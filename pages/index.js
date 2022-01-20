@@ -1,4 +1,7 @@
 import Head from 'next/head'
+import Animation from '../components/Animation'
+import AnimatedText from '../components/elements/AnimatedText'
+import HeaderAnimation from '../components/elements/HeaderAnimation'
 
 export default function Home() {
   return (
@@ -9,8 +12,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <body className="">
-        xXx
+      <body className="bg-zinc-800 overflow-x-hidden max-w-[100vw]">
+        <HeaderAnimation/>
+        <AnimatedText/>
       </body>
     </>
   )
