@@ -4,6 +4,37 @@ import TextInputWithImage from "../elements/TextInputWithImage";
 
 export default function Donate() {
   const [isVisible, setIsVisible] = useState(false);
+  function onNext() {
+    if (document.getElementById("buymeacoffee").value != "") {
+      donate =
+        donate +
+        `[![BuyMeACoffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/${
+          document.getElementById("buymeacoffee").value
+        }) `;
+    }
+    if (document.getElementById("paypal").value != "") {
+      donate =
+        donate +
+        `[![PayPal](https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/${
+          document.getElementById("paypal").value
+        }) `;
+    }
+    if (document.getElementById("patreon").value != "") {
+      donate =
+        donate +
+        `[![Patreon](https://img.shields.io/badge/Patreon-F96854?style=for-the-badge&logo=patreon&logoColor=white)](https://patreon.com/${
+          document.getElementById("patreon").value
+        }) `;
+    }
+    if (document.getElementById("kofi").value != "") {
+      donate =
+        donate +
+        `[![Ko-Fi](https://img.shields.io/badge/Ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/${
+          document.getElementById("kofi").value
+        }) `;
+    }
+    setIsVisible(true)
+  }
   return (
     <>
       {isVisible ? (
@@ -23,7 +54,9 @@ export default function Donate() {
               />
             </div>
             <div className="flex flex-col w-full md:w-6/12">
-              <p className="text-4xl md:text-5xl font-semibold text-green-300">Donate :</p>
+              <p className="text-4xl md:text-5xl font-semibold text-green-300">
+                Donate :
+              </p>
               <TextInputWithImage
                 id="buymeacoffee"
                 placeholder="Buy Me a Coffee Username"
@@ -45,7 +78,7 @@ export default function Donate() {
                 imgUrl="/kofi.svg"
               />
               <div className="flex w-full md:w-10/12 justify-center md:justify-end mt-4">
-                <NextButton onClick={() => setIsVisible(true)} />
+                <NextButton onClick={() => onNext()} />
               </div>
             </div>
           </div>
@@ -54,3 +87,4 @@ export default function Donate() {
     </>
   );
 }
+export var donate = ``;
