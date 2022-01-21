@@ -20,7 +20,7 @@ export default function GitHubStats() {
             Flex your GitHub Stats
           </p>
           {/* Options */}
-          <div className="flex flex-wrap justify-center">
+          <div className="flex flex-wrap justify-center items-center">
               Theme:
             <select
               id="theme"
