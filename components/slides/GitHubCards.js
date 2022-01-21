@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import FilterButton from "../elements/FilterButton";
 import NextButton from "../elements/NextButton";
-import TechStack from "./TechStack";
 import { username } from "./HomePage";
+import Socials from "./Socials";
 
 export default function GitHubStats() {
   const [isVisible, setIsVisible] = useState(false);
@@ -13,7 +13,7 @@ export default function GitHubStats() {
   return (
     <>
       {isVisible ? (
-        <TechStack/>
+        <Socials/>
       ) : (
         <div className="flex flex-col items-center fade-on-appear">
           <p className="w-full text-center text-3xl my-10">

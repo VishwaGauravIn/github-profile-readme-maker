@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import AnimatedText from "../elements/AnimatedText";
-import Socials from "./Socials";
+import AboutMe from "./AboutMe";
 
 export default function HomePage() {
   const [isVisible, setIsVisible] = useState(false);
@@ -36,7 +36,7 @@ export default function HomePage() {
   return (
     <>
       {isVisible ? (
-        <Socials />
+        <AboutMe />
       ) : (
         <div className="w-full flex flex-col md:flex-row py-16 md:py-28">
           <div className="flex flex-col w-full md:w-6/12 relative">

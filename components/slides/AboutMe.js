@@ -18,19 +18,19 @@ You can Write this in Markdown format too`;
         <GitHubStats/>
       ) : (
         <div className="flex flex-col items-center fade-on-appear">
-          <p className="w-full text-center text-3xl my-10">
+          <p className="w-full text-center text-3xl my-6 md:my-10">
             Add a small introduction
           </p>
-          <div className="flex flex-row w-full">
-            <div className="flex w-full md:w-6/12 justify-center items-center">
+          <div className="flex flex-col md:flex-row w-full">
+            <div className="flex w-full md:w-6/12 justify-center items-center mb-4 md:mb-0">
               <img src="/happy.svg" alt="" className="w-8/12 aspect-square select-none pointer-events-none" draggable="false"/>
             </div>
             <div className="flex flex-col w-full md:w-6/12">
-              <p className="text-5xl font-semibold text-green-300">About Me :</p>
+              <p className="text-4xl md:text-5xl font-semibold text-green-300">About Me :</p>
               <textarea
                 name=""
                 id=""
-                className="w-full bg-transparent h-96 text-xl p-4 outline-none ring-2 ring-green-300/50 focus:ring-green-300/75 rounded-md my-10 resize-none"
+                className="w-full bg-transparent h-72 md:h-96 text-base sm:text-lg md:text-xl p-4 outline-none ring-2 ring-green-300/50 focus:ring-green-300/75 rounded-md my-6 md:my-10 resize-none"
                 placeholder={textareaPlaceholder}
               ></textarea>
               <NextButton onClick={()=> setIsVisible(true)}/>

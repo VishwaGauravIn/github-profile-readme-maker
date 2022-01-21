@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import NextButton from "../elements/NextButton";
 import TextInputWithIcon from "../elements/TextInputWithIcon";
-import AboutMe from "./AboutMe";
+import TechStack from "./TechStack";
 
 export default function Socials() {
   const [isVisible, setIsVisible] = useState(false);
   return (
     <>
       {isVisible ? (
-        <AboutMe />
+        <TechStack />
       ) : (
         <div className="flex flex-col mt-10 items-center fade-on-appear">
           <p className="w-full text-center text-3xl">Add Your Social Links</p>
