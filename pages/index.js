@@ -20,7 +20,7 @@ export default function Home() {
         ></link>
       </Head>
 
-      <body className="bg-zinc-800 overflow-x-hidden max-w-[100vw] p-4 text-green-200">
+      <body className="overflow-x-hidden max-w-[100vw] p-4 text-green-200">
         <NavBar />
         <HeaderAnimation />
         <HomePage/>

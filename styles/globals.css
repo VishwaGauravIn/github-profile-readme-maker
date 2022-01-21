@@ -6,6 +6,13 @@
 
 html {
   font-family: 'Poppins', sans-serif;
+  /* background-image: linear-gradient( 110.1deg,  rgba(30,2,83,1) 44.2%, rgba(198,55,160,1) 138.2% ); */
+  /* background-image: linear-gradient( 94.3deg,  rgba(26,33,64,1) 10.9%, rgba(81,84,115,1) 87.1% ); */
+  /* background-image: linear-gradient( 112.1deg,  rgba(32,38,57,1) 11.4%, rgba(63,76,119,1) 70.2% ); */
+  background: rgb(24 24 27);
+}
+
+.body{
 }
 
 .header-animation {
