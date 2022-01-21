@@ -32,6 +32,7 @@ You can Write this in Markdown format too`;
                 id=""
                 className="w-full bg-transparent h-72 md:h-96 text-base sm:text-lg md:text-xl p-4 outline-none ring-2 ring-green-300/50 focus:ring-green-300/75 rounded-md my-6 md:my-10 resize-none"
                 placeholder={textareaPlaceholder}
+                autoFocus="true"
               ></textarea>
               <NextButton onClick={()=> setIsVisible(true)}/>
             </div>

@@ -48,6 +48,7 @@ export default function HomePage() {
               <input
                 type="text"
                 name=""
+                autoFocus="true"
                 id="username"
                 className="border-b-2 border-green-200 bg-transparent w-11/12 md:w-10/12 lg:w-8/12 sm:text-sm md:text-lg lg:text-xl 2xl:text-3xl outline-none focus:border-green-300 focus:border-b-4 inline"
                 placeholder="Enter Your GitHub Username"
