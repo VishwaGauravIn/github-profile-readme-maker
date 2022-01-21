@@ -10,7 +10,8 @@ export default function AboutMe() {
 🤝 I’m looking for help with
 🌱 I’m currently learning
 💬 Ask me about
-⚡ Fun fact`;
+⚡ Fun fact
+You can Write this in Markdown format too`;
   return (
     <>
       {isVisible ? (
