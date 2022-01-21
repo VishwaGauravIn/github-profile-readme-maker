@@ -14,12 +14,12 @@ export default function TechStack() {
           <p className="w-full text-center text-3xl my-10">
             Add Tech that you use
           </p>
-          <div className="flex flex-row w-full">
+          <div className="flex flex-col md:flex-row w-full">
             <div className="flex w-full md:w-6/12 justify-center items-center">
               <img
                 src="/girlonpc.svg"
                 alt=""
-                className="w-8/12 aspect-square select-none pointer-events-none"
+                className="md:w-8/12 aspect-square select-none pointer-events-none"
                 draggable="false"
               />
             </div>
@@ -30,7 +30,7 @@ export default function TechStack() {
                 <p className="flex justify-center text-lg md:text-xl">
                   LANGUAGES
                 </p>
-                <div className="flex flex-row flex-wrap text-gray-700 justify-center">
+                <div className="flex flex-row flex-wrap text-gray-700 md:justify-center">
                   <BadgeSelect
                     label="APACHE GROOVY"
                     url={
@@ -295,7 +295,7 @@ export default function TechStack() {
                 <p className="flex justify-center text-lg md:text-xl mt-4">
                   HOSTING/SaaS
                 </p>
-                <div className="flex flex-row flex-wrap text-gray-700 justify-center">
+                <div className="flex flex-row flex-wrap text-gray-700 md:justify-center">
                   <BadgeSelect
                     label="AWS"
                     url={
@@ -410,7 +410,7 @@ export default function TechStack() {
             <p className="flex justify-center text-lg md:text-xl mt-4">
               FRAMEWORKS, PLATFORMS & LIBRARIES
             </p>
-            <div className="flex flex-row flex-wrap text-gray-700 justify-center w-full md:w-10/12">
+            <div className="flex flex-row flex-wrap text-gray-700 md:justify-center w-full md:w-10/12">
               <BadgeSelect
                 label=".NET"
                 url={
@@ -906,7 +906,7 @@ export default function TechStack() {
             <p className="flex justify-center text-lg md:text-xl mt-4">
               SERVERS
             </p>
-            <div className="flex flex-row flex-wrap text-gray-700 justify-center  w-full md:w-10/12">
+            <div className="flex flex-row flex-wrap text-gray-700 md:justify-center  w-full md:w-10/12">
               <BadgeSelect
                 label="APACHE"
                 url={
@@ -961,7 +961,7 @@ export default function TechStack() {
             <p className="flex justify-center text-lg md:text-xl mt-4">
               DATABASES
             </p>
-            <div className="flex flex-row flex-wrap text-gray-700 justify-center  w-full md:w-10/12">
+            <div className="flex flex-row flex-wrap text-gray-700 md:justify-center  w-full md:w-10/12">
               <BadgeSelect
                 label="AMAZON DYNAMODB"
                 url={
@@ -1079,7 +1079,7 @@ export default function TechStack() {
             <p className="flex justify-center text-lg md:text-xl mt-4">
               DESIGN
             </p>
-            <div className="flex flex-row flex-wrap text-gray-700 justify-center  w-full md:w-10/12">
+            <div className="flex flex-row flex-wrap text-gray-700 md:justify-center  w-full md:w-10/12">
               <BadgeSelect
                 label="ADOBE AFTER EFFECTS"
                 url={
@@ -1224,7 +1224,7 @@ export default function TechStack() {
             </div>
             {/* ML/DL */}
             <p className="flex justify-center text-lg md:text-xl mt-4">ML/DL</p>
-            <div className="flex flex-row flex-wrap text-gray-700 justify-center w-full md:w-10/12">
+            <div className="flex flex-row flex-wrap text-gray-700 md:justify-center w-full md:w-10/12">
               <BadgeSelect
                 label="KERAS"
                 url={
@@ -1284,7 +1284,7 @@ export default function TechStack() {
             </div>
             {/* OTHER */}
             <p className="flex justify-center text-lg md:text-xl mt-4">OTHER</p>
-            <div className="flex flex-row flex-wrap text-gray-700 justify-center w-full md:w-10/12 mb-10">
+            <div className="flex flex-row flex-wrap text-gray-700 md:justify-center w-full md:w-10/12 mb-10">
               <BadgeSelect
                 label="ALFRED"
                 url={

@@ -13,7 +13,7 @@ export default function Donate() {
           <p className="w-full text-center text-3xl my-10">
             Let People Help You via Donations
           </p>
-          <div className="flex flex-row w-full">
+          <div className="flex flex-col md:flex-row w-full">
             <div className="flex w-full md:w-6/12 justify-center items-center">
               <img
                 src="/donate.svg"
@@ -23,7 +23,7 @@ export default function Donate() {
               />
             </div>
             <div className="flex flex-col w-full md:w-6/12">
-              <p className="text-5xl font-semibold text-green-300">Donate :</p>
+              <p className="text-4xl md:text-5xl font-semibold text-green-300">Donate :</p>
               <TextInputWithImage
                 id="buymeacoffee"
                 placeholder="Buy Me a Coffee Username"
@@ -44,7 +44,7 @@ export default function Donate() {
                 placeholder="Ko-Fi Username"
                 imgUrl="/kofi.svg"
               />
-              <div className="flex w-full md:w-10/12 justify-end mt-4">
+              <div className="flex w-full md:w-10/12 justify-center md:justify-end mt-4">
                 <NextButton onClick={() => setIsVisible(true)} />
               </div>
             </div>
