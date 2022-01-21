@@ -12,6 +12,14 @@ export default function AboutMe() {
 💬 Ask me about
 ⚡ Fun fact
 You can Write this in Markdown format too`;
+
+    function onNext(){
+        if(document.getElementById('aboutme').textContent != ""){
+            aboutme = `# About Me :
+            ${document.getElementById('aboutme').textContent}`
+        }
+        setIsVisible(true)
+    }
   return (
     <>
       {isVisible ? (
@@ -29,12 +37,12 @@ You can Write this in Markdown format too`;
               <p className="text-4xl md:text-5xl font-semibold text-green-300">About Me :</p>
               <textarea
                 name=""
-                id=""
+                id="aboutme"
                 className="w-full bg-transparent h-72 md:h-96 text-base sm:text-lg md:text-xl p-4 outline-none ring-2 ring-green-300/50 focus:ring-green-300/75 rounded-md my-6 md:my-10 resize-none"
                 placeholder={textareaPlaceholder}
                 autoFocus="true"
               ></textarea>
-              <NextButton onClick={()=> setIsVisible(true)}/>
+              <NextButton onClick={()=> onNext()}/>
             </div>
           </div>
         </div>
@@ -42,3 +50,4 @@ You can Write this in Markdown format too`;
     </>
   );
 }
+export var aboutme = ""
