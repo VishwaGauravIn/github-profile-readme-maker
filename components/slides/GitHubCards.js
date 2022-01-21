@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import FilterButton from "../elements/FilterButton";
 import NextButton from "../elements/NextButton";
 import TechStack from "./TechStack";
+import { username } from "./HomePage";
 
 export default function GitHubStats() {
   const [isVisible, setIsVisible] = useState(false);
-  const username = "VishwaGauravIn";
   const [theme, setTheme] = useState("radical");
   const [border, setBorder] = useState(false);
   const [includeAll, setIncludeAll] = useState(false);

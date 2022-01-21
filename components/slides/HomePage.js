@@ -1,9 +1,38 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import AnimatedText from "../elements/AnimatedText";
 import Socials from "./Socials";
 
 export default function HomePage() {
   const [isVisible, setIsVisible] = useState(false);
+  // Submit on clicking Enter Button
+  useEffect(() => {
+    // Get the input field
+    var input = document.getElementById("username");
+
+    // Execute a function when the user releases a key on the keyboard
+    input.addEventListener("keyup", function (event) {
+      // Number 13 is the "Enter" key on the keyboard
+      if (event.keyCode === 13) {
+        // Cancel the default action, if needed
+        event.preventDefault();
+        // Trigger the button element with a click
+        document.getElementById("proceed").click();
+      }
+    });
+  }, []);
+  function onNext() {
+    let user = document.getElementById("username").value;
+    if (user != "") {
+      if (user.replace(/ /g, "") != "") {
+        username = user;
+        setIsVisible(true);
+      } else {
+        alert("Enter a Valid GitHub Username");
+      }
+    } else {
+      alert("Enter a Valid GitHub Username");
+    }
+  }
   return (
     <>
       {isVisible ? (
@@ -19,25 +48,26 @@ export default function HomePage() {
               <input
                 type="text"
                 name=""
-                id=""
+                id="username"
                 className="border-b-2 border-green-200 bg-transparent w-11/12 md:w-10/12 lg:w-8/12 sm:text-sm md:text-lg lg:text-xl 2xl:text-3xl outline-none focus:border-green-300 focus:border-b-4 inline"
                 placeholder="Enter Your GitHub Username"
               />
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-8 w-12 cursor-pointer transition-all hover:ml-1 duration-200 ease-linear"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                onClick={() => setIsVisible(true)}
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M17 8l4 4m0 0l-4 4m4-4H3"
-                />
-              </svg>
+              <button id="proceed" onClick={() => onNext()}>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-8 w-12 cursor-pointer transition-all hover:ml-1 duration-200 ease-linear"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
+              </button>
             </div>
             <div className="">
               <AnimatedText />
@@ -58,3 +88,4 @@ export default function HomePage() {
     </>
   );
 }
+export var username = "";
