@@ -8,11 +8,11 @@ export default function BadgeSelect({ label, url, data }) {
       //   for()
       var badgeIndex = data.indexOf(url);
       data.splice(badgeIndex, 1);
-      console.log(data);
+    //   console.log(data);
     } else {
       setIsAdded(true);
       data.push(url);
-      console.log(data);
+    //   console.log(data);
     }
   }
   return (

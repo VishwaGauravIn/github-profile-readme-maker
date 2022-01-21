@@ -16,7 +16,6 @@ export default function GitHubStats() {
 ![](${document.getElementById("langs").getAttribute("src")})
 ![](${document.getElementById("streak").getAttribute("src")})
 `;
-    console.log(githubstats)
     setIsVisible(true)
   }
   return (
