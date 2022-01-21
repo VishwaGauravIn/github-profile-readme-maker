@@ -5,13 +5,12 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */
 
 html {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   /* background-image: linear-gradient( 110.1deg,  rgba(30,2,83,1) 44.2%, rgba(198,55,160,1) 138.2% ); */
   /* background-image: linear-gradient( 94.3deg,  rgba(26,33,64,1) 10.9%, rgba(81,84,115,1) 87.1% ); */
   /* background-image: linear-gradient( 112.1deg,  rgba(32,38,57,1) 11.4%, rgba(63,76,119,1) 70.2% ); */
   background: rgb(24 24 27);
 }
-
 
 @keyframes rotate360 {
   0% {
@@ -23,7 +22,7 @@ html {
 }
 
 /* Animated Underline Start */
-.pass{
+.pass {
   text-decoration: none;
   font-size: 1em;
   position: relative;
@@ -45,3 +44,16 @@ html {
   background: rgb(165 243 252);
 }
 /* Animated Underline End */
+
+.fade-on-appear{
+  animation: fadein 0.5s;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

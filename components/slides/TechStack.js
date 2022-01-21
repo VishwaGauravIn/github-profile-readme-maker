@@ -10,7 +10,7 @@ export default function TechStack() {
       {isVisible ? (
         <Donate/>
       ) : (
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center fade-on-appear">
           <p className="w-full text-center text-3xl my-10">
             Add Tech that you use
           </p>

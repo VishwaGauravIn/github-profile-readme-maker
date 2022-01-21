@@ -10,7 +10,7 @@ export default function Socials() {
       {isVisible ? (
         <AboutMe />
       ) : (
-        <div className="flex flex-col mt-10 items-center">
+        <div className="flex flex-col mt-10 items-center fade-on-appear">
           <p className="w-full text-center text-3xl">Add Your Social Links</p>
           <div className="w-full md:w-8/12 flex justify-between flex-wrap my-10">
             <TextInputWithIcon id="discord" placeholder="Discord Username">
