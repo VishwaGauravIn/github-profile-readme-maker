@@ -26,22 +26,22 @@ export default function Donate() {
               <p className="text-5xl font-semibold text-green-300">Donate :</p>
               <TextInputWithImage
                 id="buymeacoffee"
-                placeholder="Buy Me a Coffee Full Url"
+                placeholder="Buy Me a Coffee Username"
                 imgUrl="/bmc.svg"
               />
               <TextInputWithImage
                 id="paypal"
-                placeholder="PayPal Full Url"
+                placeholder="PayPal.Me Username"
                 imgUrl="/paypal.svg"
               />
               <TextInputWithImage
                 id="patreon"
-                placeholder="Patreon Full Url"
+                placeholder="Patreon Username"
                 imgUrl="/patreon.svg"
               />
               <TextInputWithImage
                 id="kofi"
-                placeholder="Ko-Fi Full Url"
+                placeholder="Ko-Fi Username"
                 imgUrl="/kofi.svg"
               />
               <div className="flex w-full md:w-10/12 justify-end mt-4">
