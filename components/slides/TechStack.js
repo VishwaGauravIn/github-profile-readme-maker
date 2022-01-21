@@ -1074,6 +1074,153 @@ export default function TechStack() {
                 data={techbadges}
               />
             </div>
+            {/* DESIGN */}
+            <p className="flex justify-center text-lg md:text-xl mt-4">
+              DESIGN
+            </p>
+            <div className="flex flex-row flex-wrap text-gray-700 justify-center  w-full md:w-10/12">
+              <BadgeSelect
+                label="ADOBE AFTER EFFECTS"
+                url={
+                  "![Adobe After Effects](https://img.shields.io/badge/Adobe%20After%20Effects-9999FF.svg?style=for-the-badge&logo=Adobe%20After%20Effects&logoColor=white)"
+                }
+                data={techbadges}
+              />
+              <BadgeSelect
+                label="ADOBE AUDITION"
+                url={
+                  "![Adobe Audition](https://img.shields.io/badge/Adobe%20Audition-9999FF.svg?style=for-the-badge&logo=Adobe%20Audition&logoColor=white)"
+                }
+                data={techbadges}
+              />
+              <BadgeSelect
+                label="ADOBE DREAMWEAVER"
+                url={
+                  "![Adobe Dreamweaver](https://img.shields.io/badge/Adobe%20Dreamweaver-FF61F6.svg?style=for-the-badge&logo=Adobe%20Dreamweaver&logoColor=white)"
+                }
+                data={techbadges}
+              />
+              <BadgeSelect
+                label="ADOBE ILLUSTRATOR"
+                url={
+                  "![Adobe Illustrator](https://img.shields.io/badge/adobeillustrator-%23FF9A00.svg?style=for-the-badge&logo=adobeillustrator&logoColor=white)"
+                }
+                data={techbadges}
+              />
+              <BadgeSelect
+                label="ADOBE INDESIGN"
+                url={
+                  "![Adobe InDesign](https://img.shields.io/badge/Adobe%20InDesign-49021F?style=for-the-badge&logo=adobeindesign&logoColor=white)"
+                }
+                data={techbadges}
+              />
+              <BadgeSelect
+                label="ADOBE LIGHTROOM"
+                url={
+                  "![Adobe Lightroom](https://img.shields.io/badge/Adobe%20Lightroom-31A8FF.svg?style=for-the-badge&logo=Adobe%20Lightroom&logoColor=white)"
+                }
+                data={techbadges}
+              />
+              <BadgeSelect
+                label="ADOBE PHOTOSHOP"
+                url={
+                  "![Adobe Photoshop](https://img.shields.io/badge/adobephotoshop-%2331A8FF.svg?style=for-the-badge&logo=adobephotoshop&logoColor=white)"
+                }
+                data={techbadges}
+              />
+              <BadgeSelect
+                label="ADOBE PREMIER PRO"
+                url={
+                  "![Adobe Premiere Pro](https://img.shields.io/badge/Adobe%20Premiere%20Pro-9999FF.svg?style=for-the-badge&logo=Adobe%20Premiere%20Pro&logoColor=white)"
+                }
+                data={techbadges}
+              />
+              <BadgeSelect
+                label="ADOBE XD"
+                url={
+                  "![Adobe XD](https://img.shields.io/badge/Adobe%20XD-470137?style=for-the-badge&logo=Adobe%20XD&logoColor=#FF61F6)"
+                }
+                data={techbadges}
+              />
+              <BadgeSelect
+                label="ASEPRITE"
+                url={
+                  "![Aseprite](https://img.shields.io/badge/Aseprite-FFFFFF?style=for-the-badge&logo=Aseprite&logoColor=#7D929E)"
+                }
+                data={techbadges}
+              />
+              <BadgeSelect
+                label="AFFINITY DESIGN"
+                url={
+                  "![Affinity Designer](https://img.shields.io/badge/affinitydesginer-%231B72BE.svg?style=for-the-badge&logo=affinity-designer&logoColor=white)"
+                }
+                data={techbadges}
+              />
+              <BadgeSelect
+                label="BLENDER"
+                url={
+                  "![Blender](https://img.shields.io/badge/blender-%23F5792A.svg?style=for-the-badge&logo=blender&logoColor=white)"
+                }
+                data={techbadges}
+              />
+              <BadgeSelect
+                label="CANVA"
+                url={
+                  "![Canva](https://img.shields.io/badge/Canva-%2300C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white)"
+                }
+                data={techbadges}
+              />
+              <BadgeSelect
+                label="DRIBBLE"
+                url={
+                  "![Dribbble](https://img.shields.io/badge/Dribbble-EA4C89?style=for-the-badge&logo=dribbble&logoColor=white)"
+                }
+                data={techbadges}
+              />
+              <BadgeSelect
+                label="FIGMA"
+                url={
+                  "	![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)"
+                }
+                data={techbadges}
+              />
+              <BadgeSelect
+                label="FRAMER"
+                url={
+                  "![Framer](https://img.shields.io/badge/Framer-black?style=for-the-badge&logo=framer&logoColor=blue)"
+                }
+                data={techbadges}
+              />
+              <BadgeSelect
+                label="GIMP"
+                url={
+                  "![Gimp Gnu Image Manipulation Program](https://img.shields.io/badge/Gimp-657D8B?style=for-the-badge&logo=gimp&logoColor=FFFFFF)"
+                }
+                data={techbadges}
+              />
+              <BadgeSelect
+                label="INKSCAPE"
+                url={
+                  "![Inkscape](https://img.shields.io/badge/Inkscape-e0e0e0?style=for-the-badge&logo=inkscape&logoColor=080A13)"
+                }
+                data={techbadges}
+              />
+              <BadgeSelect
+                label="KRITA"
+                url={
+                  "![Krita](https://img.shields.io/badge/Krita-203759?style=for-the-badge&logo=krita&logoColor=EEF37B)"
+                }
+                data={techbadges}
+              />
+              <BadgeSelect
+                label="PROTO.IO"
+                url={
+                  "![Proto.io](https://img.shields.io/badge/Proto.io-161637?style=for-the-badge&logo=proto.io&logoColor=00e5ff)"
+                }
+                data={techbadges}
+              />
+              <BadgeSelect label="" url={"SKETCH"} data={techbadges} />
+            </div>
             {/* ML/DL */}
             <p className="flex justify-center text-lg md:text-xl mt-4">ML/DL</p>
             <div className="flex flex-row flex-wrap text-gray-700 justify-center w-full md:w-10/12">
