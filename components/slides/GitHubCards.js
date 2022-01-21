@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import FilterButton from "../elements/FilterButton";
 import NextButton from "../elements/NextButton";
+import TechStack from "./TechStack";
 
 export default function GitHubStats() {
   const [isVisible, setIsVisible] = useState(false);
@@ -12,7 +13,7 @@ export default function GitHubStats() {
   return (
     <>
       {isVisible ? (
-        <></>
+        <TechStack/>
       ) : (
         <div className="flex flex-col items-center">
           <p className="w-full text-center text-3xl my-10">
