@@ -18,7 +18,7 @@ export default function GitHubStats() {
             Flex your GitHub Stats
           </p>
           {/* Options */}
-          <div className="">
+          <div className="flex flex-wrap justify-center">
               Theme:
             <select
               id="theme"
@@ -37,11 +37,11 @@ export default function GitHubStats() {
                 );
               })}
             </select>
-            <button className="p-1 px-4 ring-2 ring-green-300 hover:ring-green-200 active:scale-95 transition-all ease-in-out duration-200 ml-3 rounded-lg" onClick={()=> setBorder(!border)}>Border</button>
-            <button className="p-1 px-4 ring-2 ring-green-300 hover:ring-green-200 active:scale-95 transition-all ease-in-out duration-200 ml-3 rounded-lg" onClick={()=> setIncludeAll(!includeAll)}>Lifetime Commits</button>
-            <button className="p-1 px-4 ring-2 ring-green-300 hover:ring-green-200 active:scale-95 transition-all ease-in-out duration-200 ml-3 rounded-lg" onClick={()=> setIncludePrivate(!includePrivate)}>Private Commits</button>
+            <button className="p-1 px-4 ring-2 ring-green-300 hover:ring-green-200 active:scale-95 transition-all ease-in-out duration-200 md:ml-3 m-2 md:m-0 rounded-sm text-base" onClick={()=> setBorder(!border)}>Border</button>
+            <button className="p-1 px-4 ring-2 ring-green-300 hover:ring-green-200 active:scale-95 transition-all ease-in-out duration-200 md:ml-3 m-2 md:m-0 rounded-sm text-base" onClick={()=> setIncludeAll(!includeAll)}>Lifetime Commits</button>
+            <button className="p-1 px-4 ring-2 ring-green-300 hover:ring-green-200 active:scale-95 transition-all ease-in-out duration-200 md:ml-3 m-2 md:m-0 rounded-sm text-base" onClick={()=> setIncludePrivate(!includePrivate)}>Private Commits</button>
           </div>
-          <div className="w-full md:w-8/12 justify-center flex flex-wrap my-10">
+          <div className="w-full md:w-8/12 justify-center flex flex-wrap md:my-10">
             <img
               className="m-2"
               src={`https://github-readme-stats.vercel.app/api?username=${username}&theme=${theme}&hide_border=${border}&include_all_commits=${includeAll}&count_private=${includePrivate}`}
