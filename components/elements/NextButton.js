@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Button({onClick}) {
+export default function NextButton({onClick}) {
   return (
     <button className="relative inline-block group text-green-100" onClick={onClick}>
 
