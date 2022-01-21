@@ -1,7 +1,5 @@
 import Head from "next/head";
 import Animation from "../components/Animation";
-import AnimatedText from "../components/elements/AnimatedText";
-import HeaderAnimation from "../components/elements/HeaderAnimation";
 import NavBar from "../components/NavBar";
 import HomePage from "../components/slides/HomePage";
 
@@ -22,7 +20,6 @@ export default function Home() {
 
       <body className="overflow-x-hidden max-w-[100vw] p-4 text-green-200">
         <NavBar />
-        <HeaderAnimation />
         <HomePage/>
       </body>
     </>

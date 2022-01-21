@@ -12,12 +12,6 @@ html {
   background: rgb(24 24 27);
 }
 
-.body{
-}
-
-.header-animation {
-  animation: rotate360 5s infinite;
-}
 
 @keyframes rotate360 {
   0% {
