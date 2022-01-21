@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import BadgeSelect from "../elements/BadgeSelect";
 import NextButton from "../elements/NextButton";
+import Donate from "./Donate";
 
 export default function TechStack() {
   const [isVisible, setIsVisible] = useState(false);
   return (
     <>
       {isVisible ? (
-        <></>
+        <Donate/>
       ) : (
         <div className="flex flex-col items-center">
           <p className="w-full text-center text-3xl my-10">
