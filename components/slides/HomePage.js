@@ -20,7 +20,7 @@ export default function HomePage() {
                 type="text"
                 name=""
                 id=""
-                className="border-b-2 border-green-200 bg-transparent w-11/12 md:w-7/12 text-lg md:text-lg lg:text-xl 2xl:text-3xl outline-none focus:border-green-300 focus:border-b-4 inline"
+                className="border-b-2 border-green-200 bg-transparent w-11/12 md:w-10/12 lg:w-8/12 sm:text-sm md:text-lg lg:text-xl 2xl:text-3xl outline-none focus:border-green-300 focus:border-b-4 inline"
                 placeholder="Enter Your GitHub Username"
               />
               <svg
@@ -43,7 +43,7 @@ export default function HomePage() {
               <AnimatedText />
             </div>
           </div>
-          <div className="hidden md:flex w-full md:w-6/12 justify-center">
+          <div className="flex w-full mt-16 md:mt-0 md:w-6/12 justify-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
