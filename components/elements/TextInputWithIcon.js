@@ -23,7 +23,7 @@ export default function TextInputWithIcon({
           viewBox="-0.5 0 20 16"
           stroke="currentColor"
           aria-hidden="true"
-          className="w-6 h-6 text-green-300"
+          className="w-8 h-8 text-green-300"
         >
           {children}
         </svg>
