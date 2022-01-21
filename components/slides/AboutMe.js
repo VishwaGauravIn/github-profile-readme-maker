@@ -4,8 +4,7 @@ import GitHubStats from "./GitHubCards";
 
 export default function AboutMe() {
   const [isVisible, setIsVisible] = useState(false);
-  const textareaPlaceholder = 
-`🔭 I’m currently working on
+  const textareaPlaceholder = `🔭 I’m currently working on
 👯 I’m looking to collaborate on
 🤝 I’m looking for help with
 🌱 I’m currently learning
@@ -13,17 +12,18 @@ export default function AboutMe() {
 ⚡ Fun fact
 You can Write this in Markdown format too`;
 
-    function onNext(){
-        if(document.getElementById('aboutme').textContent != ""){
-            aboutme = `# About Me :
-            ${document.getElementById('aboutme').textContent}`
-        }
-        setIsVisible(true)
+  function onNext() {
+    if (document.getElementById("aboutme").textContent != "") {
+      aboutme = `# About Me :
+${document.getElementById("aboutme").textContent}
+`;
     }
+    setIsVisible(true);
+  }
   return (
     <>
       {isVisible ? (
-        <GitHubStats/>
+        <GitHubStats />
       ) : (
         <div className="flex flex-col items-center fade-on-appear">
           <p className="w-full text-center text-3xl my-6 md:my-10">
@@ -31,10 +31,17 @@ You can Write this in Markdown format too`;
           </p>
           <div className="flex flex-col md:flex-row w-full">
             <div className="flex w-full md:w-6/12 justify-center items-center mb-4 md:mb-0">
-              <img src="/happy.svg" alt="" className="w-8/12 aspect-square select-none pointer-events-none" draggable="false"/>
+              <img
+                src="/happy.svg"
+                alt=""
+                className="w-8/12 aspect-square select-none pointer-events-none"
+                draggable="false"
+              />
             </div>
             <div className="flex flex-col w-full md:w-6/12">
-              <p className="text-4xl md:text-5xl font-semibold text-green-300">About Me :</p>
+              <p className="text-4xl md:text-5xl font-semibold text-green-300">
+                About Me :
+              </p>
               <textarea
                 name=""
                 id="aboutme"
@@ -42,7 +49,7 @@ You can Write this in Markdown format too`;
                 placeholder={textareaPlaceholder}
                 autoFocus="true"
               ></textarea>
-              <NextButton onClick={()=> onNext()}/>
+              <NextButton onClick={() => onNext()} />
             </div>
           </div>
         </div>
@@ -50,4 +57,4 @@ You can Write this in Markdown format too`;
     </>
   );
 }
-export var aboutme = ""
+export var aboutme = ``;
