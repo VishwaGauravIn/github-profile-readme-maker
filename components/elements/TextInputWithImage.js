@@ -16,7 +16,7 @@ export default function TextInputWithImage({
 
       <label for={id} className="p-5">
         <span className="sr-only"> {id} </span>
-            <img src={imgUrl} alt="" className="w-12 aspect-square bg-green-100 rounded-lg p-1"/>
+            <img src={imgUrl} alt="" className="w-12 aspect-square bg-green-100 rounded-md p-1"/>
       </label>
     </div>
   );
