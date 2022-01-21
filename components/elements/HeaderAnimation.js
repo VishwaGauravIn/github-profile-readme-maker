@@ -2,10 +2,9 @@ import React from "react";
 
 export default function HeaderAnimation() {
   return (
-    <div className="absolute w-screen opacity-50">
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="w-40 aspect-square absolute right-0 top-0 translate-x-1/2 -translate-y-1/2 header-animation animate-spin text-green-300"
+        className="w-24 sm:w-28 md:w-32 lg:w-36 2xl:w-40 aspect-square absolute right-0 top-0 translate-x-1/2 -translate-y-1/2 header-animation animate-spin text-green-300"
         viewBox="0 0 20 20"
         fill="currentColor"
       >
@@ -15,6 +14,5 @@ export default function HeaderAnimation() {
           clipRule="evenodd"
         />
       </svg>
-    </div>
   );
 }
