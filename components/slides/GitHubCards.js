@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import FilterButton from "../elements/FilterButton";
 import NextButton from "../elements/NextButton";
 
 export default function GitHubStats() {
@@ -37,9 +38,9 @@ export default function GitHubStats() {
                 );
               })}
             </select>
-            <button className="p-1 px-4 ring-2 ring-green-300 hover:ring-green-200 active:scale-95 transition-all ease-in-out duration-200 md:ml-3 m-2 md:m-0 rounded-sm text-base" onClick={()=> setBorder(!border)}>Border</button>
-            <button className="p-1 px-4 ring-2 ring-green-300 hover:ring-green-200 active:scale-95 transition-all ease-in-out duration-200 md:ml-3 m-2 md:m-0 rounded-sm text-base" onClick={()=> setIncludeAll(!includeAll)}>Lifetime Commits</button>
-            <button className="p-1 px-4 ring-2 ring-green-300 hover:ring-green-200 active:scale-95 transition-all ease-in-out duration-200 md:ml-3 m-2 md:m-0 rounded-sm text-base" onClick={()=> setIncludePrivate(!includePrivate)}>Private Commits</button>
+            <FilterButton title="Border" onClick={() => setBorder(!border)}/>
+            <FilterButton title="Lifetime Commits" onClick={()=> setIncludeAll(!includeAll)}/>
+            <FilterButton title="Private Commits" onClick={()=> setIncludePrivate(!includePrivate)}/>
           </div>
           <div className="w-full md:w-8/12 justify-center flex flex-wrap md:my-10">
             <img
