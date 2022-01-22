@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import BadgeSelect from "../elements/BadgeSelect";
 import NextButton from "../elements/NextButton";
+import Pagination from "../elements/Pagination";
 import Donate from "./Donate";
 
 export default function TechStack() {
@@ -1456,6 +1457,7 @@ export default function TechStack() {
             </div>
           </div>
           <NextButton onClick={() => setIsVisible(true)} />
+          <Pagination val={4}/>
         </div>
       )}
     </>

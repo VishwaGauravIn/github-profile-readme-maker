@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import NextButton from "../elements/NextButton";
+import Pagination from "../elements/Pagination";
 import TextInputWithImage from "../elements/TextInputWithImage";
 import Extras from "./Extras";
 
@@ -80,6 +81,7 @@ export default function Donate() {
               />
               <div className="flex w-full md:w-10/12 justify-center md:justify-end mt-4">
                 <NextButton onClick={() => onNext()} />
+                <Pagination val={5}/>
               </div>
             </div>
           </div>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import NextButton from "../elements/NextButton";
+import Pagination from "../elements/Pagination";
 import GitHubStats from "./GitHubCards";
 
 export default function AboutMe() {
@@ -52,6 +53,7 @@ ${document.getElementById("aboutme").value}
               <NextButton onClick={() => onNext()} />
             </div>
           </div>
+          <Pagination val={1}/>
         </div>
       )}
     </>

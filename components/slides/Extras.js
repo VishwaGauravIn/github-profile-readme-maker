@@ -8,6 +8,7 @@ import { username } from "./HomePage";
 import { socials } from "./Socials";
 import { techbadges } from "./TechStack";
 import { donate } from './Donate'
+import Pagination from "../elements/Pagination";
 
 export default function Extras() {
   const [isVisible, setIsVisible] = useState(false);
@@ -173,6 +174,7 @@ ${techbadges.join(" ")}
             <CheckBox id="memechk" title="Add Random Memes" />
           </div>
           <NextButton onClick={() => onNext()} />
+          <Pagination val={6}/>
         </div>
       )}
     </>

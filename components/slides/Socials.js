@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import NextButton from "../elements/NextButton";
+import Pagination from "../elements/Pagination";
 import TextInputWithIcon from "../elements/TextInputWithIcon";
 import TechStack from "./TechStack";
 
@@ -109,6 +110,7 @@ export default function Socials() {
             </TextInputWithIcon>
           </div>
           <NextButton onClick={() => onNext()} />
+          <Pagination val={3}/>
         </div>
       )}
     </>

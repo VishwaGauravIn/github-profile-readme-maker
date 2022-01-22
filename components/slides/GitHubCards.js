@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import FilterButton from "../elements/FilterButton";
 import NextButton from "../elements/NextButton";
+import Pagination from "../elements/Pagination";
 import { username } from "./HomePage";
 import Socials from "./Socials";
 
@@ -80,6 +81,7 @@ export default function GitHubStats() {
             />
           </div>
           <NextButton onClick={() => onNext()} />
+          <Pagination val={2}/>
         </div>
       )}
     </>
