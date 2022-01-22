@@ -11,10 +11,10 @@ export default function GitHubStats() {
   const [includeAll, setIncludeAll] = useState(false);
   const [includePrivate, setIncludePrivate] = useState(false);
   function onNext() {
-    githubstats = `# GitHub Stats :
-![](${document.getElementById("stats").getAttribute("src")})
+    githubstats = `# 📊GitHub Stats :
+![](${document.getElementById("stats").getAttribute("src")})<br/>
+![](${document.getElementById("streak").getAttribute("src")})<br/>
 ![](${document.getElementById("langs").getAttribute("src")})
-![](${document.getElementById("streak").getAttribute("src")})
 `;
     setIsVisible(true);
   }
@@ -56,7 +56,7 @@ export default function GitHubStats() {
           <p className="mt-4 text-green-300 opacity-90">
             please wait for images to load after changing any values
           </p>
-          <div className="w-full md:w-8/12 justify-center flex flex-wrap md:my-4">
+          <div className="w-full md:w-8/12 justify-center flex flex-col flex-wrap md:my-4">
             <img
               className="m-2 select-none pointer-events-none"
               draggable="false"
@@ -67,15 +67,15 @@ export default function GitHubStats() {
             <img
               className="m-2 select-none pointer-events-none"
               draggable="false"
-              id="langs"
-              src={`https://github-readme-stats.vercel.app/api/top-langs/?username=${username}&theme=${theme}&hide_border=${border}&include_all_commits=${includeAll}&count_private=${includePrivate}&layout=compact`}
+              id="streak"
+              src={`https://github-readme-streak-stats.herokuapp.com/?user=${username}&theme=${theme}&hide_border=${border}`}
               alt=""
             />
             <img
               className="m-2 select-none pointer-events-none"
               draggable="false"
-              id="streak"
-              src={`https://github-readme-streak-stats.herokuapp.com/?user=${username}&theme=${theme}&hide_border=${border}`}
+              id="langs"
+              src={`https://github-readme-stats.vercel.app/api/top-langs/?username=${username}&theme=${theme}&hide_border=${border}&include_all_commits=${includeAll}&count_private=${includePrivate}&layout=compact`}
               alt=""
             />
           </div>

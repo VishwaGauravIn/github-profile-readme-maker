@@ -2,7 +2,12 @@ import React, { useState } from "react";
 import CheckBox from "../elements/CheckBox";
 import FilterButton from "../elements/FilterButton";
 import NextButton from "../elements/NextButton";
+import { aboutme } from "./AboutMe";
+import { githubstats } from "./GitHubCards";
 import { username } from "./HomePage";
+import { socials } from "./Socials";
+import { techbadges } from "./TechStack";
+import { donate } from './Donate'
 
 export default function Extras() {
   const [isVisible, setIsVisible] = useState(false);
@@ -10,16 +15,80 @@ export default function Extras() {
   const [border, setBorder] = useState(false);
   const [background, setBackground] = useState(false);
   const [quoteTheme, setQuoteTheme] = useState("radical");
-  const [layout, setLayout] = useState("horizontal")
-  function changeLayout(){
-      if(layout === "horizontal"){
-          setLayout("vetical")
-      }else{
-          setLayout("horizontal")
-      }
+  const [layout, setLayout] = useState("horizontal");
+  function changeLayout() {
+    if (layout === "horizontal") {
+      setLayout("vetical");
+    } else {
+      setLayout("horizontal");
+    }
   }
   function onNext() {
+    if (document.getElementById("trophychk").checked === true) {
+      extras =
+        extras +
+        `
+## 🏆GitHub Trophies
+![](${document.getElementById("trophy").getAttribute("src")})
+`;
+    }
+    if (document.getElementById("quotechk").checked === true) {
+      extras =
+        extras +
+        `
+### ✍️Random Dev Quote
+![](${document.getElementById("quote").getAttribute("src")})
+`;
+    }
+    if (document.getElementById("memechk").checked === true) {
+      extras =
+        extras +
+        `
+### 😂Random Dev Meme
+<img src="https://random-memer.herokuapp.com/" width="512px"/>
+`;
+    }
+    if (document.getElementById("visitorschk").checked === true) {
+      extras =
+        extras +
+        `
+---
+![](${document.getElementById("visitors").getAttribute("src")})
+`;
+    }
+    createFinalData();
     setIsVisible(true);
+  }
+  function createFinalData() {
+    if (aboutme != ``) {
+      finaldata = finaldata + aboutme;
+    }
+    if (socials != ``) {
+      finaldata =
+        finaldata +
+        `
+## 🌐Socials
+${socials}
+`;
+    }
+    if (techbadges != ``) {
+      finaldata =
+        finaldata +
+        `
+# 💻Tech Stack
+${techbadges.join(" ")}
+`;
+    }
+    finaldata = finaldata + githubstats + extras;
+    if (donate != ``) {
+      finaldata =
+        finaldata +
+        `
+  ## 💰You can help me by Donating
+  ${donate}
+  `;
+    }
+    console.log(finaldata)
   }
   return (
     <>
@@ -59,11 +128,11 @@ export default function Extras() {
             <img
               className="m-2 select-none pointer-events-none"
               draggable="false"
-              id="stats"
+              id="trophy"
               src={`https://github-profile-trophy.vercel.app/?username=${username}&theme=${theme}&no-frame=${border}&no-bg=${background}&margin-w=4`}
               alt=""
             />
-            <CheckBox id="statschk" title="Add GitHub Trophies" />
+            <CheckBox id="trophychk" title="Add GitHub Trophies" />
             {/* Options */}
             <div className="flex flex-wrap justify-center items-center mt-4 my-2">
               Theme:
@@ -87,7 +156,7 @@ export default function Extras() {
             <img
               className="m-2 select-none pointer-events-none"
               draggable="false"
-              id="stats"
+              id="quote"
               src={`https://quotes-github-readme.vercel.app/api?type=${layout}&theme=${quoteTheme}`}
               alt=""
             />
@@ -96,7 +165,7 @@ export default function Extras() {
             <img
               className="m-2 select-none pointer-events-none"
               draggable="false"
-              id="stats"
+              id="visitors"
               src={`https://komarev.com/ghpvc/?username=${username}&label=Visitors+Count&color=brightgreen`}
               alt=""
             />
@@ -144,3 +213,4 @@ const quoteThemes = [
 ];
 
 export var extras = ``;
+export var finaldata = ``;
