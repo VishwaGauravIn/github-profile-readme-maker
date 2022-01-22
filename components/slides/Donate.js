@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import NextButton from "../elements/NextButton";
+import NextButton from "../elements/buttons/NextButton";
 import Pagination from "../elements/Pagination";
-import TextInputWithImage from "../elements/TextInputWithImage";
+import TextInputWithImage from "../elements/textinput/TextInputWithImage";
 import Extras from "./Extras";
 
 export default function Donate() {

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import CheckBox from "../elements/CheckBox";
-import FilterButton from "../elements/FilterButton";
-import NextButton from "../elements/NextButton";
+import FilterButton from "../elements/buttons/FilterButton";
+import NextButton from "../elements/buttons/NextButton";
 import { aboutme } from "./AboutMe";
 import { githubstats } from "./GitHubCards";
 import { username } from "./HomePage";

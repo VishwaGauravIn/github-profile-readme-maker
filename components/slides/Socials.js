@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import NextButton from "../elements/NextButton";
+import NextButton from "../elements/buttons/NextButton";
 import Pagination from "../elements/Pagination";
-import TextInputWithIcon from "../elements/TextInputWithIcon";
+import TextInputWithIcon from "../elements/textinput/TextInputWithIcon";
 import TechStack from "./TechStack";
 
 export default function Socials() {

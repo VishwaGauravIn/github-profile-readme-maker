@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import FilterButton from "../elements/FilterButton";
-import NextButton from "../elements/NextButton";
+import FilterButton from "../elements/buttons/FilterButton";
+import NextButton from "../elements/buttons/NextButton";
 import Pagination from "../elements/Pagination";
 import { username } from "./HomePage";
 import Socials from "./Socials";

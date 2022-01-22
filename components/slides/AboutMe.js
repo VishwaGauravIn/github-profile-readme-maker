@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import NextButton from "../elements/NextButton";
+import NextButton from "../elements/buttons/NextButton";
 import Pagination from "../elements/Pagination";
 import GitHubStats from "./GitHubCards";
 

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import BadgeSelect from "../elements/BadgeSelect";
-import NextButton from "../elements/NextButton";
+import BadgeSelect from "../elements/buttons/BadgeSelect";
+import NextButton from "../elements/buttons/NextButton";
 import Pagination from "../elements/Pagination";
 import Donate from "./Donate";
 
