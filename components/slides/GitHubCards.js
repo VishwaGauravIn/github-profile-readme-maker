@@ -16,7 +16,7 @@ export default function GitHubStats() {
 ![](${document.getElementById("langs").getAttribute("src")})
 ![](${document.getElementById("streak").getAttribute("src")})
 `;
-    setIsVisible(true)
+    setIsVisible(true);
   }
   return (
     <>
@@ -53,7 +53,10 @@ export default function GitHubStats() {
               onClick={() => setIncludePrivate(!includePrivate)}
             />
           </div>
-          <div className="w-full md:w-8/12 justify-center flex flex-wrap md:my-10">
+          <p className="mt-4 text-green-300 opacity-90">
+            please wait for images to load after changing any values
+          </p>
+          <div className="w-full md:w-8/12 justify-center flex flex-wrap md:my-4">
             <img
               className="m-2"
               id="stats"
