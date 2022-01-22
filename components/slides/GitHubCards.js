@@ -58,19 +58,22 @@ export default function GitHubStats() {
           </p>
           <div className="w-full md:w-8/12 justify-center flex flex-wrap md:my-4">
             <img
-              className="m-2"
+              className="m-2 select-none pointer-events-none"
+              draggable="false"
               id="stats"
               src={`https://github-readme-stats.vercel.app/api?username=${username}&theme=${theme}&hide_border=${border}&include_all_commits=${includeAll}&count_private=${includePrivate}`}
               alt=""
             />
             <img
-              className="m-2"
+              className="m-2 select-none pointer-events-none"
+              draggable="false"
               id="langs"
               src={`https://github-readme-stats.vercel.app/api/top-langs/?username=${username}&theme=${theme}&hide_border=${border}&include_all_commits=${includeAll}&count_private=${includePrivate}&layout=compact`}
               alt=""
             />
             <img
-              className="m-2"
+              className="m-2 select-none pointer-events-none"
+              draggable="false"
               id="streak"
               src={`https://github-readme-streak-stats.herokuapp.com/?user=${username}&theme=${theme}&hide_border=${border}`}
               alt=""

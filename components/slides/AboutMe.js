@@ -38,7 +38,7 @@ ${document.getElementById("aboutme").textContent}
                 draggable="false"
               />
             </div>
-            <div className="flex flex-col w-full md:w-6/12">
+            <div className="flex flex-col w-full md:w-6/12 items-center">
               <p className="text-4xl md:text-5xl font-semibold text-green-300">
                 About Me :
               </p>
