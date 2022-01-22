@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import NextButton from "../elements/NextButton";
 import TextInputWithImage from "../elements/TextInputWithImage";
+import Extras from "./Extras";
 
 export default function Donate() {
   const [isVisible, setIsVisible] = useState(false);
@@ -36,9 +37,9 @@ export default function Donate() {
     setIsVisible(true)
   }
   return (
-    <>
+      <>
       {isVisible ? (
-        <></>
+          <Extras/>
       ) : (
         <div className="flex flex-col items-center fade-on-appear">
           <p className="w-full text-center text-3xl my-10">
