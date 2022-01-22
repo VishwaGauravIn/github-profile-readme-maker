@@ -9,6 +9,7 @@ export default function AnimatedText() {
         <span className="text-rose-200 underline underline-offset-4 decoration-dashed">Beautiful</span>
         <span className="text-cyan-200 underline underline-offset-4 decoration-dashed">Modern</span>
         <span className="text-amber-200 underline underline-offset-4 decoration-dashed">Interactive</span>
+        <span className="text-green-200 underline underline-offset-4 decoration-dashed">Perfect</span>
       </TextLoop>{" "}
       Profile
     </div>
