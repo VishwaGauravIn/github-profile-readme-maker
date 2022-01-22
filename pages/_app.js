@@ -1,6 +1,6 @@
 import '../styles/globals.css'
 import '../styles/animation.css'
-import '../styles/animatedtext.css'
+import '../styles/scrollbar.css'
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />
