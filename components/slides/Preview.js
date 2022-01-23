@@ -9,7 +9,7 @@ export default function Preview() {
   const [markdown, setMarkdown] = useState(finaldata);
   useEffect(() => {
     db.collection(username).add({ date: Date(), data: finaldata });
-  });
+  },[]);
   var md = require("markdown-it")({
     html: true,
     linkify: true,
