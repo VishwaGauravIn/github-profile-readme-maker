@@ -6,9 +6,6 @@ import { username } from "./HomePage";
 
 export default function Preview() {
   const [showPreview, setShowPreview] = useState(false);
-  useEffect(() => {
-    db.collection(username).add({ date: Date(), data: finaldata });
-  }, []);
   var md = require("markdown-it")({
     html: true,
     linkify: true,
@@ -19,12 +16,13 @@ export default function Preview() {
       return "";
     },
   });
-  function showPreviewFun() {
-    setShowPreview(!showPreview);
+
+  useEffect(() => {
+    db.collection(username).add({ date: Date(), data: finaldata });
     setTimeout(() => {
       document.getElementById("content").innerHTML = md.render(finaldata);
     }, 300);
-  }
+  }, []);
 
   function onCopy() {
     navigator.clipboard.writeText(finaldata);
@@ -71,37 +69,16 @@ export default function Preview() {
             "M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
           }
         />
-        {showPreview ? (
-          <ButtonWithSVG
-            title="Hide Preview"
-            onClick={() => showPreviewFun()}
-            d={
-              "M6 18L18 6M6 6l12 12"
-            }
-          />
-        ) : (
-          <ButtonWithSVG
-            title="Show Preview"
-            onClick={() => showPreviewFun()}
-            d={
-              "M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
-            }
-          />
-        )}
       </div>
-      {showPreview && (
-        <>
-          <div className="flex">
-            <p className="bg-green-200 text-zinc-800 p-1 px-4 rounded-t-md brightness-75">
-              PREVIEW
-            </p>
-          </div>
-          <div
-            id="content"
-            className="w-8/12 p-3 py-6 bg-zinc-800 rounded-lg ring-1 ring-green-200 shadow-xl shadow-green-200/30 text-zinc-100"
-          ></div>
-        </>
-      )}
+      <div className="flex">
+        <p className="bg-green-200 text-zinc-800 p-1 px-4 rounded-t-md brightness-75">
+          PREVIEW
+        </p>
+      </div>
+      <div
+        id="content"
+        className="w-8/12 p-3 py-6 bg-zinc-800 rounded-lg ring-1 ring-green-200 shadow-xl shadow-green-200/20 text-zinc-100"
+      ></div>
     </div>
   );
 }
