@@ -13,49 +13,49 @@ const features = [
   {
     name: "Lightening fast Profile Creation",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
+      "Create your Profile ReadMe in just few clicks ! On an average, it takes less than one minute to create a perfect Profile ReadMe using GPRM",
     icon: LightningBoltIcon,
   },
   {
     name: "Add all Social Links",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
+      "We have added an option to add your Social Links to increase your reach and promote your works at one place.",
     icon: GlobeAltIcon,
   },
   {
     name: "Flex Your GitHub Stats",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
+      "Be Honest, everyone loves to flex their achievements. With tools such as ReadMe Stats, Most Used Languages, Streak Stats you can show your achievements.",
     icon: ChartBarIcon,
   },
   {
     name: "Show Your Tech Stack",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
+      "Select from over 300+ tech options and show your tech stack to everyone, Let them know what makes you awesome.",
     icon: DesktopComputerIcon,
   },
   {
     name: "Visitor Counter",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
+      "With the use of Visitors Counter you can see how many people viewed your profile, this gives you an idea about how popular you are on GitHub.",
     icon: UserGroupIcon,
   },
   {
     name: "Let people help you with Donations",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
+      "No matter what your aim is, money is required at some point to boost the process for getting closer to your aim. We give you an option to add Donation Links directly into your profile so that people can help you by donating.",
     icon: CurrencyDollarIcon,
   },
   {
     name: "Fun Components",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
+      "If fun is required everywhere, how can it be missing from your profile ? Now, You can cheer up other people by adding Random Memes and Quotes in your profile.",
     icon: EmojiHappyIcon,
   },
   {
     name: "GitHub Trophies",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
+      "Got any trophies/medals but oops! how can you show them on your profile? Don't worry, GitHub Trophies are the virtual trophies for you. Showcase them by adding it to your profile.",
     icon: FireIcon,
   },
 ];
@@ -72,8 +72,7 @@ export default function Features() {
             We got everything that you need !
           </p>
           <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-            Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam
-            voluptatum cupiditate veritatis in accusamus quisquam.
+          Create your perfect GitHub Profile ReadMe in the best possible way. Lots of features and tools included, all for free !
           </p>
         </div>
 
