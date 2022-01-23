@@ -1,5 +1,5 @@
 {
-  "name": "github-profile-generator",
+  "name": "github-profile-readme-maker",
   "private": true,
   "scripts": {
     "dev": "next dev",
