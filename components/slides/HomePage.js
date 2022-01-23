@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { db } from "../../config/firebase";
 import AnimatedText from "../elements/AnimatedText";
 import AboutMe from "./AboutMe";
 
@@ -26,17 +25,8 @@ export default function HomePage() {
     if (user != "") {
       if (user.replace(/ /g, "") != "") {
         username = user;
-        //
-        db.collection(username)
-          .add({ username: username })
-          .then(()=>{
-            setIsVisible(true);
-            topFunction();
-          })
-          .catch((error) => {
-            alert(error.message);
-          });
-        //
+          setIsVisible(true);
+          topFunction();
       } else {
         alert("Enter a Valid GitHub Username");
       }

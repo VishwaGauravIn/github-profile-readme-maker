@@ -5,12 +5,12 @@ import 'firebase/compat/firestore';
                   Firebase Attach
 ----------------------------------------------------*/
 var firebaseApp = firebase.initializeApp({
-    apiKey: process.env.REACT_APP_API_KEY,
-    authDomain: process.env.REACT_APP_AUTH_DOMAIN,
-    projectId: process.env.REACT_APP_PROJECT_ID,
-    storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
-    messagingSenderId: process.env.REACT_APP_MESSEGING_SENDER_ID,
-    appId: process.env.REACT_APP_APP_ID,
+    apiKey: process.env.NEXT_PUBLIC_apiKey,
+    authDomain: process.env.NEXT_PUBLIC_authDomain,
+    projectId: process.env.NEXT_PUBLIC_projectId,
+    storageBucket: process.env.NEXT_PUBLIC_storageBucket,
+    messagingSenderId: process.env.NEXT_PUBLIC_messagingSenderId,
+    appId: process.env.NEXT_PUBLIC_appId,
 
 });
 var db = firebaseApp.firestore();
