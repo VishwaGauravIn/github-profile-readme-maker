@@ -77,7 +77,7 @@ export default function Preview() {
       </div>
       <div
         id="content"
-        className="w-8/12 p-3 py-6 bg-zinc-800 rounded-lg ring-1 ring-green-200 shadow-xl shadow-green-200/20 text-zinc-100"
+        className="w-full md:w-8/12 p-3 py-6 bg-zinc-800 rounded-lg ring-1 ring-green-200 shadow-xl shadow-green-200/20 text-zinc-100"
       ></div>
     </div>
   );
