@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { useEffect } from "react/cjs/react.development";
 import { finaldata } from "./Extras";
 import ButtonWithSVG from "../elements/buttons/ButtonWithSVG";
-import { db } from "../../config/firebase";
-import { username } from "./HomePage";
+// import { db } from "../../config/firebase";
+// import { username } from "./HomePage";
 
 export default function Preview() {
   const [markdown, setMarkdown] = useState(finaldata);
