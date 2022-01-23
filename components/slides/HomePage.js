@@ -6,6 +6,7 @@ import ToastError from "../elements/toaster/ToastError";
 import AboutMe from "./AboutMe";
 import FAQ from "../home-components/FAQ";
 import Credits from "../home-components/Credits";
+import SocialLinks from "../home-components/SocialLinks";
 
 export default function HomePage() {
   const [isVisible, setIsVisible] = useState(false);
@@ -109,6 +110,7 @@ export default function HomePage() {
           )}
           <Features/>
           <GitHubAvailability/>
+          <SocialLinks/>
           <Credits/>
           <FAQ/>
         </div>
