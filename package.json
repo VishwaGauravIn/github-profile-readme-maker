@@ -8,6 +8,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "firebase": "^9.6.4",
     "markdown-it": "^12.3.2",
     "next": "12.0.8",
     "react": "17.0.2",
