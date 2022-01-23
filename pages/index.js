@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Animation from "../components/Animation";
 import Footer from "../components/elements/Footer";
-import Pagination from "../components/elements/Pagination";
 import NavBar from "../components/NavBar";
 import HomePage from "../components/slides/HomePage";
 

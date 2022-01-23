@@ -3,9 +3,11 @@ import { finaldata } from "./Extras";
 import ButtonWithSVG from "../elements/buttons/ButtonWithSVG";
 import { db } from "../../config/firebase";
 import { username } from "./HomePage";
+import ToastSuccess from "../toaster/ToastSuccess";
 
 export default function Preview() {
-  const [showPreview, setShowPreview] = useState(false);
+  const [copiedAlertVisible, setCopiedAlertVisible] = useState(false);
+  const [downloadAlertVisible, setDownloadAlertVisible] = useState(false);
   var md = require("markdown-it")({
     html: true,
     linkify: true,
@@ -27,6 +29,7 @@ export default function Preview() {
   function onCopy() {
     navigator.clipboard.writeText(finaldata);
     // Alert for Copied
+    copied();
   }
   function onDownload() {
     const element = document.createElement("a");
@@ -38,9 +41,26 @@ export default function Preview() {
     document.body.appendChild(element); // Required for this to work in FireFox
     element.click();
     // Alert for Downloaded
+    downloaded();
   }
   function reloadTab() {
     location.reload();
+  }
+  function copied() {
+    if (copiedAlertVisible !== true) {
+      setCopiedAlertVisible(true);
+      setTimeout(() => {
+        setCopiedAlertVisible(false);
+      }, 3000);
+    }
+  }
+  function downloaded() {
+    if (downloadAlertVisible !== true) {
+      setDownloadAlertVisible(true);
+      setTimeout(() => {
+        setDownloadAlertVisible(false);
+      }, 3000);
+    }
   }
   return (
     <div className="w-full flex flex-col items-center">
@@ -79,6 +99,8 @@ export default function Preview() {
         id="content"
         className="w-full md:w-8/12 p-3 py-6 bg-zinc-800 rounded-lg ring-1 ring-green-200 shadow-xl shadow-green-200/20 text-zinc-100"
       ></div>
+      {copiedAlertVisible && <ToastSuccess title="Copied Successfully !" />}
+      {downloadAlertVisible && <ToastSuccess title="Download Started !" />}
     </div>
   );
 }

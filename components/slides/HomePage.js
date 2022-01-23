@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import AnimatedText from "../elements/AnimatedText";
+import ToastError from "../toaster/ToastError";
 import AboutMe from "./AboutMe";
 
 export default function HomePage() {
   const [isVisible, setIsVisible] = useState(false);
+  const [alertVisible, setAlertVisible] = useState(false);
   // Submit on clicking Enter Button
   useEffect(() => {
     // Get the input field
@@ -25,19 +27,27 @@ export default function HomePage() {
     if (user != "") {
       if (user.replace(/ /g, "") != "") {
         username = user;
-          setIsVisible(true);
-          topFunction();
+        setIsVisible(true);
+        topFunction();
       } else {
-        alert("Enter a Valid GitHub Username");
+        invalidUsername();
       }
     } else {
-      alert("Enter a Valid GitHub Username");
+      invalidUsername();
     }
   }
   // When the user clicks on the button, scroll to the top of the document
   function topFunction() {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  }
+  function invalidUsername() {
+    if (alertVisible !== true) {
+      setAlertVisible(true);
+      setTimeout(() => {
+        setAlertVisible(false);
+      }, 4400);
+    }
   }
   return (
     <>
@@ -90,6 +100,9 @@ export default function HomePage() {
               />
             </div>
           </div>
+          {alertVisible && (
+            <ToastError title="Enter a Valid GitHub Username !" />
+          )}
           {/* <div className="flex w-full h-96"></div> */}
         </>
       )}
