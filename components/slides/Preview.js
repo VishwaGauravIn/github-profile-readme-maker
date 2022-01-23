@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { useEffect } from "react/cjs/react.development";
+import React, { useState, useEffect } from "react";
 import { finaldata } from "./Extras";
 import ButtonWithSVG from "../elements/buttons/ButtonWithSVG";
 import { db } from "../../config/firebase";
@@ -10,22 +9,22 @@ export default function Preview() {
   useEffect(() => {
     db.collection(username).add({ date: Date(), data: finaldata });
   }, []);
-  // var md = require("markdown-it")({
-  //   html: true,
-  //   linkify: true,
-  //   typographer: true,
-  //   breaks: true,
-  //   quotes: "“”‘’",
-  //   highlight: function (/*str, lang*/) {
-  //     return "";
-  //   },
-  // });
-  // function showPreviewFun() {
-  //   setShowPreview(!showPreview);
-  //   setTimeout(() => {
-  //     document.getElementById("content").innerHTML = md.render(finaldata);
-  //   }, 300);
-  // }
+  var md = require("markdown-it")({
+    html: true,
+    linkify: true,
+    typographer: true,
+    breaks: true,
+    quotes: "“”‘’",
+    highlight: function (/*str, lang*/) {
+      return "";
+    },
+  });
+  function showPreviewFun() {
+    setShowPreview(!showPreview);
+    setTimeout(() => {
+      document.getElementById("content").innerHTML = md.render(finaldata);
+    }, 300);
+  }
 
   function onCopy() {
     navigator.clipboard.writeText(finaldata);
@@ -72,7 +71,7 @@ export default function Preview() {
             "M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
           }
         />
-        {/* {showPreview ? (
+        {showPreview ? (
           <ButtonWithSVG
             title="Hide Preview"
             onClick={() => showPreviewFun()}
@@ -88,9 +87,9 @@ export default function Preview() {
               "M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
             }
           />
-        )} */}
+        )}
       </div>
-      {/* {showPreview && (
+      {showPreview && (
         <>
           <div className="flex">
             <p className="bg-green-200 text-zinc-800 p-1 px-4 rounded-t-md brightness-75">
@@ -102,7 +101,7 @@ export default function Preview() {
             className="w-8/12 p-3 py-6 bg-zinc-800 rounded-lg ring-1 ring-green-200 shadow-xl shadow-green-200/30 text-zinc-100"
           ></div>
         </>
-      )} */}
+      )}
     </div>
   );
 }
