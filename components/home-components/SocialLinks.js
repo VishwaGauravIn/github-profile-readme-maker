@@ -8,7 +8,10 @@ export default function SocialLinks() {
         <p className="text-3xl sm:text-4xl md:text-5xl font-medium">
           Our Social Links
         </p>
-        <div className="flex flex-col md:flex-row flex-wrap my-8 justify-center md:items-end">
+        <p className="text-gray-500 md:pl-10 my-6 md:text-lg 2xl:text-xl md:text-right">
+          We are available on Twitter, LinkedIn, and GitHub. You can connect with us to get notification about any new feature we add, any cool product we create or get early access of some cool projects !
+        </p>
+        <div className="flex flex-row flex-wrap justify-center md:items-end">
           <AnchorWithSVG
             url="https://linkedin.com/in/VishwaGauravIn"
             title="LinkedIn"
