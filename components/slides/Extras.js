@@ -9,6 +9,7 @@ import { socials } from "./Socials";
 import { techbadges } from "./TechStack";
 import { donate } from './Donate'
 import Pagination from "../elements/Pagination";
+import Preview from "./Preview";
 
 export default function Extras() {
   const [isVisible, setIsVisible] = useState(false);
@@ -89,12 +90,11 @@ ${techbadges.join(" ")}
   ${donate}
   `;
     }
-    console.log(finaldata)
   }
   return (
     <>
       {isVisible ? (
-        <></>
+        <Preview/>
       ) : (
         <div className="flex flex-col items-center fade-on-appear">
           <p className="w-full text-center text-3xl my-10">

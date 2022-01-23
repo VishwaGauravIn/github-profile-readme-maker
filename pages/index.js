@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>GPM : GitHub Profile Maker</title>
+        <title>GPRM : GitHub Profile ReadMe Maker</title>
         <meta
           name="description"
           content="Best Profile Generator, Create your perfect GitHub Profile ReadMe in the best possible way. Lots of features and tools included, all for free !"

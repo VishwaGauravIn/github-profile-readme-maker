@@ -1,0 +1,242 @@
+#content {
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+}
+#content > :first-child {
+    margin-top: 0 !important;
+}
+#content > :last-child {
+    margin-bottom: 0 !important;
+}
+#content pre[class*='language-']:hover .copied, #content pre:hover .copied {
+    visibility: visible;
+}
+#content pre[class*='language-'] .copied, #content pre .copied {
+    visibility: hidden;
+    display: flex;
+    position: absolute;
+    cursor: pointer;
+    color: #a5afbb;
+    top: 6px;
+    right: 6px;
+    border-radius: 5px;
+    background: #e3e3e3;
+    padding: 6px;
+    font-size: 12px;
+    transition: all 0.3s;
+}
+#content pre[class*='language-'] .copied::before, #content pre .copied::before {
+    content: ' ';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+#content pre[class*='language-'] .copied .octicon-copy, #content pre .copied .octicon-copy {
+    display: block;
+}
+#content pre[class*='language-'] .copied .octicon-check, #content pre .copied .octicon-check {
+    display: none;
+}
+#content pre[class*='language-'] .copied.active .octicon-copy, #content pre .copied.active .octicon-copy {
+    display: none;
+}
+#content pre[class*='language-'] .copied.active .octicon-check, #content pre .copied.active .octicon-check {
+    display: block;
+}
+#content pre[class*='language-'] .copied:hover, #content pre[class*='language-'] .copied:active, #content pre[class*='language-'] .copied.active, #content pre .copied:hover, #content pre .copied:active, #content pre .copied.active {
+    background: #2e9b33;
+    color: #fff;
+}
+#content code[class*='language-'], #content pre[class*='language-'] {
+    color: black;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    hyphens: none;
+}
+#content pre code {
+    display: block;
+    padding: 16px;
+    overflow: auto;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f6f8fa;
+    border-radius: 6px;
+}
+#content pre {
+    margin-bottom: 18px;
+    line-height: 1.45;
+    position: relative;
+    overflow-x: auto;
+    background-color: #f6f8fa;
+    border-radius: 3px;
+}
+#content code, #content tt {
+    background-color: rgba(27,31,35,0.05);
+    border-radius: 3px;
+    font-size: 85%;
+    margin: 0;
+    padding: 0.2em 0.4em;
+}
+#content pre, #content code, #content tt {
+    font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+}
+#content img {
+    max-width: 100%;
+    display: inline-block;
+    margin: 2px;
+}
+#content input {
+    vertical-align: middle;
+    margin: 0 0.2em 0.25em -1.6em;
+}
+#content input + p {
+    display: inline;
+}
+#content h1, #content h2 {
+    border-bottom: 1px solid #eaecef;
+    padding-bottom: 0.3em;
+}
+#content h1, #content h2, #content h3, #content h4, #content h5, #content h6 {
+    font-weight: 600;
+    line-height: 1.25;
+    margin-bottom: 16px;
+    margin-top: 24px;
+}
+#content h1 .anchor, #content h2 .anchor, #content h3 .anchor, #content h4 .anchor, #content h5 .anchor, #content h6 .anchor {
+    float: left;
+    padding-right: 4px;
+    margin-left: -20px;
+    line-height: 1;
+}
+#content h1 .octicon-link, #content h2 .octicon-link, #content h3 .octicon-link, #content h4 .octicon-link, #content h5 .octicon-link, #content h6 .octicon-link {
+    visibility: hidden;
+    vertical-align: middle;
+}
+#content h1:hover .octicon-link, #content h2:hover .octicon-link, #content h3:hover .octicon-link, #content h4:hover .octicon-link, #content h5:hover .octicon-link, #content h6:hover .octicon-link {
+    visibility: visible;
+}
+#content h1 {
+    font-size: 2em;
+}
+#content h2 {
+    font-size: 1.5em;
+}
+#content h3 {
+    font-size: 1.25em;
+}
+#content h4 {
+    font-size: 1em;
+}
+#content h5 {
+    font-size: 0.875em;
+}
+#content h6 {
+    font-size: 0.85em;
+}
+#content ol, #content ul {
+    padding-left: 2em;
+}
+#content ol > p, #content ul > p {
+    margin-bottom: 0;
+}
+#content ul {
+    margin-bottom: 16px;
+    margin-top: 0;
+    list-style: initial;
+}
+#content li {
+    display: list-item;
+}
+#content ul ul, #content ul ol, #content ol ol, #content ol ul {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+#content ul ul ul {
+    list-style-type: square;
+}
+#content ul ul {
+    list-style-type: circle;
+}
+#content ul {
+    list-style-type: disc;
+}
+#content > blockquote, #content > blockquote blockquote {
+    margin: 0;
+    border-left: 0.25em solid #dfe2e5;
+    color: #6a737d;
+    padding: 0 1em;
+}
+#content > blockquote > :last-child, #content > blockquote blockquote > :last-child {
+    margin-bottom: 0;
+}
+#content > blockquote > :first-child, #content > blockquote blockquote > :first-child {
+    margin-top: 0;
+}
+#content hr {
+    margin: 1.5em auto;
+    border: 0;
+    border-top: 2px dotted #eee;
+    height: 1px;
+}
+#content > table, #content > blockquote table {
+    display: block;
+    overflow: auto;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: 14px;
+}
+#content > table tr, #content > blockquote table tr {
+    background-color: #fff;
+    border-top: 1px solid #c6cbd1;
+}
+#content > table td, #content > table th, #content > blockquote table td, #content > blockquote table th {
+    border: 1px solid #dfe2e5;
+    padding: 6px 13px;
+}
+#content blockquote, #content details, #content dl, #content ol, #content p, #content pre, #content table, #content ul {
+    margin-bottom: 16px;
+    margin-top: 0;
+}
+#content a {
+    color: #0366d6;
+    text-decoration: none;
+}
+#content a:hover {
+    text-decoration: underline;
+}
+#content .namespace {
+    opacity: 0.7;
+}
+#content .token.important {
+    font-weight: normal;
+}
+#content .token.bold {
+    font-weight: bold;
+}
+#content .token.italic {
+    font-style: italic;
+}
+#content .token.entity {
+    cursor: help;
+}
+#content kbd {
+    background-color: #fafbfc;
+    border-bottom-color: #d1d5da;
+    border: 1px solid #d1d5da;
+    border-radius: 3px;
+    box-shadow: inset 0 -1px 0 #d1d5da;
+    color: #56595d;
+    display: inline-block;
+    font-size: 10px;
+    font-family: ui-monospace, SFMono-Regular, SF Mono, Consolas, Liberation Mono, Menlo, monospace;
+    line-height: 10px;
+    padding: 2px 4px;
+    vertical-align: middle;
+}
