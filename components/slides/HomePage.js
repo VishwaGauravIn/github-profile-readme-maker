@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import AnimatedText from "../elements/AnimatedText";
-import Features from "../Features";
-import GitHubAvailability from "../GitHubAvailability";
-import ToastError from "../toaster/ToastError";
+import Features from "../home-components/Features";
+import GitHubAvailability from "../home-components/GitHubAvailability";
+import ToastError from "../elements/toaster/ToastError";
 import AboutMe from "./AboutMe";
 
 export default function HomePage() {

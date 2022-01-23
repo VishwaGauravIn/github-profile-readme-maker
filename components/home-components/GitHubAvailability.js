@@ -1,5 +1,5 @@
 import React from "react";
-import AnchorWithSVG from "./elements/anchor/AnchorWithSVG";
+import AnchorWithSVG from "../elements/anchor/AnchorWithSVG";
 
 export default function GitHubAvailability() {
   return (
@@ -15,7 +15,7 @@ export default function GitHubAvailability() {
         </svg>
       </div>
       <div className="w-full md:w-6/12 flex flex-col justify-center my-6 md:my-0">
-          <p className="text-3xl sm:text-4xl md:text-5xl font-medium">We're Open Source</p>
+          <p className="text-3xl sm:text-4xl md:text-5xl font-medium">We&apos;re Open Source</p>
           <p className="text-gray-500 md:pr-10 my-6 md:text-lg 2xl:text-xl">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa corporis, magni quae deleniti at, assumenda dicta consectetur obcaecati ducimus iste, hic veritatis quibusdam voluptates atque accusantium velit optio cupiditate cum.
           </p>
