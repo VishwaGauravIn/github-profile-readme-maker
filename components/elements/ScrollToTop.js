@@ -12,7 +12,7 @@ export default function ScrollToTop() {
     });
   }
   return (
-    <div className="w-full flex justify-end">
+    <div className="w-full flex justify-center md:justify-end">
       <button
         className="p-4 rounded-full bg-green-300 text-zinc-800 brightness-75 hover:brightness-90 transition-all ease-in-out duration-200 active:scale-95"
         onClick={() => topFunction()}

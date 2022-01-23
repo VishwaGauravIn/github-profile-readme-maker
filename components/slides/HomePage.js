@@ -67,19 +67,19 @@ export default function HomePage() {
                 Best Profile Generator
               </p>
               {/* Text Input */}
-              <div className="flex mt-8 md:my-16 2xl:my-20 items-center">
+              <div className="flex flex-col sm:flex-row mt-8 md:my-16 2xl:my-20 items-center">
                 <input
                   type="text"
                   name=""
                   autoFocus="true"
                   id="username"
-                  className="border-b-2 border-green-200 bg-transparent w-11/12 md:w-10/12 lg:w-8/12 sm:text-sm md:text-lg lg:text-xl 2xl:text-3xl outline-none focus:border-green-300 focus:border-b-4 inline"
+                  className="border-b-2 border-green-200 bg-transparent w-full sm:w-11/12 md:w-10/12 lg:w-8/12 text-xl sm:text-3xl md:text-xl lg:text-2xl 2xl:text-3xl outline-none focus:border-green-300 focus:border-b-4 inline"
                   placeholder="Enter Your GitHub Username"
                 />
                 <button id="proceed" onClick={() => onNext()}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-8 w-12 cursor-pointer transition-all hover:ml-1 duration-200 ease-linear"
+                    className="h-8 w-12 cursor-pointer transition-all mt-4 sm:mt-0 hover:ml-1 duration-200 ease-linear"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -93,9 +93,7 @@ export default function HomePage() {
                   </svg>
                 </button>
               </div>
-              <div className="">
-                <AnimatedText />
-              </div>
+              <AnimatedText />
             </div>
             <div className="flex w-full mt-16 md:mt-0 md:w-6/12 justify-center">
               <img
@@ -109,12 +107,12 @@ export default function HomePage() {
           {alertVisible && (
             <ToastError title="Enter a Valid GitHub Username !" />
           )}
-          <Features/>
-          <GitHubAvailability/>
-          <SocialLinks/>
-          <Credits/>
+          <Features />
+          <GitHubAvailability />
+          <SocialLinks />
+          <Credits />
           {/* <FAQ/> */}
-          <ScrollToTop/>
+          <ScrollToTop />
         </div>
       )}
     </>

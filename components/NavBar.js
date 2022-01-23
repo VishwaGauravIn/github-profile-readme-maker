@@ -7,7 +7,7 @@ export default function NavBar() {
       <p className="text-4xl font-medium text-green-300">GPRM</p>
       <a
         href="https://paypal.me/VishwaGauravIn"
-        className="flex absolute right-0 justify-center items-center p-2 px-6 bg-green-300 text-green-900 font-semibold rounded-full shadow-lg hover:shadow-green-300/30 hover:scale-[1.02] transition-all ease-in-out duration-100 scale-75 -mr-6 md:mr-0 sm:scale-100"
+        className="flex absolute right-0 justify-center items-center p-2 px-6 bg-green-300 text-green-900 font-semibold rounded-full shadow-lg hover:shadow-green-300/30 sm:hover:scale-[1.02] transition-all ease-in-out duration-100 scale-75 -mr-6 md:mr-0 sm:scale-100"
         target="_blank"
         rel="noopener noreferrer"
       >
