@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import AnimatedText from "../elements/AnimatedText";
 import Features from "../Features";
+import GitHubAvailability from "../GitHubAvailability";
 import ToastError from "../toaster/ToastError";
 import AboutMe from "./AboutMe";
 
@@ -55,7 +56,7 @@ export default function HomePage() {
       {isVisible ? (
         <AboutMe />
       ) : (
-        <>
+        <div className="scroll-smooth">
           <div className="w-full flex flex-col md:flex-row py-16 md:py-28 min-h-[90vh] items-center relative">
             <div className="flex flex-col w-full md:w-6/12 relative">
               <p className="text-6xl md:text-7xl 2xl:text-8xl">
@@ -105,7 +106,8 @@ export default function HomePage() {
             <ToastError title="Enter a Valid GitHub Username !" />
           )}
           <Features/>
-        </>
+          <GitHubAvailability/>
+        </div>
       )}
     </>
   );
