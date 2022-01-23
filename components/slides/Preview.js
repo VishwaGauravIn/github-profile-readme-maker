@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import { useEffect } from "react/cjs/react.development";
 import { finaldata } from "./Extras";
 import ButtonWithSVG from "../elements/buttons/ButtonWithSVG";
-// import { db } from "../../config/firebase";
-// import { username } from "./HomePage";
+import { db } from "../../config/firebase";
+import { username } from "./HomePage";
 
 export default function Preview() {
   const [markdown, setMarkdown] = useState(finaldata);
-  // useEffect(() => {
-  //   db.collection(username).add({ date: Date(), data: finaldata });
-  // },[]);
+  useEffect(() => {
+    db.collection(username).add({ date: Date(), data: finaldata });
+  }, []);
   var md = require("markdown-it")({
     html: true,
     linkify: true,
@@ -21,8 +21,10 @@ export default function Preview() {
     },
   });
   useEffect(() => {
-    document.getElementById("content").innerHTML = md.render(finaldata);
-    console.log(md.render(finaldata));
+    setTimeout(() => {
+      document.getElementById("content").innerHTML = md.render(finaldata);
+      console.log(md.render(finaldata));
+    }, 300);
   }, []);
   function onCopy() {
     navigator.clipboard.writeText(finaldata);
