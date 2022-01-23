@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import AnimatedText from "../elements/AnimatedText";
+import Features from "../Features";
 import ToastError from "../toaster/ToastError";
 import AboutMe from "./AboutMe";
 
@@ -103,7 +104,7 @@ export default function HomePage() {
           {alertVisible && (
             <ToastError title="Enter a Valid GitHub Username !" />
           )}
-          {/* <div className="flex w-full h-96"></div> */}
+          <Features/>
         </>
       )}
     </>

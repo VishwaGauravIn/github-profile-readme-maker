@@ -9,7 +9,7 @@ export default function Footer() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        {"</>"} with&nbsp;💛&nbsp;Vishwa Gaurav
+        {"</>"} & Crafted with&nbsp;💛&nbsp;Vishwa Gaurav
       </a>
     </div>
   );
