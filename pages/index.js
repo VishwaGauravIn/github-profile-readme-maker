@@ -67,7 +67,7 @@ export default function Home() {
           rel="stylesheet"
         ></link>
       </Head>
-      <body className="overflow-x-hidden max-w-[100vw] p-4 text-green-200">
+      <body className="overflow-x-hidden max-w-[100vw] p-3 md:p-4 text-green-200">
         <NavBar />
         <HomePage />
         <Footer />

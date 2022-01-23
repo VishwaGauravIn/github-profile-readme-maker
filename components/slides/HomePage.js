@@ -7,6 +7,7 @@ import AboutMe from "./AboutMe";
 import FAQ from "../home-components/FAQ";
 import Credits from "../home-components/Credits";
 import SocialLinks from "../home-components/SocialLinks";
+import ScrollToTop from "../elements/ScrollToTop";
 
 export default function HomePage() {
   const [isVisible, setIsVisible] = useState(false);
@@ -112,7 +113,8 @@ export default function HomePage() {
           <GitHubAvailability/>
           <SocialLinks/>
           <Credits/>
-          <FAQ/>
+          {/* <FAQ/> */}
+          <ScrollToTop/>
         </div>
       )}
     </>
