@@ -90,7 +90,7 @@ export default function HomePage() {
               />
             </div>
           </div>
-          <div className="flex w-full h-96"></div>
+          {/* <div className="flex w-full h-96"></div> */}
         </>
       )}
     </>
