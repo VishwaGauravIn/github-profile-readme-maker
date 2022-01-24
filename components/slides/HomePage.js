@@ -108,10 +108,10 @@ export default function HomePage() {
             <ToastError title="Enter a Valid GitHub Username !" />
           )}
           <Features />
-          <GitHubAvailability />
           <SocialLinks />
+          <GitHubAvailability />
+          <FAQ/>
           <Credits />
-          {/* <FAQ/> */}
           <ScrollToTop />
         </div>
       )}
