@@ -7,7 +7,7 @@ import { githubstats } from "./GitHubCards";
 import { username } from "./HomePage";
 import { socials } from "./Socials";
 import { techbadges } from "./TechStack";
-import { donate } from './Donate'
+import { donate } from "./Donate";
 import Pagination from "../elements/Pagination";
 import Preview from "./Preview";
 
@@ -88,13 +88,15 @@ ${techbadges.join(" ")}
         `
   ## 💰You can help me by Donating
   ${donate}
+
+  <!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
   `;
     }
   }
   return (
     <>
       {isVisible ? (
-        <Preview/>
+        <Preview />
       ) : (
         <div className="flex flex-col items-center fade-on-appear">
           <p className="w-full text-center text-3xl my-10">
@@ -174,7 +176,7 @@ ${techbadges.join(" ")}
             <CheckBox id="memechk" title="Add Random Memes" />
           </div>
           <NextButton onClick={() => onNext()} />
-          <Pagination val={6}/>
+          <Pagination val={6} />
         </div>
       )}
     </>

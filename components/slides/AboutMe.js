@@ -53,7 +53,7 @@ ${document.getElementById("aboutme").value}
               <NextButton onClick={() => onNext()} />
             </div>
           </div>
-          <Pagination val={1}/>
+          <Pagination val={1} />
         </div>
       )}
     </>

@@ -81,7 +81,7 @@ export default function GitHubStats() {
             />
           </div>
           <NextButton onClick={() => onNext()} />
-          <Pagination val={2}/>
+          <Pagination val={2} />
         </div>
       )}
     </>

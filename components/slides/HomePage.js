@@ -110,7 +110,7 @@ export default function HomePage() {
           <Features />
           <SocialLinks />
           <GitHubAvailability />
-          <FAQ/>
+          <FAQ />
           <Credits />
           <ScrollToTop />
         </div>

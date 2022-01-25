@@ -100,7 +100,7 @@ export default function Preview() {
         id="content"
         className="w-full md:w-8/12 p-3 py-6 bg-zinc-800 rounded-lg ring-1 ring-green-200 shadow-xl shadow-green-200/20 text-zinc-100"
       ></div>
-      <ShareUs/>
+      <ShareUs />
       {copiedAlertVisible && <ToastSuccess title="Copied Successfully !" />}
       {downloadAlertVisible && <ToastSuccess title="Download Started !" />}
     </div>

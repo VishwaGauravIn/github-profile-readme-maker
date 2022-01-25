@@ -72,7 +72,8 @@ export default function Features() {
             We got everything that you need !
           </p>
           <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-          Create your perfect GitHub Profile ReadMe in the best possible way. Lots of features and tools included, all for free !
+            Create your perfect GitHub Profile ReadMe in the best possible way.
+            Lots of features and tools included, all for free !
           </p>
         </div>
 

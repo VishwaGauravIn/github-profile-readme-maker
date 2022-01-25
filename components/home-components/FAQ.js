@@ -15,7 +15,10 @@ export default function FAQ() {
           </dt>
           <dd className="mb-10 lg:mb-16">
             <p>
-              Not at all, only GitHub username is mandatory, all the other sections are optional. It&apos;s all your choice, you can fill them depending on your requirement, you have all the options for customisation. 
+              Not at all, only GitHub username is mandatory, all the other
+              sections are optional. It&apos;s all your choice, you can fill
+              them depending on your requirement, you have all the options for
+              customisation.
             </p>
           </dd>
           <dt className="mb-4">
@@ -25,7 +28,10 @@ export default function FAQ() {
           </dt>
           <dd className="mb-10 lg:mb-16">
             <p>
-              This is a complete No-Code solution so you don&apos;t need any coding experience. You just have to fill sections and we will create a perfect GitHub Profile ReadMe for you for free! Sounds cool? Try now!
+              This is a complete No-Code solution so you don&apos;t need any
+              coding experience. You just have to fill sections and we will
+              create a perfect GitHub Profile ReadMe for you for free! Sounds
+              cool? Try now!
             </p>
           </dd>
           <dt className="mb-4">
@@ -35,12 +41,32 @@ export default function FAQ() {
           </dt>
           <dd className="mb-10 lg:mb-16">
             <p>
-              If you already have your personal repository (personal repository name is same as your GitHub username) then you can copy paste the code generated from GPRM in your ReadMe file. If you don&apos;t have your personal repository then follow this : <br/>
-              <b>Step 1 :</b> Go to <a href="https://github.com/new" className="text-cyan-700" target="_blank" rel="noopener noreferrer">https://github.com/new</a> and enter the same name as your GitHub username into the Repository name field.<br/>
-              <b>Step 2 :</b> Leave the repo as a Public repo (by default).<br/>
-              <b>Step 3 :</b> Also, make sure to initialize it with a README to get started.<br/>
-              <b>Step 4 :</b> Paste the code generated from this website inside your ReadMe file.<br/>
-              <b>Step 5 :</b> Commit the changes to add a ReadMe to your GitHub Account.
+              If you already have your personal repository (personal repository
+              name is same as your GitHub username) then you can copy paste the
+              code generated from GPRM in your ReadMe file. If you don&apos;t
+              have your personal repository then follow this : <br />
+              <b>Step 1 :</b> Go to{" "}
+              <a
+                href="https://github.com/new"
+                className="text-cyan-700"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                https://github.com/new
+              </a>{" "}
+              and enter the same name as your GitHub username into the
+              Repository name field.
+              <br />
+              <b>Step 2 :</b> Leave the repo as a Public repo (by default).
+              <br />
+              <b>Step 3 :</b> Also, make sure to initialize it with a README to
+              get started.
+              <br />
+              <b>Step 4 :</b> Paste the code generated from this website inside
+              your ReadMe file.
+              <br />
+              <b>Step 5 :</b> Commit the changes to add a ReadMe to your GitHub
+              Account.
             </p>
           </dd>
         </dl>

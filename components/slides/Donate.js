@@ -35,12 +35,12 @@ export default function Donate() {
           document.getElementById("kofi").value
         }) `;
     }
-    setIsVisible(true)
+    setIsVisible(true);
   }
   return (
-      <>
+    <>
       {isVisible ? (
-          <Extras/>
+        <Extras />
       ) : (
         <div className="flex flex-col items-center fade-on-appear">
           <p className="w-full text-center text-3xl my-10">
@@ -81,7 +81,7 @@ export default function Donate() {
               />
               <div className="flex w-full md:w-10/12 justify-center md:justify-end mt-4">
                 <NextButton onClick={() => onNext()} />
-                <Pagination val={5}/>
+                <Pagination val={5} />
               </div>
             </div>
           </div>

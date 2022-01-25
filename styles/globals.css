@@ -45,7 +45,7 @@ html {
 }
 /* Animated Underline End */
 
-.fade-on-appear{
+.fade-on-appear {
   animation: fadein 0.5s;
 }
 

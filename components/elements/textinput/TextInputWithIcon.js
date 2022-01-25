@@ -1,10 +1,6 @@
 import React from "react";
 
-export default function TextInputWithIcon({
-  id,
-  children,
-  placeholder,
-}) {
+export default function TextInputWithIcon({ id, children, placeholder }) {
   return (
     <div className="flex w-full md:w-5/12 my-2">
       <input

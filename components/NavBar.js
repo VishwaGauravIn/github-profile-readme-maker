@@ -3,7 +3,7 @@ import React from "react";
 export default function NavBar() {
   return (
     <div className="w-full flex text-green-300 items-center relative">
-      <img src="/logo.png" alt="" className="w-8 h-8 mr-2"/>
+      <img src="/logo.png" alt="" className="w-8 h-8 mr-2" />
       <p className="text-4xl font-medium text-green-300">GPRM</p>
       <a
         href="https://paypal.me/VishwaGauravIn"

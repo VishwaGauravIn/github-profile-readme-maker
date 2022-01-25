@@ -8,49 +8,105 @@ export default function Socials() {
   const [isVisible, setIsVisible] = useState(false);
   function onNext() {
     if (document.getElementById("behance").value != "") {
-        socials = socials + `[![Behance](https://img.shields.io/badge/Behance-1769ff?logo=behance&logoColor=white)](https://behance.net/${document.getElementById("behance").value}) `
+      socials =
+        socials +
+        `[![Behance](https://img.shields.io/badge/Behance-1769ff?logo=behance&logoColor=white)](https://behance.net/${
+          document.getElementById("behance").value
+        }) `;
     }
     if (document.getElementById("discord").value != "") {
-        socials = socials + `[![Discord](https://img.shields.io/badge/Discord-%237289DA.svg?logo=discord&logoColor=white)](htttps://discord.gg/${document.getElementById("discord").value}) `
+      socials =
+        socials +
+        `[![Discord](https://img.shields.io/badge/Discord-%237289DA.svg?logo=discord&logoColor=white)](htttps://discord.gg/${
+          document.getElementById("discord").value
+        }) `;
     }
     if (document.getElementById("facebook").value != "") {
-        socials = socials + `[![Facebook](https://img.shields.io/badge/Facebook-%231877F2.svg?logo=Facebook&logoColor=white)](https://facebook.com/${document.getElementById("facebook").value}) `
+      socials =
+        socials +
+        `[![Facebook](https://img.shields.io/badge/Facebook-%231877F2.svg?logo=Facebook&logoColor=white)](https://facebook.com/${
+          document.getElementById("facebook").value
+        }) `;
     }
     if (document.getElementById("instagram").value != "") {
-        socials = socials + `[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/${document.getElementById("instagram").value}) `
+      socials =
+        socials +
+        `[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/${
+          document.getElementById("instagram").value
+        }) `;
     }
     if (document.getElementById("linkedin").value != "") {
-        socials = socials + `[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/${document.getElementById("linkedin").value}) `
+      socials =
+        socials +
+        `[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/${
+          document.getElementById("linkedin").value
+        }) `;
     }
     if (document.getElementById("medium").value != "") {
-        socials = socials + `[![Medium](https://img.shields.io/badge/Medium-12100E?logo=medium&logoColor=white)](https://medium.com/@${document.getElementById("medium").value}) `
+      socials =
+        socials +
+        `[![Medium](https://img.shields.io/badge/Medium-12100E?logo=medium&logoColor=white)](https://medium.com/@${
+          document.getElementById("medium").value
+        }) `;
     }
     if (document.getElementById("pinterest").value != "") {
-        socials = socials + `[![Pinterest](https://img.shields.io/badge/Pinterest-%23E60023.svg?logo=Pinterest&logoColor=white)](https://pinterest.com/${document.getElementById("pinterest").value}) `
+      socials =
+        socials +
+        `[![Pinterest](https://img.shields.io/badge/Pinterest-%23E60023.svg?logo=Pinterest&logoColor=white)](https://pinterest.com/${
+          document.getElementById("pinterest").value
+        }) `;
     }
     if (document.getElementById("quora").value != "") {
-        socials = socials + `[![Quora](https://img.shields.io/badge/Quora-%23B92B27.svg?logo=Quora&logoColor=white)](https://quora.com/profile/${document.getElementById("quora").value}) `
+      socials =
+        socials +
+        `[![Quora](https://img.shields.io/badge/Quora-%23B92B27.svg?logo=Quora&logoColor=white)](https://quora.com/profile/${
+          document.getElementById("quora").value
+        }) `;
     }
     if (document.getElementById("reddit").value != "") {
-        socials = socials + `[![Reddit](https://img.shields.io/badge/Reddit-%23FF4500.svg?logo=Reddit&logoColor=white)](https://reddit.com/user/${document.getElementById("reddit").value}) `
+      socials =
+        socials +
+        `[![Reddit](https://img.shields.io/badge/Reddit-%23FF4500.svg?logo=Reddit&logoColor=white)](https://reddit.com/user/${
+          document.getElementById("reddit").value
+        }) `;
     }
     if (document.getElementById("stackoverflow").value != "") {
-        socials = socials + `[![Stack Overflow](https://img.shields.io/badge/-Stackoverflow-FE7A16?logo=stack-overflow&logoColor=white)](https://stackoverflow.com/users/${document.getElementById("stackoverflow").value}) `
+      socials =
+        socials +
+        `[![Stack Overflow](https://img.shields.io/badge/-Stackoverflow-FE7A16?logo=stack-overflow&logoColor=white)](https://stackoverflow.com/users/${
+          document.getElementById("stackoverflow").value
+        }) `;
     }
     if (document.getElementById("tiktok").value != "") {
-        socials = socials + `[![TikTok](https://img.shields.io/badge/TikTok-%23000000.svg?logo=TikTok&logoColor=white)](https://tiktok.com/@${document.getElementById("tiktok").value}) `
+      socials =
+        socials +
+        `[![TikTok](https://img.shields.io/badge/TikTok-%23000000.svg?logo=TikTok&logoColor=white)](https://tiktok.com/@${
+          document.getElementById("tiktok").value
+        }) `;
     }
     if (document.getElementById("twitch").value != "") {
-        socials = socials + `[![Twitch](https://img.shields.io/badge/Twitch-%239146FF.svg?logo=Twitch&logoColor=white)](https://twitch.tv/${document.getElementById("twitch").value}) `
+      socials =
+        socials +
+        `[![Twitch](https://img.shields.io/badge/Twitch-%239146FF.svg?logo=Twitch&logoColor=white)](https://twitch.tv/${
+          document.getElementById("twitch").value
+        }) `;
     }
     if (document.getElementById("twitter").value != "") {
-        socials = socials + `[![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?logo=Twitter&logoColor=white)](https://twitter.com/${document.getElementById("twitter").value}) `
+      socials =
+        socials +
+        `[![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?logo=Twitter&logoColor=white)](https://twitter.com/${
+          document.getElementById("twitter").value
+        }) `;
     }
     if (document.getElementById("youtube").value != "") {
-        socials = socials + `[![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?logo=YouTube&logoColor=white)](https://youtube.com/c/${document.getElementById("youtube").value}) `
+      socials =
+        socials +
+        `[![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?logo=YouTube&logoColor=white)](https://youtube.com/c/${
+          document.getElementById("youtube").value
+        }) `;
     }
-    console.log(socials)
-    setIsVisible(true)
+    console.log(socials);
+    setIsVisible(true);
   }
   return (
     <>
@@ -110,13 +166,13 @@ export default function Socials() {
             </TextInputWithIcon>
           </div>
           <NextButton onClick={() => onNext()} />
-          <Pagination val={3}/>
+          <Pagination val={3} />
         </div>
       )}
     </>
   );
 }
-export var socials = ``
+export var socials = ``;
 /* TEMPLATE
             <TextInputWithIcon
               id=""

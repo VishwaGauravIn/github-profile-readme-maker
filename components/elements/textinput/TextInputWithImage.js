@@ -1,10 +1,6 @@
 import React from "react";
 
-export default function TextInputWithImage({
-  id,
-  imgUrl,
-  placeholder,
-}) {
+export default function TextInputWithImage({ id, imgUrl, placeholder }) {
   return (
     <div className="flex w-full md:w-10/12 my-2">
       <input
@@ -16,7 +12,11 @@ export default function TextInputWithImage({
 
       <label htmlFor={id} className="p-5">
         <span className="sr-only"> {id} </span>
-            <img src={imgUrl} alt="" className="w-12 aspect-square bg-green-100 rounded-md p-1"/>
+        <img
+          src={imgUrl}
+          alt=""
+          className="w-12 aspect-square bg-green-100 rounded-md p-1"
+        />
       </label>
     </div>
   );

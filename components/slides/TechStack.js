@@ -9,7 +9,7 @@ export default function TechStack() {
   return (
     <>
       {isVisible ? (
-        <Donate/>
+        <Donate />
       ) : (
         <div className="flex flex-col items-center fade-on-appear">
           <p className="w-full text-center text-3xl my-10">
@@ -1457,7 +1457,7 @@ export default function TechStack() {
             </div>
           </div>
           <NextButton onClick={() => setIsVisible(true)} />
-          <Pagination val={4}/>
+          <Pagination val={4} />
         </div>
       )}
     </>
