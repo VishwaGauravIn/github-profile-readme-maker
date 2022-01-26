@@ -10,6 +10,7 @@ import { techbadges } from "./TechStack";
 import { donate } from "./Donate";
 import Pagination from "../elements/Pagination";
 import Preview from "./Preview";
+import { badgeStyle } from "./TechStack";
 
 export default function Extras() {
   const [isVisible, setIsVisible] = useState(false);
@@ -78,7 +79,7 @@ ${socials}
         finaldata +
         `
 # 💻Tech Stack
-${techbadges.join(" ")}
+${techbadges.join(" ").replaceAll("for-the-badge", badgeStyle)}
 `;
     }
     finaldata = finaldata + githubstats + extras;

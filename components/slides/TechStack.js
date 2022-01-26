@@ -6,6 +6,7 @@ import Donate from "./Donate";
 
 export default function TechStack() {
   const [isVisible, setIsVisible] = useState(false);
+  const [BadgeStyle, setBadgeStyle] = useState("for-the-badge");
   return (
     <>
       {isVisible ? (
@@ -1456,6 +1457,41 @@ export default function TechStack() {
               />
             </div>
           </div>
+          {/* Select Badge Type (with preview) */}
+          <div className="flex flex-row flex-wrap justify-center items-center border p-2 px-4 border-green-300/50 rounded-md mb-6">
+            Theme:
+            <select
+              id="badgestyle"
+              onChange={() =>
+                (badgeStyle =
+                  document.getElementById("badgestyle").value) &&
+                  setBadgeStyle(document.getElementById("badgestyle").value)
+              }
+              className="bg-transparent py-1 px-2 outline-none w-max"
+            >
+              <option value="for-the-badge" className="bg-zinc-900">
+                For the badge
+              </option>
+              <option value="flat" className="bg-zinc-900">
+                Flat
+              </option>
+              <option value="flat-square" className="bg-zinc-900">
+                Flat Square
+              </option>
+              <option value="plastic" className="bg-zinc-900">
+                Plastic
+              </option>
+              {/* Social style is not enabled as it is not compatible with all badges */}
+              {/* <option value="social" className="bg-zinc-900">
+                Social
+              </option> */}
+            </select>
+            <img
+              src={`https://img.shields.io/badge/Preview-1ED760?style=${BadgeStyle}&logo=spotify&logoColor=white`}
+              alt=""
+              className="w-max max-w-xs ml-4"
+            />
+          </div>
           <NextButton onClick={() => setIsVisible(true)} />
           <Pagination val={4} />
         </div>
@@ -1464,3 +1500,4 @@ export default function TechStack() {
   );
 }
 export var techbadges = [];
+export var badgeStyle = "for-the-badge";
