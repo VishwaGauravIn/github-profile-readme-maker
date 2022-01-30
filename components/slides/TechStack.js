@@ -834,7 +834,7 @@ export default function TechStack() {
                 data={techbadges}
               />
               <BadgeSelect
-                label="SYMPHONY"
+                label="SYMFONY"
                 url={
                   "![Symfony](https://img.shields.io/badge/symfony-%23000000.svg?style=for-the-badge&logo=symfony&logoColor=white)"
                 }
