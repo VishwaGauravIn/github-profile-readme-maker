@@ -58,9 +58,7 @@ export default function Extras() {
         extras +
         `
 ---
-[![](${document
-          .getElementById("visitors")
-          .getAttribute("src")})](https://visitorcount.itsvg.in)
+[![](https://visitcount.itsvg.in/api?id=${username}&icon=${icon}&color=${color})](https://visitorcount.itsvg.in)
 `;
     }
     createFinalData();
@@ -177,7 +175,7 @@ ${techbadges.join(" ").replaceAll("for-the-badge", badgeStyle)}
             </div>
             <img
               id="visitors"
-              src={`https://visitcount.itsvg.in/api?id=${username}&icon=${icon}&color=${color}`}
+              src={`https://visitcount.itsvg.in/api/test?icon=${icon}&color=${color}`}
               alt=""
               className="md:ml-36 mb-4"
             />
