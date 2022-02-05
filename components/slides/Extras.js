@@ -19,6 +19,8 @@ export default function Extras() {
   const [background, setBackground] = useState(false);
   const [quoteTheme, setQuoteTheme] = useState("radical");
   const [layout, setLayout] = useState("horizontal");
+  const [color, setColor] = useState(0);
+  const [icon, setIcon] = useState(0);
   function changeLayout() {
     if (layout === "horizontal") {
       setLayout("vetical");
@@ -56,7 +58,9 @@ export default function Extras() {
         extras +
         `
 ---
-![](${document.getElementById("visitors").getAttribute("src")})
+[![](${document
+          .getElementById("visitors")
+          .getAttribute("src")})](https://visitorcount.itsvg.in)
 `;
     }
     createFinalData();
@@ -137,6 +141,51 @@ ${techbadges.join(" ").replaceAll("for-the-badge", badgeStyle)}
               alt=""
             />
             <CheckBox id="trophychk" title="Add GitHub Trophies" />
+            {/* Visitors Badge */}
+            {/* Options */}
+            <div className="flex flex-wrap justify-center items-center py-6">
+              Color:
+              <select
+                id="color"
+                onChange={() =>
+                  setColor(document.getElementById("color").value)
+                }
+                className="bg-transparent py-1 px-2 outline-none mr-2"
+              >
+                {colors.map((color, index) => {
+                  return (
+                    <option key={index} value={index} className="bg-zinc-900">
+                      {color}
+                    </option>
+                  );
+                })}
+              </select>
+              Icon:
+              <select
+                id="icon"
+                onChange={() => setIcon(document.getElementById("icon").value)}
+                className="bg-transparent py-1 px-2 outline-none"
+              >
+                {icons.map((icon, index) => {
+                  return (
+                    <option key={index} value={index} className="bg-zinc-900">
+                      {icon}
+                    </option>
+                  );
+                })}
+              </select>
+            </div>
+            <img
+              id="visitors"
+              src={`https://visitcount.itsvg.in/api?id=${username}&icon=${icon}&color=${color}`}
+              alt=""
+              className="md:ml-36 mb-4"
+            />
+            <CheckBox
+              id="visitorschk"
+              defaultChecked={true}
+              title="Add Visitors Count"
+            />
             {/* Options */}
             <div className="flex flex-wrap justify-center items-center mt-4 my-2">
               Theme:
@@ -165,15 +214,7 @@ ${techbadges.join(" ").replaceAll("for-the-badge", badgeStyle)}
               alt=""
             />
             <CheckBox id="quotechk" title="Add Random Dev Quotes" />
-            {/* Visitors Badge */}
-            <img
-              className="m-2 select-none pointer-events-none"
-              draggable="false"
-              id="visitors"
-              src={`https://komarev.com/ghpvc/?username=${username}&label=Visitors+Count&color=brightgreen`}
-              alt=""
-            />
-            <CheckBox id="visitorschk" title="Add Visitors Count" />
+
             <CheckBox id="memechk" title="Add Random Memes" />
           </div>
           <NextButton onClick={() => onNext()} />
@@ -215,6 +256,35 @@ const quoteThemes = [
   "merko",
   "gruvbox",
   "tokyonight",
+];
+
+const colors = [
+  "cyan",
+  "blue",
+  "amber",
+  "green",
+  "red",
+  "rose",
+  "indigo",
+  "orange",
+  "emerald",
+  "teal",
+  "pink",
+  "fuchsia",
+  "neutral",
+];
+
+const icons = [
+  "default",
+  "bar",
+  "code",
+  "cursor",
+  "emoji",
+  "eye",
+  "fire",
+  "heart",
+  "bolt",
+  "star",
 ];
 
 export var extras = ``;
