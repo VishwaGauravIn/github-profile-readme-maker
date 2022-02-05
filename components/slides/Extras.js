@@ -58,7 +58,7 @@ export default function Extras() {
         extras +
         `
 ---
-[![](https://visitcount.itsvg.in/api?id=${username}&icon=${icon}&color=${color})](https://visitorcount.itsvg.in)
+[![](https://visitcount.itsvg.in/api?id=${username}&icon=${icon}&color=${color})](https://visitcount.itsvg.in)
 `;
     }
     createFinalData();
