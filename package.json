@@ -11,7 +11,7 @@
     "@heroicons/react": "^1.0.5",
     "firebase": "^9.6.4",
     "markdown-it": "^12.3.2",
-    "next": "12.0.8",
+    "next": "12.1.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-text-loop": "^2.3.0"
