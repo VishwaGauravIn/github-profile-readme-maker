@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import AnimatedText from "../elements/AnimatedText";
 import Features from "../home-components/Features";
 import GitHubAvailability from "../home-components/GitHubAvailability";
@@ -8,36 +8,17 @@ import FAQ from "../home-components/FAQ";
 import Credits from "../home-components/Credits";
 import SocialLinks from "../home-components/SocialLinks";
 import ScrollToTop from "../elements/ScrollToTop";
+import { RIGHT_ARROW_SVG } from "../elements/SVG";
 
 export default function HomePage() {
   const [isVisible, setIsVisible] = useState(false);
   const [alertVisible, setAlertVisible] = useState(false);
-  // Submit on clicking Enter Button
-  useEffect(() => {
-    // Get the input field
-    var input = document.getElementById("username");
-
-    // Execute a function when the user releases a key on the keyboard
-    input.addEventListener("keyup", function (event) {
-      // Number 13 is the "Enter" key on the keyboard
-      if (event.keyCode === 13) {
-        // Cancel the default action, if needed
-        event.preventDefault();
-        // Trigger the button element with a click
-        document.getElementById("proceed").click();
-      }
-    });
-  }, []);
+  const [input, setInput] = useState("");
   function onNext() {
-    let user = document.getElementById("username").value;
-    if (user != "") {
-      if (user.replace(/ /g, "") != "") {
-        username = user;
-        setIsVisible(true);
-        topFunction();
-      } else {
-        invalidUsername();
-      }
+    if (input != "" && input.replace(/ /g, "") != "") {
+      username = input;
+      setIsVisible(true);
+      topFunction();
     } else {
       invalidUsername();
     }
@@ -47,6 +28,7 @@ export default function HomePage() {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
   }
+
   function invalidUsername() {
     if (alertVisible !== true) {
       setAlertVisible(true);
@@ -68,30 +50,19 @@ export default function HomePage() {
               </p>
               {/* Text Input */}
               <div className="flex flex-col sm:flex-row mt-8 md:my-16 2xl:my-20 items-center">
-                <input
-                  type="text"
-                  name=""
-                  autoFocus="true"
-                  id="username"
-                  className="border-b-2 border-green-200 bg-transparent w-full sm:w-11/12 md:w-10/12 lg:w-8/12 text-xl sm:text-3xl md:text-xl lg:text-2xl 2xl:text-3xl outline-none focus:border-green-300 focus:border-b-4 inline"
-                  placeholder="Enter Your GitHub Username"
-                />
-                <button id="proceed" onClick={() => onNext()}>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-8 w-12 cursor-pointer transition-all mt-4 sm:mt-0 hover:ml-1 duration-200 ease-linear"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M17 8l4 4m0 0l-4 4m4-4H3"
-                    />
-                  </svg>
-                </button>
+                <form className="w-full" onSubmit={onNext}>
+                  <input
+                    type="text"
+                    value={input}
+                    onChange={(e) => setInput(e.target.value)}
+                    autoFocus="true"
+                    className="border-b-2 border-green-200 bg-transparent w-full sm:w-11/12 md:w-10/12 lg:w-8/12 text-xl sm:text-3xl md:text-xl lg:text-2xl 2xl:text-3xl outline-none focus:border-green-300 focus:border-b-4 inline"
+                    placeholder="Enter Your GitHub Username"
+                  />
+                  <button type="Submit">
+                    <RIGHT_ARROW_SVG />
+                  </button>
+                </form>
               </div>
               <AnimatedText />
             </div>
@@ -99,7 +70,7 @@ export default function HomePage() {
               <img
                 src="/hpill.svg"
                 alt=""
-                className="w-full sm:w-7/12 aspect-square select-none pointer-events-none"
+                className="w-full sm:w-8/12 aspect-square select-none pointer-events-none"
                 draggable="false"
               />
             </div>
