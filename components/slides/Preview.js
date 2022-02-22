@@ -4,7 +4,6 @@ import ButtonWithSVG from "../elements/buttons/ButtonWithSVG";
 import { db } from "../../config/firebase";
 import { username } from "./HomePage";
 import ToastSuccess from "../elements/toaster/ToastSuccess";
-import ShareUs from "../ShareUs";
 
 export default function Preview() {
   const [copiedAlertVisible, setCopiedAlertVisible] = useState(false);
@@ -101,7 +100,9 @@ export default function Preview() {
         className="w-full md:w-8/12 p-3 py-6 bg-zinc-800 rounded-lg ring-1 ring-green-200 shadow-xl shadow-green-200/20 text-zinc-100"
       ></div>
       <p className="font-semibold text-gray-400 pt-12 flex flex-wrap">What to Do Next ? :&nbsp;<p className="font-medium">Copy this Code and Paste it into your GitHub ReadMe file.</p>  </p>
-      <ShareUs />
+      <p className="flex flex-col h-full items-center text-xl text-center pt-5 lg:pt-10">
+        Hey👋, Can you help us to grow by sharing? <br />
+      </p>
       {copiedAlertVisible && <ToastSuccess title="Copied Successfully !" />}
       {downloadAlertVisible && <ToastSuccess title="Download Started !" />}
     </div>
