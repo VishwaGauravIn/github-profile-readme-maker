@@ -3,6 +3,11 @@ import React from "react";
 export default function Credits() {
   const cc = [
     {
+      avatar: "https://avatars.githubusercontent.com/u/81325730?v=4",
+      name: "Vishwa Gaurav",
+      creditfor: "Visit Count Pro",
+    },
+    {
       avatar: "https://avatars.githubusercontent.com/u/35374649?v=4",
       name: "Anurag Hazra",
       creditfor: "GitHub ReadMe Stats",
