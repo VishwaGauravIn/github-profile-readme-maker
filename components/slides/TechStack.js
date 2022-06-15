@@ -1222,7 +1222,12 @@ export default function TechStack() {
                 }
                 data={techbadges}
               />
-              <BadgeSelect label="" url={"SKETCH"} data={techbadges} />
+              <BadgeSelect
+              label="SKETCH"
+              url={
+                "![Sketch](https://img.shields.io/badge/Sketch-FFB387?style=for-the-badge&logo=sketch&logoColor=black)"
+              }
+              data={techbadges} />
             </div>
             {/* ML/DL */}
             <p className="flex justify-center text-lg md:text-xl mt-4">ML/DL</p>
