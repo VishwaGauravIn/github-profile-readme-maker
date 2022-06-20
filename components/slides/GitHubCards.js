@@ -1,16 +1,21 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import FilterButton from "../elements/buttons/FilterButton";
 import NextButton from "../elements/buttons/NextButton";
 import Pagination from "../elements/Pagination";
+import { useGPRMStore } from "../mobx/GPRMcontext";
 import { username } from "./HomePage";
 import Socials from "./Socials";
 
-export default function GitHubStats({back}) {
+export default function GitHubStats({ back }) {
   const [isVisible, setIsVisible] = useState(false);
-  const [theme, setTheme] = useState("radical");
-  const [border, setBorder] = useState(false);
-  const [includeAll, setIncludeAll] = useState(false);
-  const [includePrivate, setIncludePrivate] = useState(false);
+  const gprmStore = useGPRMStore();
+  const [theme, setTheme] = useState(gprmStore.data.stats.theme);
+  const [border, setBorder] = useState(gprmStore.data.stats.border);
+  const [includeAll, setIncludeAll] = useState(gprmStore.data.stats.lifetime);
+  const [includePrivate, setIncludePrivate] = useState(
+    gprmStore.data.stats.prv
+  );
+  console.log(gprmStore.data.stats.theme);
   function onNext() {
     githubstats = `# 📊GitHub Stats :
 ![](${document.getElementById("stats").getAttribute("src")})<br/>
@@ -19,13 +24,24 @@ export default function GitHubStats({back}) {
 `;
     setIsVisible(true);
   }
+  useEffect(() => {
+    gprmStore.data.stats.theme = theme;
+    gprmStore.data.stats.border = border;
+    gprmStore.data.stats.lifetime = includeAll;
+    gprmStore.data.stats.prv = includePrivate;
+  });
   return (
     <>
       {isVisible ? (
-        <Socials  back={() => setIsVisible(false)}/>
+        <Socials back={() => setIsVisible(false)} />
       ) : (
         <div className="flex flex-col items-center fade-on-appear">
-          <button className="left-0 absolute m-10 opacity-80 hover:opacity-100 transition-all ease-in-out outline-none" onClick={back}>◄ Go Back</button>
+          <button
+            className="left-0 absolute m-10 opacity-80 hover:opacity-100 transition-all ease-in-out outline-none"
+            onClick={back}
+          >
+            ◄ Go Back
+          </button>
           <p className="w-full text-center text-3xl my-10 mt-20">
             Flex your GitHub Stats
           </p>
@@ -63,21 +79,21 @@ export default function GitHubStats({back}) {
               className="m-2 select-none pointer-events-none"
               draggable="false"
               id="stats"
-              src={`https://github-readme-stats.vercel.app/api?username=${username}&theme=${theme}&hide_border=${border}&include_all_commits=${includeAll}&count_private=${includePrivate}`}
+              src={`https://github-readme-stats.vercel.app/api?username=${gprmStore.data.username}&theme=${theme}&hide_border=${border}&include_all_commits=${includeAll}&count_private=${includePrivate}`}
               alt=""
             />
             <img
               className="m-2 select-none pointer-events-none"
               draggable="false"
               id="streak"
-              src={`https://github-readme-streak-stats.herokuapp.com/?user=${username}&theme=${theme}&hide_border=${border}`}
+              src={`https://github-readme-streak-stats.herokuapp.com/?user=${gprmStore.data.username}&theme=${theme}&hide_border=${border}`}
               alt=""
             />
             <img
               className="m-2 select-none pointer-events-none"
               draggable="false"
               id="langs"
-              src={`https://github-readme-stats.vercel.app/api/top-langs/?username=${username}&theme=${theme}&hide_border=${border}&include_all_commits=${includeAll}&count_private=${includePrivate}&layout=compact`}
+              src={`https://github-readme-stats.vercel.app/api/top-langs/?username=${gprmStore.data.username}&theme=${theme}&hide_border=${border}&include_all_commits=${includeAll}&count_private=${includePrivate}&layout=compact`}
               alt=""
             />
           </div>

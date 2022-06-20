@@ -67,7 +67,9 @@ export default function Extras({back}) {
   }
   function createFinalData() {
     if (gprmStore.data.aboutme != ``) {
-      finaldata = finaldata + gprmStore.data.aboutme;
+      finaldata = finaldata + `# 💫About Me :
+      ${gprmStore.data.aboutme}
+      `;
     }
     if (socials != ``) {
       finaldata =

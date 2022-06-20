@@ -19,7 +19,7 @@ export default function HomePage() {
   const [input, setInput] = useState(gprmStore.data.username);
   function onNext() {
     if (input != "" && input.replace(/ /g, "") != "") {
-      gprmStore.editData("username", "input")
+      gprmStore.data.username = input
       setIsVisible(true);
       topFunction();
     } else {

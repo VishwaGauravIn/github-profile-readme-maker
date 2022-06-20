@@ -4,10 +4,10 @@ export function createGPRMStore() {
       username: "",
       aboutme: "",
       stats: {
-        theme: "",
-        border: "",
-        lifetime: "",
-        private: "",
+        theme: "dark",
+        border: false,
+        lifetime: false,
+        prv: false,
       },
       socials: {
         behance: "",
