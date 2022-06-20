@@ -39,12 +39,12 @@ export function createGPRMStore() {
         background: false,
       },
       visitcount: {
-        color: "",
-        icon: "",
+        color: 0,
+        icon: 0,
       },
       quote: {
-        theme: "",
-        layout: "",
+        quoteTheme: "radical",
+        layout: "horizontal",
       },
       checkbox:{
         trophychk: false,

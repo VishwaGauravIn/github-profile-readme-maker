@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import CheckBox from "../elements/CheckBox";
 import FilterButton from "../elements/buttons/FilterButton";
 import NextButton from "../elements/buttons/NextButton";
@@ -14,11 +14,35 @@ export default function Extras({ back }) {
   const gprmStore = useGPRMStore();
   const [theme, setTheme] = useState(gprmStore.data.trophy.theme);
   const [border, setBorder] = useState(gprmStore.data.trophy.border);
-  const [background, setBackground] = useState(gprmStore.data.trophy.background);
-  const [quoteTheme, setQuoteTheme] = useState("radical");
-  const [layout, setLayout] = useState("horizontal");
-  const [color, setColor] = useState(0);
-  const [icon, setIcon] = useState(0);
+  const [background, setBackground] = useState(
+    gprmStore.data.trophy.background
+  );
+  const [quoteTheme, setQuoteTheme] = useState(gprmStore.data.quote.quoteTheme);
+  const [layout, setLayout] = useState(gprmStore.data.quote.layout);
+  const [color, setColor] = useState(gprmStore.data.visitcount.color);
+  const [icon, setIcon] = useState(gprmStore.data.visitcount.icon);
+  useEffect(() => {
+    gprmStore.data.trophy.theme = theme;
+  }, [theme]);
+  useEffect(() => {
+    gprmStore.data.trophy.border = border;
+  }, [border]);
+  useEffect(() => {
+    gprmStore.data.trophy.background = background;
+  }, [background]);
+  useEffect(() => {
+    gprmStore.data.visitcount.color = color;
+  }, [color]);
+  useEffect(() => {
+    gprmStore.data.visitcount.icon = icon;
+  }, [icon]);
+  useEffect(() => {
+    gprmStore.data.quote.quoteTheme = quoteTheme;
+  }, [quoteTheme]);
+  useEffect(() => {
+    gprmStore.data.quote.layout = layout;
+  }, [layout]);
+
   function changeLayout() {
     if (layout === "horizontal") {
       setLayout("vetical");
@@ -123,6 +147,7 @@ ${gprmStore.data.tech
             Theme:
             <select
               id="theme"
+              value={theme}
               onChange={() => setTheme(document.getElementById("theme").value)}
               className="bg-transparent py-1 px-2 outline-none"
             >
@@ -158,6 +183,7 @@ ${gprmStore.data.tech
               Color:
               <select
                 id="color"
+                value={color}
                 onChange={() =>
                   setColor(document.getElementById("color").value)
                 }
@@ -174,6 +200,7 @@ ${gprmStore.data.tech
               Icon:
               <select
                 id="icon"
+                value={icon}
                 onChange={() => setIcon(document.getElementById("icon").value)}
                 className="bg-transparent py-1 px-2 outline-none"
               >
@@ -192,15 +219,13 @@ ${gprmStore.data.tech
               alt=""
               className="md:ml-36 mb-4"
             />
-            <CheckBox
-              id="visitorschk"
-              title="Add Visitors Count"
-            />
+            <CheckBox id="visitorschk" title="Add Visitors Count" />
             {/* Options */}
             <div className="flex flex-wrap justify-center items-center mt-4 my-2">
               Theme:
               <select
                 id="quotetheme"
+                value={quoteTheme}
                 onChange={() =>
                   setQuoteTheme(document.getElementById("quotetheme").value)
                 }
