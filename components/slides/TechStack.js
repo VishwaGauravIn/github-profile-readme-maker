@@ -13,7 +13,7 @@ export default function TechStack({ back }) {
   useEffect(() => {
     gprmStore.data.badge_theme = BadgeStyle;
   }, [BadgeStyle]);
-  return useObserver(() =>(
+  return useObserver(() => (
     <>
       {isVisible ? (
         <Donate back={() => setIsVisible(false)} />
@@ -1282,7 +1282,11 @@ export default function TechStack({ back }) {
             Theme:
             <select
               id="badgestyle"
-              value={gprmStore.data.badge_theme ? gprmStore.data.badge_theme : "for-the-badge"}
+              value={
+                gprmStore.data.badge_theme
+                  ? gprmStore.data.badge_theme
+                  : "for-the-badge"
+              }
               onChange={() =>
                 setBadgeStyle(document.getElementById("badgestyle").value)
               }

@@ -144,128 +144,131 @@ ${gprmStore.data.tech
             Additional Stuffs to add
           </p>
           {/* Trophies */}
-            {/* Options */}
-            <div className="flex flex-wrap justify-center items-center">
-              Theme:
-              <select
-                id="theme"
-                value={theme}
-                onChange={() =>
-                  setTheme(document.getElementById("theme").value)
-                }
-                className="bg-transparent py-1 px-2 outline-none"
-              >
-                {themes.map((item) => {
-                  return (
-                    <option key={item} value={item} className="bg-zinc-900">
-                      {item}
-                    </option>
-                  );
-                })}
-              </select>
-              <FilterButton chk={border} title="Border" onClick={() => setBorder(!border)} />
-              <FilterButton
-                title="Background"
-                chk={background}
-                onClick={() => setBackground(!background)}
-              />
-            </div>
-            <p className="mt-4 text-green-300 opacity-90 text-xs text-center sm:text-base">
-              please wait for images to load after changing any values
-            </p>
-            <div className="w-full md:w-8/12 items-center flex flex-col flex-wrap md:my-4">
-              <img
-                className="m-2 select-none pointer-events-none"
-                draggable="false"
-                id="trophy"
-                src={`https://github-profile-trophy.vercel.app/?username=${gprmStore.data.username}&theme=${theme}&no-frame=${!border}&no-bg=${!background}&margin-w=4`}
-                alt=""
-              />
-              <CheckBox id="trophychk" title="Add GitHub Trophies" />
-            </div>
-                <hr className="mt-2 mb-2 w-1/2 opacity-30" />
-            
-            {/* Visitors Badge */}
-              {/* Options */}
-              <div className="flex flex-wrap justify-center items-center py-6">
-                Color:
-                <select
-                  id="color"
-                  value={color}
-                  onChange={() =>
-                    setColor(document.getElementById("color").value)
-                  }
-                  className="bg-transparent py-1 px-2 outline-none mr-2"
-                >
-                  {colors.map((color, index) => {
-                    return (
-                      <option key={index} value={index} className="bg-zinc-900">
-                        {color}
-                      </option>
-                    );
-                  })}
-                </select>
-                Icon:
-                <select
-                  id="icon"
-                  value={icon}
-                  onChange={() =>
-                    setIcon(document.getElementById("icon").value)
-                  }
-                  className="bg-transparent py-1 px-2 outline-none"
-                >
-                  {icons.map((icon, index) => {
-                    return (
-                      <option key={index} value={index} className="bg-zinc-900">
-                        {icon}
-                      </option>
-                    );
-                  })}
-                </select>
-              </div>
-              <img
-                id="visitors"
-                src={`https://visitcount.itsvg.in/api/test?icon=${icon}&color=${color}`}
-                alt=""
-                className="md:ml-36 mb-4"
-              />
-              <CheckBox id="visitorschk" title="Add Visitors Count" />
-              <hr className="mt-2 mb-2 w-1/2 opacity-30" />
-              
-            {/* Quote */}
-              {/* Options */}
-              <div className="flex flex-wrap justify-center items-center mt-4 my-2">
-                Theme:
-                <select
-                  id="quotetheme"
-                  value={quoteTheme}
-                  onChange={() =>
-                    setQuoteTheme(document.getElementById("quotetheme").value)
-                  }
-                  className="bg-transparent py-1 px-2 outline-none"
-                >
-                  {quoteThemes.map((item) => {
-                    return (
-                      <option key={item} value={item} className="bg-zinc-900">
-                        {item}
-                      </option>
-                    );
-                  })}
-                </select>
-                <FilterButton title={`Layout- ${layout}`} onClick={() => changeLayout()} />
-              </div>
-              <img
-                className="m-2 select-none pointer-events-none"
-                draggable="false"
-                id="quote"
-                src={`https://quotes-github-readme.vercel.app/api?type=${layout}&theme=${quoteTheme}`}
-                alt=""
-              />
-              <hr className="mt-2 mb-2 w-1/2 opacity-30" />
-              <CheckBox id="quotechk" title="Add Random Dev Quotes" />
+          {/* Options */}
+          <div className="flex flex-wrap justify-center items-center">
+            Theme:
+            <select
+              id="theme"
+              value={theme}
+              onChange={() => setTheme(document.getElementById("theme").value)}
+              className="bg-transparent py-1 px-2 outline-none"
+            >
+              {themes.map((item) => {
+                return (
+                  <option key={item} value={item} className="bg-zinc-900">
+                    {item}
+                  </option>
+                );
+              })}
+            </select>
+            <FilterButton
+              chk={border}
+              title="Border"
+              onClick={() => setBorder(!border)}
+            />
+            <FilterButton
+              title="Background"
+              chk={background}
+              onClick={() => setBackground(!background)}
+            />
+          </div>
+          <p className="mt-4 text-green-300 opacity-90 text-xs text-center sm:text-base">
+            please wait for images to load after changing any values
+          </p>
+          <div className="w-full md:w-8/12 items-center flex flex-col flex-wrap md:my-4">
+            <img
+              className="m-2 select-none pointer-events-none"
+              draggable="false"
+              id="trophy"
+              src={`https://github-profile-trophy.vercel.app/?username=${
+                gprmStore.data.username
+              }&theme=${theme}&no-frame=${!border}&no-bg=${!background}&margin-w=4`}
+              alt=""
+            />
+            <CheckBox id="trophychk" title="Add GitHub Trophies" />
+          </div>
+          <hr className="mt-2 mb-2 w-1/2 opacity-30" />
 
-            <CheckBox id="memechk" title="Add Random Memes" />
-            <span className="pb-6"/>
+          {/* Visitors Badge */}
+          {/* Options */}
+          <div className="flex flex-wrap justify-center items-center py-6">
+            Color:
+            <select
+              id="color"
+              value={color}
+              onChange={() => setColor(document.getElementById("color").value)}
+              className="bg-transparent py-1 px-2 outline-none mr-2"
+            >
+              {colors.map((color, index) => {
+                return (
+                  <option key={index} value={index} className="bg-zinc-900">
+                    {color}
+                  </option>
+                );
+              })}
+            </select>
+            Icon:
+            <select
+              id="icon"
+              value={icon}
+              onChange={() => setIcon(document.getElementById("icon").value)}
+              className="bg-transparent py-1 px-2 outline-none"
+            >
+              {icons.map((icon, index) => {
+                return (
+                  <option key={index} value={index} className="bg-zinc-900">
+                    {icon}
+                  </option>
+                );
+              })}
+            </select>
+          </div>
+          <img
+            id="visitors"
+            src={`https://visitcount.itsvg.in/api/test?icon=${icon}&color=${color}`}
+            alt=""
+            className="md:ml-36 mb-4"
+          />
+          <CheckBox id="visitorschk" title="Add Visitors Count" />
+          <hr className="mt-2 mb-2 w-1/2 opacity-30" />
+
+          {/* Quote */}
+          {/* Options */}
+          <div className="flex flex-wrap justify-center items-center mt-4 my-2">
+            Theme:
+            <select
+              id="quotetheme"
+              value={quoteTheme}
+              onChange={() =>
+                setQuoteTheme(document.getElementById("quotetheme").value)
+              }
+              className="bg-transparent py-1 px-2 outline-none"
+            >
+              {quoteThemes.map((item) => {
+                return (
+                  <option key={item} value={item} className="bg-zinc-900">
+                    {item}
+                  </option>
+                );
+              })}
+            </select>
+            <FilterButton
+              title={`Layout- ${layout}`}
+              onClick={() => changeLayout()}
+            />
+          </div>
+          <img
+            className="m-2 select-none pointer-events-none"
+            draggable="false"
+            id="quote"
+            src={`https://quotes-github-readme.vercel.app/api?type=${layout}&theme=${quoteTheme}`}
+            alt=""
+          />
+          <hr className="mt-2 mb-2 w-1/2 opacity-30" />
+          <CheckBox id="quotechk" title="Add Random Dev Quotes" />
+
+          <CheckBox id="memechk" title="Add Random Memes" />
+          <span className="pb-6" />
           <NextButton onClick={() => onNext()} />
           <Pagination val={6} />
         </div>

@@ -3,7 +3,7 @@ import { useGPRMStore } from "../mobx/GPRMcontext";
 
 export default function CheckBox({ id, title }) {
   const gprmStore = useGPRMStore();
-  function chk(){
+  function chk() {
     gprmStore.data.checkbox[id] = document.getElementById(id).checked;
   }
   return (
@@ -12,7 +12,7 @@ export default function CheckBox({ id, title }) {
         type="checkbox"
         name=""
         id={id}
-        defaultChecked={ gprmStore.data.checkbox[id] }
+        defaultChecked={gprmStore.data.checkbox[id]}
         onChange={chk}
         className="w-4 h-4 mr-2 outline-none"
       />

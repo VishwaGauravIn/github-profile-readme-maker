@@ -4,7 +4,7 @@ import { db } from "../../config/firebase";
 import ToastSuccess from "../elements/toaster/ToastSuccess";
 import { useGPRMStore } from "../mobx/GPRMcontext";
 
-export default function Preview({back}) {
+export default function Preview({ back }) {
   const [copiedAlertVisible, setCopiedAlertVisible] = useState(false);
   const [downloadAlertVisible, setDownloadAlertVisible] = useState(false);
   const gprmStore = useGPRMStore();
@@ -20,9 +20,14 @@ export default function Preview({back}) {
   });
 
   useEffect(() => {
-    db.collection(gprmStore.data.username).add({ date: Date(), data: gprmStore.data.finalData });
+    db.collection(gprmStore.data.username).add({
+      date: Date(),
+      data: gprmStore.data.finalData,
+    });
     setTimeout(() => {
-      document.getElementById("content").innerHTML = md.render(gprmStore.data.finalData);
+      document.getElementById("content").innerHTML = md.render(
+        gprmStore.data.finalData
+      );
     }, 300);
   }, []);
   function onCopy() {
@@ -63,7 +68,12 @@ export default function Preview({back}) {
   }
   return (
     <div className="w-full flex flex-col items-center">
-          <button className="left-0 absolute m-10 opacity-80 hover:opacity-100 transition-all ease-in-out outline-none" onClick={back}>◄ Go Back</button>
+      <button
+        className="left-0 absolute m-10 opacity-80 hover:opacity-100 transition-all ease-in-out outline-none"
+        onClick={back}
+      >
+        ◄ Go Back
+      </button>
       <p className="w-full text-center text-3xl my-8 mt-20">
         Your Awesome Profile is ready !
       </p>
@@ -99,7 +109,12 @@ export default function Preview({back}) {
         id="content"
         className="w-full md:w-8/12 p-3 py-6 bg-zinc-800 rounded-lg ring-1 ring-green-200 shadow-xl shadow-green-200/20 text-zinc-100"
       ></div>
-      <p className="font-semibold text-gray-400 pt-12 flex flex-wrap">What to Do Next ? :&nbsp;<p className="font-medium">Copy this Code and Paste it into your GitHub ReadMe file.</p>  </p>
+      <p className="font-semibold text-gray-400 pt-12 flex flex-wrap">
+        What to Do Next ? :&nbsp;
+        <p className="font-medium">
+          Copy this Code and Paste it into your GitHub ReadMe file.
+        </p>{" "}
+      </p>
       <p className="flex flex-col h-full items-center text-xl text-center pt-5 lg:pt-10">
         Hey👋, Can you help us to grow by sharing? <br />
       </p>

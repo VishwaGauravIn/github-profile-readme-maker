@@ -19,7 +19,7 @@ You can Write this in Markdown format too`;
 
   function onNext() {
     if (aboutme != ``) {
-      gprmStore.data.aboutme = aboutme
+      gprmStore.data.aboutme = aboutme;
     }
     setIsVisible(true);
   }

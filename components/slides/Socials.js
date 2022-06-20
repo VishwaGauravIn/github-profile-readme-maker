@@ -9,7 +9,7 @@ export default function Socials({ back }) {
   const [isVisible, setIsVisible] = useState(false);
   const gprmStore = useGPRMStore();
   function onNext() {
-    socials = ""
+    socials = "";
     if (document.getElementById("behance").value != "") {
       socials =
         socials +

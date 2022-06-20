@@ -46,7 +46,7 @@ export function createGPRMStore() {
         quoteTheme: "radical",
         layout: "horizontal",
       },
-      checkbox:{
+      checkbox: {
         trophychk: false,
         visitorschk: true,
         quotechk: false,

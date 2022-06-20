@@ -29,7 +29,7 @@ export default function GitHubStats({ back }) {
     gprmStore.data.stats.lifetime = includeAll;
     gprmStore.data.stats.prv = includePrivate;
   });
-  return useObserver(() =>(
+  return useObserver(() => (
     <>
       {isVisible ? (
         <Socials back={() => setIsVisible(false)} />
@@ -61,7 +61,11 @@ export default function GitHubStats({ back }) {
                 );
               })}
             </select>
-            <FilterButton chk={border} title="Border" onClick={() => setBorder(!border)} />
+            <FilterButton
+              chk={border}
+              title="Border"
+              onClick={() => setBorder(!border)}
+            />
             <FilterButton
               title="Lifetime Commits"
               chk={includeAll}
@@ -81,21 +85,27 @@ export default function GitHubStats({ back }) {
               className="m-2 select-none pointer-events-none"
               draggable="false"
               id="stats"
-              src={`https://github-readme-stats.vercel.app/api?username=${gprmStore.data.username}&theme=${theme}&hide_border=${!border}&include_all_commits=${includeAll}&count_private=${includePrivate}`}
+              src={`https://github-readme-stats.vercel.app/api?username=${
+                gprmStore.data.username
+              }&theme=${theme}&hide_border=${!border}&include_all_commits=${includeAll}&count_private=${includePrivate}`}
               alt=""
             />
             <img
               className="m-2 select-none pointer-events-none"
               draggable="false"
               id="streak"
-              src={`https://github-readme-streak-stats.herokuapp.com/?user=${gprmStore.data.username}&theme=${theme}&hide_border=${!border}`}
+              src={`https://github-readme-streak-stats.herokuapp.com/?user=${
+                gprmStore.data.username
+              }&theme=${theme}&hide_border=${!border}`}
               alt=""
             />
             <img
               className="m-2 select-none pointer-events-none"
               draggable="false"
               id="langs"
-              src={`https://github-readme-stats.vercel.app/api/top-langs/?username=${gprmStore.data.username}&theme=${theme}&hide_border=${!border}&include_all_commits=${includeAll}&count_private=${includePrivate}&layout=compact`}
+              src={`https://github-readme-stats.vercel.app/api/top-langs/?username=${
+                gprmStore.data.username
+              }&theme=${theme}&hide_border=${!border}&include_all_commits=${includeAll}&count_private=${includePrivate}&layout=compact`}
               alt=""
             />
           </div>
