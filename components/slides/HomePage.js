@@ -9,14 +9,17 @@ import Credits from "../home-components/Credits";
 import SocialLinks from "../home-components/SocialLinks";
 import ScrollToTop from "../elements/ScrollToTop";
 import { RIGHT_ARROW_SVG } from "../elements/SVG";
+import { useGPRMStore } from "../mobx/GPRMcontext";
+import { useObserver } from "mobx-react";
 
 export default function HomePage() {
   const [isVisible, setIsVisible] = useState(false);
   const [alertVisible, setAlertVisible] = useState(false);
-  const [input, setInput] = useState("");
+  const gprmStore = useGPRMStore();
+  const [input, setInput] = useState(gprmStore.data.username);
   function onNext() {
     if (input != "" && input.replace(/ /g, "") != "") {
-      username = input;
+      gprmStore.editData("username", "input")
       setIsVisible(true);
       topFunction();
     } else {
@@ -37,10 +40,10 @@ export default function HomePage() {
       }, 4400);
     }
   }
-  return (
+  return useObserver(() =>(
     <>
       {isVisible ? (
-        <AboutMe />
+        <AboutMe back={() => setIsVisible(false)}/>
       ) : (
         <div className="scroll-smooth">
           <div className="w-full flex flex-col md:flex-row py-16 md:py-28 min-h-[90vh] items-center relative">
@@ -88,6 +91,5 @@ export default function HomePage() {
         </div>
       )}
     </>
-  );
+  ));
 }
-export var username = "";

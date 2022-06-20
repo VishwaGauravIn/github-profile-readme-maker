@@ -3,7 +3,7 @@ import NextButton from "../elements/buttons/NextButton";
 import Pagination from "../elements/Pagination";
 import GitHubStats from "./GitHubCards";
 
-export default function AboutMe() {
+export default function AboutMe({back}) {
   const [isVisible, setIsVisible] = useState(false);
   const textareaPlaceholder = `🔭 I’m currently working on
 👯 I’m looking to collaborate on
@@ -27,7 +27,8 @@ ${document.getElementById("aboutme").value}
         <GitHubStats />
       ) : (
         <div className="flex flex-col items-center fade-on-appear">
-          <p className="w-full text-center text-3xl my-6 md:my-10">
+          <button className="left-0 absolute m-10 opacity-80 hover:opacity-100 transition-all ease-in-out outline-none" onClick={back}>◄ Go Back</button>
+          <p className="w-full text-center text-3xl my-6 md:my-10 mt-20">
             Add a small introduction
           </p>
           <div className="flex flex-col md:flex-row w-full">
