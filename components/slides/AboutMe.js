@@ -4,6 +4,7 @@ import Pagination from "../elements/Pagination";
 import { useGPRMStore } from "../mobx/GPRMcontext";
 import { useObserver } from "mobx-react";
 import GitHubStats from "./GitHubCards";
+import { LightBulbIcon } from '@heroicons/react/outline'
 
 export default function AboutMe({ back }) {
   const [isVisible, setIsVisible] = useState(false);
@@ -14,8 +15,7 @@ export default function AboutMe({ back }) {
 🤝 I’m looking for help with
 🌱 I’m currently learning
 💬 Ask me about
-⚡ Fun fact
-You can Write this in Markdown format too`;
+⚡ Fun fact`;
 
   function onNext() {
     if (aboutme != ``) {
@@ -60,7 +60,12 @@ You can Write this in Markdown format too`;
                 onChange={(e) => setAboutme(e.target.value)}
                 autoFocus="true"
               ></textarea>
-              <NextButton onClick={() => onNext()} />
+              <div className="flex ">
+                <button className="mr-4 opacity-60 hover:opacity-80" title="Load Template" onClick={()=> setAboutme(textareaPlaceholder) }>
+                  <LightBulbIcon className="w-6 stroke-1"></LightBulbIcon>
+                </button>
+                <NextButton onClick={() => onNext()} />
+              </div>
             </div>
           </div>
           <Pagination val={1} />
