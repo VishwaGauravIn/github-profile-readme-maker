@@ -34,22 +34,24 @@ export function createGPRMStore() {
         kofi: "",
       },
       trophy: {
-        theme: "",
-        border: "",
-        background: "",
-        visible: "",
+        theme: "radical",
+        border: false,
+        background: false,
       },
       visitcount: {
         color: "",
         icon: "",
-        visible: "",
       },
       quote: {
         theme: "",
         layout: "",
-        visible: "",
       },
-      meme_visible: "",
+      checkbox:{
+        trophychk: false,
+        visitorschk: true,
+        quotechk: false,
+        memechk: false,
+      },
       finalData: "",
     },
     editData(id, value) {

@@ -11,14 +11,14 @@ import { useGPRMStore } from "../mobx/GPRMcontext";
 
 export default function Extras({ back }) {
   const [isVisible, setIsVisible] = useState(false);
-  const [theme, setTheme] = useState("radical");
-  const [border, setBorder] = useState(false);
-  const [background, setBackground] = useState(false);
+  const gprmStore = useGPRMStore();
+  const [theme, setTheme] = useState(gprmStore.data.trophy.theme);
+  const [border, setBorder] = useState(gprmStore.data.trophy.border);
+  const [background, setBackground] = useState(gprmStore.data.trophy.background);
   const [quoteTheme, setQuoteTheme] = useState("radical");
   const [layout, setLayout] = useState("horizontal");
   const [color, setColor] = useState(0);
   const [icon, setIcon] = useState(0);
-  const gprmStore = useGPRMStore();
   function changeLayout() {
     if (layout === "horizontal") {
       setLayout("vetical");
@@ -194,7 +194,6 @@ ${gprmStore.data.tech
             />
             <CheckBox
               id="visitorschk"
-              defaultChecked={true}
               title="Add Visitors Count"
             />
             {/* Options */}
