@@ -5,14 +5,12 @@ import NextButton from "../elements/buttons/NextButton";
 import { githubstats } from "./GitHubCards";
 import { username } from "./HomePage";
 import { socials } from "./Socials";
-import { techbadges } from "./TechStack";
 import { donate } from "./Donate";
 import Pagination from "../elements/Pagination";
 import Preview from "./Preview";
-import { badgeStyle } from "./TechStack";
 import { useGPRMStore } from "../mobx/GPRMcontext";
 
-export default function Extras({back}) {
+export default function Extras({ back }) {
   const [isVisible, setIsVisible] = useState(false);
   const [theme, setTheme] = useState("radical");
   const [border, setBorder] = useState(false);
@@ -21,7 +19,7 @@ export default function Extras({back}) {
   const [layout, setLayout] = useState("horizontal");
   const [color, setColor] = useState(0);
   const [icon, setIcon] = useState(0);
-  const gprmStore = useGPRMStore()
+  const gprmStore = useGPRMStore();
   function changeLayout() {
     if (layout === "horizontal") {
       setLayout("vetical");
@@ -67,7 +65,9 @@ export default function Extras({back}) {
   }
   function createFinalData() {
     if (gprmStore.data.aboutme != ``) {
-      finaldata = finaldata + `# 💫About Me :
+      finaldata =
+        finaldata +
+        `# 💫About Me :
       ${gprmStore.data.aboutme}
       `;
     }
@@ -79,12 +79,14 @@ export default function Extras({back}) {
 ${socials}
 `;
     }
-    if (techbadges != ``) {
+    if (gprmStore.data.tech != ``) {
       finaldata =
         finaldata +
         `
 # 💻Tech Stack
-${techbadges.join(" ").replaceAll("for-the-badge", badgeStyle)}
+${gprmStore.data.tech
+  .join(" ")
+  .replaceAll("for-the-badge", gprmStore.data.badge_theme)}
 `;
     }
     finaldata = finaldata + githubstats + extras;
@@ -102,10 +104,15 @@ ${techbadges.join(" ").replaceAll("for-the-badge", badgeStyle)}
   return (
     <>
       {isVisible ? (
-        <Preview  back={() => setIsVisible(false)}/>
+        <Preview back={() => setIsVisible(false)} />
       ) : (
         <div className="flex flex-col items-center fade-on-appear">
-          <button className="left-0 absolute m-10 opacity-80 hover:opacity-100 transition-all ease-in-out outline-none" onClick={back}>◄ Go Back</button>
+          <button
+            className="left-0 absolute m-10 opacity-80 hover:opacity-100 transition-all ease-in-out outline-none"
+            onClick={back}
+          >
+            ◄ Go Back
+          </button>
           <p className="w-full text-center text-3xl my-10 mt-20">
             Additional Stuffs to add
           </p>

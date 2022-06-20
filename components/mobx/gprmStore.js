@@ -25,8 +25,8 @@ export function createGPRMStore() {
         twitter: "",
         youtube: "",
       },
-      tech: "",
-      badge_theme: "",
+      tech: [],
+      badge_theme: "for-the-badge",
       donate: {
         bmc: "",
         paypal: "",
