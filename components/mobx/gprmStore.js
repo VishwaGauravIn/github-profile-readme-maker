@@ -5,7 +5,7 @@ export function createGPRMStore() {
       aboutme: "",
       stats: {
         theme: "dark",
-        border: false,
+        border: true,
         lifetime: false,
         prv: false,
       },
@@ -35,7 +35,7 @@ export function createGPRMStore() {
       },
       trophy: {
         theme: "radical",
-        border: false,
+        border: true,
         background: false,
       },
       visitcount: {
