@@ -25,7 +25,6 @@ export default function Preview({back}) {
       document.getElementById("content").innerHTML = md.render(gprmStore.data.finalData);
     }, 300);
   }, []);
-  console.log(gprmStore.data.finalData)
   function onCopy() {
     navigator.clipboard.writeText(gprmStore.data.finalData);
     // Alert for Copied

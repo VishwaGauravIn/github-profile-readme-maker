@@ -15,7 +15,6 @@ export default function GitHubStats({ back }) {
   const [includePrivate, setIncludePrivate] = useState(
     gprmStore.data.stats.prv
   );
-  console.log(gprmStore.data.stats.theme);
   function onNext() {
     githubstats = `# 📊GitHub Stats :
 ![](${document.getElementById("stats").getAttribute("src")})<br/>

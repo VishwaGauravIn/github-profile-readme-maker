@@ -7,6 +7,7 @@ import Extras from "./Extras";
 export default function Donate({back}) {
   const [isVisible, setIsVisible] = useState(false);
   function onNext() {
+    donate = ""
     if (document.getElementById("buymeacoffee").value != "") {
       donate =
         donate +

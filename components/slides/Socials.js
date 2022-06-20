@@ -108,7 +108,6 @@ export default function Socials({ back }) {
           document.getElementById("youtube").value
         }) `;
     }
-    console.log(socials);
     setIsVisible(true);
   }
   return (
