@@ -27,7 +27,7 @@ export default function Extras({ back }) {
     }
   }
   function onNext() {
-    extras = ""
+    extras = "";
     if (document.getElementById("trophychk").checked === true) {
       extras =
         extras +
@@ -64,7 +64,7 @@ export default function Extras({ back }) {
     setIsVisible(true);
   }
   function createFinalData() {
-    var finaldata = ""
+    var finaldata = "";
     if (gprmStore.data.aboutme != ``) {
       finaldata =
         finaldata +

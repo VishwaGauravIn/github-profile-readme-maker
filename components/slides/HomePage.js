@@ -19,7 +19,7 @@ export default function HomePage() {
   const [input, setInput] = useState(gprmStore.data.username);
   function onNext() {
     if (input != "" && input.replace(/ /g, "") != "") {
-      gprmStore.data.username = input
+      gprmStore.data.username = input;
       setIsVisible(true);
       topFunction();
     } else {
@@ -40,10 +40,10 @@ export default function HomePage() {
       }, 4400);
     }
   }
-  return useObserver(() =>(
+  return useObserver(() => (
     <>
       {isVisible ? (
-        <AboutMe back={() => setIsVisible(false)}/>
+        <AboutMe back={() => setIsVisible(false)} />
       ) : (
         <div className="scroll-smooth">
           <div className="w-full flex flex-col md:flex-row py-16 md:py-28 min-h-[90vh] items-center relative">
