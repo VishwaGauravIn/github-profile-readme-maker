@@ -2,7 +2,7 @@ export function createGPRMStore() {
   return {
     data: {
       username: "",
-      intro: "",
+      aboutme: "",
       stats: {
         theme: "",
         border: "",

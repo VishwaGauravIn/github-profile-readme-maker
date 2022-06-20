@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import CheckBox from "../elements/CheckBox";
 import FilterButton from "../elements/buttons/FilterButton";
 import NextButton from "../elements/buttons/NextButton";
-import { aboutme } from "./AboutMe";
 import { githubstats } from "./GitHubCards";
 import { username } from "./HomePage";
 import { socials } from "./Socials";
@@ -11,6 +10,7 @@ import { donate } from "./Donate";
 import Pagination from "../elements/Pagination";
 import Preview from "./Preview";
 import { badgeStyle } from "./TechStack";
+import { useGPRMStore } from "../mobx/GPRMcontext";
 
 export default function Extras({back}) {
   const [isVisible, setIsVisible] = useState(false);
@@ -21,6 +21,7 @@ export default function Extras({back}) {
   const [layout, setLayout] = useState("horizontal");
   const [color, setColor] = useState(0);
   const [icon, setIcon] = useState(0);
+  const gprmStore = useGPRMStore()
   function changeLayout() {
     if (layout === "horizontal") {
       setLayout("vetical");
@@ -65,8 +66,8 @@ export default function Extras({back}) {
     setIsVisible(true);
   }
   function createFinalData() {
-    if (aboutme != ``) {
-      finaldata = finaldata + aboutme;
+    if (gprmStore.data.aboutme != ``) {
+      finaldata = finaldata + gprmStore.data.aboutme;
     }
     if (socials != ``) {
       finaldata =
