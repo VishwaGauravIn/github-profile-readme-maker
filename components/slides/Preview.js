@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { finaldata } from "./Extras";
 import ButtonWithSVG from "../elements/buttons/ButtonWithSVG";
 import { db } from "../../config/firebase";
 import ToastSuccess from "../elements/toaster/ToastSuccess";
@@ -21,20 +20,20 @@ export default function Preview({back}) {
   });
 
   useEffect(() => {
-    db.collection(gprmStore.data.username).add({ date: Date(), data: finaldata });
+    db.collection(gprmStore.data.username).add({ date: Date(), data: gprmStore.data.finalData });
     setTimeout(() => {
-      document.getElementById("content").innerHTML = md.render(finaldata);
+      document.getElementById("content").innerHTML = md.render(gprmStore.data.finalData);
     }, 300);
   }, []);
-
+  console.log(gprmStore.data.finalData)
   function onCopy() {
-    navigator.clipboard.writeText(finaldata);
+    navigator.clipboard.writeText(gprmStore.data.finalData);
     // Alert for Copied
     copied();
   }
   function onDownload() {
     const element = document.createElement("a");
-    const file = new Blob([finaldata], {
+    const file = new Blob([gprmStore.data.finalData], {
       type: "text/plain",
     });
     element.href = URL.createObjectURL(file);

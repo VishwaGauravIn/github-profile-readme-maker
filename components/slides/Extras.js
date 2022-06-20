@@ -3,7 +3,6 @@ import CheckBox from "../elements/CheckBox";
 import FilterButton from "../elements/buttons/FilterButton";
 import NextButton from "../elements/buttons/NextButton";
 import { githubstats } from "./GitHubCards";
-import { username } from "./HomePage";
 import { socials } from "./Socials";
 import { donate } from "./Donate";
 import Pagination from "../elements/Pagination";
@@ -28,6 +27,7 @@ export default function Extras({ back }) {
     }
   }
   function onNext() {
+    extras = ""
     if (document.getElementById("trophychk").checked === true) {
       extras =
         extras +
@@ -57,18 +57,19 @@ export default function Extras({ back }) {
         extras +
         `
 ---
-[![](https://visitcount.itsvg.in/api?id=${username}&icon=${icon}&color=${color})](https://visitcount.itsvg.in)
+[![](https://visitcount.itsvg.in/api?id=${gprmStore.data.username}&icon=${icon}&color=${color})](https://visitcount.itsvg.in)
 `;
     }
     createFinalData();
     setIsVisible(true);
   }
   function createFinalData() {
+    var finaldata = ""
     if (gprmStore.data.aboutme != ``) {
       finaldata =
         finaldata +
         `# 💫About Me :
-      ${gprmStore.data.aboutme}
+${gprmStore.data.aboutme}
       `;
     }
     if (socials != ``) {
@@ -100,6 +101,7 @@ ${gprmStore.data.tech
   <!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
   `;
     }
+    gprmStore.data.finalData = finaldata;
   }
   return (
     <>
@@ -146,7 +148,7 @@ ${gprmStore.data.tech
               className="m-2 select-none pointer-events-none"
               draggable="false"
               id="trophy"
-              src={`https://github-profile-trophy.vercel.app/?username=${username}&theme=${theme}&no-frame=${border}&no-bg=${background}&margin-w=4`}
+              src={`https://github-profile-trophy.vercel.app/?username=${gprmStore.data.username}&theme=${theme}&no-frame=${border}&no-bg=${background}&margin-w=4`}
               alt=""
             />
             <CheckBox id="trophychk" title="Add GitHub Trophies" />
@@ -297,4 +299,3 @@ const icons = [
 ];
 
 export var extras = ``;
-export var finaldata = ``;

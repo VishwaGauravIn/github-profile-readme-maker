@@ -50,6 +50,7 @@ export function createGPRMStore() {
         visible: "",
       },
       meme_visible: "",
+      finalData: "",
     },
     editData(id, value) {
       this.data[id] = value;

@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { useGPRMStore } from "../../mobx/GPRMcontext";
 
 export default function BadgeSelect({ label, url}) {
-  const [isAdded, setIsAdded] = useState(false);
   const gprmStore = useGPRMStore()
+  const [isAdded, setIsAdded] = useState(gprmStore.data.tech.toString().includes(url));
   function onClickFun() {
     if (isAdded) {
       setIsAdded(false);
@@ -17,7 +17,6 @@ export default function BadgeSelect({ label, url}) {
       //   console.log(data);
     }
   }
-  console.log(gprmStore.data.tech)
   return (
     <>
       {isAdded ? (
