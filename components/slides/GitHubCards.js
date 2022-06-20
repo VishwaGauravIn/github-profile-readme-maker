@@ -16,7 +16,7 @@ export default function GitHubStats({ back }) {
     gprmStore.data.stats.prv
   );
   function onNext() {
-    githubstats = `# 📊GitHub Stats :
+    githubstats = `# 📊 GitHub Stats:
 ![](${document.getElementById("stats").getAttribute("src")})<br/>
 ![](${document.getElementById("streak").getAttribute("src")})<br/>
 ![](${document.getElementById("langs").getAttribute("src")})

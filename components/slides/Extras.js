@@ -56,7 +56,7 @@ export default function Extras({ back }) {
       extras =
         extras +
         `
-## 🏆GitHub Trophies
+## 🏆 GitHub Trophies
 ![](${document.getElementById("trophy").getAttribute("src")})
 `;
     }
@@ -64,7 +64,7 @@ export default function Extras({ back }) {
       extras =
         extras +
         `
-### ✍️Random Dev Quote
+### ✍️ Random Dev Quote
 ![](${document.getElementById("quote").getAttribute("src")})
 `;
     }
@@ -72,7 +72,7 @@ export default function Extras({ back }) {
       extras =
         extras +
         `
-### 😂Random Dev Meme
+### 😂 Random Dev Meme
 <img src="https://random-memer.herokuapp.com/" width="512px"/>
 `;
     }
@@ -92,7 +92,7 @@ export default function Extras({ back }) {
     if (gprmStore.data.aboutme != ``) {
       finaldata =
         finaldata +
-        `# 💫About Me :
+        `# 💫 About Me:
 ${gprmStore.data.aboutme}
       `;
     }
@@ -100,7 +100,7 @@ ${gprmStore.data.aboutme}
       finaldata =
         finaldata +
         `
-## 🌐Socials
+## 🌐 Socials:
 ${socials}
 `;
     }
@@ -108,7 +108,7 @@ ${socials}
       finaldata =
         finaldata +
         `
-# 💻Tech Stack
+# 💻 Tech Stack:
 ${gprmStore.data.tech
   .join(" ")
   .replaceAll("for-the-badge", gprmStore.data.badge_theme)}
@@ -119,7 +119,7 @@ ${gprmStore.data.tech
       finaldata =
         finaldata +
         `
-  ## 💰You can help me by Donating
+  ## 💰 You can help me by Donating
   ${donate}
 
   <!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
