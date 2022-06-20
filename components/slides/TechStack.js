@@ -4,6 +4,7 @@ import NextButton from "../elements/buttons/NextButton";
 import Pagination from "../elements/Pagination";
 import { useGPRMStore } from "../mobx/GPRMcontext";
 import Donate from "./Donate";
+import { useObserver } from "mobx-react";
 
 export default function TechStack({ back }) {
   const [isVisible, setIsVisible] = useState(false);
@@ -12,7 +13,7 @@ export default function TechStack({ back }) {
   useEffect(() => {
     gprmStore.data.badge_theme = BadgeStyle;
   }, [BadgeStyle]);
-  return (
+  return useObserver(() =>(
     <>
       {isVisible ? (
         <Donate back={() => setIsVisible(false)} />
@@ -1281,6 +1282,7 @@ export default function TechStack({ back }) {
             Theme:
             <select
               id="badgestyle"
+              value={gprmStore.data.badge_theme ? gprmStore.data.badge_theme : "for-the-badge"}
               onChange={() =>
                 setBadgeStyle(document.getElementById("badgestyle").value)
               }
@@ -1314,5 +1316,5 @@ export default function TechStack({ back }) {
         </div>
       )}
     </>
-  );
+  ));
 }

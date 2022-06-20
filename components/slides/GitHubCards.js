@@ -3,7 +3,7 @@ import FilterButton from "../elements/buttons/FilterButton";
 import NextButton from "../elements/buttons/NextButton";
 import Pagination from "../elements/Pagination";
 import { useGPRMStore } from "../mobx/GPRMcontext";
-import { username } from "./HomePage";
+import { useObserver } from "mobx-react";
 import Socials from "./Socials";
 
 export default function GitHubStats({ back }) {
@@ -30,7 +30,7 @@ export default function GitHubStats({ back }) {
     gprmStore.data.stats.lifetime = includeAll;
     gprmStore.data.stats.prv = includePrivate;
   });
-  return (
+  return useObserver(() =>(
     <>
       {isVisible ? (
         <Socials back={() => setIsVisible(false)} />
@@ -50,6 +50,7 @@ export default function GitHubStats({ back }) {
             Theme:
             <select
               id="theme"
+              value={gprmStore.data.stats.theme}
               onChange={() => setTheme(document.getElementById("theme").value)}
               className="bg-transparent py-1 px-2 outline-none"
             >
@@ -102,7 +103,7 @@ export default function GitHubStats({ back }) {
         </div>
       )}
     </>
-  );
+  ));
 }
 
 const themes = [
