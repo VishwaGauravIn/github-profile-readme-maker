@@ -264,8 +264,8 @@ ${gprmStore.data.tech
             src={`https://quotes-github-readme.vercel.app/api?type=${layout}&theme=${quoteTheme}`}
             alt=""
           />
-          <hr className="mt-2 mb-2 w-1/2 opacity-30" />
           <CheckBox id="quotechk" title="Add Random Dev Quotes" />
+          <hr className="mt-2 mb-2 w-1/2 opacity-30" />
 
           <CheckBox id="memechk" title="Add Random Memes" />
           <span className="pb-6" />
