@@ -94,8 +94,9 @@ export default function Extras({ back }) {
       finaldata =
         finaldata +
         `# 💫 About Me:
-${gprmStore.data.aboutme}
-      `;
+${(gprmStore.data.aboutme).replace(/(?:\r\n|\r|\n)/g, '<br>')}
+
+`;
     }
     if (socials != ``) {
       finaldata =
