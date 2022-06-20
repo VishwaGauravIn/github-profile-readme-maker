@@ -24,7 +24,7 @@ ${document.getElementById("aboutme").value}
   return (
     <>
       {isVisible ? (
-        <GitHubStats />
+        <GitHubStats  back={() => setIsVisible(false)}/>
       ) : (
         <div className="flex flex-col items-center fade-on-appear">
           <button className="left-0 absolute m-10 opacity-80 hover:opacity-100 transition-all ease-in-out outline-none" onClick={back}>◄ Go Back</button>

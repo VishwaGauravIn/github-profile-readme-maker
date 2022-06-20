@@ -4,7 +4,7 @@ import Pagination from "../elements/Pagination";
 import TextInputWithImage from "../elements/textinput/TextInputWithImage";
 import Extras from "./Extras";
 
-export default function Donate() {
+export default function Donate({back}) {
   const [isVisible, setIsVisible] = useState(false);
   function onNext() {
     if (document.getElementById("buymeacoffee").value != "") {
@@ -40,10 +40,11 @@ export default function Donate() {
   return (
     <>
       {isVisible ? (
-        <Extras />
+        <Extras  back={() => setIsVisible(false)}/>
       ) : (
         <div className="flex flex-col items-center fade-on-appear">
-          <p className="w-full text-center text-3xl my-10">
+          <button className="left-0 absolute m-10 opacity-80 hover:opacity-100 transition-all ease-in-out outline-none" onClick={back}>◄ Go Back</button>
+          <p className="w-full text-center text-3xl my-10 mt-20">
             Let People Help You via Donations
           </p>
           <div className="flex flex-col md:flex-row w-full">

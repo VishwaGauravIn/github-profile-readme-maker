@@ -4,16 +4,17 @@ import NextButton from "../elements/buttons/NextButton";
 import Pagination from "../elements/Pagination";
 import Donate from "./Donate";
 
-export default function TechStack() {
+export default function TechStack({back}) {
   const [isVisible, setIsVisible] = useState(false);
   const [BadgeStyle, setBadgeStyle] = useState("for-the-badge");
   return (
     <>
       {isVisible ? (
-        <Donate />
+        <Donate  back={() => setIsVisible(false)}/>
       ) : (
         <div className="flex flex-col items-center fade-on-appear">
-          <p className="w-full text-center text-3xl my-10">
+          <button className="left-0 absolute m-10 opacity-80 hover:opacity-100 transition-all ease-in-out outline-none" onClick={back}>◄ Go Back</button>
+          <p className="w-full text-center text-3xl my-10 mt-20">
             Add Tech that you use
           </p>
           <div className="flex flex-col md:flex-row w-full">

@@ -5,7 +5,7 @@ import Pagination from "../elements/Pagination";
 import { username } from "./HomePage";
 import Socials from "./Socials";
 
-export default function GitHubStats() {
+export default function GitHubStats({back}) {
   const [isVisible, setIsVisible] = useState(false);
   const [theme, setTheme] = useState("radical");
   const [border, setBorder] = useState(false);
@@ -22,10 +22,11 @@ export default function GitHubStats() {
   return (
     <>
       {isVisible ? (
-        <Socials />
+        <Socials  back={() => setIsVisible(false)}/>
       ) : (
         <div className="flex flex-col items-center fade-on-appear">
-          <p className="w-full text-center text-3xl my-10">
+          <button className="left-0 absolute m-10 opacity-80 hover:opacity-100 transition-all ease-in-out outline-none" onClick={back}>◄ Go Back</button>
+          <p className="w-full text-center text-3xl my-10 mt-20">
             Flex your GitHub Stats
           </p>
           {/* Options */}

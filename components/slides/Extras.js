@@ -12,7 +12,7 @@ import Pagination from "../elements/Pagination";
 import Preview from "./Preview";
 import { badgeStyle } from "./TechStack";
 
-export default function Extras() {
+export default function Extras({back}) {
   const [isVisible, setIsVisible] = useState(false);
   const [theme, setTheme] = useState("radical");
   const [border, setBorder] = useState(false);
@@ -99,10 +99,11 @@ ${techbadges.join(" ").replaceAll("for-the-badge", badgeStyle)}
   return (
     <>
       {isVisible ? (
-        <Preview />
+        <Preview  back={() => setIsVisible(false)}/>
       ) : (
         <div className="flex flex-col items-center fade-on-appear">
-          <p className="w-full text-center text-3xl my-10">
+          <button className="left-0 absolute m-10 opacity-80 hover:opacity-100 transition-all ease-in-out outline-none" onClick={back}>◄ Go Back</button>
+          <p className="w-full text-center text-3xl my-10 mt-20">
             Additional Stuffs to add
           </p>
           {/* Options */}

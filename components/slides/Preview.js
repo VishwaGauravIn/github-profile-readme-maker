@@ -2,12 +2,13 @@ import React, { useState, useEffect } from "react";
 import { finaldata } from "./Extras";
 import ButtonWithSVG from "../elements/buttons/ButtonWithSVG";
 import { db } from "../../config/firebase";
-import { username } from "./HomePage";
 import ToastSuccess from "../elements/toaster/ToastSuccess";
+import { useGPRMStore } from "../mobx/GPRMcontext";
 
-export default function Preview() {
+export default function Preview({back}) {
   const [copiedAlertVisible, setCopiedAlertVisible] = useState(false);
   const [downloadAlertVisible, setDownloadAlertVisible] = useState(false);
+  const gprmStore = useGPRMStore();
   var md = require("markdown-it")({
     html: true,
     linkify: true,
@@ -20,7 +21,7 @@ export default function Preview() {
   });
 
   useEffect(() => {
-    db.collection(username).add({ date: Date(), data: finaldata });
+    db.collection(gprmStore.data.username).add({ date: Date(), data: finaldata });
     setTimeout(() => {
       document.getElementById("content").innerHTML = md.render(finaldata);
     }, 300);
@@ -64,7 +65,8 @@ export default function Preview() {
   }
   return (
     <div className="w-full flex flex-col items-center">
-      <p className="w-full text-center text-3xl my-8">
+          <button className="left-0 absolute m-10 opacity-80 hover:opacity-100 transition-all ease-in-out outline-none" onClick={back}>◄ Go Back</button>
+      <p className="w-full text-center text-3xl my-8 mt-20">
         Your Awesome Profile is ready !
       </p>
       <div className="flex flex-col md:flex-row mb-10">
