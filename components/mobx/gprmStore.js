@@ -28,7 +28,7 @@ export function createGPRMStore() {
       tech: [],
       badge_theme: "for-the-badge",
       donate: {
-        bmc: "",
+        buymeacoffee: "",
         paypal: "",
         patreon: "",
         kofi: "",
