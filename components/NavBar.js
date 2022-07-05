@@ -12,7 +12,7 @@ export default function NavBar() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <BUY_ME_A_COFFEE_SVG/>
+        <BUY_ME_A_COFFEE_SVG />
         Donate us
       </a>
     </div>

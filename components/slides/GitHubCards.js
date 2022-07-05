@@ -1,31 +1,47 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import FilterButton from "../elements/buttons/FilterButton";
 import NextButton from "../elements/buttons/NextButton";
 import Pagination from "../elements/Pagination";
-import { username } from "./HomePage";
+import { useGPRMStore } from "../mobx/GPRMcontext";
+import { useObserver } from "mobx-react";
 import Socials from "./Socials";
 
-export default function GitHubStats() {
+export default function GitHubStats({ back }) {
   const [isVisible, setIsVisible] = useState(false);
-  const [theme, setTheme] = useState("radical");
-  const [border, setBorder] = useState(false);
-  const [includeAll, setIncludeAll] = useState(false);
-  const [includePrivate, setIncludePrivate] = useState(false);
+  const gprmStore = useGPRMStore();
+  const [theme, setTheme] = useState(gprmStore.data.stats.theme);
+  const [border, setBorder] = useState(gprmStore.data.stats.border);
+  const [includeAll, setIncludeAll] = useState(gprmStore.data.stats.lifetime);
+  const [includePrivate, setIncludePrivate] = useState(
+    gprmStore.data.stats.prv
+  );
   function onNext() {
-    githubstats = `# 📊GitHub Stats :
+    githubstats = `# 📊 GitHub Stats:
 ![](${document.getElementById("stats").getAttribute("src")})<br/>
 ![](${document.getElementById("streak").getAttribute("src")})<br/>
 ![](${document.getElementById("langs").getAttribute("src")})
 `;
     setIsVisible(true);
   }
-  return (
+  useEffect(() => {
+    gprmStore.data.stats.theme = theme;
+    gprmStore.data.stats.border = border;
+    gprmStore.data.stats.lifetime = includeAll;
+    gprmStore.data.stats.prv = includePrivate;
+  });
+  return useObserver(() => (
     <>
       {isVisible ? (
-        <Socials />
+        <Socials back={() => setIsVisible(false)} />
       ) : (
         <div className="flex flex-col items-center fade-on-appear">
-          <p className="w-full text-center text-3xl my-10">
+          <button
+            className="left-0 absolute m-10 opacity-80 hover:opacity-100 transition-all ease-in-out outline-none"
+            onClick={back}
+          >
+            ◄ Go Back
+          </button>
+          <p className="w-full text-center text-3xl my-10 mt-20">
             Flex your GitHub Stats
           </p>
           {/* Options */}
@@ -33,6 +49,7 @@ export default function GitHubStats() {
             Theme:
             <select
               id="theme"
+              value={gprmStore.data.stats.theme}
               onChange={() => setTheme(document.getElementById("theme").value)}
               className="bg-transparent py-1 px-2 outline-none"
             >
@@ -44,13 +61,19 @@ export default function GitHubStats() {
                 );
               })}
             </select>
-            <FilterButton title="Border" onClick={() => setBorder(!border)} />
+            <FilterButton
+              chk={border}
+              title="Border"
+              onClick={() => setBorder(!border)}
+            />
             <FilterButton
               title="Lifetime Commits"
+              chk={includeAll}
               onClick={() => setIncludeAll(!includeAll)}
             />
             <FilterButton
               title="Private Commits"
+              chk={includePrivate}
               onClick={() => setIncludePrivate(!includePrivate)}
             />
           </div>
@@ -62,21 +85,27 @@ export default function GitHubStats() {
               className="m-2 select-none pointer-events-none"
               draggable="false"
               id="stats"
-              src={`https://github-readme-stats.vercel.app/api?username=${username}&theme=${theme}&hide_border=${border}&include_all_commits=${includeAll}&count_private=${includePrivate}`}
+              src={`https://github-readme-stats.vercel.app/api?username=${
+                gprmStore.data.username
+              }&theme=${theme}&hide_border=${!border}&include_all_commits=${includeAll}&count_private=${includePrivate}`}
               alt=""
             />
             <img
               className="m-2 select-none pointer-events-none"
               draggable="false"
               id="streak"
-              src={`https://github-readme-streak-stats.herokuapp.com/?user=${username}&theme=${theme}&hide_border=${border}`}
+              src={`https://github-readme-streak-stats.herokuapp.com/?user=${
+                gprmStore.data.username
+              }&theme=${theme}&hide_border=${!border}`}
               alt=""
             />
             <img
               className="m-2 select-none pointer-events-none"
               draggable="false"
               id="langs"
-              src={`https://github-readme-stats.vercel.app/api/top-langs/?username=${username}&theme=${theme}&hide_border=${border}&include_all_commits=${includeAll}&count_private=${includePrivate}&layout=compact`}
+              src={`https://github-readme-stats.vercel.app/api/top-langs/?username=${
+                gprmStore.data.username
+              }&theme=${theme}&hide_border=${!border}&include_all_commits=${includeAll}&count_private=${includePrivate}&layout=compact`}
               alt=""
             />
           </div>
@@ -85,7 +114,7 @@ export default function GitHubStats() {
         </div>
       )}
     </>
-  );
+  ));
 }
 
 const themes = [

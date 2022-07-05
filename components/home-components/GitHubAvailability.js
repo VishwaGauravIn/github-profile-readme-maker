@@ -6,7 +6,7 @@ export default function GitHubAvailability() {
   return (
     <div className="flex flex-col md:flex-row my-8 text-green-300">
       <div className="w-full md:w-6/12 flex flex-col justify-center items-center">
-        <GITHUB_LOGO_LARGE_SVG/>
+        <GITHUB_LOGO_LARGE_SVG />
       </div>
       <div className="w-full md:w-6/12 flex flex-col justify-center my-6 md:my-0">
         <p className="text-3xl sm:text-4xl md:text-5xl font-medium">

@@ -1,26 +1,49 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import CheckBox from "../elements/CheckBox";
 import FilterButton from "../elements/buttons/FilterButton";
 import NextButton from "../elements/buttons/NextButton";
-import { aboutme } from "./AboutMe";
 import { githubstats } from "./GitHubCards";
-import { username } from "./HomePage";
 import { socials } from "./Socials";
-import { techbadges } from "./TechStack";
 import { donate } from "./Donate";
 import Pagination from "../elements/Pagination";
 import Preview from "./Preview";
-import { badgeStyle } from "./TechStack";
+import { useGPRMStore } from "../mobx/GPRMcontext";
+import { useObserver } from "mobx-react";
 
-export default function Extras() {
+export default function Extras({ back }) {
   const [isVisible, setIsVisible] = useState(false);
-  const [theme, setTheme] = useState("radical");
-  const [border, setBorder] = useState(false);
-  const [background, setBackground] = useState(false);
-  const [quoteTheme, setQuoteTheme] = useState("radical");
-  const [layout, setLayout] = useState("horizontal");
-  const [color, setColor] = useState(0);
-  const [icon, setIcon] = useState(0);
+  const gprmStore = useGPRMStore();
+  const [theme, setTheme] = useState(gprmStore.data.trophy.theme);
+  const [border, setBorder] = useState(gprmStore.data.trophy.border);
+  const [background, setBackground] = useState(
+    gprmStore.data.trophy.background
+  );
+  const [quoteTheme, setQuoteTheme] = useState(gprmStore.data.quote.quoteTheme);
+  const [layout, setLayout] = useState(gprmStore.data.quote.layout);
+  const [color, setColor] = useState(gprmStore.data.visitcount.color);
+  const [icon, setIcon] = useState(gprmStore.data.visitcount.icon);
+  useEffect(() => {
+    gprmStore.data.trophy.theme = theme;
+  }, [theme]);
+  useEffect(() => {
+    gprmStore.data.trophy.border = border;
+  }, [border]);
+  useEffect(() => {
+    gprmStore.data.trophy.background = background;
+  }, [background]);
+  useEffect(() => {
+    gprmStore.data.visitcount.color = color;
+  }, [color]);
+  useEffect(() => {
+    gprmStore.data.visitcount.icon = icon;
+  }, [icon]);
+  useEffect(() => {
+    gprmStore.data.quote.quoteTheme = quoteTheme;
+  }, [quoteTheme]);
+  useEffect(() => {
+    gprmStore.data.quote.layout = layout;
+  }, [layout]);
+
   function changeLayout() {
     if (layout === "horizontal") {
       setLayout("vetical");
@@ -29,11 +52,12 @@ export default function Extras() {
     }
   }
   function onNext() {
+    extras = "";
     if (document.getElementById("trophychk").checked === true) {
       extras =
         extras +
         `
-## 🏆GitHub Trophies
+## 🏆 GitHub Trophies
 ![](${document.getElementById("trophy").getAttribute("src")})
 `;
     }
@@ -41,7 +65,7 @@ export default function Extras() {
       extras =
         extras +
         `
-### ✍️Random Dev Quote
+### ✍️ Random Dev Quote
 ![](${document.getElementById("quote").getAttribute("src")})
 `;
     }
@@ -49,7 +73,7 @@ export default function Extras() {
       extras =
         extras +
         `
-### 😂Random Dev Meme
+### 😂 Random Dev Meme
 <img src="https://random-memer.herokuapp.com/" width="512px"/>
 `;
     }
@@ -58,30 +82,38 @@ export default function Extras() {
         extras +
         `
 ---
-[![](https://visitcount.itsvg.in/api?id=${username}&icon=${icon}&color=${color})](https://visitcount.itsvg.in)
+[![](https://visitcount.itsvg.in/api?id=${gprmStore.data.username}&icon=${icon}&color=${color})](https://visitcount.itsvg.in)
 `;
     }
     createFinalData();
     setIsVisible(true);
   }
   function createFinalData() {
-    if (aboutme != ``) {
-      finaldata = finaldata + aboutme;
+    var finaldata = "";
+    if (gprmStore.data.aboutme != ``) {
+      finaldata =
+        finaldata +
+        `# 💫 About Me:
+${(gprmStore.data.aboutme).replace(/(?:\r\n|\r|\n)/g, '<br>')}
+
+`;
     }
     if (socials != ``) {
       finaldata =
         finaldata +
         `
-## 🌐Socials
+## 🌐 Socials:
 ${socials}
 `;
     }
-    if (techbadges != ``) {
+    if (gprmStore.data.tech != ``) {
       finaldata =
         finaldata +
         `
-# 💻Tech Stack
-${techbadges.join(" ").replaceAll("for-the-badge", badgeStyle)}
+# 💻 Tech Stack:
+${gprmStore.data.tech
+  .join(" ")
+  .replaceAll("for-the-badge", gprmStore.data.badge_theme)}
 `;
     }
     finaldata = finaldata + githubstats + extras;
@@ -89,27 +121,36 @@ ${techbadges.join(" ").replaceAll("for-the-badge", badgeStyle)}
       finaldata =
         finaldata +
         `
-  ## 💰You can help me by Donating
+  ## 💰 You can help me by Donating
   ${donate}
 
   <!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
   `;
     }
+    gprmStore.data.finalData = finaldata;
   }
-  return (
+  return useObserver(() => (
     <>
       {isVisible ? (
-        <Preview />
+        <Preview back={() => setIsVisible(false)} />
       ) : (
         <div className="flex flex-col items-center fade-on-appear">
-          <p className="w-full text-center text-3xl my-10">
+          <button
+            className="left-0 absolute m-10 opacity-80 hover:opacity-100 transition-all ease-in-out outline-none"
+            onClick={back}
+          >
+            ◄ Go Back
+          </button>
+          <p className="w-full text-center text-3xl my-10 mt-20">
             Additional Stuffs to add
           </p>
+          {/* Trophies */}
           {/* Options */}
           <div className="flex flex-wrap justify-center items-center">
             Theme:
             <select
               id="theme"
+              value={theme}
               onChange={() => setTheme(document.getElementById("theme").value)}
               className="bg-transparent py-1 px-2 outline-none"
             >
@@ -121,13 +162,18 @@ ${techbadges.join(" ").replaceAll("for-the-badge", badgeStyle)}
                 );
               })}
             </select>
-            <FilterButton title="Border" onClick={() => setBorder(!border)} />
+            <FilterButton
+              chk={border}
+              title="Border"
+              onClick={() => setBorder(!border)}
+            />
             <FilterButton
               title="Background"
+              chk={background}
               onClick={() => setBackground(!background)}
             />
           </div>
-          <p className="mt-4 text-green-300 opacity-90">
+          <p className="mt-4 text-green-300 opacity-90 text-xs text-center sm:text-base">
             please wait for images to load after changing any values
           </p>
           <div className="w-full md:w-8/12 items-center flex flex-col flex-wrap md:my-4">
@@ -135,92 +181,101 @@ ${techbadges.join(" ").replaceAll("for-the-badge", badgeStyle)}
               className="m-2 select-none pointer-events-none"
               draggable="false"
               id="trophy"
-              src={`https://github-profile-trophy.vercel.app/?username=${username}&theme=${theme}&no-frame=${border}&no-bg=${background}&margin-w=4`}
+              src={`https://github-profile-trophy.vercel.app/?username=${
+                gprmStore.data.username
+              }&theme=${theme}&no-frame=${!border}&no-bg=${!background}&margin-w=4`}
               alt=""
             />
             <CheckBox id="trophychk" title="Add GitHub Trophies" />
-            {/* Visitors Badge */}
-            {/* Options */}
-            <div className="flex flex-wrap justify-center items-center py-6">
-              Color:
-              <select
-                id="color"
-                onChange={() =>
-                  setColor(document.getElementById("color").value)
-                }
-                className="bg-transparent py-1 px-2 outline-none mr-2"
-              >
-                {colors.map((color, index) => {
-                  return (
-                    <option key={index} value={index} className="bg-zinc-900">
-                      {color}
-                    </option>
-                  );
-                })}
-              </select>
-              Icon:
-              <select
-                id="icon"
-                onChange={() => setIcon(document.getElementById("icon").value)}
-                className="bg-transparent py-1 px-2 outline-none"
-              >
-                {icons.map((icon, index) => {
-                  return (
-                    <option key={index} value={index} className="bg-zinc-900">
-                      {icon}
-                    </option>
-                  );
-                })}
-              </select>
-            </div>
-            <img
-              id="visitors"
-              src={`https://visitcount.itsvg.in/api/test?icon=${icon}&color=${color}`}
-              alt=""
-              className="md:ml-36 mb-4"
-            />
-            <CheckBox
-              id="visitorschk"
-              defaultChecked={true}
-              title="Add Visitors Count"
-            />
-            {/* Options */}
-            <div className="flex flex-wrap justify-center items-center mt-4 my-2">
-              Theme:
-              <select
-                id="quotetheme"
-                onChange={() =>
-                  setQuoteTheme(document.getElementById("quotetheme").value)
-                }
-                className="bg-transparent py-1 px-2 outline-none"
-              >
-                {quoteThemes.map((item) => {
-                  return (
-                    <option key={item} value={item} className="bg-zinc-900">
-                      {item}
-                    </option>
-                  );
-                })}
-              </select>
-              <FilterButton title="Layout" onClick={() => changeLayout()} />
-            </div>
-            <img
-              className="m-2 select-none pointer-events-none"
-              draggable="false"
-              id="quote"
-              src={`https://quotes-github-readme.vercel.app/api?type=${layout}&theme=${quoteTheme}`}
-              alt=""
-            />
-            <CheckBox id="quotechk" title="Add Random Dev Quotes" />
-
-            <CheckBox id="memechk" title="Add Random Memes" />
           </div>
+          <hr className="mt-2 mb-2 w-1/2 opacity-30" />
+
+          {/* Visitors Badge */}
+          {/* Options */}
+          <div className="flex flex-wrap justify-center items-center py-6">
+            Color:
+            <select
+              id="color"
+              value={color}
+              onChange={() => setColor(document.getElementById("color").value)}
+              className="bg-transparent py-1 px-2 outline-none mr-2"
+            >
+              {colors.map((color, index) => {
+                return (
+                  <option key={index} value={index} className="bg-zinc-900">
+                    {color}
+                  </option>
+                );
+              })}
+            </select>
+            Icon:
+            <select
+              id="icon"
+              value={icon}
+              onChange={() => setIcon(document.getElementById("icon").value)}
+              className="bg-transparent py-1 px-2 outline-none"
+            >
+              {icons.map((icon, index) => {
+                return (
+                  <option key={index} value={index} className="bg-zinc-900">
+                    {icon}
+                  </option>
+                );
+              })}
+            </select>
+          </div>
+          <img
+            id="visitors"
+            src={`https://visitcount.itsvg.in/api/test?icon=${icon}&color=${color}`}
+            alt=""
+            className="md:ml-36 mb-4"
+          />
+          <CheckBox id="visitorschk" title="Add Visitors Count" />
+          <hr className="mt-2 mb-2 w-1/2 opacity-30" />
+
+          {/* Quote */}
+          {/* Options */}
+          <div className="flex flex-wrap justify-center items-center mt-4 my-2">
+            Theme:
+            <select
+              id="quotetheme"
+              value={quoteTheme}
+              onChange={() =>
+                setQuoteTheme(document.getElementById("quotetheme").value)
+              }
+              className="bg-transparent py-1 px-2 outline-none"
+            >
+              {quoteThemes.map((item) => {
+                return (
+                  <option key={item} value={item} className="bg-zinc-900">
+                    {item}
+                  </option>
+                );
+              })}
+            </select>
+            <FilterButton
+              title={`Layout- ${layout}`}
+              onClick={() => changeLayout()}
+            />
+          </div>
+          <img
+            className="m-2 select-none pointer-events-none"
+            draggable="false"
+            id="quote"
+            src={`https://quotes-github-readme.vercel.app/api?type=${layout}&theme=${quoteTheme}`}
+            alt=""
+          />
+          <CheckBox id="quotechk" title="Add Random Dev Quotes" />
+          <hr className="mt-2 mb-2 w-1/2 opacity-30" />
+
+          <CheckBox id="memechk" title="Add Random Memes" />
+          <span className="pb-6" />
           <NextButton onClick={() => onNext()} />
           <Pagination val={6} />
         </div>
       )}
     </>
-  );
+  ));
 }
 
 const themes = [
@@ -286,4 +341,3 @@ const icons = [
 ];
 
 export var extras = ``;
-export var finaldata = ``;

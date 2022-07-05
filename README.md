@@ -8,7 +8,7 @@
 </div>
 <br/>
 
-![](https://github.com/VishwaGauravIn/Images/blob/main/screencapture-gprm.png?raw=true)
+![screencapture-gprm-itsvg-in-2022-06-20-23_26_35](https://user-images.githubusercontent.com/81325730/174656518-bfb20479-6b5c-4947-8a5c-f709f35ed345.png)
 
 # Features
 We got everything that you need ! Create your perfect GitHub Profile ReadMe in the best possible way. Lots of features and tools included, all for free !

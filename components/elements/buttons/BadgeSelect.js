@@ -1,17 +1,19 @@
 import React, { useState } from "react";
+import { useGPRMStore } from "../../mobx/GPRMcontext";
 
-export default function BadgeSelect({ label, url, data }) {
-  const [isAdded, setIsAdded] = useState(false);
+export default function BadgeSelect({ label, url}) {
+  const gprmStore = useGPRMStore()
+  const [isAdded, setIsAdded] = useState(gprmStore.data.tech.toString().includes(url));
   function onClickFun() {
     if (isAdded) {
       setIsAdded(false);
       //   for()
-      var badgeIndex = data.indexOf(url);
-      data.splice(badgeIndex, 1);
+      var badgeIndex = gprmStore.data.tech.indexOf(url);
+      gprmStore.data.tech.splice(badgeIndex, 1);
       //   console.log(data);
     } else {
       setIsAdded(true);
-      data.push(url);
+      gprmStore.data.tech.push(url);
       //   console.log(data);
     }
   }
@@ -70,4 +72,4 @@ export default function BadgeSelect({ label, url, data }) {
   );
 }
 
-// Template: <BadgeSelect label='' url={""} data={techbadges}/>
+// Template: <BadgeSelect label='' url={""}/>
