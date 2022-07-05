@@ -1,11 +1,19 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useGPRMStore } from "../../mobx/GPRMcontext";
 
 export default function TextInputWithIcon({ id, children, placeholder }) {
+  const gprmStore = useGPRMStore();
+  const [input, setInput] = useState(gprmStore.data.socials[id]);
+  useEffect(() => {
+    gprmStore.data.socials[id] = input;
+  }, [input]);
   return (
     <div className="flex w-full md:w-5/12 my-2">
       <input
         type="text"
         id={id}
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
         placeholder={placeholder}
         className="w-full h-16 p-4 border-b-2 bg-transparent outline-none border-green-300 focus:border-green-200 focus:z-10"
       />

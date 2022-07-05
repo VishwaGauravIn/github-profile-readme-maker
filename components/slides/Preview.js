@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { finaldata } from "./Extras";
 import ButtonWithSVG from "../elements/buttons/ButtonWithSVG";
 import { db } from "../../config/firebase";
-import { username } from "./HomePage";
 import ToastSuccess from "../elements/toaster/ToastSuccess";
+import { useGPRMStore } from "../mobx/GPRMcontext";
 
-export default function Preview() {
+export default function Preview({ back }) {
   const [copiedAlertVisible, setCopiedAlertVisible] = useState(false);
   const [downloadAlertVisible, setDownloadAlertVisible] = useState(false);
+  const gprmStore = useGPRMStore();
   var md = require("markdown-it")({
     html: true,
     linkify: true,
@@ -20,20 +20,24 @@ export default function Preview() {
   });
 
   useEffect(() => {
-    db.collection(username).add({ date: Date(), data: finaldata });
+    db.collection(gprmStore.data.username).add({
+      date: Date(),
+      data: gprmStore.data.finalData,
+    });
     setTimeout(() => {
-      document.getElementById("content").innerHTML = md.render(finaldata);
+      document.getElementById("content").innerHTML = md.render(
+        gprmStore.data.finalData
+      );
     }, 300);
   }, []);
-
   function onCopy() {
-    navigator.clipboard.writeText(finaldata);
+    navigator.clipboard.writeText(gprmStore.data.finalData);
     // Alert for Copied
     copied();
   }
   function onDownload() {
     const element = document.createElement("a");
-    const file = new Blob([finaldata], {
+    const file = new Blob([gprmStore.data.finalData], {
       type: "text/plain",
     });
     element.href = URL.createObjectURL(file);
@@ -64,7 +68,13 @@ export default function Preview() {
   }
   return (
     <div className="w-full flex flex-col items-center">
-      <p className="w-full text-center text-3xl my-8">
+      <button
+        className="left-0 absolute m-10 opacity-80 hover:opacity-100 transition-all ease-in-out outline-none"
+        onClick={back}
+      >
+        ◄ Go Back
+      </button>
+      <p className="w-full text-center text-3xl my-8 mt-20">
         Your Awesome Profile is ready !
       </p>
       <div className="flex flex-col md:flex-row mb-10">
@@ -99,7 +109,12 @@ export default function Preview() {
         id="content"
         className="w-full md:w-8/12 p-3 py-6 bg-zinc-800 rounded-lg ring-1 ring-green-200 shadow-xl shadow-green-200/20 text-zinc-100"
       ></div>
-      <p className="font-semibold text-gray-400 pt-12 flex flex-wrap">What to Do Next ? :&nbsp;<p className="font-medium">Copy this Code and Paste it into your GitHub ReadMe file.</p>  </p>
+      <p className="font-semibold text-gray-400 pt-12 flex flex-wrap">
+        What to Do Next ? :&nbsp;
+        <p className="font-medium">
+          Copy this Code and Paste it into your GitHub ReadMe file.
+        </p>{" "}
+      </p>
       <p className="flex flex-col h-full items-center text-xl text-center pt-5 lg:pt-10">
         Hey👋, Can you help us to grow by sharing? <br />
       </p>

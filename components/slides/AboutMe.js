@@ -1,33 +1,41 @@
 import React, { useState } from "react";
 import NextButton from "../elements/buttons/NextButton";
 import Pagination from "../elements/Pagination";
+import { useGPRMStore } from "../mobx/GPRMcontext";
+import { useObserver } from "mobx-react";
 import GitHubStats from "./GitHubCards";
+import { LightBulbIcon } from '@heroicons/react/outline'
 
-export default function AboutMe() {
+export default function AboutMe({ back }) {
   const [isVisible, setIsVisible] = useState(false);
+  const gprmStore = useGPRMStore();
+  const [aboutme, setAboutme] = useState(gprmStore.data.aboutme);
   const textareaPlaceholder = `🔭 I’m currently working on
 👯 I’m looking to collaborate on
 🤝 I’m looking for help with
 🌱 I’m currently learning
 💬 Ask me about
-⚡ Fun fact
-You can Write this in Markdown format too`;
+⚡ Fun fact`;
 
   function onNext() {
-    if (document.getElementById("aboutme").value != ``) {
-      aboutme = `# 💫About Me :
-${document.getElementById("aboutme").value}
-`;
+    if (aboutme != ``) {
+      gprmStore.data.aboutme = aboutme;
     }
     setIsVisible(true);
   }
-  return (
+  return useObserver(() => (
     <>
       {isVisible ? (
-        <GitHubStats />
+        <GitHubStats back={() => setIsVisible(false)} />
       ) : (
         <div className="flex flex-col items-center fade-on-appear">
-          <p className="w-full text-center text-3xl my-6 md:my-10">
+          <button
+            className="left-0 absolute m-10 opacity-80 hover:opacity-100 transition-all ease-in-out outline-none"
+            onClick={back}
+          >
+            ◄ Go Back
+          </button>
+          <p className="w-full text-center text-3xl my-6 md:my-10 mt-20">
             Add a small introduction
           </p>
           <div className="flex flex-col md:flex-row w-full">
@@ -48,15 +56,21 @@ ${document.getElementById("aboutme").value}
                 id="aboutme"
                 className="w-full bg-transparent h-72 md:h-96 text-base sm:text-lg md:text-xl p-4 outline-none ring-2 ring-green-300/50 focus:ring-green-300/75 rounded-md my-6 md:my-10 resize-none whitespace-pre"
                 placeholder={textareaPlaceholder}
+                value={aboutme}
+                onChange={(e) => setAboutme(e.target.value)}
                 autoFocus="true"
               ></textarea>
-              <NextButton onClick={() => onNext()} />
+              <div className="flex ">
+                <button className="mr-4 opacity-60 hover:opacity-80" title="Load Template" onClick={()=> setAboutme(textareaPlaceholder) }>
+                  <LightBulbIcon className="w-6 stroke-1"></LightBulbIcon>
+                </button>
+                <NextButton onClick={() => onNext()} />
+              </div>
             </div>
           </div>
           <Pagination val={1} />
         </div>
       )}
     </>
-  );
+  ));
 }
-export var aboutme = ``;
