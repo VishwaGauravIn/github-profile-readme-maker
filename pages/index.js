@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Animation from "../components/Animation";
+import Broadcast from "../components/broadcast/Broadcast";
 import Footer from "../components/elements/Footer";
 import NavBar from "../components/NavBar";
 import HomePage from "../components/slides/HomePage";
@@ -68,6 +69,7 @@ export default function Home() {
         ></link>
       </Head>
       <body className="overflow-x-hidden max-w-[100vw] p-3 md:p-4 text-green-200">
+        <Broadcast />
         <NavBar />
         <HomePage />
         <Footer />
