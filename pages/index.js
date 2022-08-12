@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Script from "next/script";
 import Animation from "../components/Animation";
 import Broadcast from "../components/broadcast/Broadcast";
 import Footer from "../components/elements/Footer";
@@ -44,22 +45,6 @@ export default function Home() {
           content="https://gprm.itsvg.in/webimg.png"
         />
         <link rel="icon" href="/logo.png" />
-        {/* Google Analytics */}
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-9FEXPTFC17"
-        />
-
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-9FEXPTFC17', { page_path: window.location.pathname });
-            `,
-          }}
-        />
         {/* Fonts in Head for Fast Serving */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
@@ -68,6 +53,23 @@ export default function Home() {
           rel="stylesheet"
         ></link>
       </Head>
+      {/* Google Analytics */}
+      <Script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-9FEXPTFC17"
+      />
+      <Script
+        id="google-analytics"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-9FEXPTFC17', { page_path: window.location.pathname });
+            `,
+        }}
+      />
       <body className="overflow-x-hidden max-w-[100vw] p-3 md:p-4 text-green-200">
         <Broadcast />
         <NavBar />
