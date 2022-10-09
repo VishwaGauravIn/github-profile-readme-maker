@@ -17,6 +17,7 @@ html {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -29,6 +30,7 @@ html {
   position: relative;
   transition: all 0.6s;
 }
+
 .pass:before {
   content: "";
   width: 0;
@@ -39,11 +41,13 @@ html {
   background: rgb(254 205 211);
   transition: all 0.3s;
 }
+
 .pass:hover:before {
   width: 100%;
   left: 0;
   background: rgb(165 243 252);
 }
+
 /* Animated Underline End */
 
 .fade-on-appear {
@@ -54,7 +58,15 @@ html {
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
+}
+
+
+.search-input {
+  background: transparent;
+  border-bottom: 1px solid rgb(165 243 252);
+  outline: none;
 }
