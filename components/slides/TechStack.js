@@ -18,14 +18,7 @@ import {
 import Search from '../elements/textinput/Search';
 
 export default function TechStack({ back }) {
-  const [languageSearch, setLanguageSearch] = useState('');
-  const [hostSassSearch, sethostSassSearch] = useState('');
-  const [serversSearch, setServersSearch] = useState('');
-  const [databasesSearch, setDatabasesSearch] = useState('');
-  const [MLDLSearch, setMLDLSearch] = useState('');
-  const [designSearch, setDesignSearch] = useState('');
-  const [otherSearch, setOtherSearch] = useState('');
-  const [frameworkSearch, setFrameworkSearch] = useState('');
+  const [search, setSearch] = useState('');
 
   const [isVisible, setIsVisible] = useState(false);
   const gprmStore = useGPRMStore();
@@ -35,84 +28,84 @@ export default function TechStack({ back }) {
   }, [BadgeStyle]);
 
   const showLanguage = useMemo(() => {
-    if (!languageSearch) {
+    if (!search) {
       return languages;
     }
 
     return languages.filter((item) =>
-      item.label.toLowerCase().includes(languageSearch.toLowerCase())
+      item.label.toLowerCase().includes(search.toLowerCase())
     );
-  }, [languageSearch]);
+  }, [search]);
 
   const showHostSass = useMemo(() => {
-    if (!hostSassSearch) {
+    if (!search) {
       return hostSaas;
     }
 
     return hostSaas.filter((item) =>
-      item.label.toLowerCase().includes(hostSassSearch.toLowerCase())
+      item.label.toLowerCase().includes(search.toLowerCase())
     );
-  }, [hostSassSearch]);
+  }, [search]);
 
   const showDatabases = useMemo(() => {
-    if (!databasesSearch) {
+    if (!search) {
       return databases;
     }
 
     return databases.filter((item) =>
-      item.label.toLowerCase().includes(databasesSearch.toLowerCase())
+      item.label.toLowerCase().includes(search.toLowerCase())
     );
-  }, [databasesSearch]);
+  }, [search]);
 
   const showMLDL = useMemo(() => {
-    if (!MLDLSearch) {
+    if (!search) {
       return MLDL;
     }
 
     return MLDL.filter((item) =>
-      item.label.toLowerCase().includes(MLDLSearch.toLowerCase())
+      item.label.toLowerCase().includes(search.toLowerCase())
     );
-  }, [MLDLSearch]);
+  }, [search]);
 
   const showServers = useMemo(() => {
-    if (!serversSearch) {
+    if (!search) {
       return servers;
     }
 
     return servers.filter((item) =>
-      item.label.toLowerCase().includes(serversSearch.toLowerCase())
+      item.label.toLowerCase().includes(search.toLowerCase())
     );
-  }, [serversSearch]);
+  }, [search]);
 
   const showFrameworks = useMemo(() => {
-    if (!frameworkSearch) {
+    if (!search) {
       return frameWorks;
     }
 
     return frameWorks.filter((item) =>
-      item.label.toLowerCase().includes(frameworkSearch.toLowerCase())
+      item.label.toLowerCase().includes(search.toLowerCase())
     );
-  }, [frameworkSearch]);
+  }, [search]);
 
   const showOther = useMemo(() => {
-    if (!otherSearch) {
+    if (!search) {
       return other;
     }
 
     return other.filter((item) =>
-      item.label.toLowerCase().includes(otherSearch.toLowerCase())
+      item.label.toLowerCase().includes(search.toLowerCase())
     );
-  }, [otherSearch]);
+  }, [search]);
 
   const showDesign = useMemo(() => {
-    if (!designSearch) {
+    if (!search) {
       return design;
     }
 
     return design.filter((item) =>
-      item.label.toLowerCase().includes(designSearch.toLowerCase())
+      item.label.toLowerCase().includes(search.toLowerCase())
     );
-  }, [designSearch]);
+  }, [search]);
 
   return useObserver(() => (
     <>
@@ -126,9 +119,9 @@ export default function TechStack({ back }) {
           >
             ◄ Go Back
           </button>
-          <p className='w-full text-center text-3xl my-10 mt-20'>
-            Add Tech that you use
-          </p>
+          <div className='flex justify-center my-10 mt-20 w-[100%] relative'>
+            <p className='text-center text-3xl'>Add Tech that you use</p>
+          </div>
           <div className='flex flex-col md:flex-row w-full'>
             <div className='flex w-full md:w-6/12 justify-center items-center'>
               <img
@@ -138,16 +131,20 @@ export default function TechStack({ back }) {
                 draggable='false'
               />
             </div>
-            <div className='flex flex-col w-full md:w-6/12'>
+            <div className='flex flex-col w-full md:w-6/12 text-green-100'>
               {/* NOT USING ANY DATA FILE TO POPULATE BADGES */}
+              <div className='flex justify-center md:justify-end w-full mb-5'>
+                <Search
+                  setValue={setSearch}
+                  className='w-full md:w-[450px]'
+                  placeholder='Search among different categories...'
+                />
+              </div>
               <div className='flex flex-col h-full items-center'>
                 {/* Languages */}
-                <div className='flex justify-between w-[100%] mb-3'>
-                  <p className='flex justify-center text-lg md:text-xl'>
-                    LANGUAGES
-                  </p>
-                  <Search setValue={setLanguageSearch} />
-                </div>
+                <p className='flex justify-center text-lg md:text-xl mb-3'>
+                  LANGUAGES
+                </p>
                 <div className='flex flex-row flex-wrap text-gray-700 md:justify-center'>
                   {showLanguage.length ? (
                     showLanguage.map((item) => (
@@ -164,12 +161,11 @@ export default function TechStack({ back }) {
                   )}
                 </div>
                 {/* Hosting/SaaS */}
-                <div className='flex justify-between w-[100%] mb-3'>
-                  <p className='flex justify-center text-lg md:text-xl mt-4'>
-                    HOSTING/SaaS
-                  </p>
-                  <Search setValue={sethostSassSearch} />
-                </div>
+
+                <p className='flex justify-center text-lg md:text-xl mt-4 mb-3'>
+                  HOSTING/SaaS
+                </p>
+
                 <div className='flex flex-row flex-wrap text-gray-700 md:justify-center'>
                   {showHostSass.length ? (
                     showHostSass.map((item) => (
@@ -190,12 +186,9 @@ export default function TechStack({ back }) {
           </div>
           <div className='w-full flex flex-col justify-center items-center text-green-100'>
             {/* FRAMEWORKS, PLATFORMS & LIBRARIES */}
-            <div className='flex justify-between mb-3 w-[80%]'>
-              <p className='flex justify-center text-lg md:text-xl mt-4'>
-                FRAMEWORKS, PLATFORMS & LIBRARIES
-              </p>
-              <Search setValue={setFrameworkSearch} />
-            </div>
+            <p className='flex justify-center text-lg md:text-xl mt-4 mb-3'>
+              FRAMEWORKS, PLATFORMS & LIBRARIES
+            </p>
             <div className='flex flex-row flex-wrap text-gray-700 md:justify-center w-full md:w-10/12'>
               {showFrameworks.length ? (
                 showFrameworks.map((item) => (
@@ -206,18 +199,15 @@ export default function TechStack({ back }) {
                   />
                 ))
               ) : (
-                <p className='text-lg text-green-200'>
+                <p className='text-lg text-green-200 w-full text-center'>
                   No Frameworks, Platforms & Libraries Found !!!
                 </p>
               )}
             </div>
             {/* SERVERS */}
-            <div className='flex justify-between w-[80%] mb-3'>
-              <p className='flex justify-center text-lg md:text-xl mt-4'>
-                SERVERS
-              </p>
-              <Search setValue={setServersSearch} />
-            </div>
+            <p className='flex justify-center text-lg md:text-xl mt-4 mb-3'>
+              SERVERS
+            </p>
             <div className='flex flex-row flex-wrap text-gray-700 md:justify-center  w-full md:w-10/12'>
               {showServers.length ? (
                 showServers.map((item) => (
@@ -228,16 +218,16 @@ export default function TechStack({ back }) {
                   />
                 ))
               ) : (
-                <p className='text-lg text-green-200'>No Servers Found !!!</p>
+                <p className='text-lg text-green-200 w-full text-center'>
+                  No Servers Found !!!
+                </p>
               )}
             </div>
             {/* DATABASES */}
-            <div className='flex justify-between w-[80%] mb-3'>
-              <p className='flex justify-center text-lg md:text-xl mt-4'>
-                DATABASES
-              </p>
-              <Search setValue={setDatabasesSearch} />
-            </div>
+            <p className='flex justify-center text-lg md:text-xl mt-4 mb-3'>
+              DATABASES
+            </p>
+
             <div className='flex flex-row flex-wrap text-gray-700 md:justify-center  w-full md:w-10/12'>
               {showDatabases.length ? (
                 showDatabases.map((item) => (
@@ -248,16 +238,16 @@ export default function TechStack({ back }) {
                   />
                 ))
               ) : (
-                <p className='text-lg text-green-200'>No Databases Found !!!</p>
+                <p className='text-lg text-green-200 w-full text-center'>
+                  No Databases Found !!!
+                </p>
               )}
             </div>
             {/* DESIGN */}
-            <div className='flex justify-between w-[80%] mb-3'>
-              <p className='flex justify-center text-lg md:text-xl mt-4'>
-                DESIGN
-              </p>
-              <Search setValue={setDesignSearch} />
-            </div>
+            <p className='flex justify-center text-lg md:text-xl mt-4 mb-3'>
+              DESIGN
+            </p>
+
             <div className='flex flex-row flex-wrap text-gray-700 md:justify-center  w-full md:w-10/12'>
               {showDesign.length ? (
                 showDesign.map((item) => (
@@ -268,16 +258,15 @@ export default function TechStack({ back }) {
                   />
                 ))
               ) : (
-                <p className='text-lg text-green-200'>No Design Found !!!</p>
+                <p className='text-lg text-green-200 w-full text-center'>
+                  No Design Found !!!
+                </p>
               )}
             </div>
             {/* ML/DL */}
-            <div className='flex justify-between w-[80%] mb-3'>
-              <p className='flex justify-center text-lg md:text-xl mt-4'>
-                ML/DL
-              </p>
-              <Search setValue={setMLDLSearch} />
-            </div>
+            <p className='flex justify-center text-lg md:text-xl mt-4 mb-3'>
+              ML/DL
+            </p>
             <div className='flex flex-row flex-wrap text-gray-700 md:justify-center w-full md:w-10/12'>
               {showMLDL.length ? (
                 showMLDL.map((item) => (
@@ -288,16 +277,15 @@ export default function TechStack({ back }) {
                   />
                 ))
               ) : (
-                <p className='text-lg text-green-200'>No ML/DL Found !!!</p>
+                <p className='text-lg text-green-200 w-full text-center'>
+                  No ML/DL Found !!!
+                </p>
               )}
             </div>
             {/* OTHER */}
-            <div className='flex justify-between mb-3 w-[80%]'>
-              <p className='flex justify-center text-lg md:text-xl mt-4'>
-                OTHER
-              </p>
-              <Search setValue={setOtherSearch} />
-            </div>
+            <p className='flex justify-center text-lg md:text-xl mt-4 mb-3'>
+              OTHER
+            </p>
             <div className='flex flex-row flex-wrap text-gray-700 md:justify-center w-full md:w-10/12 mb-10'>
               {showOther.length ? (
                 showOther.map((item) => (
@@ -308,7 +296,9 @@ export default function TechStack({ back }) {
                   />
                 ))
               ) : (
-                <p className='text-lg text-green-200'>Nothing Found !!!</p>
+                <p className='text-lg text-green-200 w-full text-center'>
+                  Nothing Found !!!
+                </p>
               )}
             </div>
           </div>
