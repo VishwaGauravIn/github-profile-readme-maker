@@ -94,7 +94,7 @@ export default function Extras({ back }) {
       finaldata =
         finaldata +
         `# 💫 About Me:
-${(gprmStore.data.aboutme).replace(/(?:\r\n|\r|\n)/g, '<br>')}
+${gprmStore.data.aboutme.replace(/(?:\r\n|\r|\n)/g, "<br>")}
 
 `;
     }
@@ -124,9 +124,10 @@ ${gprmStore.data.tech
   ## 💰 You can help me by Donating
   ${donate}
 
-  <!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
   `;
     }
+    finaldata = `${finaldata}
+<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->`;
     gprmStore.data.finalData = finaldata;
   }
   return useObserver(() => (
