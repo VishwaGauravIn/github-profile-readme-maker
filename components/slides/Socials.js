@@ -104,7 +104,7 @@ export default function Socials({ back }) {
     if (document.getElementById("youtube").value != "") {
       socials =
         socials +
-        `[![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?logo=YouTube&logoColor=white)](https://youtube.com/c/${
+        `[![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?logo=YouTube&logoColor=white)](https://youtube.com/@${
           document.getElementById("youtube").value
         }) `;
     }
