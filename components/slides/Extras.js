@@ -68,7 +68,7 @@ export default function Extras({ back }) {
       extras =
         extras +
         `
-### 🐦 Latest Tweet
+## 🐦 Latest Tweet
 [![](https://gtce.itsvg.in/api?username=${gprmStore.data.socials.twitter})](https://gtce.itsvg.in)
 `;
     }
