@@ -61,6 +61,17 @@ export default function Extras({ back }) {
 ![](${document.getElementById("trophy").getAttribute("src")})
 `;
     }
+    if (
+      gprmStore.data.socials.twitter &&
+      document.getElementById("gtcechk").checked === true
+    ) {
+      extras =
+        extras +
+        `
+### 🐦 Latest Tweet
+[![](https://gtce.itsvg.in/api?username=${gprmStore.data.socials.twitter})](https://gtce.itsvg.in)
+`;
+    }
     if (document.getElementById("quotechk").checked === true) {
       extras =
         extras +
@@ -83,17 +94,6 @@ export default function Extras({ back }) {
         `
 ---
 [![](https://visitcount.itsvg.in/api?id=${gprmStore.data.username}&icon=${icon}&color=${color})](https://visitcount.itsvg.in)
-`;
-    }
-    if (
-      gprmStore.data.socials.twitter &&
-      document.getElementById("gtcechk").checked === true
-    ) {
-      extras =
-        extras +
-        `
----
-[![](https://gtce.itsvg.in/api?username=${gprmStore.data.socials.twitter})](https://gtce.itsvg.in)
 `;
     }
 
