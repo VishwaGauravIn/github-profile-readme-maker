@@ -85,6 +85,18 @@ export default function Extras({ back }) {
 [![](https://visitcount.itsvg.in/api?id=${gprmStore.data.username}&icon=${icon}&color=${color})](https://visitcount.itsvg.in)
 `;
     }
+    if (
+      gprmStore.data.socials.twitter &&
+      document.getElementById("gtcechk").checked === true
+    ) {
+      extras =
+        extras +
+        `
+---
+[![](https://gtce.itsvg.in/api?username=${gprmStore.data.socials.twitter})](https://gtce.itsvg.in)
+`;
+    }
+
     createFinalData();
     setIsVisible(true);
   }
@@ -233,6 +245,20 @@ ${gprmStore.data.tech
           />
           <CheckBox id="visitorschk" title="Add Visitors Count" />
           <hr className="mt-2 mb-2 w-1/2 opacity-30" />
+
+          {/* Twitter Card */}
+          {gprmStore.data.socials.twitter && (
+            <>
+              <img
+                id="visitors"
+                src={`https://gtce.itsvg.in/api?username=${gprmStore.data.socials.twitter}`}
+                alt=""
+                className="mb-4 mt-2"
+              />
+              <CheckBox id="gtcechk" title="Add Twitter Card" />
+              <hr className="mt-2 mb-2 w-1/2 opacity-30" />
+            </>
+          )}
 
           {/* Quote */}
           {/* Options */}

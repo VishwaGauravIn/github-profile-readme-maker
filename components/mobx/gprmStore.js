@@ -51,6 +51,7 @@ export function createGPRMStore() {
         visitorschk: true,
         quotechk: false,
         memechk: false,
+        gtcechk: true,
       },
       finalData: "",
     },
