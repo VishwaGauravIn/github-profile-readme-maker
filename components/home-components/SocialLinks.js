@@ -26,6 +26,10 @@ export default function SocialLinks() {
             url="https://github.com/VishwaGauravIn"
             title="GitHub"
           />
+          <AnchorWithSVG
+            url="https://instagram.com/VishwaGauravIn"
+            title="Instagram"
+          />
         </div>
       </div>
       <div className="w-full md:w-6/12 flex flex-col justify-center items-center">

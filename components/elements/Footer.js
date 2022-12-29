@@ -1,5 +1,5 @@
 import React from "react";
-import { GITHUB_SVG, LINKEDIN_SVG, TWITTER_SVG } from "./SVG";
+import { GITHUB_SVG, INSTAGRAM_SVG, LINKEDIN_SVG, TWITTER_SVG } from "./SVG";
 
 export default function Footer() {
   return (
@@ -31,6 +31,15 @@ export default function Footer() {
           rel="noopener noreferrer"
         >
           <LINKEDIN_SVG size={4} />
+        </a>
+        {/* Instagram */}
+        <a
+          className="bg-rose-500 text-fuchsia-50 mt-3 hover:bg-rose-600 font-semibold uppercase  text-lg p-2 rounded-full shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 flex items-center w-max aspect-square"
+          href="https://www.instagram.com/VishwaGauravIn"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <INSTAGRAM_SVG size={4} />
         </a>
       </div>
       <div className="w-full flex justify-center items-center text-green-200">
