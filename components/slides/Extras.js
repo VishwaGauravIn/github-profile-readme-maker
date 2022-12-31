@@ -69,7 +69,7 @@ export default function Extras({ back }) {
         extras +
         `
 ## 🐦 Latest Tweet
-[![](https://gtce.itsvg.in/api?username=${gprmStore.data.socials.twitter})](https://gtce.itsvg.in)
+[![](https://gtce.itsvg.in/api?username=${gprmStore.data.socials.twitter})](https://github.com/VishwaGauravIn/github-twitter-card-embed)
 `;
     }
     if (document.getElementById("quotechk").checked === true) {
