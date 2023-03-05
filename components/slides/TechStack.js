@@ -650,6 +650,18 @@ export default function TechStack({ back }) {
                 }
               />
               <BadgeSelect
+                label="IOS"
+                url={
+                  "![IOS](https://img.shields.io/badge/IOS-%2320232a.svg?style=for-the-badge&logo=apple&logoColor=white)"
+                }
+              />
+              <BadgeSelect
+                label="ANDROID"
+                url={
+                  "![ANDROID](https://img.shields.io/badge/android-%2320232a.svg?style=for-the-badge&logo=android&logoColor=%a4c639)"
+                }
+              />
+              <BadgeSelect
                 label="REACT"
                 url={
                   "![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)"
