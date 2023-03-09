@@ -1143,6 +1143,12 @@ export default function TechStack({ back }) {
             {/* OTHER */}
             <p className="flex justify-center text-lg md:text-xl mt-4">OTHER</p>
             <div className="flex flex-row flex-wrap text-gray-700 md:justify-center w-full md:w-10/12 mb-10">
+            <BadgeSelect
+                label="LINUX"
+                url={
+                  "![LINUX](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)"
+                }
+              />
               <BadgeSelect
                 label="ALFRED"
                 url={
