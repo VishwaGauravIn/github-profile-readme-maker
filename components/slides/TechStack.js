@@ -650,6 +650,24 @@ export default function TechStack({ back }) {
                 }
               />
               <BadgeSelect
+                label="UNITY"
+                url={
+                  "![UNITY](https://img.shields.io/badge/Unity-%2320232a.svg?style=for-the-badge&logo=unity&logoColor=white)"
+                }
+              />
+              <BadgeSelect
+                label="UNREAL"
+                url={
+                  "![UNREAL](https://img.shields.io/badge/unreal-%2320232a.svg?style=for-the-badge&logo=unreal-engine&logoColor=white)"
+                }
+              />
+              <BadgeSelect
+                label="GODOT"
+                url={
+                  "![GODOT](https://img.shields.io/badge/godot-3582bb.svg?style=for-the-badge&logo=godot-engine&logoColor=white)"
+                }
+              />
+              <BadgeSelect
                 label="IOS"
                 url={
                   "![IOS](https://img.shields.io/badge/IOS-%2320232a.svg?style=for-the-badge&logo=apple&logoColor=white)"
@@ -1143,7 +1161,7 @@ export default function TechStack({ back }) {
             {/* OTHER */}
             <p className="flex justify-center text-lg md:text-xl mt-4">OTHER</p>
             <div className="flex flex-row flex-wrap text-gray-700 md:justify-center w-full md:w-10/12 mb-10">
-            <BadgeSelect
+              <BadgeSelect
                 label="LINUX"
                 url={
                   "![LINUX](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)"
