@@ -47,7 +47,7 @@ export default function TechStack({ back }) {
               type="text"
               name=""
               id=""
-              className="bg-transparent outline-none ring-2 p-4 px-8 ring-green-200 rounded-full text-green-300 pr-16 max-w-[94vw] sm:max-w-full"
+              className="bg-transparent outline-none ring-2 p-4 px-8 ring-green-200 rounded-full text-green-300 pr-16 max-w-[92vw] sm:max-w-full"
               placeholder="Search tech"
               onChange={(e) => setTechData(searchFilter(e.target.value))}
             />
