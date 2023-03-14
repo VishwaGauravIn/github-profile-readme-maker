@@ -6,6 +6,8 @@ import { useGPRMStore } from "../mobx/GPRMcontext";
 import Donate from "./Donate";
 import { useObserver } from "mobx-react";
 import { data } from "../../data/tech";
+import { searchFilter } from "../../utils/searchFilter";
+import { SearchIcon } from "@heroicons/react/outline";
 
 export default function TechStack({ back }) {
   const [isVisible, setIsVisible] = useState(false);
@@ -30,6 +32,18 @@ export default function TechStack({ back }) {
           <p className="w-full text-center text-3xl my-10 mt-20">
             Add Tech that you use
           </p>
+          {/* Search Box */}
+          <div className="relative">
+            <input
+              type="text"
+              name=""
+              id=""
+              className="bg-transparent outline-none ring-2 p-4 px-8 ring-green-200 rounded-full text-green-300 pr-16"
+              placeholder="Search tech"
+              onChange={(e) => setTechData(searchFilter(e.target.value))}
+            />
+            <SearchIcon className="w-8 absolute right-4 top-1/2 -translate-y-1/2" />
+          </div>
           <div className="flex flex-col md:flex-row w-full">
             <div className="flex w-full md:w-6/12 justify-center items-center">
               <img
