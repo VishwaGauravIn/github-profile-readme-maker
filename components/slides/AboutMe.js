@@ -4,7 +4,7 @@ import Pagination from "../elements/Pagination";
 import { useGPRMStore } from "../mobx/GPRMcontext";
 import { useObserver } from "mobx-react";
 import GitHubStats from "./GitHubCards";
-import { LightBulbIcon } from '@heroicons/react/outline'
+import { LightBulbIcon } from "@heroicons/react/outline";
 
 export default function AboutMe({ back }) {
   const [isVisible, setIsVisible] = useState(false);
@@ -58,10 +58,14 @@ export default function AboutMe({ back }) {
                 placeholder={textareaPlaceholder}
                 value={aboutme}
                 onChange={(e) => setAboutme(e.target.value)}
-                autoFocus="true"
+                autoFocus={true}
               ></textarea>
               <div className="flex ">
-                <button className="mr-4 opacity-60 hover:opacity-80" title="Load Template" onClick={()=> setAboutme(textareaPlaceholder) }>
+                <button
+                  className="mr-4 opacity-60 hover:opacity-80"
+                  title="Load Template"
+                  onClick={() => setAboutme(textareaPlaceholder)}
+                >
                   <LightBulbIcon className="w-6 stroke-1"></LightBulbIcon>
                 </button>
                 <NextButton onClick={() => onNext()} />
