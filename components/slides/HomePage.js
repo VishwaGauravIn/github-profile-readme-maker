@@ -59,7 +59,7 @@ export default function HomePage() {
                     value={input}
                     required={true}
                     onChange={(e) => setInput(e.target.value)}
-                    autoFocus="true"
+                    autoFocus={true}
                     className="border-b-2 border-green-200 bg-transparent w-full sm:w-11/12 md:w-10/12 lg:w-8/12 text-xl sm:text-3xl md:text-xl lg:text-2xl 2xl:text-3xl outline-none focus:border-green-300 focus:border-b-4 inline"
                     placeholder="Enter Your GitHub Username"
                   />
