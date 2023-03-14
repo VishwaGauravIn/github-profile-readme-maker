@@ -17,6 +17,15 @@ export default function TechStack({ back }) {
   useEffect(() => {
     gprmStore.data.badge_theme = BadgeStyle;
   }, [BadgeStyle]);
+
+  // It is just a message that will appear under a category if no matching tech is found
+  const nothingFound = () => {
+    return (
+      <p className="text-red-300 opacity-60">
+        Oops! no result found in this category for your search.
+      </p>
+    );
+  };
   return useObserver(() => (
     <>
       {isVisible ? (
@@ -64,6 +73,7 @@ export default function TechStack({ back }) {
                   {techData.lang.map((data, key) => (
                     <BadgeSelect key={key} label={data.label} url={data.url} />
                   ))}
+                  {techData.lang.length === 0 && nothingFound()}
                 </div>
                 {/* Hosting/SaaS */}
                 <p className="flex justify-center text-lg md:text-xl mt-4">
@@ -73,6 +83,7 @@ export default function TechStack({ back }) {
                   {techData.hosting.map((data, key) => (
                     <BadgeSelect key={key} label={data.label} url={data.url} />
                   ))}
+                  {techData.hosting.length === 0 && nothingFound()}
                 </div>
               </div>
             </div>
@@ -86,6 +97,7 @@ export default function TechStack({ back }) {
               {techData.frameworks.map((data, key) => (
                 <BadgeSelect key={key} label={data.label} url={data.url} />
               ))}
+              {techData.frameworks.length === 0 && nothingFound()}
             </div>
             {/* SERVERS */}
             <p className="flex justify-center text-lg md:text-xl mt-4">
@@ -95,6 +107,7 @@ export default function TechStack({ back }) {
               {techData.servers.map((data, key) => (
                 <BadgeSelect key={key} label={data.label} url={data.url} />
               ))}
+              {techData.servers.length === 0 && nothingFound()}
             </div>
             {/* DATABASES */}
             <p className="flex justify-center text-lg md:text-xl mt-4">
@@ -104,6 +117,7 @@ export default function TechStack({ back }) {
               {techData.database.map((data, key) => (
                 <BadgeSelect key={key} label={data.label} url={data.url} />
               ))}
+              {techData.database.length === 0 && nothingFound()}
             </div>
             {/* DESIGN */}
             <p className="flex justify-center text-lg md:text-xl mt-4">
@@ -113,6 +127,7 @@ export default function TechStack({ back }) {
               {techData.design.map((data, key) => (
                 <BadgeSelect key={key} label={data.label} url={data.url} />
               ))}
+              {techData.design.length === 0 && nothingFound()}
             </div>
             {/* ML/DL */}
             <p className="flex justify-center text-lg md:text-xl mt-4">ML/DL</p>
@@ -120,6 +135,7 @@ export default function TechStack({ back }) {
               {techData.ml.map((data, key) => (
                 <BadgeSelect key={key} label={data.label} url={data.url} />
               ))}
+              {techData.ml.length === 0 && nothingFound()}
             </div>
             {/* OTHER */}
             <p className="flex justify-center text-lg md:text-xl mt-4">OTHER</p>
@@ -127,6 +143,7 @@ export default function TechStack({ back }) {
               {techData.others.map((data, key) => (
                 <BadgeSelect key={key} label={data.label} url={data.url} />
               ))}
+              {techData.others.length === 0 && nothingFound()}
             </div>
           </div>
           {/* Select Badge Type (with preview) */}
