@@ -38,7 +38,7 @@ export default function TechStack({ back }) {
           >
             ◄ Go Back
           </button>
-          <p className="w-full text-center text-3xl my-10 mt-20">
+          <p className="w-full text-center text-2xl sm:text-3xl my-8 sm:my-10 mt-20">
             Add Tech that you use
           </p>
           {/* Search Box */}
