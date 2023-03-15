@@ -8,21 +8,28 @@ import { useObserver } from "mobx-react";
 import { data } from "../../data/tech";
 import { searchFilter } from "../../utils/searchFilter";
 import { SearchIcon } from "@heroicons/react/outline";
+import TechBadgesWrapper from "../techstack/TechBadgesWrapper";
 
 export default function TechStack({ back }) {
   const [isVisible, setIsVisible] = useState(false);
   const gprmStore = useGPRMStore();
   const [BadgeStyle, setBadgeStyle] = useState(gprmStore.data.badge_theme);
   const [techData, setTechData] = useState(data);
+  const [searchStr, setSearchStr] = useState("");
   useEffect(() => {
     gprmStore.data.badge_theme = BadgeStyle;
   }, [BadgeStyle]);
 
+  // Seaching whenever searchStr is changed
+  useEffect(() => {
+    setTechData(searchFilter(searchStr));
+  }, [searchStr]);
+
   // It is just a message that will appear under a category if no matching tech is found
   const nothingFound = () => {
     return (
-      <p className="text-red-300 opacity-60">
-        Oops! no result found in this category for your search.
+      <p className="text-red-300 opacity-60 my-10">
+        Oops! no result found for your search.
       </p>
     );
   };
@@ -47,14 +54,19 @@ export default function TechStack({ back }) {
               type="text"
               name=""
               id=""
+              value={searchStr}
               className="bg-transparent outline-none ring-2 p-4 px-8 ring-green-200 rounded-full text-green-300 pr-16 max-w-[92vw] sm:max-w-full"
               placeholder="Search tech"
-              onChange={(e) => setTechData(searchFilter(e.target.value))}
+              onChange={(e) => setSearchStr(e.target.value)}
             />
             <SearchIcon className="w-8 absolute right-4 top-1/2 -translate-y-1/2" />
           </div>
           <div className="flex flex-col md:flex-row w-full">
-            <div className="flex w-full md:w-6/12 justify-center items-center">
+            <div
+              className={`w-full ${
+                searchStr ? "hidden" : "flex"
+              } md:w-6/12 justify-center items-center`}
+            >
               <img
                 src="/girlonpc.svg"
                 alt=""
@@ -62,89 +74,50 @@ export default function TechStack({ back }) {
                 draggable="false"
               />
             </div>
-            <div className="flex flex-col w-full md:w-6/12">
+            <div
+              className={`flex flex-col w-full ${
+                searchStr ? "md:w-full" : "md:w-6/12"
+              }`}
+            >
               {/* NOT USING ANY DATA FILE TO POPULATE BADGES */}
               <div className="flex flex-col h-full items-center">
+                {/* If nothing found in all searches - can be minified */}
+                {techData.lang.length === 0 &&
+                  techData.database.length === 0 &&
+                  techData.design.length === 0 &&
+                  techData.frameworks.length === 0 &&
+                  techData.hosting.length === 0 &&
+                  techData.ml.length === 0 &&
+                  techData.others.length === 0 &&
+                  techData.servers.length === 0 &&
+                  nothingFound()}
+
                 {/* Languages */}
-                <p className="flex justify-center text-lg md:text-xl">
-                  LANGUAGES
-                </p>
-                <div className="flex flex-row flex-wrap text-gray-700 md:justify-center">
-                  {techData.lang.map((data, key) => (
-                    <BadgeSelect key={key} label={data.label} url={data.url} />
-                  ))}
-                  {techData.lang.length === 0 && nothingFound()}
-                </div>
+                <TechBadgesWrapper label="LANGUAGES" data={techData.lang} />
                 {/* Hosting/SaaS */}
-                <p className="flex justify-center text-lg md:text-xl mt-4">
-                  HOSTING/SaaS
-                </p>
-                <div className="flex flex-row flex-wrap text-gray-700 md:justify-center">
-                  {techData.hosting.map((data, key) => (
-                    <BadgeSelect key={key} label={data.label} url={data.url} />
-                  ))}
-                  {techData.hosting.length === 0 && nothingFound()}
-                </div>
+                <TechBadgesWrapper
+                  label="Hosting/SaaS"
+                  data={techData.hosting}
+                />
               </div>
             </div>
           </div>
           <div className="w-full flex flex-col justify-center items-center text-green-100">
             {/* FRAMEWORKS, PLATFORMS & LIBRARIES */}
-            <p className="flex justify-center text-lg md:text-xl mt-4">
-              FRAMEWORKS, PLATFORMS & LIBRARIES
-            </p>
-            <div className="flex flex-row flex-wrap text-gray-700 md:justify-center w-full md:w-10/12">
-              {techData.frameworks.map((data, key) => (
-                <BadgeSelect key={key} label={data.label} url={data.url} />
-              ))}
-              {techData.frameworks.length === 0 && nothingFound()}
-            </div>
+            <TechBadgesWrapper
+              label="FRAMEWORKS, PLATFORMS & LIBRARIES"
+              data={techData.frameworks}
+            />
             {/* SERVERS */}
-            <p className="flex justify-center text-lg md:text-xl mt-4">
-              SERVERS
-            </p>
-            <div className="flex flex-row flex-wrap text-gray-700 md:justify-center  w-full md:w-10/12">
-              {techData.servers.map((data, key) => (
-                <BadgeSelect key={key} label={data.label} url={data.url} />
-              ))}
-              {techData.servers.length === 0 && nothingFound()}
-            </div>
+            <TechBadgesWrapper label="SERVERS" data={techData.servers} />
             {/* DATABASES */}
-            <p className="flex justify-center text-lg md:text-xl mt-4">
-              DATABASES
-            </p>
-            <div className="flex flex-row flex-wrap text-gray-700 md:justify-center  w-full md:w-10/12">
-              {techData.database.map((data, key) => (
-                <BadgeSelect key={key} label={data.label} url={data.url} />
-              ))}
-              {techData.database.length === 0 && nothingFound()}
-            </div>
+            <TechBadgesWrapper label="DATABASES" data={techData.database} />
             {/* DESIGN */}
-            <p className="flex justify-center text-lg md:text-xl mt-4">
-              DESIGN
-            </p>
-            <div className="flex flex-row flex-wrap text-gray-700 md:justify-center  w-full md:w-10/12">
-              {techData.design.map((data, key) => (
-                <BadgeSelect key={key} label={data.label} url={data.url} />
-              ))}
-              {techData.design.length === 0 && nothingFound()}
-            </div>
+            <TechBadgesWrapper label="DESIGN" data={techData.design} />
             {/* ML/DL */}
-            <p className="flex justify-center text-lg md:text-xl mt-4">ML/DL</p>
-            <div className="flex flex-row flex-wrap text-gray-700 md:justify-center w-full md:w-10/12">
-              {techData.ml.map((data, key) => (
-                <BadgeSelect key={key} label={data.label} url={data.url} />
-              ))}
-              {techData.ml.length === 0 && nothingFound()}
-            </div>
+            <TechBadgesWrapper label="ML/DL" data={techData.ml} />
             {/* OTHER */}
-            <p className="flex justify-center text-lg md:text-xl mt-4">OTHER</p>
-            <div className="flex flex-row flex-wrap text-gray-700 md:justify-center w-full md:w-10/12 mb-10">
-              {techData.others.map((data, key) => (
-                <BadgeSelect key={key} label={data.label} url={data.url} />
-              ))}
-              {techData.others.length === 0 && nothingFound()}
-            </div>
+            <TechBadgesWrapper label="OTHER" data={techData.others} />
           </div>
           {/* Select Badge Type (with preview) */}
           <div className="flex flex-row flex-wrap justify-center items-center border p-2 px-4 border-green-300/50 rounded-md mb-6">
