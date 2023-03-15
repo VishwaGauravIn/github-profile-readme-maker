@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Script from "next/script";
-import Animation from "../components/Animation";
 import Broadcast from "../components/broadcast/Broadcast";
 import Footer from "../components/elements/Footer";
 import NavBar from "../components/NavBar";

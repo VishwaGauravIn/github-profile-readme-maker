@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import BadgeSelect from "../elements/buttons/BadgeSelect";
 import NextButton from "../elements/buttons/NextButton";
 import Pagination from "../elements/Pagination";
 import { useGPRMStore } from "../mobx/GPRMcontext";
