@@ -11,31 +11,31 @@
 ![screencapture-gprm-itsvg-in-2022-06-20-23_26_35](https://user-images.githubusercontent.com/81325730/174656518-bfb20479-6b5c-4947-8a5c-f709f35ed345.png)
 
 # Features
-We got everything that you need ! Create your perfect GitHub Profile ReadMe in the best possible way. Lots of features and tools included, all for free !
+We've got everything that you need! Create your perfect GitHub Profile ReadMe in the best possible way. Lots of features and tools included, all for free!
 
-### ⚡ Lightning fast Profile Creation
-Create your Profile ReadMe in just few clicks ! On an average, it takes less than one minute to create a perfect Profile ReadMe using GPRM
+### ⚡ Lightning Fast Profile Creation
+Create your Profile ReadMe in just a few clicks! On an average, it takes less than one minute to create a perfect Profile ReadMe using GPRM.
 
 ### 📊 Flex Your GitHub Stats
-Be Honest, everyone loves to flex their achievements. With tools such as ReadMe Stats, Most Used Languages, Streak Stats you can show your achievements.
+Let's be Honest, everyone loves to flex their achievements. With tools such as ReadMe Stats, Most Used Languages, and Streak Stats you can show your achievements.
 
-### 👥 Visitor Counter
-With the use of Visitors Counter you can see how many people viewed your profile, this gives you an idea about how popular you are on GitHub.
+### 👥 Visitors Counter
+With the use of a Visitors Counter, you can see how many people viewed your profile. This gives you an idea about how popular you are on GitHub.
 
-### 🌐 Add all Social Links
+### 🌐 Add All Social Links
 We have added an option to add your Social Links to increase your reach and promote your works at one place.
 
 ### 💻 Show Your Tech Stack
-Select from over 300+ tech options and show your tech stack to everyone, Let them know what makes you awesome.
+Select from over 300+ tech options and show your tech stack to everyone. Let them know what makes you awesome.
 
-### 💰 Let people help you with Donations
-No matter what your aim is, money is required at some point to boost the process for getting closer to your aim. We give you an option to add Donation Links directly into your profile so that people can help you by donating.
+### 💰 Let People Help You With Donations
+No matter what your aim is, money is required at some point to boost the process for getting closer to your aim. We give you an option to add Donation Links directly to your profile so that people can help you by donating.
 
 ### 😃 Fun Components
-If fun is required everywhere, how can it be missing from your profile ? Now, You can cheer up other people by adding Random Memes and Quotes in your profile.
+If fun is required everywhere, how can it be missing from your profile? Now, you can cheer up other people by adding random memes and quotes in your profile.
 
 ### 🏆 GitHub Trophies
-Got any trophies/medals but oops! how can you show them on your profile? Don't worry, GitHub Trophies are the virtual trophies for you. Showcase them by adding it to your profile.
+Got any trophies/medals but don't know how to show them on your profile? Don't worry! GitHub Trophies are the virtual trophies for you. Showcase them by adding them to your profile.
 
 ## Our Social Links
 [![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=normal&logo=linkedin&logoColor=white)](https://linkedin.com/in/VishwaGauravIn)
