@@ -13,7 +13,7 @@
 # Features
 We got everything that you need ! Create your perfect GitHub Profile ReadMe in the best possible way. Lots of features and tools included, all for free !
 
-### ⚡ Lightening fast Profile Creation
+### ⚡ Lightning fast Profile Creation
 Create your Profile ReadMe in just few clicks ! On an average, it takes less than one minute to create a perfect Profile ReadMe using GPRM
 
 ### 📊 Flex Your GitHub Stats
