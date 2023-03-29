@@ -85,7 +85,7 @@ export default function Extras({ back }) {
         extras +
         `
 ### 😂 Random Dev Meme
-<img src="https://random-memer.herokuapp.com/" width="512px"/>
+<img src="https://rm.up.railway.app/" width="512px"/>
 `;
     }
     if (document.getElementById("visitorschk").checked === true) {
