@@ -1,7 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useGPRMStore } from "../../mobx/GPRMcontext";
 
-export default function TextInputWithIcon({ id, children, placeholder }) {
+export default function TextInputWithIcon({
+  id,
+  children,
+  placeholder,
+  viewBox = "-0.5 0 20 16",
+}) {
   const gprmStore = useGPRMStore();
   const [input, setInput] = useState(gprmStore.data.socials[id]);
   useEffect(() => {
@@ -24,7 +29,7 @@ export default function TextInputWithIcon({ id, children, placeholder }) {
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
-          viewBox="-0.5 0 20 16"
+          viewBox={viewBox}
           stroke="currentColor"
           aria-hidden="true"
           className="w-8 h-8 text-green-300 opacity-75"
