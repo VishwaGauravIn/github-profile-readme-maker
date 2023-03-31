@@ -22,6 +22,9 @@ export default function Extras({ back }) {
   const [layout, setLayout] = useState(gprmStore.data.quote.layout);
   const [color, setColor] = useState(gprmStore.data.visitcount.color);
   const [icon, setIcon] = useState(gprmStore.data.visitcount.icon);
+  const [topRepoTheme, setTopRepoTheme] = useState(
+    gprmStore.data.toprepo.toprepotheme
+  );
   useEffect(() => {
     gprmStore.data.trophy.theme = theme;
   }, [theme]);
@@ -43,6 +46,9 @@ export default function Extras({ back }) {
   useEffect(() => {
     gprmStore.data.quote.layout = layout;
   }, [layout]);
+  useEffect(() => {
+    gprmStore.data.toprepo.toprepotheme = topRepoTheme;
+  }, [topRepoTheme]);
 
   function changeLayout() {
     if (layout === "horizontal") {
@@ -78,6 +84,14 @@ export default function Extras({ back }) {
         `
 ### ✍️ Random Dev Quote
 ![](${document.getElementById("quote").getAttribute("src")})
+`;
+    }
+    if (document.getElementById("toprepochk").checked === true) {
+      extras =
+        extras +
+        `
+### 🔝 Top Contributed Repo
+![](${document.getElementById("toprepo").getAttribute("src")})
 `;
     }
     if (document.getElementById("memechk").checked === true) {
@@ -295,6 +309,37 @@ ${gprmStore.data.tech
           <CheckBox id="quotechk" title="Add Random Dev Quotes" />
           <hr className="mt-2 mb-2 w-1/2 opacity-30" />
 
+          {/* Top Contributed Repo */}
+          {/* Options */}
+          <div className="flex flex-wrap justify-center items-center mt-4 my-2">
+            Theme:
+            <select
+              id="toprepotheme"
+              value={topRepoTheme}
+              onChange={() =>
+                setTopRepoTheme(document.getElementById("toprepotheme").value)
+              }
+              className="bg-transparent py-1 px-2 outline-none"
+            >
+              {themes.map((item) => {
+                return (
+                  <option key={item} value={item} className="bg-zinc-900">
+                    {item}
+                  </option>
+                );
+              })}
+            </select>
+          </div>
+          <img
+            className="m-2 select-none pointer-events-none"
+            draggable="false"
+            id="toprepo"
+            src={`https://github-contributor-stats.vercel.app/api?username=${gprmStore.data.username}&limit=5&theme=${topRepoTheme}&combine_all_yearly_contributions=true`}
+            alt=""
+          />
+          <CheckBox id="toprepochk" title="Add Top Contributed Repo List" />
+          <hr className="mt-2 mb-2 w-1/2 opacity-30" />
+
           <CheckBox id="memechk" title="Add Random Memes" />
           <span className="pb-6" />
           <NextButton onClick={() => onNext()} />
@@ -327,6 +372,7 @@ const themes = [
   "matrix",
   "apprentice",
   "dark_dimmed",
+  "dark"
 ];
 
 const quoteThemes = [
