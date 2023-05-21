@@ -42,6 +42,30 @@ export default function Footer() {
           <INSTAGRAM_SVG size={4} />
         </a>
       </div>
+      {/* mail to */}
+      <div className="flex justify-center w-full">
+        <a
+          href="mailto:itsvgin@gmail.com"
+          className="text-white flex gap-1 text-base opacity-75 mt-2 transition-all ease-in-out hover:opacity-100"
+          title="Contact us for any business, service or query."
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="w-6 h-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
+            />
+          </svg>
+          itsvgin@gmail.com
+        </a>
+      </div>
       <div className="w-full flex justify-center items-center text-green-200">
         <a
           href="https://itsvg.in"
