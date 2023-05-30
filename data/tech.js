@@ -74,7 +74,7 @@ export const data = {
     },
     {
       label: "JULIA",
-      url: "\t![Julia](https://img.shields.io/badge/-Julia-9558B2?style=for-the-badge&logo=julia&logoColor=white)",
+      url: "![Julia](https://img.shields.io/badge/-Julia-9558B2?style=for-the-badge&logo=julia&logoColor=white)",
     },
     {
       label: "KOTLIN",
@@ -829,6 +829,10 @@ export const data = {
     {
       label: "VAGRANT",
       url: "![Vagrant](https://img.shields.io/badge/vagrant-%231563FF.svg?style=for-the-badge&logo=vagrant&logoColor=white)",
+    },
+    {
+      label: "WEBFLOW",
+      url: "![Webflow](https://img.shields.io/badge/Webflow-4353FF?style=for-the-badge&logo=webflow&logoColor=white)",
     },
   ],
 };
