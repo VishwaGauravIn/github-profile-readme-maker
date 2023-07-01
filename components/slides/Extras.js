@@ -67,17 +67,17 @@ export default function Extras({ back }) {
 ![](${document.getElementById("trophy").getAttribute("src")})
 `;
     }
-    if (
-      gprmStore.data.socials.twitter &&
-      document.getElementById("gtcechk").checked === true
-    ) {
-      extras =
-        extras +
-        `
-## 🐦 Latest Tweet
-[![](https://gtce.itsvg.in/api?username=${gprmStore.data.socials.twitter})](https://github.com/VishwaGauravIn/github-twitter-card-embed)
-`;
-    }
+    //     if (
+    //       gprmStore.data.socials.twitter &&
+    //       document.getElementById("gtcechk").checked === true
+    //     ) {
+    //       extras =
+    //         extras +
+    //         `
+    // ## 🐦 Latest Tweet
+    // [![](https://gtce.itsvg.in/api?username=${gprmStore.data.socials.twitter})](https://github.com/VishwaGauravIn/github-twitter-card-embed)
+    // `;
+    //     }
     if (document.getElementById("quotechk").checked === true) {
       extras =
         extras +
@@ -261,7 +261,7 @@ ${gprmStore.data.tech
           <hr className="mt-2 mb-2 w-1/2 opacity-30" />
 
           {/* Twitter Card */}
-          {gprmStore.data.socials.twitter && (
+          {/* {gprmStore.data.socials.twitter && (
             <>
               <img
                 id="visitors"
@@ -272,7 +272,7 @@ ${gprmStore.data.tech
               <CheckBox id="gtcechk" title="Add Twitter Card" />
               <hr className="mt-2 mb-2 w-1/2 opacity-30" />
             </>
-          )}
+          )} */}
 
           {/* Quote */}
           {/* Options */}
@@ -372,7 +372,7 @@ const themes = [
   "matrix",
   "apprentice",
   "dark_dimmed",
-  "dark"
+  "dark",
 ];
 
 const quoteThemes = [
