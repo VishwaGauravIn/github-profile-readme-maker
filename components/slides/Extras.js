@@ -57,7 +57,7 @@ export default function Extras({ back }) {
       setLayout("horizontal");
     }
   }
-  function onNext() {
+  async function onNext() {
     extras = "";
     if (document.getElementById("trophychk").checked === true) {
       extras =
@@ -95,11 +95,36 @@ export default function Extras({ back }) {
 `;
     }
     if (document.getElementById("memechk").checked === true) {
+      const getRandomTechMeme = async () => {
+        const url = "https://memeapi.dev/meme";
+        // const params = {
+        //   category: "tech",
+        // };
+        const response = await fetch(url, {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          // params,
+        });
+        console.log(response);
+      
+        if (response.status === 200) {
+          const data = await response.json();
+          console.log(data);
+          console.log(data.data);
+          return data.data;
+        } else {
+          return null;
+        }
+      };
+      
+      const url = await getRandomTechMeme();
       extras =
         extras +
         `
 ### 😂 Random Dev Meme
-<img src="https://rm.up.railway.app/" width="512px"/>
+<img src="${url}" width="512px"/>
 `;
     }
     if (document.getElementById("visitorschk").checked === true) {
