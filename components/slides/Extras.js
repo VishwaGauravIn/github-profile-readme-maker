@@ -107,13 +107,11 @@ export default function Extras({ back }) {
           },
           // params,
         });
-        console.log(response);
       
         if (response.status === 200) {
           const data = await response.json();
-          console.log(data);
-          console.log(data.data);
-          return data.data;
+          data = data["data"];
+          return data;
         } else {
           return null;
         }
@@ -124,7 +122,7 @@ export default function Extras({ back }) {
         extras +
         `
 ### 😂 Random Dev Meme
-<img src="${url}" width="512px"/>
+<img src="${url}" width="512px" height = "400px !important"/>
 `;
     }
     if (document.getElementById("visitorschk").checked === true) {
