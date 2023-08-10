@@ -95,34 +95,34 @@ export default function Extras({ back }) {
 `;
     }
     if (document.getElementById("memechk").checked === true) {
-      const getRandomTechMeme = async () => {
-        const url = "https://memeapi.dev/meme";
-        // const params = {
-        //   category: "tech",
-        // };
-        const response = await fetch(url, {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          // params,
-        });
+      // const getRandomTechMeme = async () => {
+      //   const url = "https://memeapi.dev/meme";
+      //   // const params = {
+      //   //   category: "tech",
+      //   // };
+      //   const response = await fetch(url, {
+      //     method: "GET",
+      //     headers: {
+      //       "Content-Type": "application/json",
+      //     },
+      //     // params,
+      //   });
       
-        if (response.status === 200) {
-          const data = await response.json();
-          data = data["data"];
-          return data;
-        } else {
-          return null;
-        }
-      };
+      //   if (response.status === 200) {
+      //     const data = await response.json();
+      //     data = data["data"];
+      //     return data;
+      //   } else {
+      //     return null;
+      //   }
+      // };
       
-      const url = await getRandomTechMeme();
+      // const url = await getRandomTechMeme();
       extras =
         extras +
         `
 ### 😂 Random Dev Meme
-<img src="${url}" width="512px" height = "400px !important"/>
+<img src='https://randommeme-five.vercel.app/' title="Meme" alt="Please refresh the page if the meme doesn't show up." width="512px" height = "400px !important"/>
 `;
     }
     if (document.getElementById("visitorschk").checked === true) {
