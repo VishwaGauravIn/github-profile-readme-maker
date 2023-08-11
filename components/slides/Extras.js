@@ -99,7 +99,7 @@ export default function Extras({ back }) {
         extras +
         `
 ### 😂 Random Dev Meme
-<img src="https://rm.up.railway.app/" width="512px"/>
+<img src='https://randommeme-five.vercel.app/' style="height: 400px;"/>
 `;
     }
     if (document.getElementById("visitorschk").checked === true) {
