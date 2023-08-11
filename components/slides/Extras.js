@@ -95,29 +95,6 @@ export default function Extras({ back }) {
 `;
     }
     if (document.getElementById("memechk").checked === true) {
-      // const getRandomTechMeme = async () => {
-      //   const url = "https://memeapi.dev/meme";
-      //   // const params = {
-      //   //   category: "tech",
-      //   // };
-      //   const response = await fetch(url, {
-      //     method: "GET",
-      //     headers: {
-      //       "Content-Type": "application/json",
-      //     },
-      //     // params,
-      //   });
-      
-      //   if (response.status === 200) {
-      //     const data = await response.json();
-      //     data = data["data"];
-      //     return data;
-      //   } else {
-      //     return null;
-      //   }
-      // };
-      
-      // const url = await getRandomTechMeme();
       extras =
         extras +
         `
