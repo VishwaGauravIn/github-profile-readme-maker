@@ -57,7 +57,7 @@ export default function Extras({ back }) {
       setLayout("horizontal");
     }
   }
-  async function onNext() {
+  function onNext() {
     extras = "";
     if (document.getElementById("trophychk").checked === true) {
       extras =
@@ -99,7 +99,7 @@ export default function Extras({ back }) {
         extras +
         `
 ### 😂 Random Dev Meme
-<img src='https://randommeme-five.vercel.app/' title="Meme" alt="Please refresh the page if the meme doesn't show up." width="512px" height = "400px !important"/>
+<img src='https://randommeme-five.vercel.app/' width="512px" height = "400px !important"/>
 `;
     }
     if (document.getElementById("visitorschk").checked === true) {
