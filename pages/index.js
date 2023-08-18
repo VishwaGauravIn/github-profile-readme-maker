@@ -45,11 +45,11 @@ export default function Home() {
         />
         <link rel="icon" href="/logo.png" />
         {/* Google Ads */}
-        {/* <script
+        <script
            async
            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7377463303850503"
            crossOrigin="anonymous"
-         ></script> */}
+         ></script>
       </Head>
       {/* Google Analytics */}
       <Script
