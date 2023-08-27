@@ -512,6 +512,10 @@ export const data = {
       label: "YARN",
       url: "![Yarn](https://img.shields.io/badge/yarn-%232C8EBB.svg?style=for-the-badge&logo=yarn&logoColor=white)",
     },
+    {
+      label: "GITHUB",
+      url: "![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)",
+    },
   ],
   servers: [
     {
