@@ -405,6 +405,10 @@ export const data = {
       url: "![UNREAL](https://img.shields.io/badge/unreal-%2320232a.svg?style=for-the-badge&logo=unreal-engine&logoColor=white)",
     },
     {
+      label: "GITHUB",
+      url: "![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)",
+    },
+    {
       label: "GODOT",
       url: "![GODOT](https://img.shields.io/badge/godot-3582bb.svg?style=for-the-badge&logo=godot-engine&logoColor=white)",
     },
@@ -511,10 +515,6 @@ export const data = {
     {
       label: "YARN",
       url: "![Yarn](https://img.shields.io/badge/yarn-%232C8EBB.svg?style=for-the-badge&logo=yarn&logoColor=white)",
-    },
-    {
-      label: "GITHUB",
-      url: "![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)",
     },
   ],
   servers: [
