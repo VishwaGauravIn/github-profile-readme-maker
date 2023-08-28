@@ -405,6 +405,10 @@ export const data = {
       url: "![UNREAL](https://img.shields.io/badge/unreal-%2320232a.svg?style=for-the-badge&logo=unreal-engine&logoColor=white)",
     },
     {
+      label: "GITHUB",
+      url: "![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)",
+    },
+    {
       label: "GODOT",
       url: "![GODOT](https://img.shields.io/badge/godot-3582bb.svg?style=for-the-badge&logo=godot-engine&logoColor=white)",
     },
@@ -730,6 +734,10 @@ export const data = {
     },
   ],
   others: [
+    {
+      label: "GIT",
+      url: "![GIT](https://img.shields.io/badge/Git-fc6d26?style=for-the-badge&logo=git&logoColor=white)",
+    },
     {
       label: "LINUX",
       url: "![LINUX](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)",
