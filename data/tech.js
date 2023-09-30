@@ -733,6 +733,112 @@ export const data = {
       url: "![TensorFlow](https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white)",
     },
   ],
+  devops: [
+    {
+      label: "ARGOCD",
+      url: "![ARGOCD](https://img.shields.io/badge/argo-EF7B4D.svg?style=for-the-badge&logo=argo&logoColor=white&color=%23EF7B4D)",
+    },
+    {
+      label: "ANSIBLE",
+      url: "![ANSIBLE](https://img.shields.io/badge/ansible-%231A1918.svg?style=for-the-badge&logo=ansible&logoColor=white)",
+    },
+    {
+      label: "APACHE KAFKA",
+      url: "![APACHEKAFKA](https://img.shields.io/badge/apachekafka-231F20.svg?style=for-the-badge&logo=apachekafka&logoColor=white&color=%23231F20)",
+    },
+    {
+      label: "AZURE DEVOPS",
+      url: "![AZUREDEVOPS](https://img.shields.io/badge/azuredevops-0078D7.svg?style=for-the-badge&logo=azuredevops&logoColor=white&color=%230078D7)",
+    },
+    {
+      label: "CHEF",
+      url: "![CHEF](https://img.shields.io/badge/Chef-02303A.svg?style=for-the-badge&logo=Chef&logoColor=white&color=%23F09820)",
+    },
+    {
+      label: "CIRCLECI",
+      url: "![CIRCLECI](https://img.shields.io/badge/CIRCLECI-02303A.svg?style=for-the-badge&logo=CIRCLECI&logoColor=white&color=%23343434)",
+    },
+    {
+      label: "CONSUL",
+      url: "![CONSUL](https://img.shields.io/badge/consul-F24C53svg?style=for-the-badge&logo=consul&logoColor=white&color=%23F24C53)",
+    },
+    {
+      label: "DOCKER",
+      url: "![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)",
+    },
+    {
+      label: "ELASTICSEARCH",
+      url: "![ElasticSearch](https://img.shields.io/badge/-ElasticSearch-005571?style=for-the-badge&logo=elasticsearch)",
+    },
+    {
+      label: "FLUENTD",
+      url: "![FLUENTD](https://img.shields.io/badge/fluentd-0E83C8.svg?style=for-the-badge&logo=fluentd&logoColor=white&color=%230E83C8)",
+    },
+    {
+      label: "GRAFANA",
+      url: "![GRAFANA](https://img.shields.io/badge/grafana-F46800.svg?style=for-the-badge&logo=grafana&logoColor=white&color=%23F46800)",
+    },
+    {
+      label: "ISTIO",
+      url: "![ISTIO](https://img.shields.io/badge/istio-466BB0.svg?style=for-the-badge&logo=istio&logoColor=white&color=%23466BB0)",
+    },
+    {
+      label: "KIBANA",
+      url: "![KIBANA](https://img.shields.io/badge/kibana-005571.svg?style=for-the-badge&logo=kibana&logoColor=white&color=%23005571)",
+    },
+    {
+      label: "KUBERNETES",
+      url: "![Kubernetes](https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=for-the-badge&logo=kubernetes&logoColor=white)",
+    },
+    {
+      label: "LOGSTASH",
+      url: "![LOGSTASH](https://img.shields.io/badge/logstash-005571.svg?style=for-the-badge&logo=logstash)",
+    },
+    {
+      label: "NEW RELIC",
+      url: "![NEWRELIC](https://img.shields.io/badge/newrelic-1CE783.svg?style=for-the-badge&logo=newrelic&logoColor=white&color=%231CE783)",
+    },
+    {
+      label: "PACKER",
+      url: "![PACKER](https://img.shields.io/badge/packer-02A8EF.svg?style=for-the-badge&logo=packer&logoColor=white&color=%2302A8EF)",
+    },
+    {
+      label: "PODMAN",
+      url: "![PODMAN](https://img.shields.io/badge/podman-892CA0.svg?style=for-the-badge&logo=podman&logoColor=white)",
+    },
+    {
+      label: "PROMETHEUS",
+      url: "![PROMETHEUS](https://img.shields.io/badge/prometheus-E6522C.svg?style=for-the-badge&logo=prometheus&logoColor=white&color=%23E6522C)",
+    },
+    {
+      label: "PUPPET",
+      url: "![PUPPET](https://img.shields.io/badge/Puppet-02303A.svg?style=for-the-badge&logo=Puppet&logoColor=white&color=%23FFAE1A)",
+    },
+    {
+      label: "SONARQUBE",
+      url: "![SONARQUBE](https://img.shields.io/badge/sonarqube-4E9BCD.svg?style=for-the-badge&logo=sonarqube&logoColor=white&color=%234E9BCD)",
+    },
+    {
+      label: "SPLUNK",
+      url: "![SPLUNK](https://img.shields.io/badge/splunk-000000.svg?style=for-the-badge&logo=splunk&color=%23000000)",
+    },
+    {
+      label: "SUMOLOGIC",
+      url: "![SUMOLOGIC](https://img.shields.io/badge/sumologic-000099.svg?style=for-the-badge&logo=sumologic&logoColor=white&color=%23000099)",
+    },
+    {
+      label: "TERRAFORM",
+      url: "![Terraform](https://img.shields.io/badge/terraform-%235835CC.svg?style=for-the-badge&logo=terraform&logoColor=white)",
+    },
+    {
+      label: "VAULT",
+      url: "![VAULT](https://img.shields.io/badge/vault-FFEC6E.svg?style=for-the-badge&logo=vault&logoColor=white&color=%23FFEC6E)",
+    },
+    {
+      label: "VAGRANT",
+      url: "![Vagrant](https://img.shields.io/badge/vagrant-%231563FF.svg?style=for-the-badge&logo=vagrant&logoColor=white)",
+    },
+  ],
   others: [
     {
       label: "GIT",
@@ -745,10 +851,6 @@ export const data = {
     {
       label: "ALFRED",
       url: "![Alfred](https://img.shields.io/badge/alfred-%235C1F87.svg?style=for-the-badge&logo=alfred)",
-    },
-    {
-      label: "ANSIBLE",
-      url: "![Ansible](https://img.shields.io/badge/ansible-%231A1918.svg?style=for-the-badge&logo=ansible&logoColor=white)",
     },
     {
       label: "AQUA",
@@ -775,16 +877,8 @@ export const data = {
       url: "![Confluence](https://img.shields.io/badge/confluence-%23172BF4.svg?style=for-the-badge&logo=confluence&logoColor=white)",
     },
     {
-      label: "DOCKER",
-      url: "![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)",
-    },
-    {
       label: "ESLINT",
       url: "![ESLint](https://img.shields.io/badge/ESLint-4B3263?style=for-the-badge&logo=eslint&logoColor=white)",
-    },
-    {
-      label: "ELASTICSEARCH",
-      url: "![ElasticSearch](https://img.shields.io/badge/-ElasticSearch-005571?style=for-the-badge&logo=elasticsearch)",
     },
     {
       label: "GRADLE",
@@ -793,10 +887,6 @@ export const data = {
     {
       label: "JIRA",
       url: "![Jira](https://img.shields.io/badge/jira-%230A0FFF.svg?style=for-the-badge&logo=jira&logoColor=white)",
-    },
-    {
-      label: "KUBERNETES",
-      url: "![Kubernetes](https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=for-the-badge&logo=kubernetes&logoColor=white)",
     },
     {
       label: "NOTION",
@@ -827,16 +917,8 @@ export const data = {
       url: "![Swagger](https://img.shields.io/badge/-Swagger-%23Clojure?style=for-the-badge&logo=swagger&logoColor=white)",
     },
     {
-      label: "TERRAFORM",
-      url: "![Terraform](https://img.shields.io/badge/terraform-%235835CC.svg?style=for-the-badge&logo=terraform&logoColor=white)",
-    },
-    {
       label: "TRELLO",
       url: "![Trello](https://img.shields.io/badge/Trello-%23026AA7.svg?style=for-the-badge&logo=Trello&logoColor=white)",
-    },
-    {
-      label: "VAGRANT",
-      url: "![Vagrant](https://img.shields.io/badge/vagrant-%231563FF.svg?style=for-the-badge&logo=vagrant&logoColor=white)",
     },
     {
       label: "WEBFLOW",
