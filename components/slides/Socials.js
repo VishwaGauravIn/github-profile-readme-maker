@@ -4,6 +4,7 @@ import Pagination from "../elements/Pagination";
 import TextInputWithIcon from "../elements/textinput/TextInputWithIcon";
 import { useGPRMStore } from "../mobx/GPRMcontext";
 import TechStack from "./TechStack";
+import FeedbackButton from "../elements/FeedbackButton";
 
 export default function Socials({ back }) {
   const [isVisible, setIsVisible] = useState(false);
@@ -205,6 +206,7 @@ export default function Socials({ back }) {
           </div>
           <NextButton onClick={() => onNext()} />
           <Pagination val={3} />
+          <FeedbackButton />
         </div>
       )}
     </>

@@ -3,6 +3,7 @@ import ButtonWithSVG from "../elements/buttons/ButtonWithSVG";
 import { db } from "../../config/firebase";
 import ToastSuccess from "../elements/toaster/ToastSuccess";
 import { useGPRMStore } from "../mobx/GPRMcontext";
+import FeedbackButton from "../elements/FeedbackButton";
 
 export default function Preview({ back }) {
   const [copiedAlertVisible, setCopiedAlertVisible] = useState(false);
@@ -120,6 +121,7 @@ export default function Preview({ back }) {
       </p>
       {copiedAlertVisible && <ToastSuccess title="Copied Successfully !" />}
       {downloadAlertVisible && <ToastSuccess title="Download Started !" />}
+      <FeedbackButton />
     </div>
   );
 }

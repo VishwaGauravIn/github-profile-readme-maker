@@ -5,6 +5,7 @@ import Pagination from "../elements/Pagination";
 import { useGPRMStore } from "../mobx/GPRMcontext";
 import { useObserver } from "mobx-react";
 import Socials from "./Socials";
+import FeedbackButton from "../elements/FeedbackButton";
 
 export default function GitHubStats({ back }) {
   const [isVisible, setIsVisible] = useState(false);
@@ -111,6 +112,7 @@ export default function GitHubStats({ back }) {
           </div>
           <NextButton onClick={() => onNext()} />
           <Pagination val={2} />
+          <FeedbackButton />
         </div>
       )}
     </>

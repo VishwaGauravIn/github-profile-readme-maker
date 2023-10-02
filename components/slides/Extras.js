@@ -9,6 +9,7 @@ import Pagination from "../elements/Pagination";
 import Preview from "./Preview";
 import { useGPRMStore } from "../mobx/GPRMcontext";
 import { useObserver } from "mobx-react";
+import FeedbackButton from "../elements/FeedbackButton";
 
 export default function Extras({ back }) {
   const [isVisible, setIsVisible] = useState(false);
@@ -344,6 +345,7 @@ ${gprmStore.data.tech
           <span className="pb-6" />
           <NextButton onClick={() => onNext()} />
           <Pagination val={6} />
+          <FeedbackButton />
         </div>
       )}
     </>

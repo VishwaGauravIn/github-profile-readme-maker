@@ -5,6 +5,7 @@ import { useGPRMStore } from "../mobx/GPRMcontext";
 import { useObserver } from "mobx-react";
 import GitHubStats from "./GitHubCards";
 import { LightBulbIcon } from "@heroicons/react/outline";
+import FeedbackButton from "../elements/FeedbackButton";
 
 export default function AboutMe({ back }) {
   const [isVisible, setIsVisible] = useState(false);
@@ -73,6 +74,7 @@ export default function AboutMe({ back }) {
             </div>
           </div>
           <Pagination val={1} />
+          <FeedbackButton />
         </div>
       )}
     </>

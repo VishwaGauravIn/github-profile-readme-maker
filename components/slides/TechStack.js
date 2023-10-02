@@ -8,6 +8,7 @@ import { data } from "../../data/tech";
 import { searchFilter } from "../../utils/searchFilter";
 import { SearchIcon } from "@heroicons/react/outline";
 import TechBadgesWrapper from "../techstack/TechBadgesWrapper";
+import FeedbackButton from "../elements/FeedbackButton";
 
 export default function TechStack({ back }) {
   const [isVisible, setIsVisible] = useState(false);
@@ -161,6 +162,7 @@ export default function TechStack({ back }) {
           </div>
           <NextButton onClick={() => setIsVisible(true)} />
           <Pagination val={4} />
+          <FeedbackButton />
         </div>
       )}
     </>

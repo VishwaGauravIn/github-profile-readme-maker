@@ -3,6 +3,7 @@ import NextButton from "../elements/buttons/NextButton";
 import Pagination from "../elements/Pagination";
 import TextInputWithImage from "../elements/textinput/TextInputWithImage";
 import Extras from "./Extras";
+import FeedbackButton from "../elements/FeedbackButton";
 
 export default function Donate({ back }) {
   const [isVisible, setIsVisible] = useState(false);
@@ -89,6 +90,7 @@ export default function Donate({ back }) {
               <div className="flex w-full md:w-10/12 justify-center md:justify-end mt-4">
                 <NextButton onClick={() => onNext()} />
                 <Pagination val={5} />
+                <FeedbackButton />
               </div>
             </div>
           </div>
