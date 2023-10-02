@@ -32,3 +32,6 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# util for testing 
+/data/update.js
