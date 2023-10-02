@@ -89,6 +89,7 @@ export default function TechStack({ back }) {
                   techData.ml.length === 0 &&
                   techData.others.length === 0 &&
                   techData.servers.length === 0 &&
+                  techData.devops.length === 0 &&
                   nothingFound()}
 
                 {/* Languages */}
@@ -115,6 +116,8 @@ export default function TechStack({ back }) {
             <TechBadgesWrapper label="DESIGN" data={techData.design} />
             {/* ML/DL */}
             <TechBadgesWrapper label="ML/DL" data={techData.ml} />
+            {/* DevOps */}
+            <TechBadgesWrapper label="DevOps" data={techData.devops} />
             {/* OTHER */}
             <TechBadgesWrapper label="OTHER" data={techData.others} />
           </div>
