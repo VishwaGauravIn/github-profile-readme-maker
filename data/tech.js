@@ -737,6 +737,10 @@ export const data = {
       url: "![InfluxDB](https://img.shields.io/badge/InfluxDB-22ADF6?style=for-the-badge&logo=InfluxDB&logoColor=white)",
     },
     {
+      label: "Microsoft Excel",
+      url: "![Microsoft Excel](https://img.shields.io/badge/Microsoft_Excel-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white)",  
+    },
+    {
       label: "MARIADB",
       url: "![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white)",
     },
@@ -809,6 +813,10 @@ export const data = {
     {
       label: "ADOBE AFTER EFFECTS",
       url: "![Adobe After Effects](https://img.shields.io/badge/Adobe%20After%20Effects-9999FF.svg?style=for-the-badge&logo=Adobe%20After%20Effects&logoColor=white)",
+    },
+    {
+      label: "Power BI",
+      url: "![Power Bi](https://img.shields.io/badge/power_bi-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)",  
     },
     {
       label: "ADOBE AUDITION",
