@@ -1148,5 +1148,13 @@ export const data = {
       label: "WEBFLOW",
       url: "![Webflow](https://img.shields.io/badge/Webflow-4353FF?style=for-the-badge&logo=webflow&logoColor=white)",
     },
+    {
+      label: "Power BI",
+      url: "![Trello](https://img.shields.io/badge/Trello-%23026AA7.svg?style=for-the-badge&logo=Trello&logoColor=white)",
+    },
+     {
+      label: "Excel",
+      url: "![Trello](https://img.shields.io/badge/Trello-%23026AA7.svg?style=for-the-badge&logo=Trello&logoColor=white)",
+    },
   ],
 };
