@@ -172,6 +172,10 @@ export const data = {
       label: "ZIG",
       url: "![Zig](https://img.shields.io/badge/Zig-%23F7A41D.svg?style=for-the-badge&logo=zig&logoColor=white)",
     },
+     {
+      label: "Excel",
+      url: "![Trello](https://img.shields.io/badge/Trello-%23026AA7.svg?style=for-the-badge&logo=Trello&logoColor=white)",
+    },
   ],
   hosting: [
     {
@@ -679,6 +683,10 @@ export const data = {
     {
       label: "YARN",
       url: "![Yarn](https://img.shields.io/badge/yarn-%232C8EBB.svg?style=for-the-badge&logo=yarn&logoColor=white)",
+    },
+    {
+      label: "Power BI",
+      url: "![Trello](https://img.shields.io/badge/Trello-%23026AA7.svg?style=for-the-badge&logo=Trello&logoColor=white)",
     },
   ],
   servers: [
