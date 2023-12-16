@@ -1,5 +1,12 @@
 import React from "react";
 import AnchorWithSVG from "../elements/anchor/AnchorWithSVG";
+import AnchorWithGivenSvg from "../elements/anchor/AnchorWithGivenSvg";
+import {
+  GITHUB_SVG,
+  INSTAGRAM_SVG,
+  LINKEDIN_SVG,
+  TWITTER_SVG,
+} from "../elements/SVG";
 
 export default function SocialLinks() {
   return (
@@ -14,21 +21,26 @@ export default function SocialLinks() {
           product we create or get early access of some cool projects !
         </p>
         <div className="flex flex-row flex-wrap justify-center md:items-end">
-          <AnchorWithSVG
+          <AnchorWithGivenSvg
             url="https://linkedin.com/in/VishwaGauravIn"
             title="LinkedIn"
+            svg={<LINKEDIN_SVG size={4} />}
           />
-          <AnchorWithSVG
+          <AnchorWithGivenSvg
             url="https://twitter.com/VishwaGauravIn"
             title="Twitter"
+            svg={<TWITTER_SVG size={4} />}
+            sv
           />
-          <AnchorWithSVG
+          <AnchorWithGivenSvg
             url="https://github.com/VishwaGauravIn"
             title="GitHub"
+            svg={<GITHUB_SVG size={4} />}
           />
-          <AnchorWithSVG
+          <AnchorWithGivenSvg
             url="https://instagram.com/VishwaGauravIn"
             title="Instagram"
+            svg={<INSTAGRAM_SVG size={4} />}
           />
         </div>
       </div>
