@@ -860,11 +860,11 @@ export const data = {
     },
     {
       label: "AFFINITY DESIGNER",
-      url: "![Affinity Designer](https://img.shields.io/badge/affinity%20desginer-%231B72BE.svg?style=for-the-badge&logo=affinity-designer&logoColor=white)",
+      url: "![Affinity Designer](https://img.shields.io/badge/affinity%20designer-%231B72BE.svg?style=for-the-badge&logo=affinity-designer&logoColor=white)",
     },
     {
       label: "AFFINITY PHOTO",
-      url: "![Affinity Photo](https://img.shields.io/badge/affinityphoto-%237E4DD2.svg?style=for-the-badge&logo=affinity-photo&logoColor=white)",
+      url: "![Affinity Photo](https://img.shields.io/badge/affinity%20photo-%237E4DD2.svg?style=for-the-badge&logo=affinity-photo&logoColor=white)",
     },
     {
       label: "BLENDER",
