@@ -38,8 +38,8 @@ If fun is required everywhere, how can it be missing from your profile? Now, you
 Got any trophies/medals but don't know how to show them on your profile? Don't worry! GitHub Trophies are the virtual trophies for you. Showcase them by adding them to your profile.
 
 ## Our Social Links
+[![X](https://img.shields.io/badge/X-black.svg?style=normal&logo=X&logoColor=white)](https://x.com/VishwaGauravIn)
 [![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=normal&logo=linkedin&logoColor=white)](https://linkedin.com/in/VishwaGauravIn)
-[![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?style=normal&logo=Twitter&logoColor=white)](https://twitter.com/VishwaGauravIn)
 
 ## PageSpeed Insights
 ![](https://raw.githubusercontent.com/VishwaGauravIn/Images/f13849bc9989d66c67085313dd606ea978eff0f8/psi-gprm.svg)

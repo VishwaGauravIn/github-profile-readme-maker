@@ -9,7 +9,7 @@ export default function SocialLinks() {
           Our Social Links
         </p>
         <p className="text-gray-500 md:pl-10 my-6 md:text-lg 2xl:text-xl md:text-right">
-          We are available on Twitter, LinkedIn, and GitHub. You can connect
+          We are available on X, LinkedIn, and GitHub. You can connect
           with us to get notification about any new feature we add, any cool
           product we create or get early access of some cool projects !
         </p>
@@ -19,8 +19,8 @@ export default function SocialLinks() {
             title="LinkedIn"
           />
           <AnchorWithSVG
-            url="https://twitter.com/VishwaGauravIn"
-            title="Twitter"
+            url="https://x.com/VishwaGauravIn"
+            title="X"
           />
           <AnchorWithSVG
             url="https://github.com/VishwaGauravIn"
