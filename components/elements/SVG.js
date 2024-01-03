@@ -98,7 +98,7 @@ export const GITHUB_LOGO_LARGE_SVG = () => {
   );
 };
 
-export const TWITTER_SVG = ({ size }) => {
+export const X_SVG = ({ size }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
