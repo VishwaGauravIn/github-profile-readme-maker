@@ -31,11 +31,14 @@ export default function Preview({ back }) {
       );
 
       // targeting all the a tags inside the content div
-      const links =  document.getElementById("content").querySelectorAll("a");
-      links.forEach((link) => {
-        // adding attribute target
-        link.setAttribute("target", "_blank");
-      });
+      const links =  document?.getElementById("content")?.querySelectorAll("a");
+      // Checking if elements exists 
+      if(links.length > 0){
+        links.forEach((link) => {
+          // adding attribute target
+          link.setAttribute("target", "_blank");
+        });
+      }
     }, 300);
   }, []);
 
