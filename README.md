@@ -37,8 +37,8 @@ If fun is required everywhere, how can it be missing from your profile? Now, you
 ### 🏆 GitHub Trophies
 Got any trophies/medals but don't know how to show them on your profile? Don't worry! GitHub Trophies are the virtual trophies for you. Showcase them by adding them to your profile.
 
-### 🤔 Wondering how you can use it?
-You can Copy the generated script and Paste it into your GitHub ReadMe file ,or you can also download the markdown(README.md) file and just add it yo your github repo
+## 🤔 Wondering how you can use it?
+You can Copy the generated ReadMe and Paste it into your GitHub ReadMe file directly, or you can also download the markdown(README.md) file and just add it to your GitHub repo.
 
 ## Our Social Links
 [![X](https://img.shields.io/badge/X-black.svg?style=normal&logo=X&logoColor=white)](https://x.com/VishwaGauravIn)
