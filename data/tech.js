@@ -1145,6 +1145,10 @@ export const data = {
       url: "![Jira](https://img.shields.io/badge/jira-%230A0FFF.svg?style=for-the-badge&logo=jira&logoColor=white)",
     },
     {
+      label: "JEST",
+      url: "![Jest](https://img.shields.io/badge/jest-%230A0FFF.svg?style=for-the-badge&logo=jest&logoColor=orange)",
+    },
+    {
       label: "KUBERNETES",
       url: "![Kubernetes](https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=for-the-badge&logo=kubernetes&logoColor=white)",
     },
