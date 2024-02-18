@@ -1146,7 +1146,7 @@ export const data = {
     },
     {
       label: "JEST",
-      url: "![Jest](https://img.shields.io/badge/jest-%230A0FFF.svg?style=for-the-badge&logo=jest&logoColor=white)",
+      url: "![Jest](https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white)",
     },
     {
       label: "KUBERNETES",
