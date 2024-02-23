@@ -987,6 +987,10 @@ export const data = {
       url: "![CONSUL](https://img.shields.io/badge/consul-F24C53svg?style=for-the-badge&logo=consul&logoColor=white&color=%23F24C53)",
     },
     {
+      label: "CONTAINERD",
+      url: "![CONTAINERD](https://img.shields.io/badge/containerd-%232C5263.svg?style=for-the-badge&logo=containerd&logoColor=white)",
+    },
+    {
       label: "DOCKER",
       url: "![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)",
     },
@@ -999,12 +1003,20 @@ export const data = {
       url: "![FLUENTD](https://img.shields.io/badge/fluentd-0E83C8.svg?style=for-the-badge&logo=fluentd&logoColor=white&color=%230E83C8)",
     },
     {
+      label: "GITHUB ACTIONS",
+      url: "![GITHUBACTIONS](https://img.shields.io/badge/githubactions-%231A1918.svg?style=for-the-badge&logo=github&logoColor=white)",
+    },
+    {
       label: "GRAFANA",
       url: "![GRAFANA](https://img.shields.io/badge/grafana-F46800.svg?style=for-the-badge&logo=grafana&logoColor=white&color=%23F46800)",
     },
     {
       label: "ISTIO",
       url: "![ISTIO](https://img.shields.io/badge/istio-466BB0.svg?style=for-the-badge&logo=istio&logoColor=white&color=%23466BB0)",
+    },
+    {
+      label: "JFROG",
+      url: "![JFROG](https://img.shields.io/badge/jfrog-009639.svg?style=for-the-badge&logo=jfrog&logoColor=white&color=%23009639)",
     },
     {
       label: "KIBANA",
@@ -1021,6 +1033,14 @@ export const data = {
     {
       label: "NEW RELIC",
       url: "![NEWRELIC](https://img.shields.io/badge/newrelic-1CE783.svg?style=for-the-badge&logo=newrelic&logoColor=white&color=%231CE783)",
+    },
+    {
+      label: "NEXUS",
+      url: "![NEXUS](https://img.shields.io/badge/nexus-000099.svg?style=for-the-badge&logo=sonatype&logoColor=white&color=%%23000099)",
+    },
+    {
+      label: "OPEN TELEMETRY",
+      url: "![OPENTELEMETRY](https://img.shields.io/badge/opentelemetry-0078D7.svg?style=for-the-badge&logo=opentelemetry&logoColor=white&color=%231CE783)",
     },
     {
       label: "PACKER",
@@ -1053,6 +1073,10 @@ export const data = {
     {
       label: "TERRAFORM",
       url: "![Terraform](https://img.shields.io/badge/terraform-%235835CC.svg?style=for-the-badge&logo=terraform&logoColor=white)",
+    },
+    {
+      label: "TRAVIS CI",
+      url: "![TRAVISCI](https://img.shields.io/badge/travisci-%230db7ed.svg?style=for-the-badge&logo=travisci&logoColor=white)",
     },
     {
       label: "VAULT",
