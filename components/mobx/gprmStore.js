@@ -22,7 +22,7 @@ export function createGPRMStore() {
         sof: "",
         tiktok: "",
         twitch: "",
-        twitter: "",
+        x: "",
         youtube: "",
       },
       tech: [],

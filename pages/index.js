@@ -30,18 +30,18 @@ export default function Home() {
           content="Best Profile Generator, Create your perfect GitHub Profile ReadMe in the best possible way. Lots of features and tools included, all for free !"
         />
         <meta property="og:image" content="https://gprm.itsvg.in/webimg.png" />
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://gprm.itsvg.in" />
+        <meta property="x:card" content="summary_large_image" />
+        <meta property="x:url" content="https://gprm.itsvg.in" />
         <meta
-          property="twitter:title"
+          property="x:title"
           content="GPRM : GitHub Profile ReadMe Maker"
         />
         <meta
-          property="twitter:description"
+          property="x:description"
           content="Best Profile Generator, Create your perfect GitHub Profile ReadMe in the best possible way. Lots of features and tools included, all for free !"
         />
         <meta
-          property="twitter:image"
+          property="x:image"
           content="https://gprm.itsvg.in/webimg.png"
         />
         <link rel="icon" href="/logo.png" />

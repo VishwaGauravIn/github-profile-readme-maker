@@ -69,14 +69,14 @@ export default function Extras({ back }) {
 `;
     }
     //     if (
-    //       gprmStore.data.socials.twitter &&
+    //       gprmStore.data.socials.x &&
     //       document.getElementById("gtcechk").checked === true
     //     ) {
     //       extras =
     //         extras +
     //         `
     // ## 🐦 Latest Tweet
-    // [![](https://gtce.itsvg.in/api?username=${gprmStore.data.socials.twitter})](https://github.com/VishwaGauravIn/github-twitter-card-embed)
+    // [![](https://gtce.itsvg.in/api?username=${gprmStore.data.socials.x})](https://github.com/VishwaGauravIn/github-x-card-embed)
     // `;
     //     }
     if (document.getElementById("quotechk").checked === true) {
@@ -261,16 +261,16 @@ ${gprmStore.data.tech
           <CheckBox id="visitorschk" title="Add Visitors Count" />
           <hr className="mt-2 mb-2 w-1/2 opacity-30" />
 
-          {/* Twitter Card */}
-          {/* {gprmStore.data.socials.twitter && (
+          {/* X Card */}
+          {/* {gprmStore.data.socials.x && (
             <>
               <img
                 id="visitors"
-                src={`https://gtce.itsvg.in/api?username=${gprmStore.data.socials.twitter}`}
+                src={`https://gtce.itsvg.in/api?username=${gprmStore.data.socials.x}`}
                 alt=""
                 className="mb-4 mt-2"
               />
-              <CheckBox id="gtcechk" title="Add Twitter Card" />
+              <CheckBox id="gtcechk" title="Add X Card" />
               <hr className="mt-2 mb-2 w-1/2 opacity-30" />
             </>
           )} */}

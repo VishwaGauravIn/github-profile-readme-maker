@@ -29,8 +29,20 @@ export default function Preview({ back }) {
       document.getElementById("content").innerHTML = md.render(
         gprmStore.data.finalData
       );
+
+      // targeting all the a tags inside the content div
+      const links =  document?.getElementById("content")?.querySelectorAll("a");
+      // Checking if elements exists 
+      if(links.length > 0){
+        links.forEach((link) => {
+          // adding attribute target
+          link.setAttribute("target", "_blank");
+        });
+      }
     }, 300);
   }, []);
+
+
   function onCopy() {
     navigator.clipboard.writeText(gprmStore.data.finalData);
     // Alert for Copied
