@@ -4,6 +4,7 @@ import Broadcast from "../components/broadcast/Broadcast";
 import Footer from "../components/elements/Footer";
 import NavBar from "../components/NavBar";
 import HomePage from "../components/slides/HomePage";
+import { CrispBanner } from "../components/crisp";
 
 export default function Home() {
   return (
@@ -46,10 +47,10 @@ export default function Home() {
         <link rel="icon" href="/logo.png" />
         {/* Google Ads */}
         <script
-           async
-           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7377463303850503"
-           crossOrigin="anonymous"
-         ></script>
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7377463303850503"
+          crossOrigin="anonymous"
+        ></script>
       </Head>
       {/* Google Analytics */}
       <Script
@@ -68,12 +69,15 @@ export default function Home() {
             `,
         }}
       />
-      <body className="overflow-x-hidden max-w-[100vw] p-3 md:p-4 text-green-200">
-        <Broadcast />
-        <NavBar />
-        <HomePage />
-        <Footer />
-      </body>
+      <>
+        <CrispBanner />
+        <div className="overflow-x-hidden max-w-[100vw] p-3 md:p-4 text-green-200">
+          <Broadcast />
+          <NavBar />
+          <HomePage />
+          <Footer />
+        </div>
+      </>
     </>
   );
 }

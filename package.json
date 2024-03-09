@@ -10,6 +10,7 @@
   "dependencies": {
     "@heroicons/react": "^1.0.5",
     "axios": "^0.27.2",
+    "crisp-sdk-web": "^1.0.22",
     "firebase": "^9.6.4",
     "markdown-it": "^12.3.2",
     "mobx": "^6.6.0",
