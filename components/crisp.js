@@ -1,4 +1,6 @@
-{/* Disabled due to spam */}
+{
+  /* Disabled due to spam */
+}
 
 // import React, { Component } from "react";
 // import dynamic from "next/dynamic";
@@ -78,7 +80,7 @@
 //                 background-position: 0% 50%;
 //               }
 //             }
-    
+
 //             @keyframes appear {
 //               0% {
 //                 height: 0px;
@@ -95,8 +97,7 @@
 //   );
 // }
 
-
-// import React, { Component } from "react";
+import React from "react";
 // import dynamic from "next/dynamic";
 
 // import { Crisp } from "crisp-sdk-web";
@@ -160,7 +161,7 @@ export function CrispBanner() {
           </a>
         </div>
       </div>
-      <CrispWithNoSSR />
+      {/* <CrispWithNoSSR /> */}
 
       <style>{`
             @keyframes anime {
