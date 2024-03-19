@@ -157,7 +157,7 @@ export function CrispBanner() {
       <div style={bannerWrapperAnimation}>
         <div style={bannerAnimation}>
           <a style={buttonStyles} href="mailto:itsvgin@gmail.com">
-            Want a crazy good website? Let&apos;s Chat!
+            Want a crazy good website? Let&apos;s Discuss!
           </a>
         </div>
       </div>
