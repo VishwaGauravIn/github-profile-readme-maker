@@ -139,7 +139,6 @@ export function CrispBanner() {
 
   const buttonStyles = {
     color: "white",
-    fontSize: "1rem", // Use a single fontSize property
     transition: "all 0.2s ease-in-out",
     letterSpacing: "0.05em",
     fontWeight: 500,
@@ -156,7 +155,11 @@ export function CrispBanner() {
     <>
       <div style={bannerWrapperAnimation}>
         <div style={bannerAnimation}>
-          <a style={buttonStyles} href="mailto:itsvgin@gmail.com">
+          <a
+            style={buttonStyles}
+            href="mailto:itsvgin@gmail.com"
+            className="text-xs sm:text-base"
+          >
             Want a crazy good website? Let&apos;s Discuss!
           </a>
         </div>
