@@ -55,7 +55,7 @@ export default function AboutMe({ back }) {
               <textarea
                 name=""
                 id="aboutme"
-                className="w-full bg-transparent h-72 md:h-96 text-base sm:text-lg md:text-xl p-4 outline-none ring-2 ring-green-300/50 focus:ring-green-300/75 rounded-md my-6 md:my-10 resize-none whitespace-pre"
+                className="w-full bg-transparent h-72 md:h-96 text-base sm:text-lg md:text-xl p-4 outline-none ring-2 ring-green-300/50 focus:ring-green-300/75 rounded-md my-6 md:my-10 resize-none sm:whitespace-pre"
                 placeholder={textareaPlaceholder}
                 value={aboutme}
                 onChange={(e) => setAboutme(e.target.value)}
