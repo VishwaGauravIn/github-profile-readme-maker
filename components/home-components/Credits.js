@@ -18,9 +18,9 @@ export default function Credits() {
       creditfor: "GitHub ReadMe Streaks",
     },
     {
-      avatar: "https://avatars.githubusercontent.com/u/26834658?v=4",
-      name: "Tushar Mittal",
-      creditfor: "Random Memer",
+      avatar: "https://avatars.githubusercontent.com/u/81325730?v=4",
+      name: "Vishwa Gaurav",
+      creditfor: "Random Memes",
     },
     {
       avatar: "https://avatars.githubusercontent.com/u/6661165?v=4",
