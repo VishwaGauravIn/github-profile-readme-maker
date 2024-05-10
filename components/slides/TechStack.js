@@ -95,15 +95,12 @@ export default function TechStack({ back }) {
 
                 {/* Languages */}
                 <TechBadgesWrapper label="LANGUAGES" data={techData.lang} />
-                {/* Hosting/SaaS */}
-                <TechBadgesWrapper
-                  label="Hosting/SaaS"
-                  data={techData.hosting}
-                />
               </div>
             </div>
           </div>
           <div className="w-full flex flex-col justify-center items-center text-green-100">
+            {/* Hosting/SaaS */}
+            <TechBadgesWrapper label="Hosting/SaaS" data={techData.hosting} />
             {/* FRAMEWORKS, PLATFORMS & LIBRARIES */}
             <TechBadgesWrapper
               label="FRAMEWORKS, PLATFORMS & LIBRARIES"
@@ -111,14 +108,17 @@ export default function TechStack({ back }) {
             />
             {/* SERVERS */}
             <TechBadgesWrapper label="SERVERS" data={techData.servers} />
-            {/* DATABASES */}
-            <TechBadgesWrapper label="DATABASES" data={techData.database} />
+            {/* DATABASES / ORM */}
+            <TechBadgesWrapper
+              label="DATABASES / ORM"
+              data={techData.database}
+            />
             {/* DESIGN */}
             <TechBadgesWrapper label="DESIGN" data={techData.design} />
             {/* ML/DL */}
             <TechBadgesWrapper label="ML/DL" data={techData.ml} />
-            {/* DevOps */}
-            <TechBadgesWrapper label="DevOps" data={techData.devops} />
+            {/* CI CD VCS */}
+            <TechBadgesWrapper label="CI/CD VCS" data={techData.cicdvcs} />
             {/* OTHER */}
             <TechBadgesWrapper label="OTHER" data={techData.others} />
           </div>

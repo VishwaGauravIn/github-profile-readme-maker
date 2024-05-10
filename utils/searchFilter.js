@@ -10,7 +10,7 @@ export function searchFilter(searchStr) {
     database: [],
     design: [],
     ml: [],
-    devops: [],
+    cicdvcs: [],
     others: [],
   };
   //   Filtering object using old school, for loop
