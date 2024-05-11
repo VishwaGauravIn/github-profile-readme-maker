@@ -90,7 +90,7 @@ export default function TechStack({ back }) {
                   techData.ml.length === 0 &&
                   techData.others.length === 0 &&
                   techData.servers.length === 0 &&
-                  techData.devops.length === 0 &&
+                  techData.cicdvcs.length === 0 &&
                   nothingFound()}
 
                 {/* Languages */}
