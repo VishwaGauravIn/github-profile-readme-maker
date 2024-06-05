@@ -6,6 +6,7 @@ import { useGPRMStore } from "../mobx/GPRMcontext";
 import { useObserver } from "mobx-react";
 import Socials from "./Socials";
 import FeedbackButton from "../elements/FeedbackButton";
+import themes from "../../data/themes";
 
 export default function GitHubStats({ back }) {
   const [isVisible, setIsVisible] = useState(false);
@@ -118,52 +119,5 @@ export default function GitHubStats({ back }) {
     </>
   ));
 }
-
-const themes = [
-  "default",
-  "dark",
-  "radical",
-  "merko",
-  "gruvbox",
-  "tokyonight",
-  "onedark",
-  "synthwave",
-  "highcontrast",
-  "dracula",
-  "prussian",
-  "monokai",
-  "vue",
-  "vue-dark",
-  "shades-of-purple",
-  "nightowl",
-  "buefy",
-  "blue-green",
-  "algolia",
-  "great-gatsby",
-  "darcula",
-  "bear",
-  "solarized-dark",
-  "solarized-light",
-  "chartreuse-dark",
-  "nord",
-  "gotham",
-  "material-palenight",
-  "graywhite",
-  "vision-friendly-dark",
-  "ayu-mirage",
-  "midnight-purple",
-  "calm",
-  "flag-india",
-  "omni",
-  "react",
-  "jolly",
-  "maroongold",
-  "yeblu",
-  "blueberry",
-  "slateorange",
-  "kacho_ga",
-  "city_light",
-  "swift",
-];
 
 export var githubstats = ``;

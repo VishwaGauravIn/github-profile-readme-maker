@@ -10,6 +10,7 @@ import Preview from "./Preview";
 import { useGPRMStore } from "../mobx/GPRMcontext";
 import { useObserver } from "mobx-react";
 import FeedbackButton from "../elements/FeedbackButton";
+import themes from "../../data/themes";
 
 export default function Extras({ back }) {
   const [isVisible, setIsVisible] = useState(false);
@@ -252,12 +253,14 @@ ${gprmStore.data.tech
               })}
             </select>
           </div>
-          <img
-            id="visitors"
-            src={`https://visitcount.itsvg.in/api/test?icon=${icon}&color=${color}`}
-            alt=""
-            className="md:ml-36 mb-4"
-          />
+          <a href="https://visitcount.itsvg.in" className="">
+            <img
+              id="visitors"
+              src={`https://visitcount.itsvg.in/api?id=VishwaGauravIn&pretty=true&icon=${icon}&color=${color}`}
+              alt=""
+              className="mb-4"
+            />
+          </a>
           <CheckBox id="visitorschk" title="Add Visitors Count" />
           <hr className="mt-2 mb-2 w-1/2 opacity-30" />
 
@@ -352,31 +355,6 @@ ${gprmStore.data.tech
   ));
 }
 
-const themes = [
-  "flat",
-  "onedark",
-  "gruvbox",
-  "dracula",
-  "monokai",
-  "chalk",
-  "nord",
-  "alduin",
-  "darkhub",
-  "juicyfresh",
-  "buddhism",
-  "oldie",
-  "radical",
-  "onestar",
-  "discord",
-  "algolia",
-  "gitdimmed",
-  "tokyonight",
-  "matrix",
-  "apprentice",
-  "dark_dimmed",
-  "dark",
-];
-
 const quoteThemes = [
   "light",
   "dark",
@@ -400,6 +378,7 @@ const colors = [
   "pink",
   "fuchsia",
   "neutral",
+  "random",
 ];
 
 const icons = [
@@ -413,6 +392,7 @@ const icons = [
   "heart",
   "bolt",
   "star",
+  "random",
 ];
 
 export var extras = ``;
