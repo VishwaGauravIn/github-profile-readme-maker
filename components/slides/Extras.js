@@ -344,7 +344,7 @@ ${gprmStore.data.tech
           <CheckBox id="toprepochk" title="Add Top Contributed Repo List" />
           <hr className="mt-2 mb-2 w-1/2 opacity-30" />
 
-          <CheckBox id="memechk" title="Add Random Memes" />
+          {/* <CheckBox id="memechk" title="Add Random Memes" /> */}
           <span className="pb-6" />
           <NextButton onClick={() => onNext()} />
           <Pagination val={6} />
