@@ -96,14 +96,14 @@ export default function Extras({ back }) {
 ![](${document.getElementById("toprepo").getAttribute("src")})
 `;
     }
-    if (document.getElementById("memechk").checked === true) {
-      extras =
-        extras +
-        `
-### 😂 Random Dev Meme
-<img src='https://memer-new.vercel.app/' style="height: 400px;"/>
-`;
-    }
+//     if (document.getElementById("memechk").checked === true) {
+//       extras =
+//         extras +
+//         `
+// ### 😂 Random Dev Meme
+// <img src='https://memer-new.vercel.app/' style="height: 400px;"/>
+// `;
+//     }
     if (document.getElementById("visitorschk").checked === true) {
       extras =
         extras +
