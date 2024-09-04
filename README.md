@@ -14,31 +14,31 @@
 We've got everything that you need! Create your perfect GitHub Profile ReadMe in the best possible way. Lots of features and tools included, all for free!
 
 ### ⚡ Lightning Fast Profile Creation
-Create your Profile ReadMe in just a few clicks! On an average, it takes less than one minute to create a perfect Profile ReadMe using GPRM.
+Create your Profile ReadMe in just a few clicks! On average, it takes less than one minute to create a perfect Profile ReadMe using GPRM.
 
 ### 📊 Flex Your GitHub Stats
-Let's be Honest, everyone loves to flex their achievements. With tools such as ReadMe Stats, Most Used Languages, and Streak Stats you can show your achievements.
+Let's be honest, everyone loves to flex their achievements. With tools such as ReadMe Stats, Most Used Languages, and Streak Stats, you can show off your accomplishments.
 
 ### 👥 Visitors Counter
-With the use of a Visitors Counter, you can see how many people viewed your profile. This gives you an idea about how popular you are on GitHub.
+With the use of a Visitors Counter, you can see how many people have viewed your profile. This gives you an idea of how popular you are on GitHub.
 
 ### 🌐 Add All Social Links
-We have added an option to add your Social Links to increase your reach and promote your works at one place.
+We have added an option to include your Social Links to increase your reach and promote your work all in one place.
 
 ### 💻 Show Your Tech Stack
-Select from over 300+ tech options and show your tech stack to everyone. Let them know what makes you awesome.
+Select from over 300+ tech options and showcase your tech stack to everyone. Let them know what makes you awesome.
 
 ### 💰 Let People Help You With Donations
-No matter what your aim is, money is required at some point to boost the process for getting closer to your aim. We give you an option to add Donation Links directly to your profile so that people can help you by donating.
+No matter what your aim is, money is required at some point to boost your progress towards achieving it. We give you an option to add Donation Links directly to your profile so that people can support you financially.
 
 ### 😃 Fun Components
-If fun is required everywhere, how can it be missing from your profile? Now, you can cheer up other people by adding random memes and quotes in your profile.
+Fun is needed everywhere, so why not include it in your profile? Now, you can cheer up others by adding random memes and quotes to your profile.
 
 ### 🏆 GitHub Trophies
-Got any trophies/medals but don't know how to show them on your profile? Don't worry! GitHub Trophies are the virtual trophies for you. Showcase them by adding them to your profile.
+Got any trophies/medals but don't know how to display them on your profile? Don't worry! GitHub Trophies are the virtual trophies for you. Showcase them by adding them to your profile.
 
 ## 🤔 Wondering how you can use it?
-You can Copy the generated ReadMe and Paste it into your GitHub ReadMe file directly, or you can also download the markdown(README.md) file and just add it to your GitHub repo.
+You can copy the generated ReadMe and paste it into your GitHub ReadMe file directly, or you can also download the markdown (`README.md`) file and just add it to your GitHub repo.
 
 ## Our Social Links
 [![X](https://img.shields.io/badge/X-black.svg?style=normal&logo=X&logoColor=white)](https://x.com/VishwaGauravIn)
@@ -63,38 +63,3 @@ You can Copy the generated ReadMe and Paste it into your GitHub ReadMe file dire
 <summary>
   NextJS Guide
 </summary>
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-  
-</details>
