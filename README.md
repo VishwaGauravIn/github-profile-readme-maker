@@ -17,13 +17,13 @@ We've got everything that you need! Create your perfect GitHub Profile ReadMe in
 Create your Profile ReadMe in just a few clicks! On average, it takes less than one minute to create a perfect Profile ReadMe using GPRM.
 
 ### 📊 Flex Your GitHub Stats
-Let's be honest, everyone loves to flex their achievements. With tools such as ReadMe Stats, Most Used Languages, and Streak Stats, you can show off your accomplishments.
+Let's be honest, everyone loves to flex their achievements. With tools such as ReadMe Stats, Most Used Languages, and Streak Stats, you can show off your achievements.
 
 ### 👥 Visitors Counter
 With the use of a Visitors Counter, you can see how many people have viewed your profile. This gives you an idea of how popular you are on GitHub.
 
 ### 🌐 Add All Social Links
-We have added an option to include your Social Links to increase your reach and promote your work all in one place.
+We have added an option to add your Social Links to increase your reach and promote your work all in one place.
 
 ### 💻 Show Your Tech Stack
 Select from over 300+ tech options and showcase your tech stack to everyone. Let them know what makes you awesome.
