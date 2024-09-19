@@ -7,6 +7,7 @@ import { useObserver } from "mobx-react";
 import Socials from "./Socials";
 import FeedbackButton from "../elements/FeedbackButton";
 import themes from "../../data/themes";
+import Image from "next/image";
 
 export default function GitHubStats({ back }) {
   const [isVisible, setIsVisible] = useState(false);
@@ -82,9 +83,10 @@ export default function GitHubStats({ back }) {
           <p className="mt-4 text-green-300 opacity-90">
             please wait for images to load after changing any values
           </p>
-          <div className="w-full md:w-8/12 justify-center flex flex-col flex-wrap md:my-4">
-            <img
-              className="m-2 select-none pointer-events-none"
+          <div className="w-full md:w-8/12 justify-center flex flex-col flex-wrap md:my-4 md:gap-4">
+            <Image
+              width={200}
+              height={200}
               draggable="false"
               id="stats"
               src={`https://github-readme-stats.vercel.app/api?username=${
@@ -92,17 +94,20 @@ export default function GitHubStats({ back }) {
               }&theme=${theme}&hide_border=${!border}&include_all_commits=${includeAll}&count_private=${includePrivate}`}
               alt=""
             />
-            <img
-              className="m-2 select-none pointer-events-none"
+            <Image
+              width={200}
+              height={200}
               draggable="false"
               id="streak"
               src={`https://github-readme-streak-stats.herokuapp.com/?user=${
                 gprmStore.data.username
               }&theme=${theme}&hide_border=${!border}`}
               alt=""
+              unoptimized
             />
-            <img
-              className="m-2 select-none pointer-events-none"
+            <Image
+              width={150}
+              height={150}
               draggable="false"
               id="langs"
               src={`https://github-readme-stats.vercel.app/api/top-langs/?username=${
@@ -111,7 +116,9 @@ export default function GitHubStats({ back }) {
               alt=""
             />
           </div>
-          <NextButton onClick={() => onNext()} />
+          <div className="mt-5 md:mt-0">
+            <NextButton onClick={() => onNext()} />
+          </div>
           <Pagination val={2} />
           <FeedbackButton />
         </div>

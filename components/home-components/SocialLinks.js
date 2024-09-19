@@ -1,5 +1,6 @@
 import React from "react";
 import AnchorWithSVG from "../elements/anchor/AnchorWithSVG";
+import Image from "next/image";
 
 export default function SocialLinks() {
   return (
@@ -9,19 +10,16 @@ export default function SocialLinks() {
           Our Social Links
         </p>
         <p className="text-gray-500 md:pl-10 my-6 md:text-lg 2xl:text-xl md:text-right">
-          We are available on X, LinkedIn, and GitHub. You can connect
-          with us to get notification about any new feature we add, any cool
-          product we create or get early access of some cool projects !
+          We are available on X, LinkedIn, and GitHub. You can connect with us
+          to get notification about any new feature we add, any cool product we
+          create or get early access of some cool projects !
         </p>
         <div className="flex flex-row flex-wrap justify-center md:items-end">
           <AnchorWithSVG
             url="https://linkedin.com/in/VishwaGauravIn"
             title="LinkedIn"
           />
-          <AnchorWithSVG
-            url="https://x.com/VishwaGauravIn"
-            title="X"
-          />
+          <AnchorWithSVG url="https://x.com/VishwaGauravIn" title="X" />
           <AnchorWithSVG
             url="https://github.com/VishwaGauravIn"
             title="GitHub"
@@ -33,7 +31,9 @@ export default function SocialLinks() {
         </div>
       </div>
       <div className="w-full md:w-6/12 flex flex-col justify-center items-center">
-        <img
+        <Image
+          width={500}
+          height={500}
           src="/socials.svg"
           alt=""
           className="w-10/12 aspect-square select-none pointer-events-none -rotate-3"

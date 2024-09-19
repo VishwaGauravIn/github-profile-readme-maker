@@ -1,10 +1,11 @@
 import React from "react";
+import Image from "next/image";
 import { BUY_ME_A_COFFEE_SVG } from "./elements/SVG";
 
 export default function NavBar() {
   return (
     <div className="w-full flex text-green-300 items-center relative">
-      <img src="/logo.png" alt="" className="w-8 h-8 mr-2" />
+      <Image src={`/logo.png`} alt="" width={30} height={30} draggable={false} />
       <p className="text-4xl font-medium text-green-300">GPRM</p>
       <a
         href="https://www.buymeacoffee.com/VishwaGauravIn"

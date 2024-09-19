@@ -11,6 +11,7 @@ import ScrollToTop from "../elements/ScrollToTop";
 import { RIGHT_ARROW_SVG } from "../elements/SVG";
 import { useGPRMStore } from "../mobx/GPRMcontext";
 import { useObserver } from "mobx-react";
+import Image from "next/image";
 
 export default function HomePage() {
   const [isVisible, setIsVisible] = useState(false);
@@ -53,7 +54,7 @@ export default function HomePage() {
               </p>
               {/* Text Input */}
               <div className="flex flex-col sm:flex-row mt-8 md:my-16 2xl:my-20 items-center">
-                <form className="w-full" onSubmit={onNext}>
+                <form className="w-full flex items-center" onSubmit={onNext}>
                   <input
                     type="text"
                     value={input}
@@ -71,11 +72,12 @@ export default function HomePage() {
               <AnimatedText />
             </div>
             <div className="flex w-full mt-16 md:mt-0 md:w-6/12 justify-center">
-              <img
-                src="/hpill.svg"
+              <Image
+                src={`/hpill.svg`}
                 alt=""
-                className="w-full sm:w-8/12 aspect-square select-none pointer-events-none"
-                draggable="false"
+                width={500}
+                height={500}
+                onSelect={null}
               />
             </div>
           </div>
