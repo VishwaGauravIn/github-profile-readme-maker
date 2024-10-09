@@ -32,18 +32,12 @@ export default function Home() {
         <meta property="og:image" content="https://gprm.itsvg.in/webimg.png" />
         <meta property="x:card" content="summary_large_image" />
         <meta property="x:url" content="https://gprm.itsvg.in" />
-        <meta
-          property="x:title"
-          content="GPRM : GitHub Profile ReadMe Maker"
-        />
+        <meta property="x:title" content="GPRM : GitHub Profile ReadMe Maker" />
         <meta
           property="x:description"
           content="Best Profile Generator, Create your perfect GitHub Profile ReadMe in the best possible way. Lots of features and tools included, all for free !"
         />
-        <meta
-          property="x:image"
-          content="https://gprm.itsvg.in/webimg.png"
-        />
+        <meta property="x:image" content="https://gprm.itsvg.in/webimg.png" />
         <link rel="icon" href="/logo.png" />
         {/* Google Ads */}
         <script
@@ -71,11 +65,11 @@ export default function Home() {
       />
       <>
         <CrispBanner />
-        <div className="overflow-x-hidden max-w-[100vw] p-3 md:p-4 text-green-200">
+        <div className="overflow-x-hidden max-w-[100vw] p-3 md:p-4 text-white">
           <Broadcast />
           <NavBar />
           <HomePage />
-          <Footer />
+          {/* <Footer /> */}
         </div>
       </>
     </>

@@ -90,7 +90,7 @@ export default function Donate({ back }) {
               <div className="flex w-full md:w-10/12 justify-center md:justify-end mt-4">
                 <NextButton onClick={() => onNext()} />
                 <Pagination val={5} />
-                <FeedbackButton />
+                {/* <FeedbackButton /> */}
               </div>
             </div>
           </div>

@@ -5,7 +5,6 @@ import { useGPRMStore } from "../mobx/GPRMcontext";
 import { useObserver } from "mobx-react";
 import GitHubStats from "./GitHubCards";
 import { LightBulbIcon } from "@heroicons/react/outline";
-import FeedbackButton from "../elements/FeedbackButton";
 
 export default function AboutMe({ back }) {
   const [isVisible, setIsVisible] = useState(false);
@@ -39,23 +38,15 @@ export default function AboutMe({ back }) {
           <p className="w-full text-center text-3xl my-6 md:my-10 mt-20">
             Add a small introduction
           </p>
-          <div className="flex flex-col md:flex-row w-full">
-            <div className="flex w-full md:w-6/12 justify-center items-center mb-4 md:mb-0">
-              <img
-                src="/happy.svg"
-                alt=""
-                className="w-8/12 aspect-square select-none pointer-events-none"
-                draggable="false"
-              />
-            </div>
+          <div className="flex flex-col md:flex-row w-full justify-center">
             <div className="flex flex-col w-full md:w-6/12 items-center">
-              <p className="text-4xl md:text-5xl font-semibold text-green-300">
+              <p className="text-4xl md:text-5xl font-semibold text-[#ECA227]">
                 About Me :
               </p>
               <textarea
                 name=""
                 id="aboutme"
-                className="w-full bg-transparent h-72 md:h-96 text-base sm:text-lg md:text-xl p-4 outline-none ring-2 ring-green-300/50 focus:ring-green-300/75 rounded-md my-6 md:my-10 resize-none whitespace-pre"
+                className="w-full bg-transparent h-72 md:h-96 text-base sm:text-lg md:text-xl p-4 outline-none ring-2 ring-[#ECA227] focus:ring-white rounded-md my-6 md:my-10 resize-none whitespace-pre"
                 placeholder={textareaPlaceholder}
                 value={aboutme}
                 onChange={(e) => setAboutme(e.target.value)}
@@ -74,7 +65,7 @@ export default function AboutMe({ back }) {
             </div>
           </div>
           <Pagination val={1} />
-          <FeedbackButton />
+          {/* <FeedbackButton /> */}
         </div>
       )}
     </>

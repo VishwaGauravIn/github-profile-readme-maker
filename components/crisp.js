@@ -155,12 +155,8 @@ export function CrispBanner() {
     <>
       <div style={bannerWrapperAnimation}>
         <div style={bannerAnimation}>
-          <a
-            style={buttonStyles}
-            href="mailto:itsvgin@gmail.com"
-            className="text-xs sm:text-base"
-          >
-            Want a crazy good website? Let&apos;s Discuss!
+          <a style={buttonStyles} href="#" className="text-xs sm:text-base">
+            A Build Village Project
           </a>
         </div>
       </div>

@@ -113,7 +113,7 @@ export default function GitHubStats({ back }) {
           </div>
           <NextButton onClick={() => onNext()} />
           <Pagination val={2} />
-          <FeedbackButton />
+          {/* <FeedbackButton /> */}
         </div>
       )}
     </>

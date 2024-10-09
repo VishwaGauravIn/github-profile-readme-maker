@@ -31,9 +31,9 @@ export default function Preview({ back }) {
       );
 
       // targeting all the a tags inside the content div
-      const links =  document?.getElementById("content")?.querySelectorAll("a");
-      // Checking if elements exists 
-      if(links.length > 0){
+      const links = document?.getElementById("content")?.querySelectorAll("a");
+      // Checking if elements exists
+      if (links.length > 0) {
         links.forEach((link) => {
           // adding attribute target
           link.setAttribute("target", "_blank");
@@ -41,7 +41,6 @@ export default function Preview({ back }) {
       }
     }, 300);
   }, []);
-
 
   function onCopy() {
     navigator.clipboard.writeText(gprmStore.data.finalData);
@@ -133,7 +132,7 @@ export default function Preview({ back }) {
       </p>
       {copiedAlertVisible && <ToastSuccess title="Copied Successfully !" />}
       {downloadAlertVisible && <ToastSuccess title="Download Started !" />}
-      <FeedbackButton />
+      {/* <FeedbackButton /> */}
     </div>
   );
 }

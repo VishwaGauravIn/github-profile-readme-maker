@@ -162,7 +162,7 @@ export default function TechStack({ back }) {
           </div>
           <NextButton onClick={() => setIsVisible(true)} />
           <Pagination val={4} />
-          <FeedbackButton />
+          {/* <FeedbackButton /> */}
         </div>
       )}
     </>
