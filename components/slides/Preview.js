@@ -130,6 +130,7 @@ export default function Preview({ back }) {
       <p className="flex flex-col h-full items-center text-xl text-center pt-5 lg:pt-10">
         Hey👋, Can you help us to grow by sharing? <br />
       </p>
+      <pre className="text-white">{JSON.stringify(gprmStore.data)}</pre>
       {copiedAlertVisible && <ToastSuccess title="Copied Successfully !" />}
       {downloadAlertVisible && <ToastSuccess title="Download Started !" />}
       {/* <FeedbackButton /> */}

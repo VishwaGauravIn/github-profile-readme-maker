@@ -2,8 +2,11 @@ import React, { useState } from "react";
 import NextButton from "../elements/buttons/NextButton";
 import Pagination from "../elements/Pagination";
 import TextInputWithImage from "../elements/textinput/TextInputWithImage";
-import Extras from "./Extras";
-import FeedbackButton from "../elements/FeedbackButton";
+import { useGPRMStore } from "../mobx/GPRMcontext";
+import { socials } from "./Socials";
+import { githubstats } from "./GitHubCards";
+
+import Preview from "./Preview";
 
 export default function Donate({ back }) {
   const [isVisible, setIsVisible] = useState(false);
@@ -37,12 +40,59 @@ export default function Donate({ back }) {
           document.getElementById("kofi").value
         }) `;
     }
+    createFinalData();
     setIsVisible(true);
   }
+
+  const gprmStore = useGPRMStore();
+
+  function createFinalData() {
+    var finaldata = "";
+    if (gprmStore.data.aboutme != ``) {
+      finaldata =
+        finaldata +
+        `# 💫 About Me:
+${gprmStore.data.aboutme.replace(/(?:\r\n|\r|\n)/g, "<br>")}
+
+`;
+    }
+    if (socials != ``) {
+      finaldata =
+        finaldata +
+        `
+## 🌐 Socials:
+${socials}
+`;
+    }
+    if (gprmStore.data.tech != ``) {
+      finaldata =
+        finaldata +
+        `
+# 💻 Tech Stack:
+${gprmStore.data.tech
+  .join(" ")
+  .replaceAll("for-the-badge", gprmStore.data.badge_theme)}
+`;
+    }
+    finaldata = finaldata + githubstats;
+    if (donate != ``) {
+      finaldata =
+        finaldata +
+        `
+  ## 💰 You can help me by Donating
+  ${donate}
+
+  `;
+    }
+    finaldata = `${finaldata}
+<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->`;
+    gprmStore.data.finalData = finaldata;
+  }
+
   return (
     <>
       {isVisible ? (
-        <Extras back={() => setIsVisible(false)} />
+        <Preview back={() => setIsVisible(false)} />
       ) : (
         <div className="flex flex-col items-center fade-on-appear">
           <button

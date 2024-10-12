@@ -1,13 +1,9 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { useState } from "react";
 import AnimatedText from "../elements/AnimatedText";
-import Features from "../home-components/Features";
-import GitHubAvailability from "../home-components/GitHubAvailability";
 import ToastError from "../elements/toaster/ToastError";
 import AboutMe from "./AboutMe";
-import FAQ from "../home-components/FAQ";
-import Credits from "../home-components/Credits";
-import SocialLinks from "../home-components/SocialLinks";
-import ScrollToTop from "../elements/ScrollToTop";
+import Link from "next/link";
 import { RIGHT_ARROW_SVG } from "../elements/SVG";
 import { useGPRMStore } from "../mobx/GPRMcontext";
 import { useObserver } from "mobx-react";
@@ -16,10 +12,12 @@ export default function HomePage() {
   const [isVisible, setIsVisible] = useState(false);
   const [alertVisible, setAlertVisible] = useState(false);
   const gprmStore = useGPRMStore();
-  const [input, setInput] = useState(gprmStore.data.username);
+  const [input, setInput] = useState(gprmStore.data.nearuser);
+  const [input2, setInput2] = useState(gprmStore.data.username);
   function onNext() {
     if (input != "" && input.replace(/ /g, "") != "") {
-      gprmStore.data.username = input;
+      gprmStore.data.username = input2;
+      gprmStore.data.nearuser = input;
       setIsVisible(true);
       topFunction();
     } else {
@@ -61,12 +59,32 @@ export default function HomePage() {
                     onChange={(e) => setInput(e.target.value)}
                     autoFocus={true}
                     className="border-b-2 border-[#ECA227] bg-transparent w-full sm:w-11/12 md:w-10/12 lg:w-8/12 text-xl sm:text-3xl md:text-xl lg:text-2xl 2xl:text-3xl outline-none focus:border-border-[#ECA227] focus:border-b-4 inline"
+                    placeholder="Enter Your NEAR Wallet Address"
+                  />
+                  <input
+                    type="text"
+                    value={input2}
+                    required={true}
+                    onChange={(e) => setInput2(e.target.value)}
+                    autoFocus={true}
+                    className="border-b-2 border-[#ECA227] bg-transparent w-full sm:w-11/12 md:w-10/12 lg:w-8/12 text-xl sm:text-3xl md:text-xl lg:text-2xl 2xl:text-3xl outline-none focus:border-border-[#ECA227] focus:border-b-4 inline"
                     placeholder="Enter Your GitHub Username"
                   />
                   <button type="Submit">
                     <RIGHT_ARROW_SVG />
                   </button>
                 </form>
+              </div>
+              <div>
+                No NEAR Wallet Address yet?{" "}
+                <a
+                  href="https://wallet.meteorwallet.app/add_wallet/create_new"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-cyan-700 underline"
+                >
+                  Get one here
+                </a>
               </div>
               <AnimatedText />
             </div>
@@ -82,12 +100,6 @@ export default function HomePage() {
           {alertVisible && (
             <ToastError title="Enter a Valid GitHub Username !" />
           )}
-          {/* <Features /> */}
-          {/* <SocialLinks />
-          <GitHubAvailability />
-          <FAQ />
-          <Credits /> */}
-          {/* <ScrollToTop /> */}
         </div>
       )}
     </>

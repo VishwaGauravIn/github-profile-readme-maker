@@ -2,6 +2,7 @@ export function createGPRMStore() {
   return {
     data: {
       username: "",
+      nearuser: "",
       aboutme: "",
       stats: {
         theme: "dark",

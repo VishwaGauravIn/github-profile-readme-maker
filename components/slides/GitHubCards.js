@@ -20,8 +20,6 @@ export default function GitHubStats({ back }) {
   function onNext() {
     githubstats = `# 📊 GitHub Stats:
 ![](${document.getElementById("stats").getAttribute("src")})<br/>
-![](${document.getElementById("streak").getAttribute("src")})<br/>
-![](${document.getElementById("langs").getAttribute("src")})
 `;
     setIsVisible(true);
   }
@@ -90,24 +88,6 @@ export default function GitHubStats({ back }) {
               src={`https://github-readme-stats.vercel.app/api?username=${
                 gprmStore.data.username
               }&theme=${theme}&hide_border=${!border}&include_all_commits=${includeAll}&count_private=${includePrivate}`}
-              alt=""
-            />
-            <img
-              className="m-2 select-none pointer-events-none"
-              draggable="false"
-              id="streak"
-              src={`https://github-readme-streak-stats.herokuapp.com/?user=${
-                gprmStore.data.username
-              }&theme=${theme}&hide_border=${!border}`}
-              alt=""
-            />
-            <img
-              className="m-2 select-none pointer-events-none"
-              draggable="false"
-              id="langs"
-              src={`https://github-readme-stats.vercel.app/api/top-langs/?username=${
-                gprmStore.data.username
-              }&theme=${theme}&hide_border=${!border}&include_all_commits=${includeAll}&count_private=${includePrivate}&layout=compact`}
               alt=""
             />
           </div>
