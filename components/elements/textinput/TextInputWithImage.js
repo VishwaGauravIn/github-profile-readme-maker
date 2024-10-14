@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { useGPRMStore } from "../../mobx/GPRMcontext";
+import { useProfileMaker } from "../../../contexts/profile-maker";
 
 export default function TextInputWithImage({ id, imgUrl, placeholder }) {
-  const gprmStore = useGPRMStore();
-  const [input, setInput] = useState(gprmStore.data.donate[id]);
+  const profileMaker = useProfileMaker();
+  const [input, setInput] = useState(profileMaker.data.donate[id]);
   useEffect(() => {
-    gprmStore.data.donate[id] = input;
+    profileMaker.data.donate[id] = input;
   }, [input]);
   return (
     <div className="flex w-full md:w-10/12 my-2">

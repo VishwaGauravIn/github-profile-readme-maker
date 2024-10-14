@@ -1,10 +1,10 @@
 import React from "react";
-import { useGPRMStore } from "../mobx/GPRMcontext";
+import { useProfileMaker } from "../../contexts/profile-maker";
 
 export default function CheckBox({ id, title }) {
-  const gprmStore = useGPRMStore();
+  const profileMaker = useProfileMaker();
   function chk() {
-    gprmStore.data.checkbox[id] = document.getElementById(id).checked;
+    profileMaker.data.checkbox[id] = document.getElementById(id).checked;
   }
   return (
     <p className="flex w-max items-center my-2">
@@ -12,7 +12,7 @@ export default function CheckBox({ id, title }) {
         type="checkbox"
         name=""
         id={id}
-        defaultChecked={gprmStore.data.checkbox[id]}
+        defaultChecked={profileMaker.data.checkbox[id]}
         onChange={chk}
         className="w-4 h-4 mr-2 outline-none"
       />

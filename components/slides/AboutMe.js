@@ -1,19 +1,19 @@
 import React, { useState } from "react";
 import NextButton from "../elements/buttons/NextButton";
 import Pagination from "../elements/Pagination";
-import { useGPRMStore } from "../mobx/GPRMcontext";
 import { useObserver } from "mobx-react";
 import GitHubStats from "./GitHubCards";
 import { LightBulbIcon } from "@heroicons/react/outline";
+import { useProfileMaker } from "../../contexts/profile-maker";
 
 export default function AboutMe({ back }) {
   const [isVisible, setIsVisible] = useState(false);
-  const gprmStore = useGPRMStore();
-  const [aboutme, setAboutme] = useState(gprmStore.data.aboutme);
-  const [name, setName] = useState(gprmStore.data.name);
-  const [profileImage, setProfileImage] = useState(gprmStore.data.profileImage);
+  const profileMaker = useProfileMaker();
+  const [aboutme, setAboutme] = useState(profileMaker.data.aboutme);
+  const [name, setName] = useState(profileMaker.data.name);
+  const [profileImage, setProfileImage] = useState(profileMaker.data.profileImage);
   const [backgroundImage, setBackgroundImage] = useState(
-    gprmStore.data.backgroundImage
+    profileMaker.data.backgroundImage
   );
   const textareaPlaceholder = `🔭 I’m currently working on
 👯 I’m looking to collaborate on
@@ -29,10 +29,10 @@ export default function AboutMe({ back }) {
       profileImage != `` &&
       backgroundImage != ``
     ) {
-      gprmStore.data.aboutme = aboutme;
-      gprmStore.data.name = name;
-      gprmStore.data.profileImage = profileImage;
-      gprmStore.data.backgroundImage = backgroundImage;
+      profileMaker.data.aboutme = aboutme;
+      profileMaker.data.name = name;
+      profileMaker.data.profileImage = profileImage;
+      profileMaker.data.backgroundImage = backgroundImage;
     }
     setIsVisible(true);
   }

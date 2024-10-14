@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import NextButton from "../elements/buttons/NextButton";
 import Pagination from "../elements/Pagination";
 import TextInputWithImage from "../elements/textinput/TextInputWithImage";
-import { useGPRMStore } from "../mobx/GPRMcontext";
 import { socials } from "./Socials";
 import { githubstats } from "./GitHubCards";
 
 import Preview from "./Preview";
+import { useProfileMaker } from "../../contexts/profile-maker";
 
 export default function Donate({ back }) {
   const [isVisible, setIsVisible] = useState(false);
@@ -44,15 +44,15 @@ export default function Donate({ back }) {
     setIsVisible(true);
   }
 
-  const gprmStore = useGPRMStore();
+  const profileMaker = useProfileMaker();
 
   function createFinalData() {
     var finaldata = "";
-    if (gprmStore.data.aboutme != ``) {
+    if (profileMaker.data.aboutme != ``) {
       finaldata =
         finaldata +
         `# 💫 About Me:
-${gprmStore.data.aboutme.replace(/(?:\r\n|\r|\n)/g, "<br>")}
+${profileMaker.data.aboutme.replace(/(?:\r\n|\r|\n)/g, "<br>")}
 
 `;
     }
@@ -64,14 +64,14 @@ ${gprmStore.data.aboutme.replace(/(?:\r\n|\r|\n)/g, "<br>")}
 ${socials}
 `;
     }
-    if (gprmStore.data.tech != ``) {
+    if (profileMaker.data.tech != ``) {
       finaldata =
         finaldata +
         `
 # 💻 Tech Stack:
-${gprmStore.data.tech
+${profileMaker.data.tech
   .join(" ")
-  .replaceAll("for-the-badge", gprmStore.data.badge_theme)}
+  .replaceAll("for-the-badge", profileMaker.data.badge_theme)}
 `;
     }
     finaldata = finaldata + githubstats;
@@ -86,7 +86,7 @@ ${gprmStore.data.tech
     }
     finaldata = `${finaldata}
 <!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->`;
-    gprmStore.data.finalData = finaldata;
+    profileMaker.data.finalData = finaldata;
   }
 
   return (

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useGPRMStore } from "../../mobx/GPRMcontext";
+import { useProfileMaker } from "../../../contexts/profile-maker";
 
 export default function TextInputWithIcon({
   id,
@@ -7,10 +7,10 @@ export default function TextInputWithIcon({
   placeholder,
   viewBox = "-0.5 0 20 16",
 }) {
-  const gprmStore = useGPRMStore();
-  const [input, setInput] = useState(gprmStore.data.socials[id]);
+  const profileMaker = useProfileMaker();
+  const [input, setInput] = useState(profileMaker.data.socials[id]);
   useEffect(() => {
-    gprmStore.data.socials[id] = input;
+    profileMaker.data.socials[id] = input;
   }, [input]);
   return (
     <div className="flex w-full md:w-5/12 my-2">
