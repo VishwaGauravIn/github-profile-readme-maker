@@ -6,11 +6,13 @@ import AnimatedText from "../elements/AnimatedText";
 import { RIGHT_ARROW_SVG } from "../elements/SVG";
 import ToastError from "../elements/toaster/ToastError";
 import AboutMe from "./AboutMe";
+import { useWallet } from "../../contexts/wallet";
 
 export default function HomePage() {
   const [isVisible, setIsVisible] = useState(false);
   const [alertVisible, setAlertVisible] = useState(false);
   const profileMaker = useProfileMaker();
+  const { signOut } = useWallet();
   const [input, setInput] = useState(profileMaker.data.nearuser);
   const [input2, setInput2] = useState(profileMaker.data.username);
   function onNext() {
