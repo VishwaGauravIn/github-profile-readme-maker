@@ -7,7 +7,9 @@ import { searchFilter } from "../../utils/searchFilter";
 import NextButton from "../elements/buttons/NextButton";
 import Pagination from "../elements/Pagination";
 import TechBadgesWrapper from "../techstack/TechBadgesWrapper";
-import Donate from "./Donate";
+import Preview from "./Preview";
+import { socials } from "./Socials";
+import { githubstats } from "./GitHubCards";
 
 export default function TechStack({ back }) {
   const [isVisible, setIsVisible] = useState(false);
@@ -32,11 +34,52 @@ export default function TechStack({ back }) {
       </p>
     );
   };
+
+  function onNext() {
+    createFinalData();
+    setIsVisible(true);
+  }
+
+  function createFinalData() {
+    var finaldata = "";
+    if (profileMaker.data.aboutme != ``) {
+      finaldata =
+        finaldata +
+        `# 💫 About Me:
+${profileMaker.data.aboutme.replace(/(?:\r\n|\r|\n)/g, "<br>")}
+
+`;
+    }
+    if (socials != ``) {
+      finaldata =
+        finaldata +
+        `
+## 🌐 Socials:
+${socials}
+`;
+    }
+    if (profileMaker.data.tech != ``) {
+      finaldata =
+        finaldata +
+        `
+# 💻 Tech Stack:
+${profileMaker.data.tech
+  .join(" ")
+  .replaceAll("for-the-badge", profileMaker.data.badge_theme)}
+`;
+    }
+    finaldata = finaldata + githubstats;
+    finaldata = `${finaldata}
+<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->`;
+    profileMaker.data.finalData = finaldata;
+  }
+
   return useObserver(() => (
     <>
       {isVisible ? (
-        <Donate back={() => setIsVisible(false)} />
+        <Preview back={() => setIsVisible(false)} />
       ) : (
+        // <Donate back={() => setIsVisible(false)} />
         <div className="flex flex-col items-center fade-on-appear">
           <button
             className="left-0 absolute m-10 opacity-80 hover:opacity-100 transition-all ease-in-out outline-none"
@@ -99,7 +142,7 @@ export default function TechStack({ back }) {
           </div>
           <div className="w-full flex flex-col justify-center items-center text-green-100">
             {/* Hosting/SaaS */}
-            <TechBadgesWrapper label="Hosting/SaaS" data={techData.hosting} />
+            {/* <TechBadgesWrapper label="Hosting/SaaS" data={techData.hosting} /> */}
             {/* FRAMEWORKS, PLATFORMS & LIBRARIES */}
             <TechBadgesWrapper
               label="FRAMEWORKS, PLATFORMS & LIBRARIES"
@@ -159,7 +202,7 @@ export default function TechStack({ back }) {
               className="w-max max-w-xs ml-4"
             />
           </div>
-          <NextButton onClick={() => setIsVisible(true)} />
+          <NextButton onClick={() => onNext()} />
           <Pagination val={4} />
           {/* <FeedbackButton /> */}
         </div>

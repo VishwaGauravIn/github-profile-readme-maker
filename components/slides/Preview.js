@@ -99,6 +99,7 @@ export default function Preview({ back }) {
         github: data.username,
         instagram: data.socials.instagram,
         linkedin: data.socials.linkedin,
+        mastodon: data.socials.mastodon,
         medium: data.socials.medium,
         pinterest: data.socials.pinterest,
         quora: data.socials.quora,

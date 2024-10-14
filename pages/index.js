@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Script from "next/script";
 import Broadcast from "../components/broadcast/Broadcast";
-import Footer from "../components/elements/Footer";
 import NavBar from "../components/NavBar";
 import HomePage from "../components/slides/HomePage";
 import { CrispBanner } from "../components/crisp";
@@ -39,13 +38,13 @@ export default function Home() {
         />
         <meta property="x:image" content="https://gprm.itsvg.in/webimg.png" />
         <link rel="icon" href="/logo.png" />
-        {/* Google Ads */}
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7377463303850503"
-          crossOrigin="anonymous"
-        ></script>
       </Head>
+      {/* Google Ads */}
+      <Script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7377463303850503"
+        crossOrigin="anonymous"
+      />
       {/* Google Analytics */}
       <Script
         async

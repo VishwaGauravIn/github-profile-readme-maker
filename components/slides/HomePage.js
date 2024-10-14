@@ -2,7 +2,6 @@
 import { useObserver } from "mobx-react";
 import React, { useState } from "react";
 import { useProfileMaker } from "../../contexts/profile-maker";
-import AnimatedText from "../elements/AnimatedText";
 import { RIGHT_ARROW_SVG } from "../elements/SVG";
 import ToastError from "../elements/toaster/ToastError";
 import AboutMe from "./AboutMe";
@@ -13,12 +12,10 @@ export default function HomePage() {
   const [alertVisible, setAlertVisible] = useState(false);
   const profileMaker = useProfileMaker();
   const { signOut } = useWallet();
-  const [input, setInput] = useState(profileMaker.data.nearuser);
-  const [input2, setInput2] = useState(profileMaker.data.username);
+  const [input, setInput] = useState(profileMaker.data.username);
   function onNext() {
     if (input != "" && input.replace(/ /g, "") != "") {
-      profileMaker.data.username = input2;
-      profileMaker.data.nearuser = input;
+      profileMaker.data.username = input;
       setIsVisible(true);
       topFunction();
     } else {
@@ -48,7 +45,7 @@ export default function HomePage() {
           <div className="w-full flex flex-col md:flex-row py-16 md:py-28 min-h-[90vh] items-center relative">
             <div className="flex flex-col w-full md:w-6/12 relative">
               <p className="text-6xl md:text-7xl 2xl:text-8xl">
-                Builder Profile Generator
+                Builder Profile Creator
               </p>
               {/* Text Input */}
               <div className="flex flex-col sm:flex-row mt-8 md:my-16 2xl:my-20 items-center">
@@ -58,15 +55,6 @@ export default function HomePage() {
                     value={input}
                     required={true}
                     onChange={(e) => setInput(e.target.value)}
-                    autoFocus={true}
-                    className="border-b-2 border-[#ECA227] bg-transparent w-full sm:w-11/12 md:w-10/12 lg:w-8/12 text-xl sm:text-3xl md:text-xl lg:text-2xl 2xl:text-3xl outline-none focus:border-border-[#ECA227] focus:border-b-4 inline"
-                    placeholder="Enter Your NEAR Wallet Address"
-                  />
-                  <input
-                    type="text"
-                    value={input2}
-                    required={true}
-                    onChange={(e) => setInput2(e.target.value)}
                     autoFocus={true}
                     className="border-b-2 border-[#ECA227] bg-transparent w-full sm:w-11/12 md:w-10/12 lg:w-8/12 text-xl sm:text-3xl md:text-xl lg:text-2xl 2xl:text-3xl outline-none focus:border-border-[#ECA227] focus:border-b-4 inline"
                     placeholder="Enter Your GitHub Username"
@@ -87,7 +75,6 @@ export default function HomePage() {
                   Get one here
                 </a>
               </div>
-              <AnimatedText />
             </div>
             <div className="flex w-full mt-16 md:mt-0 md:w-6/12 justify-center">
               <img
