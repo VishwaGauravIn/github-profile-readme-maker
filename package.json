@@ -8,21 +8,30 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@builddao/near-social-js": "^1.1.0",
     "@heroicons/react": "^1.0.5",
+    "@near-js/providers": "^1.0.1",
+    "@near-wallet-selector/core": "^8.9.13",
+    "@near-wallet-selector/here-wallet": "^8.9.13",
+    "@near-wallet-selector/meteor-wallet": "^8.9.13",
+    "@near-wallet-selector/modal-ui": "^8.9.13",
+    "@near-wallet-selector/my-near-wallet": "^8.9.13",
     "axios": "^0.27.2",
     "crisp-sdk-web": "^1.0.22",
     "firebase": "^9.6.4",
     "markdown-it": "^12.3.2",
     "mobx": "^6.6.0",
     "mobx-react": "^7.5.0",
-    "next": "^12.1.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "near-api-js": "^5.0.1",
+    "next": "^14.2.15",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "rxjs": "^7.8.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.2",
     "eslint": "8.7.0",
-    "eslint-config-next": "12.0.8",
+    "eslint-config-next": "14.2.15",
     "postcss": "^8.4.5",
     "tailwindcss": "^3.0.15"
   }

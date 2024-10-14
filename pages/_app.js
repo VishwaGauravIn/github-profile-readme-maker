@@ -4,12 +4,15 @@ import "../styles/scrollbar.css";
 import "../styles/markdown.css";
 import "../styles/toastvg.css";
 import { ProfileMakerProvider } from "../contexts/profile-maker";
+import { WalletProvider } from "../contexts/wallet";
 
 function App({ Component, pageProps }) {
   return (
-    <ProfileMakerProvider>
-      <Component {...pageProps} />
-    </ProfileMakerProvider>
+    <WalletProvider>
+      <ProfileMakerProvider>
+        <Component {...pageProps} />
+      </ProfileMakerProvider>
+    </WalletProvider>
   );
 }
 

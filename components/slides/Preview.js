@@ -1,14 +1,15 @@
-import React, { useState, useEffect } from "react";
-import ButtonWithSVG from "../elements/buttons/ButtonWithSVG";
+import React, { useEffect, useState } from "react";
 import { db } from "../../config/firebase";
-import ToastSuccess from "../elements/toaster/ToastSuccess";
-import FeedbackButton from "../elements/FeedbackButton";
 import { useProfileMaker } from "../../contexts/profile-maker";
+import { useWallet } from "../../contexts/wallet";
+import ButtonWithSVG from "../elements/buttons/ButtonWithSVG";
+import ToastSuccess from "../elements/toaster/ToastSuccess";
 
 export default function Preview({ back }) {
   const [copiedAlertVisible, setCopiedAlertVisible] = useState(false);
   const [downloadAlertVisible, setDownloadAlertVisible] = useState(false);
   const profileMaker = useProfileMaker();
+  const { signIn, signOut, signedAccountId } = useWallet();
   var md = require("markdown-it")({
     html: true,
     linkify: true,
@@ -146,13 +147,23 @@ export default function Preview({ back }) {
             "M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
           }
         />
-        <ButtonWithSVG
-          title="Save to NEAR Social Profile"
-          onClick={() => saveToNearSocial()}
-          d={
-            "M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
-          }
-        />
+        {signedAccountId ? (
+          <ButtonWithSVG
+            title="Save to NEAR Social Profile"
+            onClick={() => signOut()}
+            d={
+              "M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+            }
+          />
+        ) : (
+          <ButtonWithSVG
+            title="Connect NEAR Profile"
+            onClick={() => signIn()}
+            d={
+              "M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+            }
+          />
+        )}
       </div>
       <div className="flex">
         <p className="bg-green-200 text-zinc-800 p-1 px-4 rounded-t-md brightness-75">
