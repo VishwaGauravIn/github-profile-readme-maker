@@ -1,6 +1,4 @@
-import { withUt } from "uploadthing/tw";
-
-module.exports = withUt({
+module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
@@ -9,4 +7,4 @@ module.exports = withUt({
     extend: {},
   },
   plugins: [],
-});
+};
