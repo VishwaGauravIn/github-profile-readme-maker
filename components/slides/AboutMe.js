@@ -10,6 +10,11 @@ export default function AboutMe({ back }) {
   const [isVisible, setIsVisible] = useState(false);
   const gprmStore = useGPRMStore();
   const [aboutme, setAboutme] = useState(gprmStore.data.aboutme);
+  const [name, setName] = useState(gprmStore.data.name);
+  const [profileImage, setProfileImage] = useState(gprmStore.data.profileImage);
+  const [backgroundImage, setBackgroundImage] = useState(
+    gprmStore.data.backgroundImage
+  );
   const textareaPlaceholder = `🔭 I’m currently working on
 👯 I’m looking to collaborate on
 🤝 I’m looking for help with
@@ -18,8 +23,16 @@ export default function AboutMe({ back }) {
 ⚡ Fun fact`;
 
   function onNext() {
-    if (aboutme != ``) {
+    if (
+      aboutme != `` &&
+      name != `` &&
+      profileImage != `` &&
+      backgroundImage != ``
+    ) {
       gprmStore.data.aboutme = aboutme;
+      gprmStore.data.name = name;
+      gprmStore.data.profileImage = profileImage;
+      gprmStore.data.backgroundImage = backgroundImage;
     }
     setIsVisible(true);
   }
@@ -41,6 +54,39 @@ export default function AboutMe({ back }) {
           <div className="flex flex-col md:flex-row w-full justify-center">
             <div className="flex flex-col w-full md:w-6/12 items-center">
               <p className="text-4xl md:text-5xl font-semibold text-[#ECA227]">
+                Your Name :
+              </p>
+              <input
+                name="name"
+                className="w-full bg-transparent text-base sm:text-lg md:text-xl p-4 outline-none ring-2 ring-[#ECA227] focus:ring-white rounded-md my-6 md:my-10 resize-none whitespace-pre"
+                placeholder="Your Name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                autoFocus
+              />
+              <p className="text-4xl md:text-5xl font-semibold text-[#ECA227]">
+                Profile Image URL :
+              </p>
+              <input
+                name="profileImage"
+                className="w-full bg-transparent text-base sm:text-lg md:text-xl p-4 outline-none ring-2 ring-[#ECA227] focus:ring-white rounded-md my-6 md:my-10 resize-none whitespace-pre"
+                placeholder="Your profile image url"
+                value={profileImage}
+                onChange={(e) => setProfileImage(e.target.value)}
+                autoFocus
+              />
+              <p className="text-4xl md:text-5xl font-semibold text-[#ECA227]">
+                Background Image URL :
+              </p>
+              <input
+                name="profileImage"
+                className="w-full bg-transparent text-base sm:text-lg md:text-xl p-4 outline-none ring-2 ring-[#ECA227] focus:ring-white rounded-md my-6 md:my-10 resize-none whitespace-pre"
+                placeholder="Your background image url"
+                value={backgroundImage}
+                onChange={(e) => setBackgroundImage(e.target.value)}
+                autoFocus
+              />
+              <p className="text-4xl md:text-5xl font-semibold text-[#ECA227]">
                 About Me :
               </p>
               <textarea
@@ -50,7 +96,6 @@ export default function AboutMe({ back }) {
                 placeholder={textareaPlaceholder}
                 value={aboutme}
                 onChange={(e) => setAboutme(e.target.value)}
-                autoFocus={true}
               ></textarea>
               <div className="flex ">
                 <button

@@ -78,6 +78,41 @@ export default function Preview({ back }) {
       }, 3000);
     }
   }
+
+  function saveToNearSocial() {
+    const data = gprmStore.data;
+
+    let profileData = {
+      name: data.name,
+      description: data.aboutme,
+      image: {
+        url: data.profileImage,
+      },
+      backgroundImage: {
+        url: data.backgroundImage,
+      },
+      linktree: {
+        behance: data.socials.behance,
+        discord: data.socials.discord,
+        facebook: data.socials.facebook,
+        github: data.username,
+        instagram: data.socials.instagram,
+        linkedin: data.socials.linkedin,
+        medium: data.socials.medium,
+        pinterest: data.socials.pinterest,
+        quora: data.socials.quora,
+        reddit: data.socials.reddit,
+        sof: data.socials.sof,
+        tiktok: data.socials.tiktok,
+        twitch: data.socials.twitch,
+        twitter: data.socials.x,
+        youtube: data.socials.youtube,
+      },
+    };
+
+    console.log(profileData);
+  }
+
   return (
     <div className="w-full flex flex-col items-center">
       <button
@@ -107,6 +142,13 @@ export default function Preview({ back }) {
         <ButtonWithSVG
           title="Create New"
           onClick={() => reloadTab()}
+          d={
+            "M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+          }
+        />
+        <ButtonWithSVG
+          title="Save to NEAR Social Profile"
+          onClick={() => saveToNearSocial()}
           d={
             "M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
           }
