@@ -3,14 +3,14 @@ import "../styles/animation.css";
 import "../styles/scrollbar.css";
 import "../styles/markdown.css";
 import "../styles/toastvg.css";
-import { GPRMProvider } from "../components/mobx/GPRMcontext";
+import { ProfileMakerProvider } from "../contexts/profile-maker";
 
-function MyApp({ Component, pageProps }) {
+function App({ Component, pageProps }) {
   return (
-    <GPRMProvider>
+    <ProfileMakerProvider>
       <Component {...pageProps} />
-    </GPRMProvider>
+    </ProfileMakerProvider>
   );
 }
 
-export default MyApp;
+export default App;

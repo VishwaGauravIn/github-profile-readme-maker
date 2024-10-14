@@ -2,13 +2,13 @@ import React, { useEffect, useState } from "react";
 import NextButton from "../elements/buttons/NextButton";
 import Pagination from "../elements/Pagination";
 import TextInputWithIcon from "../elements/textinput/TextInputWithIcon";
-import { useGPRMStore } from "../mobx/GPRMcontext";
 import TechStack from "./TechStack";
 import FeedbackButton from "../elements/FeedbackButton";
+import { useProfileMaker } from "../../contexts/profile-maker";
 
 export default function Socials({ back }) {
   const [isVisible, setIsVisible] = useState(false);
-  const gprmStore = useGPRMStore();
+  const profileMaker = useProfileMaker();
   function onNext() {
     socials = "";
     if (document.getElementById("behance").value != "") {

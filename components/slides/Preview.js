@@ -2,13 +2,13 @@ import React, { useState, useEffect } from "react";
 import ButtonWithSVG from "../elements/buttons/ButtonWithSVG";
 import { db } from "../../config/firebase";
 import ToastSuccess from "../elements/toaster/ToastSuccess";
-import { useGPRMStore } from "../mobx/GPRMcontext";
 import FeedbackButton from "../elements/FeedbackButton";
+import { useProfileMaker } from "../../contexts/profile-maker";
 
 export default function Preview({ back }) {
   const [copiedAlertVisible, setCopiedAlertVisible] = useState(false);
   const [downloadAlertVisible, setDownloadAlertVisible] = useState(false);
-  const gprmStore = useGPRMStore();
+  const profileMaker = useProfileMaker();
   var md = require("markdown-it")({
     html: true,
     linkify: true,
@@ -21,13 +21,13 @@ export default function Preview({ back }) {
   });
 
   useEffect(() => {
-    db.collection(gprmStore.data.username).add({
+    db.collection(profileMaker.data.username).add({
       date: Date(),
-      data: gprmStore.data.finalData,
+      data: profileMaker.data.finalData,
     });
     setTimeout(() => {
       document.getElementById("content").innerHTML = md.render(
-        gprmStore.data.finalData
+        profileMaker.data.finalData
       );
 
       // targeting all the a tags inside the content div
@@ -43,13 +43,13 @@ export default function Preview({ back }) {
   }, []);
 
   function onCopy() {
-    navigator.clipboard.writeText(gprmStore.data.finalData);
+    navigator.clipboard.writeText(profileMaker.data.finalData);
     // Alert for Copied
     copied();
   }
   function onDownload() {
     const element = document.createElement("a");
-    const file = new Blob([gprmStore.data.finalData], {
+    const file = new Blob([profileMaker.data.finalData], {
       type: "text/plain",
     });
     element.href = URL.createObjectURL(file);
@@ -80,7 +80,7 @@ export default function Preview({ back }) {
   }
 
   function saveToNearSocial() {
-    const data = gprmStore.data;
+    const data = profileMaker.data;
 
     let profileData = {
       name: data.name,
@@ -172,7 +172,7 @@ export default function Preview({ back }) {
       <p className="flex flex-col h-full items-center text-xl text-center pt-5 lg:pt-10">
         Hey👋, Can you help us to grow by sharing? <br />
       </p>
-      <pre className="text-white">{JSON.stringify(gprmStore.data)}</pre>
+      <pre className="text-white">{JSON.stringify(profileMaker.data)}</pre>
       {copiedAlertVisible && <ToastSuccess title="Copied Successfully !" />}
       {downloadAlertVisible && <ToastSuccess title="Download Started !" />}
       {/* <FeedbackButton /> */}

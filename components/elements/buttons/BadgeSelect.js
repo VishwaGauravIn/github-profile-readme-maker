@@ -1,19 +1,19 @@
 import React, { useState } from "react";
-import { useGPRMStore } from "../../mobx/GPRMcontext";
+import { useProfileMaker } from "../../../contexts/profile-maker";
 
 export default function BadgeSelect({ label, url}) {
-  const gprmStore = useGPRMStore()
-  const [isAdded, setIsAdded] = useState(gprmStore.data.tech.toString().includes(url));
+  const profileMaker = useProfileMaker()
+  const [isAdded, setIsAdded] = useState(profileMaker.data.tech.toString().includes(url));
   function onClickFun() {
     if (isAdded) {
       setIsAdded(false);
       //   for()
-      var badgeIndex = gprmStore.data.tech.indexOf(url);
-      gprmStore.data.tech.splice(badgeIndex, 1);
+      var badgeIndex = profileMaker.data.tech.indexOf(url);
+      profileMaker.data.tech.splice(badgeIndex, 1);
       //   console.log(data);
     } else {
       setIsAdded(true);
-      gprmStore.data.tech.push(url);
+      profileMaker.data.tech.push(url);
       //   console.log(data);
     }
   }

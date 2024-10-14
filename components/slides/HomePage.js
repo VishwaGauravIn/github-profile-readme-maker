@@ -1,23 +1,22 @@
 /* eslint-disable @next/next/no-img-element */
+import { useObserver } from "mobx-react";
 import React, { useState } from "react";
+import { useProfileMaker } from "../../contexts/profile-maker";
 import AnimatedText from "../elements/AnimatedText";
+import { RIGHT_ARROW_SVG } from "../elements/SVG";
 import ToastError from "../elements/toaster/ToastError";
 import AboutMe from "./AboutMe";
-import Link from "next/link";
-import { RIGHT_ARROW_SVG } from "../elements/SVG";
-import { useGPRMStore } from "../mobx/GPRMcontext";
-import { useObserver } from "mobx-react";
 
 export default function HomePage() {
   const [isVisible, setIsVisible] = useState(false);
   const [alertVisible, setAlertVisible] = useState(false);
-  const gprmStore = useGPRMStore();
-  const [input, setInput] = useState(gprmStore.data.nearuser);
-  const [input2, setInput2] = useState(gprmStore.data.username);
+  const profileMaker = useProfileMaker();
+  const [input, setInput] = useState(profileMaker.data.nearuser);
+  const [input2, setInput2] = useState(profileMaker.data.username);
   function onNext() {
     if (input != "" && input.replace(/ /g, "") != "") {
-      gprmStore.data.username = input2;
-      gprmStore.data.nearuser = input;
+      profileMaker.data.username = input2;
+      profileMaker.data.nearuser = input;
       setIsVisible(true);
       topFunction();
     } else {

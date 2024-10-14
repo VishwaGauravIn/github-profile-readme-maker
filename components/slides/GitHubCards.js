@@ -1,21 +1,20 @@
+import { useObserver } from "mobx-react";
 import React, { useEffect, useState } from "react";
+import themes from "../../data/themes";
 import FilterButton from "../elements/buttons/FilterButton";
 import NextButton from "../elements/buttons/NextButton";
 import Pagination from "../elements/Pagination";
-import { useGPRMStore } from "../mobx/GPRMcontext";
-import { useObserver } from "mobx-react";
 import Socials from "./Socials";
-import FeedbackButton from "../elements/FeedbackButton";
-import themes from "../../data/themes";
+import { useProfileMaker } from "../../contexts/profile-maker";
 
 export default function GitHubStats({ back }) {
   const [isVisible, setIsVisible] = useState(false);
-  const gprmStore = useGPRMStore();
-  const [theme, setTheme] = useState(gprmStore.data.stats.theme);
-  const [border, setBorder] = useState(gprmStore.data.stats.border);
-  const [includeAll, setIncludeAll] = useState(gprmStore.data.stats.lifetime);
+  const profileMaker = useProfileMaker();
+  const [theme, setTheme] = useState(profileMaker.data.stats.theme);
+  const [border, setBorder] = useState(profileMaker.data.stats.border);
+  const [includeAll, setIncludeAll] = useState(profileMaker.data.stats.lifetime);
   const [includePrivate, setIncludePrivate] = useState(
-    gprmStore.data.stats.prv
+    profileMaker.data.stats.prv
   );
   function onNext() {
     githubstats = `# 📊 GitHub Stats:
@@ -24,10 +23,10 @@ export default function GitHubStats({ back }) {
     setIsVisible(true);
   }
   useEffect(() => {
-    gprmStore.data.stats.theme = theme;
-    gprmStore.data.stats.border = border;
-    gprmStore.data.stats.lifetime = includeAll;
-    gprmStore.data.stats.prv = includePrivate;
+    profileMaker.data.stats.theme = theme;
+    profileMaker.data.stats.border = border;
+    profileMaker.data.stats.lifetime = includeAll;
+    profileMaker.data.stats.prv = includePrivate;
   });
   return useObserver(() => (
     <>
@@ -49,7 +48,7 @@ export default function GitHubStats({ back }) {
             Theme:
             <select
               id="theme"
-              value={gprmStore.data.stats.theme}
+              value={profileMaker.data.stats.theme}
               onChange={() => setTheme(document.getElementById("theme").value)}
               className="bg-transparent py-1 px-2 outline-none"
             >
@@ -86,7 +85,7 @@ export default function GitHubStats({ back }) {
               draggable="false"
               id="stats"
               src={`https://github-readme-stats.vercel.app/api?username=${
-                gprmStore.data.username
+                profileMaker.data.username
               }&theme=${theme}&hide_border=${!border}&include_all_commits=${includeAll}&count_private=${includePrivate}`}
               alt=""
             />

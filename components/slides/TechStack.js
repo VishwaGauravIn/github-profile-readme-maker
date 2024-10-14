@@ -1,23 +1,22 @@
-import React, { useEffect, useState } from "react";
-import NextButton from "../elements/buttons/NextButton";
-import Pagination from "../elements/Pagination";
-import { useGPRMStore } from "../mobx/GPRMcontext";
-import Donate from "./Donate";
+import { SearchIcon } from "@heroicons/react/outline";
 import { useObserver } from "mobx-react";
+import React, { useEffect, useState } from "react";
+import { useProfileMaker } from "../../contexts/profile-maker";
 import { data } from "../../data/tech";
 import { searchFilter } from "../../utils/searchFilter";
-import { SearchIcon } from "@heroicons/react/outline";
+import NextButton from "../elements/buttons/NextButton";
+import Pagination from "../elements/Pagination";
 import TechBadgesWrapper from "../techstack/TechBadgesWrapper";
-import FeedbackButton from "../elements/FeedbackButton";
+import Donate from "./Donate";
 
 export default function TechStack({ back }) {
   const [isVisible, setIsVisible] = useState(false);
-  const gprmStore = useGPRMStore();
-  const [BadgeStyle, setBadgeStyle] = useState(gprmStore.data.badge_theme);
+  const profileMaker = useProfileMaker();
+  const [BadgeStyle, setBadgeStyle] = useState(profileMaker.data.badge_theme);
   const [techData, setTechData] = useState(data);
   const [searchStr, setSearchStr] = useState("");
   useEffect(() => {
-    gprmStore.data.badge_theme = BadgeStyle;
+    profileMaker.data.badge_theme = BadgeStyle;
   }, [BadgeStyle]);
 
   // Seaching whenever searchStr is changed
@@ -128,8 +127,8 @@ export default function TechStack({ back }) {
             <select
               id="badgestyle"
               value={
-                gprmStore.data.badge_theme
-                  ? gprmStore.data.badge_theme
+                profileMaker.data.badge_theme
+                  ? profileMaker.data.badge_theme
                   : "for-the-badge"
               }
               onChange={() =>
