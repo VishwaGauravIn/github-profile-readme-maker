@@ -36,6 +36,7 @@ export default function HomePage() {
       }, 4400);
     }
   }
+
   return useObserver(() => (
     <>
       {isVisible ? (
@@ -43,12 +44,19 @@ export default function HomePage() {
       ) : (
         <div className="scroll-smooth">
           <div className="w-full flex flex-col md:flex-row py-16 md:py-28 min-h-[90vh] items-center relative">
-            <div className="flex flex-col w-full md:w-6/12 relative">
+            <div className="flex flex-col w-full md:w-6/12 relative gap-2">
+              <div className="gap-1 w-full flex  items-center relative">
+                <img
+                  src="/logo_bdao.png"
+                  alt="logo"
+                  className="w-60 h-36 mr-2"
+                />
+              </div>
               <p className="text-6xl md:text-7xl 2xl:text-8xl">
-                Builder Profile Creator
+                Profile Builder
               </p>
               {/* Text Input */}
-              <div className="flex flex-col sm:flex-row mt-8 md:my-16 2xl:my-20 items-center">
+              <div className="flex flex-col sm:flex-row mt-8 md:my-8 2xl:my10 items-center">
                 <form className="w-full" onSubmit={onNext}>
                   <input
                     type="text"
@@ -64,23 +72,12 @@ export default function HomePage() {
                   </button>
                 </form>
               </div>
-              <div>
-                No NEAR Wallet Address yet?{" "}
-                <a
-                  href="https://wallet.meteorwallet.app/add_wallet/create_new"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-cyan-700 underline"
-                >
-                  Get one here
-                </a>
-              </div>
             </div>
             <div className="flex w-full mt-16 md:mt-0 md:w-6/12 justify-center">
               <img
-                src="/hpill.svg"
+                src="/hat_logo.png"
                 alt=""
-                className="w-full sm:w-8/12 aspect-square select-none pointer-events-none"
+                className="w-full sm:w-8/12 select-none pointer-events-none rotate-3 animate-bounce"
                 draggable="false"
               />
             </div>

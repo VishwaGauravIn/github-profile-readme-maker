@@ -66,7 +66,7 @@ export default function Home() {
         <CrispBanner />
         <div className="overflow-x-hidden max-w-[100vw] p-3 md:p-4 text-white">
           <Broadcast />
-          <NavBar />
+          {/* <NavBar /> */}
           <HomePage />
           {/* <Footer /> */}
         </div>

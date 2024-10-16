@@ -156,7 +156,7 @@ export function CrispBanner() {
       <div style={bannerWrapperAnimation}>
         <div style={bannerAnimation}>
           <a style={buttonStyles} href="#" className="text-xs sm:text-base">
-            A Build Village Project
+            [REDACTED] Hackathon | Build Village
           </a>
         </div>
       </div>
