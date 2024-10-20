@@ -31,9 +31,9 @@ export default function Preview({ back }) {
       );
 
       // targeting all the a tags inside the content div
-      const links =  document?.getElementById("content")?.querySelectorAll("a");
-      // Checking if elements exists 
-      if(links.length > 0){
+      const links = document?.getElementById("content")?.querySelectorAll("a");
+      // Checking if elements exists
+      if (links.length > 0) {
         links.forEach((link) => {
           // adding attribute target
           link.setAttribute("target", "_blank");
@@ -41,7 +41,6 @@ export default function Preview({ back }) {
       }
     }, 300);
   }, []);
-
 
   function onCopy() {
     navigator.clipboard.writeText(gprmStore.data.finalData);
@@ -87,10 +86,10 @@ export default function Preview({ back }) {
       >
         ◄ Go Back
       </button>
-      <p className="w-full text-center text-3xl my-8 mt-20">
+      <p className="w-full text-center text-3xl my-4 mt-20">
         Your Awesome Profile is ready !
       </p>
-      <div className="flex flex-col md:flex-row mb-10">
+      <div className="flex flex-col md:flex-row mb-6">
         <ButtonWithSVG
           title="Copy Code"
           onClick={() => onCopy()}
@@ -113,6 +112,14 @@ export default function Preview({ back }) {
           }
         />
       </div>
+      <a
+        href="https://youtu.be/LuBXYYEyv88?si=_abK2Q9dvun6IiOV&t=377"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-sm sm:text-base text-blue-400 underline underline-offset-4 sm:underline-offset-8 mb-6 text-center"
+      >
+        Need help regarding this? Click here to watch Video.
+      </a>
       <div className="flex">
         <p className="bg-green-200 text-zinc-800 p-1 px-4 rounded-t-md brightness-75">
           PREVIEW
