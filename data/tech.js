@@ -37,6 +37,10 @@ export const data = {
       url: "![Dart](https://img.shields.io/badge/dart-%230175C2.svg?style=for-the-badge&logo=dart&logoColor=white)",
     },
     {
+      label: "DGRAPH",
+      url: "![Dgraph](https://img.shields.io/badge/dgraph-%23E50695.svg?style=for-the-badge&logo=dgraph&logoColor=white)",
+    },
+    {
       label: "ELIXIR",
       url: "![Elixir](https://img.shields.io/badge/elixir-%234B275F.svg?style=for-the-badge&logo=elixir&logoColor=white)",
     },
@@ -157,8 +161,8 @@ export const data = {
       url: "![Scala](https://img.shields.io/badge/scala-%23DC322F.svg?style=for-the-badge&logo=scala&logoColor=white)",
     },
     {
-      label: "SHELL SCRIPT",
-      url: "![Shell Script](https://img.shields.io/badge/shell_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white)",
+      label: "BASH SCRIPT",
+      url: "![Bash Script](https://img.shields.io/badge/bash_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white)",
     },
     {
       label: "SOLIDITY",
@@ -175,10 +179,6 @@ export const data = {
     {
       label: "WINDOWS TERMINAL",
       url: "![Windows Terminal](https://img.shields.io/badge/Windows%20Terminal-%234D4D4D.svg?style=for-the-badge&logo=windows-terminal&logoColor=white)",
-    },
-    {
-      label: "YAML",
-      url: "![YAML](https://img.shields.io/badge/yaml-%23ffffff.svg?style=for-the-badge&logo=yaml&logoColor=151515)",
     },
     {
       label: "ZIG",
@@ -219,10 +219,6 @@ export const data = {
       url: "![Firebase](https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase)",
     },
     {
-      label: "GITHUB PAGES",
-      url: "![GithubPages](https://img.shields.io/badge/github%20pages-121013?style=for-the-badge&logo=github&logoColor=white)",
-    },
-    {
       label: "GLITCH",
       url: "![Glitch](https://img.shields.io/badge/glitch-%233333FF.svg?style=for-the-badge&logo=glitch&logoColor=white)",
     },
@@ -253,10 +249,6 @@ export const data = {
     {
       label: "OVH",
       url: "![OVH](https://img.shields.io/badge/ovh-%23123F6D.svg?style=for-the-badge&logo=ovh&logoColor=#123F6D)",
-    },
-    {
-      label: "PYTHONANYWHERE",
-      url: "![PythonAnywhere](https://img.shields.io/badge/pythonanywhere-%232F9FD7.svg?style=for-the-badge&logo=pythonanywhere&logoColor=151515)",
     },
     {
       label: "RENDER",
@@ -353,10 +345,6 @@ export const data = {
       url: "![Bun](https://img.shields.io/badge/Bun-%23000000.svg?style=for-the-badge&logo=bun&logoColor=white)",
     },
     {
-      label: "CELERY",
-      url: "![Celery](https://img.shields.io/badge/celery-%23a9cc54.svg?style=for-the-badge&logo=celery&logoColor=ddf4a4)",
-    },
-    {
       label: "CHAKRA UI",
       url: "![Chakra](https://img.shields.io/badge/chakra-%234ED1C5.svg?style=for-the-badge&logo=chakraui&logoColor=white)",
     },
@@ -371,6 +359,10 @@ export const data = {
     {
       label: "CONTEXT API",
       url: "![Context-API](https://img.shields.io/badge/Context--Api-000000?style=for-the-badge&logo=react)",
+    },
+    {
+      label: "CUDA",
+      url: "![nVIDIA](https://img.shields.io/badge/cuda-000000.svg?style=for-the-badge&logo=nVIDIA&logoColor=green)",
     },
     {
       label: "DAISYUI",
@@ -397,12 +389,24 @@ export const data = {
       url: "![Drupal](https://img.shields.io/badge/drupal-%230678BE.svg?style=for-the-badge&logo=drupal&logoColor=white)",
     },
     {
+      label: "EJS",
+      url: "![EJS](https://img.shields.io/badge/ejs-%23B4CA65.svg?style=for-the-badge&logo=ejs&logoColor=black)",
+    },
+    {
+      label: "ELASTICSEARCH",
+      url: "![Elasticsearch](https://img.shields.io/badge/elasticsearch-%230377CC.svg?style=for-the-badge&logo=elasticsearch&logoColor=white)",
+    },
+    {
       label: "ELECTRON.JS",
       url: "![Electron.js](https://img.shields.io/badge/Electron-191970?style=for-the-badge&logo=Electron&logoColor=white)",
     },
     {
       label: "EMBER",
       url: "![Ember](https://img.shields.io/badge/ember-1C1E24?style=for-the-badge&logo=ember.js&logoColor=#D04A37)",
+    },
+    {
+      label: "ESBUILD",
+      url: "![Esbuild](https://img.shields.io/badge/esbuild-%23FFCF00.svg?style=for-the-badge&logo=esbuild&logoColor=black)",
     },
     {
       label: "EXPO",
@@ -421,6 +425,10 @@ export const data = {
       url: "![Fastify](https://img.shields.io/badge/fastify-%23000000.svg?style=for-the-badge&logo=fastify&logoColor=white)",
     },
     {
+      label: "FILAMENT",
+      url: "![Filament](https://img.shields.io/badge/Filament-FFAA00?style=for-the-badge&logoColor=%23000000)",
+    },
+    {
       label: "FLASK",
       url: "![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white)",
     },
@@ -429,8 +437,16 @@ export const data = {
       url: "![Flutter](https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white)",
     },
     {
+      label: "FRAMEWORK7",
+      url: "![Framework7](https://img.shields.io/badge/framework7-%23EE350F.svg?style=for-the-badge&logo=framework7&logoColor=white)",
+    },
+    {
       label: "GATSBY.JS",
       url: "![Gatsby](https://img.shields.io/badge/Gatsby-%23663399.svg?style=for-the-badge&logo=gatsby&logoColor=white)",
+    },
+    {
+      label: "GRAV",
+      url: "![Grav](https://img.shields.io/badge/grav-%23FFFFFF.svg?style=for-the-badge&logo=grav&logoColor=221E1F)",
     },
     {
       label: "GREEN SOCK",
@@ -441,20 +457,20 @@ export const data = {
       url: "![Gulp](https://img.shields.io/badge/GULP-%23CF4647.svg?style=for-the-badge&logo=gulp&logoColor=white)",
     },
     {
+      label: "GUTENBERG",
+      url: "![Gutenberg](https://img.shields.io/badge/gutenberg-%23077CB2.svg?style=for-the-badge&logo=gutenberg&logoColor=white)",
+    },
+    {
       label: "INSOMNIA",
       url: "![Insomnia](https://img.shields.io/badge/Insomnia-black?style=for-the-badge&logo=insomnia&logoColor=5849BE)",
     },
     {
-      label: "HUGO",
-      url: "![Hugo](https://img.shields.io/badge/Hugo-black.svg?style=for-the-badge&logo=Hugo)",
+      label: "HANDLEBARS",
+      url: "![Handlebars](https://img.shields.io/badge/Handlebars-%23000000?style=for-the-badge&logo=Handlebars.js&logoColor=white)",
     },
     {
       label: "IONIC",
       url: "![Ionic](https://img.shields.io/badge/Ionic-%233880FF.svg?style=for-the-badge&logo=Ionic&logoColor=white)",
-    },
-    {
-      label: "AIOHTTP",
-      url: "![AIOHTTP](https://img.shields.io/badge/iohttp-%232C5bb4.svg?style=for-the-badge&logo=aiohttp&logoColor=white)",
     },
     {
       label: "JASMINE",
@@ -483,6 +499,10 @@ export const data = {
     {
       label: "LARAVEL",
       url: "![Laravel](https://img.shields.io/badge/laravel-%23FF2D20.svg?style=for-the-badge&logo=laravel&logoColor=white)",
+    },
+    {
+      label: "LIVEWIRE",
+      url: "![Livewire](https://img.shields.io/badge/livewire-%234e56a6.svg?style=for-the-badge&logo=livewire&logoColor=white)",
     },
     {
       label: "LESS",
@@ -549,16 +569,12 @@ export const data = {
       url: "![P5js](https://img.shields.io/badge/p5.js-ED225D?style=for-the-badge&logo=p5.js&logoColor=FFFFFF)",
     },
     {
+      label: "PHOENIX FRAMEWORK",
+      url: "![Phoenix Framework](https://img.shields.io/badge/phoenixframework-%23FD4F00.svg?style=for-the-badge&logo=phoenixframework&logoColor=black)",
+    },
+    {
       label: "PNPM",
       url: "![PNPM](https://img.shields.io/badge/pnpm-%234a4a4a.svg?style=for-the-badge&logo=pnpm&logoColor=f69220)",
-    },
-    {
-      label: "POETRY",
-      url: "![Poetry](https://img.shields.io/badge/Poetry-%233B82F6.svg?style=for-the-badge&logo=poetry&logoColor=0B3D8D)",
-    },
-    {
-      label: "PREFECT",
-      url: "![Prefect](https://img.shields.io/badge/Prefect-%23ffffff.svg?style=for-the-badge&logo=prefect&logoColor=white)",
     },
     {
       label: "PUG",
@@ -567,6 +583,10 @@ export const data = {
     {
       label: "QT",
       url: "![Qt](https://img.shields.io/badge/Qt-%23217346.svg?style=for-the-badge&logo=Qt&logoColor=white)",
+    },
+    {
+      label: "QUARKUS",
+      url: "![Quarkus](https://img.shields.io/badge/quarkus-%234794EB.svg?style=for-the-badge&logo=quarkus&logoColor=white)",
     },
     {
       label: "QUASAR",
@@ -587,6 +607,10 @@ export const data = {
     {
       label: "RAILS",
       url: "![Rails](https://img.shields.io/badge/rails-%23CC0000.svg?style=for-the-badge&logo=ruby-on-rails&logoColor=white)",
+    },
+    {
+      label: "RAYLIB",
+      url: "![RayLib](https://img.shields.io/badge/RAYLIB-FFFFFF?style=for-the-badge&logo=raylib&logoColor=black)",
     },
     {
       label: "REACT",
@@ -637,6 +661,10 @@ export const data = {
       url: "![Semantic UI React](https://img.shields.io/badge/Semantic%20UI%20React-%2335BDB2.svg?style=for-the-badge&logo=SemanticUIReact&logoColor=white)",
     },
     {
+      label: "SNOWFLAKE",
+      url: "![Snowflake](https://img.shields.io/badge/snowflake-%2329B5E8.svg?style=for-the-badge&logo=snowflake&logoColor=white)",
+    },
+    {
       label: "SOCKET.IO",
       url: "![Socket.io](https://img.shields.io/badge/Socket.io-black?style=for-the-badge&logo=socket.io&badgeColor=010101)",
     },
@@ -653,6 +681,10 @@ export const data = {
       url: "![Strapi](https://img.shields.io/badge/strapi-%232E7EEA.svg?style=for-the-badge&logo=strapi&logoColor=white)",
     },
     {
+      label: "STREAMLIT",
+      url: "![Streamlit](https://img.shields.io/badge/Streamlit-%23FE4B4B.svg?style=for-the-badge&logo=streamlit&logoColor=white)",
+    },
+    {
       label: "STYLED COMPONENTS",
       url: "![Styled Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)",
     },
@@ -663,6 +695,10 @@ export const data = {
     {
       label: "SVELTE",
       url: "![Svelte](https://img.shields.io/badge/svelte-%23f1413d.svg?style=for-the-badge&logo=svelte&logoColor=white)",
+    },
+    {
+      label: "SVELTEKIT",
+      url: "![SvelteKit](https://img.shields.io/badge/sveltekit-%23ff3e00.svg?style=for-the-badge&logo=svelte&logoColor=white)",
     },
     {
       label: "SYMFONY",
@@ -736,10 +772,6 @@ export const data = {
       label: "YARN",
       url: "![Yarn](https://img.shields.io/badge/yarn-%232C8EBB.svg?style=for-the-badge&logo=yarn&logoColor=white)",
     },
-    {
-      label: "ZOD",
-      url: "![Zod](https://img.shields.io/badge/zod-%233068b7.svg?style=for-the-badge&logo=zod&logoColor=white)",
-    },
   ],
   servers: [
     {
@@ -786,6 +818,14 @@ export const data = {
       url: "![AmazonDynamoDB](https://img.shields.io/badge/Amazon%20DynamoDB-4053D6?style=for-the-badge&logo=Amazon%20DynamoDB&logoColor=white)",
     },
     {
+      label: "APPWRITE",
+      url: "![Appwrite](https://img.shields.io/badge/Appwrite-%23FD366E.svg?style=for-the-badge&logo=appwrite&logoColor=white)",
+    },
+    {
+      label: "ARANGODB",
+      url: "![Arango DB](https://img.shields.io/badge/ArangoDB-DDE072?style=for-the-badge&logo=arangodb&logoColor=white)",
+    },
+    {
       label: "CASSANDRA",
       url: "![ApacheCassandra](https://img.shields.io/badge/cassandra-%231287B1.svg?style=for-the-badge&logo=apache-cassandra&logoColor=white)",
     },
@@ -796,6 +836,10 @@ export const data = {
     {
       label: "COUCHBASE",
       url: "![Couchbase](https://img.shields.io/badge/Couchbase-EA2328?style=for-the-badge&logo=couchbase&logoColor=white)",
+    },
+    {
+      label: "CRATEDB",
+      url: "![CrateDB](https://img.shields.io/badge/CrateDB-009DC7?style=for-the-badge&logo=CrateDB&logoColor=white)",
     },
     {
       label: "FIREBASE",
@@ -832,6 +876,10 @@ export const data = {
     {
       label: "PLANETSCALE",
       url: "![PlanetScale](https://img.shields.io/badge/planetscale-%23000000.svg?style=for-the-badge&logo=planetscale&logoColor=white)",
+    },
+    {
+      label: "POCKETBASE",
+      url: "![PocketBase](https://img.shields.io/badge/pocketbase-%23b8dbe4.svg?style=for-the-badge&logo=Pocketbase&logoColor=black)",
     },
     {
       label: "POSTGRES",
@@ -960,6 +1008,10 @@ export const data = {
       url: "![Canva](https://img.shields.io/badge/Canva-%2300C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white)",
     },
     {
+      label: "CLIP STUDIO PAINT",
+      url: "![Clip Studio Paint](https://img.shields.io/badge/ClipStudioPaint-%23CFD3D3.svg?style=for-the-badge&logo=ClipStudioPaint&logoColor=white)",
+    },
+    {
       label: "DRIBBBLE",
       url: "![Dribbble](https://img.shields.io/badge/Dribbble-EA4C89?style=for-the-badge&logo=dribbble&logoColor=white)",
     },
@@ -992,8 +1044,16 @@ export const data = {
       url: "![Proto.io](https://img.shields.io/badge/Proto.io-161637?style=for-the-badge&logo=proto.io&logoColor=00e5ff)",
     },
     {
+      label: "RHINOCEROS",
+      url: "![Rhinoceros](https://img.shields.io/badge/Rhinoceros-801010?style=for-the-badge&logo=rhinoceros&logoColor=white)",
+    },
+    {
       label: "SKETCH",
       url: "![Sketch](https://img.shields.io/badge/Sketch-FFB387?style=for-the-badge&logo=sketch&logoColor=black)",
+    },
+    {
+      label: "SKETCH UP",
+      url: "![Sketch Up](https://img.shields.io/badge/SketchUp-005F9E?style=for-the-badge&logo=sketchup&logoColor=white)",
     },
     {
       label: "STORYBOOK",
@@ -1055,6 +1115,10 @@ export const data = {
     {
       label: "CLOUDBEES",
       url: "![CloudBees](https://img.shields.io/badge/CloudBees-1997B5&?logo=cloudbees&logoColor=white&style=for-the-badge)",
+    },
+    {
+      label: "FASTLANE",
+      url: "![Fastlane](https://img.shields.io/badge/fastlane-%2382bd4e.svg?style=for-the-badge&logo=fastlane&logoColor=black)",
     },
     {
       label: "GITLAB CI",
@@ -1121,6 +1185,7 @@ export const data = {
       url: "![Perforce Helix](https://img.shields.io/badge/-PERFORCE%20HELIX-404040?style=for-the-badge&logo=Perforce&logoColor=white)",
     },
   ],
+  // Others + Gaming
   others: [
     {
       label: "AIRBNB",
@@ -1183,8 +1248,8 @@ export const data = {
       url: "![ElasticSearch](https://img.shields.io/badge/-ElasticSearch-005571?style=for-the-badge&logo=elasticsearch)",
     },
     {
-      label: "ESPRESSIF",
-      url: "![Espressif](https://img.shields.io/badge/espressif-E7352C.svg?style=for-the-badge&logo=espressif&logoColor=white)",
+      label: "FFMPEG",
+      url: "![FFmpeg](https://shields.io/badge/FFmpeg-%23171717.svg?logo=ffmpeg&style=for-the-badge&labelColor=171717&logoColor=5cb85c)",
     },
     {
       label: "GRADLE",
@@ -1227,8 +1292,16 @@ export const data = {
       url: "![Notion](https://img.shields.io/badge/Notion-%23000000.svg?style=for-the-badge&logo=notion&logoColor=white)",
     },
     {
+      label: "OPENAPI SPECIFICATION",
+      url: "![OpenAPI Specification](https://img.shields.io/badge/openapiinitiative-%23000000.svg?style=for-the-badge&logo=openapiinitiative&logoColor=white)",
+    },
+    {
       label: "OPENSEA",
       url: "![OpenSea](https://img.shields.io/badge/OpenSea-%232081E2.svg?style=for-the-badge&logo=opensea&logoColor=white)",
+    },
+    {
+      label: "OPENTELEMETRY",
+      url: "![OpenTelemetry](https://img.shields.io/badge/OpenTelemetry-FFFFFF?&style=for-the-badge&logo=opentelemetry&logoColor=black)",
     },
     {
       label: "PACKER",
@@ -1237,6 +1310,10 @@ export const data = {
     {
       label: "PI-HOLE",
       url: "![Pi-Hole](https://img.shields.io/badge/pihole-%2396060C.svg?style=for-the-badge&logo=pi-hole&logoColor=white)",
+    },
+    {
+      label: "PLATFORMIO",
+      url: "![PlatformIO](https://img.shields.io/badge/PlatformIO-%23222.svg?style=for-the-badge&logo=platformio&logoColor=%23f5822a)",
     },
     {
       label: "PLEX",
@@ -1255,6 +1332,10 @@ export const data = {
       url: "![Power Bi](https://img.shields.io/badge/power_bi-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)",
     },
     {
+      label: "PRETTIER",
+      url: "![Prettier](https://img.shields.io/badge/prettier-%23F7B93E.svg?style=for-the-badge&logo=prettier&logoColor=black)",
+    },
+    {
       label: "PREZI",
       url: "![Prezi](https://img.shields.io/badge/Prezi-%23000000.svg?style=for-the-badge&logo=Prezi&logoColor=white)",
     },
@@ -1268,7 +1349,7 @@ export const data = {
     },
     {
       label: "RASPBERRY PI",
-      url: "![Raspberry Pi](https://img.shields.io/badge/-RaspberryPi-C51A4A?style=for-the-badge&logo=Raspberry-Pi)",
+      url: "![Raspberry Pi](https://img.shields.io/badge/-Raspberry_Pi-C51A4A?style=for-the-badge&logo=Raspberry-Pi)",
     },
     {
       label: "SONARLINT",
@@ -1285,6 +1366,10 @@ export const data = {
     {
       label: "SWAGGER",
       url: "![Swagger](https://img.shields.io/badge/-Swagger-%23Clojure?style=for-the-badge&logo=swagger&logoColor=white)",
+    },
+    {
+      label: "TAMPERMONKEY",
+      url: "![Tampermonkey](https://img.shields.io/badge/tampermonkey-%2300485B.svg?style=for-the-badge&logo=tampermonkey&logoColor=white)",
     },
     {
       label: "TOR",
@@ -1325,6 +1410,86 @@ export const data = {
     {
       label: "ZIGBEE",
       url: "![Zigbee](https://img.shields.io/badge/zigbee-%23EB0443.svg?style=for-the-badge&logo=zigbee&logoColor=white)",
+    },
+    {
+      label: "AMD",
+      url: "![AMD](https://img.shields.io/badge/AMD-%23000000.svg?style=for-the-badge&logo=amd&logoColor=white)",
+    },
+    {
+      label: "ANALOGUE",
+      url: "![Analogue](https://img.shields.io/badge/Analogue-1A1A1A?style=for-the-badge&logo=Analogue&logoColor=white)",
+    },
+    {
+      label: "BATTLE.NET",
+      url: "![Battle.net](https://img.shields.io/badge/battle.net-%2300AEFF.svg?style=for-the-badge&logo=battle.net&logoColor=white)",
+    },
+    {
+      label: "BEVY",
+      url: "![Bevy](https://img.shields.io/badge/bevy-%23232326.svg?style=for-the-badge&logo=bevy&logoColor=white)",
+    },
+    {
+      label: "EA",
+      url: "![EA](https://img.shields.io/badge/ea-%23000000.svg?style=for-the-badge&logo=ea&logoColor=white)",
+    },
+    {
+      label: "EPIC GAMES",
+      url: "![Epic Games](https://img.shields.io/badge/epicgames-%23313131.svg?style=for-the-badge&logo=epicgames&logoColor=white)",
+    },
+    {
+      label: "GODOT ENGINE",
+      url: "![Godot Engine](https://img.shields.io/badge/GODOT-%23FFFFFF.svg?style=for-the-badge&logo=godot-engine)",
+    },
+    {
+      label: "HUMBLE BUNDLE",
+      url: "![Humble Bundle](https://img.shields.io/badge/HumbleBundle-%23494F5C.svg?style=for-the-badge&logo=HumbleBundle&logoColor=white)",
+    },
+    {
+      label: "ITCH.IO",
+      url: "![Itch.io](https://img.shields.io/badge/Itch-%23FF0B34.svg?style=for-the-badge&logo=Itch.io&logoColor=white)",
+    },
+    {
+      label: "NVIDIA",
+      url: "![nVIDIA](https://img.shields.io/badge/nVIDIA-%2376B900.svg?style=for-the-badge&logo=nVIDIA&logoColor=white)",
+    },
+    {
+      label: "OPENGL",
+      url: "![OpenGL](https://img.shields.io/badge/OpenGL-white?logo=OpenGL&style=for-the-badge)",
+    },
+    {
+      label: "PLAYSTATION NETWORK",
+      url: "![PlayStation Network](https://img.shields.io/badge/PSN-%230070D1.svg?style=for-the-badge&logo=Playstation&logoColor=white)",
+    },
+    {
+      label: "RIOT GAMES",
+      url: "![Riot Games](https://img.shields.io/badge/riotgames-D32936.svg?style=for-the-badge&logo=riotgames&logoColor=white)",
+    },
+    {
+      label: "SIDEQUEST",
+      url: "![Sidequest](https://img.shields.io/badge/sidequest-%23101227.svg?style=for-the-badge&logo=sidequest&logoColor=white)",
+    },
+    {
+      label: "SQUARE ENIX",
+      url: "![Square Enix](https://img.shields.io/badge/SquareEnix-%23ED1C24.svg?style=for-the-badge&logo=SquareEnix&logoColor=white)",
+    },
+    {
+      label: "STEAM",
+      url: "![Steam](https://img.shields.io/badge/steam-%23000000.svg?style=for-the-badge&logo=steam&logoColor=white)",
+    },
+    {
+      label: "UBISOFT",
+      url: "![Ubisoft](https://img.shields.io/badge/Ubisoft-%23F5F5F5.svg?style=for-the-badge&logo=Ubisoft&logoColor=black)",
+    },
+    {
+      label: "UNITY",
+      url: "![Unity](https://img.shields.io/badge/unity-%23000000.svg?style=for-the-badge&logo=unity&logoColor=white)",
+    },
+    {
+      label: "UNREAL ENGINE",
+      url: "![Unreal Engine](https://img.shields.io/badge/unrealengine-%23313131.svg?style=for-the-badge&logo=unrealengine&logoColor=white)",
+    },
+    {
+      label: "XBOX",
+      url: "![Xbox](https://img.shields.io/badge/xbox-%23107C10.svg?style=for-the-badge&logo=xbox&logoColor=white)",
     },
   ],
 };
