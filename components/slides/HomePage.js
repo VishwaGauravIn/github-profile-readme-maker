@@ -19,7 +19,12 @@ export default function HomePage() {
   const [input, setInput] = useState(gprmStore.data.username);
   function onNext() {
     if (input != "" && input.replace(/ /g, "") != "") {
-      gprmStore.data.username = input;
+      if(input.startsWith("https://github.com/") || input.startsWith("github.com/")) {
+        gprmStore.data.username = input.match(/github\.com\/([^\/]+)/)[1];
+      }
+      else{
+        gprmStore.data.username = input;
+      }
       setIsVisible(true);
       topFunction();
     } else {
@@ -61,7 +66,7 @@ export default function HomePage() {
                     onChange={(e) => setInput(e.target.value)}
                     autoFocus={true}
                     className="border-b-2 border-green-200 bg-transparent w-full sm:w-11/12 md:w-10/12 lg:w-8/12 text-xl sm:text-3xl md:text-xl lg:text-2xl 2xl:text-3xl outline-none focus:border-green-300 focus:border-b-4 inline"
-                    placeholder="Enter Your GitHub Username"
+                    placeholder="Enter Your GitHub Username or Profile URL"
                   />
                   <button type="Submit">
                     <RIGHT_ARROW_SVG />
