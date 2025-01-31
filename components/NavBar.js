@@ -13,7 +13,7 @@ export default function NavBar() {
         rel="noopener noreferrer"
       >
         <BUY_ME_A_COFFEE_SVG />
-        Donate us
+        Support us
       </a>
     </div>
   );
