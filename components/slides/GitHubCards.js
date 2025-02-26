@@ -96,7 +96,7 @@ export default function GitHubStats({ back }) {
               className="m-2 select-none pointer-events-none"
               draggable="false"
               id="streak"
-              src={`https://github-readme-streak-stats.herokuapp.com/?user=${
+              src={`https://nirzak-streak-stats.vercel.app/?user=${
                 gprmStore.data.username
               }&theme=${theme}&hide_border=${!border}`}
               alt=""
