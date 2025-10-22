@@ -1185,6 +1185,49 @@ export const data = {
       url: "![Perforce Helix](https://img.shields.io/badge/-PERFORCE%20HELIX-404040?style=for-the-badge&logo=Perforce&logoColor=white)",
     },
   ],
+  // Testing
+  testing: [
+    {
+      label: "CYPRESS",
+      url: "![Cypress](https://img.shields.io/badge/-cypress-%23E5E5E5?style=for-the-badge&logo=cypress&logoColor=058a5e)",
+    },
+    {
+      label: "JASMINE",
+      url: "![Jasmine](https://img.shields.io/badge/-Jasmine-%238A4182?style=for-the-badge&logo=Jasmine&logoColor=white)",
+    },
+    {
+      label: "JEST",
+      url: "![Jest](https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white)",
+    },
+    {
+      label: "MOCHA",
+      url: "![Mocha](https://img.shields.io/badge/-mocha-%238D6748?style=for-the-badge&logo=mocha&logoColor=white)",
+    },
+    {
+      label: "PLAYWRIGHT",
+      url: "![Playwright](https://img.shields.io/badge/-playwright-%232EAD33?style=for-the-badge&logo=playwright&logoColor=white)",
+    },
+    {
+      label: "PUPPETEER",
+      url: "![Puppeteer](https://img.shields.io/badge/Puppeteer-%2340B5A4.svg?style=for-the-badge&logo=Puppeteer&logoSize=auto&logoColor=black)",
+    },
+    {
+      label: "SELENIUM",
+      url: "![Selenium](https://img.shields.io/badge/-selenium-%43B02A?style=for-the-badge&logo=selenium&logoColor=white)",
+    },
+    {
+      label: "SENTRY",
+      url: "![Sentry](https://img.shields.io/badge/sentry-%23362D59.svg?style=for-the-badge&logo=sentry&logoColor=white)",
+    },
+    {
+      label: "TESTING LIBRARY",
+      url: "![Testing-Library](https://img.shields.io/badge/-TestingLibrary-%23E33332?style=for-the-badge&logo=testing-library&logoColor=white)",
+    },
+    {
+      label: "VITEST",
+      url: "![Vitest](https://img.shields.io/badge/-Vitest-252529?style=for-the-badge&logo=vitest&logoColor=FCC72B)",
+    },
+  ],
   // Others + Gaming
   others: [
     {

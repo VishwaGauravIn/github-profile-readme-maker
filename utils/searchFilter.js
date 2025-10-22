@@ -11,6 +11,7 @@ export function searchFilter(searchStr) {
     design: [],
     ml: [],
     cicdvcs: [],
+    testing: [],
     others: [],
   };
   //   Filtering object using old school, for loop

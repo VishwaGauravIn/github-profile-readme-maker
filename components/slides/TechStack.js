@@ -91,6 +91,8 @@ export default function TechStack({ back }) {
                   techData.others.length === 0 &&
                   techData.servers.length === 0 &&
                   techData.cicdvcs.length === 0 &&
+                  techData.others.length === 0 &&
+                  techData.testing.length === 0 &&
                   nothingFound()}
 
                 {/* Languages */}
@@ -119,6 +121,8 @@ export default function TechStack({ back }) {
             <TechBadgesWrapper label="ML/DL" data={techData.ml} />
             {/* CI CD VCS */}
             <TechBadgesWrapper label="CI/CD VCS" data={techData.cicdvcs} />
+            {/* TESTING */}
+            <TechBadgesWrapper label="TESTING" data={techData.testing} />
             {/* OTHER */}
             <TechBadgesWrapper label="OTHER" data={techData.others} />
           </div>
