@@ -28,9 +28,15 @@ export default function HomePage() {
     }
 
     try {
+      // Create AbortController for timeout
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 5000); // 5 second timeout
+
       const response = await fetch(
-        `/api/validate-username?username=${encodeURIComponent(input)}`
+        `/api/validate-username?username=${encodeURIComponent(input)}`,
+        { signal: controller.signal }
       );
+      clearTimeout(timeoutId);
       const data = await response.json();
 
       if (!data.exists && !data.rateLimited && !data.error) {
