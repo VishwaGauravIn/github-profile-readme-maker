@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import AnimatedText from "../elements/AnimatedText";
 import Features from "../home-components/Features";
 import GitHubAvailability from "../home-components/GitHubAvailability";
+import { useGitHubUsernameValidator } from "../../hooks/useGitHubUsernameValidator";
 import ToastError from "../elements/toaster/ToastError";
 import AboutMe from "./AboutMe";
 import FAQ from "../home-components/FAQ";
@@ -18,6 +19,8 @@ export default function HomePage() {
   const [errorMessage, setErrorMessage] = useState("");
   const gprmStore = useGPRMStore();
   const [input, setInput] = useState(gprmStore.data.username);
+  const validateUsername = useGitHubUsernameValidator();
+
   async function onNext(e) {
     // Prevent the browser's default form submit which causes a full page reload
     if (e && typeof e.preventDefault === "function") e.preventDefault();
@@ -27,34 +30,17 @@ export default function HomePage() {
       return;
     }
 
-    try {
-      // Create AbortController for timeout
-      const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 5000); // 5 second timeout
+    const result = await validateUsername(input);
 
-      const response = await fetch(
-        `/api/validate-username?username=${encodeURIComponent(input)}`,
-        { signal: controller.signal }
-      );
-      clearTimeout(timeoutId);
-      const data = await response.json();
-
-      if (!data.exists && !data.rateLimited && !data.error) {
-        invalidUsername("GitHub username does not exist!");
-        return;
-      }
-
-      // If username exists or we hit rate limit/error, proceed as normal
-      gprmStore.data.username = input;
-      setIsVisible(true);
-      topFunction();
-    } catch (error) {
-      console.error("Error validating username:", error);
-      // On error, proceed as before
-      gprmStore.data.username = input;
-      setIsVisible(true);
-      topFunction();
+    if (!result.exists && !result.rateLimited && !result.error) {
+      invalidUsername("GitHub username does not exist!");
+      return;
     }
+
+    // If username exists or we hit rate limit/error, proceed as normal
+    gprmStore.data.username = input;
+    setIsVisible(true);
+    topFunction();
   }
   // When the user clicks on the button, scroll to the top of the document
   function topFunction() {
