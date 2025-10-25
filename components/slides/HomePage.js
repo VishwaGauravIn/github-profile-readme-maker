@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import AnimatedText from "../elements/AnimatedText";
 import Features from "../home-components/Features";
 import GitHubAvailability from "../home-components/GitHubAvailability";
+import { useGitHubUsernameValidator } from "../../hooks/useGitHubUsernameValidator";
 import ToastError from "../elements/toaster/ToastError";
 import AboutMe from "./AboutMe";
 import FAQ from "../home-components/FAQ";
@@ -15,16 +16,31 @@ import { useObserver } from "mobx-react";
 export default function HomePage() {
   const [isVisible, setIsVisible] = useState(false);
   const [alertVisible, setAlertVisible] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
   const gprmStore = useGPRMStore();
   const [input, setInput] = useState(gprmStore.data.username);
-  function onNext() {
-    if (input != "" && input.replace(/ /g, "") != "") {
-      gprmStore.data.username = input;
-      setIsVisible(true);
-      topFunction();
-    } else {
-      invalidUsername();
+  const validateUsername = useGitHubUsernameValidator();
+
+  async function onNext(e) {
+    // Prevent the browser's default form submit which causes a full page reload
+    if (e && typeof e.preventDefault === "function") e.preventDefault();
+
+    if (input === "" || input.replace(/ /g, "") === "") {
+      invalidUsername("Enter a Valid GitHub Username!");
+      return;
     }
+
+    const result = await validateUsername(input);
+
+    if (!result.exists && !result.rateLimited && !result.error) {
+      invalidUsername("GitHub username does not exist!");
+      return;
+    }
+
+    // If username exists or we hit rate limit/error, proceed as normal
+    gprmStore.data.username = input;
+    setIsVisible(true);
+    topFunction();
   }
   // When the user clicks on the button, scroll to the top of the document
   function topFunction() {
@@ -32,8 +48,9 @@ export default function HomePage() {
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
   }
 
-  function invalidUsername() {
+  function invalidUsername(message) {
     if (alertVisible !== true) {
+      setErrorMessage(message);
       setAlertVisible(true);
       setTimeout(() => {
         setAlertVisible(false);
@@ -63,7 +80,7 @@ export default function HomePage() {
                     className="border-b-2 border-green-200 bg-transparent w-full sm:w-11/12 md:w-10/12 lg:w-8/12 text-xl sm:text-3xl md:text-xl lg:text-2xl 2xl:text-3xl outline-none focus:border-green-300 focus:border-b-4 inline"
                     placeholder="Enter Your GitHub Username"
                   />
-                  <button type="Submit">
+                  <button type="submit">
                     <RIGHT_ARROW_SVG />
                   </button>
                 </form>
@@ -80,7 +97,9 @@ export default function HomePage() {
             </div>
           </div>
           {alertVisible && (
-            <ToastError title="Enter a Valid GitHub Username !" />
+            <ToastError
+              title={errorMessage || "Enter a Valid GitHub Username!"}
+            />
           )}
           <Features />
           <SocialLinks />
