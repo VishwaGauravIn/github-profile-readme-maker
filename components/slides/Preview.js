@@ -10,7 +10,7 @@ export default function Preview({ back }) {
   const [downloadAlertVisible, setDownloadAlertVisible] = useState(false);
   const gprmStore = useGPRMStore();
   var md = require("markdown-it")({
-    html: true,
+    html: false,
     linkify: true,
     typographer: true,
     breaks: true,
@@ -35,8 +35,9 @@ export default function Preview({ back }) {
       // Checking if elements exists
       if (links.length > 0) {
         links.forEach((link) => {
-          // adding attribute target
+          // adding secure link attributes
           link.setAttribute("target", "_blank");
+          link.setAttribute("rel", "noopener noreferrer nofollow");
         });
       }
     }, 300);
