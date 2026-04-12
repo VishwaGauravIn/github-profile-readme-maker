@@ -109,7 +109,7 @@ export default function Extras({ back }) {
         extras +
         `
 ---
-[![](https://visitcount.itsvg.in/api?id=${gprmStore.data.username}&icon=${icon}&color=${color})](https://visitcount.itsvg.in)
+[![](https://komarev.com/ghpvc/?username=${gprmStore.data.username}&icon=${icon}&color=${color})](https://visitcount.itsvg.in)
 `;
     }
 
@@ -256,7 +256,7 @@ ${gprmStore.data.tech
           <a href="https://visitcount.itsvg.in" className="">
             <img
               id="visitors"
-              src={`https://visitcount.itsvg.in/api?id=VishwaGauravIn&pretty=true&icon=${icon}&color=${color}`}
+              src={`https://komarev.com/ghpvc/?username=VishwaGauravIn`}
               alt=""
               className="mb-4"
             />
