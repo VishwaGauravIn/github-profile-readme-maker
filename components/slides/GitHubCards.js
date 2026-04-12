@@ -87,7 +87,7 @@ export default function GitHubStats({ back }) {
               className="m-2 select-none pointer-events-none"
               draggable="false"
               id="stats"
-              src={`https://github-readme-stats.vercel.app/api?username=${
+              src={`https://github-readme-stats.shion.dev/api?username=${
                 gprmStore.data.username
               }&theme=${theme}&hide_border=${!border}&include_all_commits=${includeAll}&count_private=${includePrivate}`}
               alt=""
@@ -96,7 +96,7 @@ export default function GitHubStats({ back }) {
               className="m-2 select-none pointer-events-none"
               draggable="false"
               id="streak"
-              src={`https://nirzak-streak-stats.vercel.app/?user=${
+              src={`https://streak-stats.demolab.com/?user=${
                 gprmStore.data.username
               }&theme=${theme}&hide_border=${!border}`}
               alt=""
@@ -105,7 +105,7 @@ export default function GitHubStats({ back }) {
               className="m-2 select-none pointer-events-none"
               draggable="false"
               id="langs"
-              src={`https://github-readme-stats.vercel.app/api/top-langs/?username=${
+              src={`https://github-readme-stats.shion.dev/api/top-langs/?username=${
                 gprmStore.data.username
               }&theme=${theme}&hide_border=${!border}&include_all_commits=${includeAll}&count_private=${includePrivate}&layout=compact`}
               alt=""
