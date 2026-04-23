@@ -14,7 +14,7 @@ export const data = {
     },
     {
       label: "C#",
-      url: "![C#](https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=csharp&logoColor=white)",
+      url: "![C#](https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=sharp&logoColor=white)",
     },
     {
       label: "C++",
@@ -83,6 +83,10 @@ export const data = {
     {
       label: "JULIA",
       url: "![Julia](https://img.shields.io/badge/-Julia-9558B2?style=for-the-badge&logo=julia&logoColor=white)",
+    },
+    {
+      label: "JSON",
+      url: "![JSON](https://img.shields.io/badge/-JSON-000000?style=for-the-badge&logo=json&logoColor=white)",
     },
     {
       label: "KOTLIN",
@@ -325,6 +329,10 @@ export const data = {
       url: "![Aurelia](https://img.shields.io/badge/aurelia-%23ED2B88.svg?style=for-the-badge&logo=aurelia&logoColor=fff)",
     },
     {
+      label: "Axios",
+      url: "![Axios](https://img.shields.io/badge/axios-%234682A6.svg?style=for-the-badge&logo=axios&logoColor=white)",
+    },
+    {
       label: "BLAZOR",
       url: "![Blazor](https://img.shields.io/badge/blazor-%235C2D91.svg?style=for-the-badge&logo=blazor&logoColor=white)",
     },
@@ -387,6 +395,10 @@ export const data = {
     {
       label: "DRUPAL",
       url: "![Drupal](https://img.shields.io/badge/drupal-%230678BE.svg?style=for-the-badge&logo=drupal&logoColor=white)",
+    },
+    {
+      label: "D3.js",
+      url: "![D3.js](https://img.shields.io/badge/d3.js-%23F9A03C.svg?style=for-the-badge&logo=d3js&logoColor=white)",
     },
     {
       label: "EJS",
@@ -471,6 +483,10 @@ export const data = {
     {
       label: "IONIC",
       url: "![Ionic](https://img.shields.io/badge/Ionic-%233880FF.svg?style=for-the-badge&logo=Ionic&logoColor=white)",
+    },
+    {
+      label: "I18NEXT",
+      url: "![I18NEXT](https://img.shields.io/badge/I18NEXT-%233880FF.svg?style=for-the-badge&logo=I18NEXT&logoColor=white)",
     },
     {
       label: "JASMINE",
@@ -1488,7 +1504,7 @@ export const data = {
     },
     {
       label: "ITCH.IO",
-      url: "![Itch.io](https://img.shields.io/badge/Itch-%23FF0B34.svg?style=for-the-badge&logo=Itch.io&logoColor=white)",
+      url: "![Itch.io](https://img.shields.io/badge/Itch.io-%23FF0B34.svg?style=for-the-badge&logo=Itch.io&logoColor=white)",
     },
     {
       label: "NVIDIA",
