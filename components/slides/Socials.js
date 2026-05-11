@@ -49,7 +49,7 @@ export default function Socials({ back }) {
     if (document.getElementById("linkedin").value != "") {
       socials =
         socials +
-        `[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/${
+        `[![LinkedIn](https://custom-icon-badges.demolab.com/badge/LinkedIn-0A66C2?logo=linkedin-white&logoColor=fff)](https://linkedin.com/in/${
           document.getElementById("linkedin").value
         }) `;
     }
@@ -256,3 +256,4 @@ export var socials = ``;
 
             </TextInputWithIcon>
 */
+
