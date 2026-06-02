@@ -22,7 +22,9 @@ export default function Extras({ back }) {
   );
   const [quoteTheme, setQuoteTheme] = useState(gprmStore.data.quote.quoteTheme);
   const [layout, setLayout] = useState(gprmStore.data.quote.layout);
-  const [color, setColor] = useState(gprmStore.data.visitcount.color);
+  const [color, setColor] = useState(
+    gprmStore.data.visitcount.color || "blue"
+  );
   const [icon, setIcon] = useState(gprmStore.data.visitcount.icon);
   const [topRepoTheme, setTopRepoTheme] = useState(
     gprmStore.data.toprepo.toprepotheme
@@ -231,7 +233,7 @@ ${gprmStore.data.tech
             >
               {colors.map((color, index) => {
                 return (
-                  <option key={index} value={index} className="bg-zinc-900">
+                  <option key={index} value={color} className="bg-zinc-900">
                     {color}
                   </option>
                 );
@@ -365,20 +367,15 @@ const quoteThemes = [
 ];
 
 const colors = [
-  "cyan",
-  "blue",
-  "amber",
+  "brightgreen",
   "green",
-  "red",
-  "rose",
-  "indigo",
+  "yellow",
+  "yellowgreen",
   "orange",
-  "emerald",
-  "teal",
-  "pink",
-  "fuchsia",
-  "neutral",
-  "random",
+  "red",
+  "blue",
+  "grey",
+  "lightgrey",
 ];
 
 const icons = [
