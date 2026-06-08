@@ -171,7 +171,7 @@ ${gprmStore.data.tech
             ◄ Go Back
           </button>
           <p className="w-full text-center text-3xl my-10 mt-20">
-            Additional Stuffs to add
+            Additional stuff to add
           </p>
           {/* Trophies */}
           {/* Options */}
