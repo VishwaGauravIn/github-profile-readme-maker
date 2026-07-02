@@ -338,7 +338,7 @@ ${gprmStore.data.tech
             className="m-2 select-none pointer-events-none"
             draggable="false"
             id="toprepo"
-            src={`https://github-contributor-stats.vercel.app/api?username=${gprmStore.data.username}&limit=5&theme=${topRepoTheme}&combine_all_yearly_contributions=true`}
+            src={`https://github-contribution-card.vercel.app/api?username=${gprmStore.data.username}&limit=5&theme=${topRepoTheme}&combine_all_yearly_contributions=true`}
             alt=""
           />
           <CheckBox id="toprepochk" title="Add Top Contributed Repo List" />
