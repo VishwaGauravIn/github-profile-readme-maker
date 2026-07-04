@@ -61,5 +61,9 @@ export function createGPRMStore() {
     editData(id, value) {
       this.data[id] = value;
     },
+    /** Merge a partial data object into store.data (used by ResumeUpload) */
+    bulkEditData(partialData) {
+      Object.assign(this.data, partialData);
+    },
   };
 }

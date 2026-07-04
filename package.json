@@ -8,17 +8,21 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@google/generative-ai": "^0.24.1",
     "@heroicons/react": "^1.0.5",
     "axios": "^0.27.2",
     "crisp-sdk-web": "^1.0.22",
     "firebase": "^9.6.4",
+    "mammoth": "^1.12.0",
     "markdown-it": "^12.3.2",
     "mobx": "^6.6.0",
     "mobx-react": "^7.5.0",
     "next": "12.1.0",
+    "pdfjs-dist": "^6.1.200",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "react-text-loop": "^2.3.0"
+    "react-text-loop": "^2.3.0",
+    "tesseract.js": "^7.0.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.2",
