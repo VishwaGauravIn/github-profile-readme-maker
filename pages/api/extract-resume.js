@@ -45,10 +45,16 @@ export default async function handler(req, res) {
     return res.status(400).json({ error: "Raw text is too short or empty" });
   }
 
-  const apiKey = process.env.GEMINI_API_KEY;
+  // Prefer user-supplied key (from browser localStorage via header) over server key.
+  // The user key is used only for this request — never stored or logged.
+  const apiKey =
+    (req.headers["x-user-gemini-key"] || "").trim() ||
+    (process.env.GEMINI_API_KEY || "").trim();
+
   if (!apiKey) {
-    return res.status(500).json({
-      error: "GEMINI_API_KEY is not configured. Add it to .env.local",
+    return res.status(401).json({
+      error:
+        "No Gemini API key found. Please enter your key in the Upload Resume screen (🔑), or add GEMINI_API_KEY to .env.local.",
     });
   }
 

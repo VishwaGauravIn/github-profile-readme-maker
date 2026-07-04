@@ -2,6 +2,7 @@ import React, { useState, useCallback } from "react";
 import { useGPRMStore } from "../mobx/GPRMcontext";
 import { normalizeTechToUrls } from "../../utils/normalizeTech";
 import AboutMe from "./AboutMe";
+import GeminiKeyInput from "../elements/GeminiKeyInput";
 
 // ── Step indicators ────────────────────────────────────────────────────────────
 const STEPS = ["Upload", "Parse", "AI Extract", "Review & Fill"];
@@ -154,6 +155,7 @@ export default function ResumeUpload({ back }) {
   const [goToAbout, setGoToAbout] = useState(false);
   const [busy, setBusy] = useState(false);
   const [manualUsername, setManualUsername] = useState("");
+  const [userGeminiKey, setUserGeminiKey] = useState("");
 
   // ── Extract text from PDF (text layer first, then OCR fallback) ──────────────
   async function extractPDF(file) {
@@ -247,9 +249,12 @@ export default function ResumeUpload({ back }) {
       setStep(2);
       setStatus({ type: "loading", text: "Sending to AI for extraction… (1–4s)" });
 
+      const headers = { "Content-Type": "application/json" };
+      if (userGeminiKey) headers["x-user-gemini-key"] = userGeminiKey;
+
       const res = await fetch("/api/extract-resume", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers,
         body: JSON.stringify({ rawText }),
       });
 
@@ -337,6 +342,8 @@ export default function ResumeUpload({ back }) {
         Your file is parsed entirely in your browser — only the extracted text is sent to the AI.
         No file upload to any server.
       </p>
+
+      <GeminiKeyInput onChange={setUserGeminiKey} />
 
       <StepBar current={step} />
 
